@@ -317,14 +317,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
-                <div className="mb-6 overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50">
-                  <Image
-                    src="/rc2.jpg"
-                    alt="Rickard Collander"
-                    width={1200}
-                    height={900}
-                    className="h-56 w-full object-cover"
-                  />
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="h-20 w-20 overflow-hidden rounded-full border border-zinc-200/70 bg-zinc-50 shadow-sm">
+                    <Image
+                      src="/rc2.jpg"
+                      alt="Rickard Collander"
+                      width={320}
+                      height={320}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-zinc-900">Rickard Collander</div>
+                    <div className="text-sm text-zinc-600">Customer Success & Support Leadership</div>
+                  </div>
                 </div>
                 <div className="text-sm font-semibold">När du lämnar sidan ska du tänka</div>
                 <p className="mt-2 text-sm text-zinc-600">
