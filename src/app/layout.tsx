@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Successifier.se — Konsult inom Contact Center & Customer Success",
   description: "Svensk konsultverksamhet inom Contact Center och Customer Success. Struktur, processer och AI-stöd som ger bättre kundupplevelse, lägre churn och högre effektivitet.",
   metadataBase: new URL("https://successifier.se"),
+  icons: {
+    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
+    shortcut: ["/logo.svg"],
+  },
   openGraph: {
     title: "Successifier.se — Konsult inom Contact Center & Customer Success",
     description: "Svensk konsultverksamhet inom Contact Center och Customer Success. Struktur, processer och AI-stöd som ger bättre kundupplevelse, lägre churn och högre effektivitet.",
