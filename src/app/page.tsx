@@ -75,24 +75,6 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-6 flex flex-col gap-2 text-sm text-zinc-600 sm:flex-row sm:items-center sm:gap-6">
-                <div className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
-                  <span className="font-medium text-zinc-900">10+ år</span>
-                  <span>i CS & Support Leadership</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
-                  <span className="font-medium text-zinc-900">SaaS, Enterprise</span>
-                  <span>& Global Operations</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
-                  <span className="font-medium text-zinc-900">AI-</span>
-                  <span>och datadriven styrning</span>
-                </div>
-              </div>
-
             </div>
 
             <div className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
@@ -115,6 +97,31 @@ export default function Home() {
                   Verktygs- och dataflöden som gör verksamheten styrbar i realtid.
                 </li>
               </ul>
+
+              <div className="mt-6 grid gap-3 rounded-2xl border border-zinc-200/70 bg-white p-4 sm:grid-cols-3">
+                <div className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
+                  <div className="text-sm text-zinc-600">
+                    <div className="font-semibold text-zinc-900">10+ år</div>
+                    <div>CS & Support Leadership</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
+                  <div className="text-sm text-zinc-600">
+                    <div className="font-semibold text-zinc-900">SaaS & Enterprise</div>
+                    <div>Global Operations</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
+                  <div className="text-sm text-zinc-600">
+                    <div className="font-semibold text-zinc-900">AI-styrning</div>
+                    <div>Datadriven uppföljning</div>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6 rounded-2xl bg-zinc-50 p-4 text-sm text-zinc-700">
                 <div className="font-semibold">Kontakt</div>
                 <div className="mt-2">
