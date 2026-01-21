@@ -316,7 +316,16 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="rounded-3xl border border-zinc-200 bg-white p-6">
+              <div className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
+                <div className="mb-6 overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50">
+                  <Image
+                    src="/rc2.jpg"
+                    alt="Rickard Collander"
+                    width={1200}
+                    height={900}
+                    className="h-56 w-full object-cover"
+                  />
+                </div>
                 <div className="text-sm font-semibold">När du lämnar sidan ska du tänka</div>
                 <p className="mt-2 text-sm text-zinc-600">
                   “Den här personen kan ta ansvar för hela vår kundaffär, inte bara förbättra delar av den.”
