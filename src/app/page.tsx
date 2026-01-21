@@ -4,8 +4,8 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-zinc-950">
-      <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/80 backdrop-blur">
+    <div className="min-h-screen text-zinc-950">
+      <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
             <Image
@@ -13,7 +13,7 @@ export default function Home() {
               alt="Successifier"
               width={36}
               height={36}
-              className="h-9 w-9"
+              className="h-9 w-9 drop-shadow-sm"
               priority
             />
             <div className="leading-tight">
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-800"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
             >
               Boka strategisamtal
             </a>
@@ -63,13 +63,13 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#kontakt"
-                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
                 >
                   Boka strategisamtal (30 min)
                 </a>
                 <Link
                   href="#arbetssatt"
-                  className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+                  className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
                 >
                   Se hur jag jobbar
                 </Link>
@@ -95,7 +95,7 @@ export default function Home() {
 
             </div>
 
-            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <div className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
               <div className="text-sm font-semibold">Detta etablerar jag</div>
               <ul className="mt-4 space-y-3 text-sm text-zinc-700">
                 <li className="flex gap-3">
@@ -300,8 +300,21 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight">Om mig</h2>
                 <p className="mt-4 text-zinc-600">
-                  Jag har lett Customer Success och Support i globala, digitala miljöer med ansvar för både intäktsskydd och operativ leverans. Min styrka ligger i att bygga system som fungerar för ledning, chefer och team samtidigt – där data, process och teknik arbetar tillsammans.
+                  Jag heter Rickard Collander och har lett Customer Success och Support i globala, digitala miljöer med ansvar för både intäktsskydd och operativ leverans. Min styrka ligger i att bygga system som fungerar för ledning, chefer och team samtidigt – där data, process och teknik arbetar tillsammans.
                 </p>
+                <p className="mt-4 text-zinc-600">
+                  Utanför jobbet laddar jag energi med familjen, fjällen och längdskidor – och när det finns en bana i närheten blir det gärna en padelmatch.
+                </p>
+                <div className="mt-5">
+                  <a
+                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
+                    href="https://www.linkedin.com/in/rickard-collander/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold">När du lämnar sidan ska du tänka</div>
@@ -352,6 +365,14 @@ export default function Home() {
           <div className="flex gap-4">
             <a className="hover:text-zinc-900" href="mailto:rc@successifier.com">rc@successifier.com</a>
             <a className="hover:text-zinc-900" href="tel:+46722136422">+46 72 213 64 22</a>
+            <a
+              className="hover:text-zinc-900"
+              href="https://www.linkedin.com/in/rickard-collander/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </footer>

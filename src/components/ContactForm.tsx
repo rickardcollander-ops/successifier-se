@@ -63,7 +63,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+    <form onSubmit={onSubmit} className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
       <div className="grid gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-1.5">
@@ -72,7 +72,7 @@ export default function ContactForm() {
               value={form.name}
               onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
               required
-              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-indigo-400"
+              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
               placeholder="Ditt namn"
             />
           </label>
@@ -81,7 +81,7 @@ export default function ContactForm() {
             <input
               value={form.company}
               onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
-              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-indigo-400"
+              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
               placeholder="Företagsnamn"
             />
           </label>
@@ -95,7 +95,7 @@ export default function ContactForm() {
               onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
               type="email"
               required
-              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-indigo-400"
+              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
               placeholder="namn@bolag.se"
             />
           </label>
@@ -104,7 +104,7 @@ export default function ContactForm() {
             <input
               value={form.phone}
               onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-indigo-400"
+              className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
               placeholder="+46 ..."
             />
           </label>
@@ -117,7 +117,7 @@ export default function ContactForm() {
             onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
             required
             rows={5}
-            className="resize-none rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none focus:border-indigo-400"
+            className="resize-none rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
             placeholder="Kort beskrivning av nuläge, mål och tidsram..."
           />
         </label>
@@ -137,13 +137,13 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 text-sm font-semibold text-white hover:opacity-95 disabled:opacity-60"
+            className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)] disabled:opacity-60"
           >
             {submitting ? "Skickar..." : "Boka strategisamtal"}
           </button>
           <a
             href={mailtoHref}
-            className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+            className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
           >
             Skicka via email
           </a>
