@@ -13,16 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Successifier.se — Konsult inom Contact Center & Customer Success",
-  description: "Svensk konsultverksamhet inom Contact Center och Customer Success. Struktur, processer och AI-stöd som ger bättre kundupplevelse, lägre churn och högre effektivitet.",
+  title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+  description: "Svensk konsultverksamhet inom Customer Success, Contact Center, AI och automation. Vi driver SEO och marknadsföring på Google, LinkedIn och Meta – med vår egen plattform SAMA för AI-synlighet, GEO-readiness och content-publicering.",
+  keywords: [
+    "AI-konsult",
+    "AI konsulting",
+    "Automation",
+    "Customer Success",
+    "Contact Center",
+    "AI-marknadsföring",
+    "SEO med AI",
+    "Google Ads",
+    "LinkedIn Ads",
+    "Meta Ads",
+    "AI-verktyg",
+    "SAMA",
+    "AI-synlighet",
+    "GEO readiness",
+    "AI-omnämnande",
+    "Sverige",
+  ],
   metadataBase: new URL("https://successifier.se"),
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: ["/logo.svg"],
   },
   openGraph: {
-    title: "Successifier.se — Konsult inom Contact Center & Customer Success",
-    description: "Svensk konsultverksamhet inom Contact Center och Customer Success. Struktur, processer och AI-stöd som ger bättre kundupplevelse, lägre churn och högre effektivitet.",
+    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+    description: "Konsulting och egen plattform (SAMA) för AI-synlighet, SEO och content – samt Customer Success, Contact Center och AI-driven marknadsföring på Google, LinkedIn och Meta.",
     url: "https://successifier.se",
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -30,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Successifier.se — Konsult inom Contact Center & Customer Success",
-    description: "Svensk konsultverksamhet inom Contact Center och Customer Success.",
+    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+    description: "Konsulting och egen plattform SAMA för AI-synlighet, SEO och content-publicering på Google, LinkedIn och Meta.",
   },
 };
 

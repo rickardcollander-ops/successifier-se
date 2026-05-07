@@ -53,7 +53,7 @@ export default function ContactForm() {
         throw new Error(data.error || "Något gick fel");
       }
 
-      setSuccess("Tack! Jag återkommer så snart jag kan.");
+      setSuccess("Tack! Vi återkommer så snart vi kan.");
       setForm({ name: "", company: "", email: "", phone: "", message: "" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Något gick fel");
@@ -150,7 +150,7 @@ export default function ContactForm() {
         </div>
 
         <p className="text-xs text-zinc-500">
-          Genom att skicka godkänner du att jag kontaktar dig tillbaka. Inga nyhetsbrev.
+          Genom att skicka godkänner du att vi kontaktar dig tillbaka. Inga nyhetsbrev.
         </p>
       </div>
     </form>
