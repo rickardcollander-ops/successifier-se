@@ -18,7 +18,7 @@ export default function Home() {
             />
             <div className="leading-tight">
               <div className="text-sm font-semibold">Successifier.se</div>
-              <div className="text-xs text-zinc-500">Contact Center & Customer Success</div>
+              <div className="text-xs text-zinc-500">Customer Success • AI • Automation • Marknadsföring</div>
             </div>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
@@ -51,13 +51,13 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600">
                 <span className="font-medium text-zinc-900">Sverige</span>
                 <span className="text-zinc-300">/</span>
-                <span>Contact Center & Customer Success</span>
+                <span>Customer Success • AI • Automation • Marknadsföring</span>
               </div>
               <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Jag bygger Customer Success- och Supportfunktioner som säkrar intäkter, skalar team och tål ledningsgranskning.
+                Jag bygger AI-, automations- och kundfunktioner som säkrar intäkter, skalar team och tål ledningsgranskning.
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-                Från strategi till implementation. Jag hjälper bolag att gå från reaktiv kundhantering till ett styrbart, mätbart och affärskritiskt system för retention, expansion och operativ effektivitet.
+                Från strategi till implementation. Jag hjälper bolag att gå från reaktiv drift till ett styrbart, mätbart och affärskritiskt system – med AI, automation och AI-driven marknadsföring på Google, LinkedIn och Meta.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -82,19 +82,19 @@ export default function Home() {
               <ul className="mt-4 space-y-3 text-sm text-zinc-700">
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
-                  Operating model och ansvarskedja som håller för ledning och tillväxt.
+                  AI-strategi och AI-verktyg som ger mätbar effekt i drift, sälj och marknad.
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
-                  KPI-struktur från styrelserapport till daglig teamstyrning.
+                  Automationsflöden som tar bort manuellt arbete och gör verksamheten skalbar.
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
-                  Playbooks och signalsystem för churn-risk, renewals och expansion.
+                  AI-driven SEO och marknadsföring på Google, LinkedIn och Meta – från idé till kampanjstyrning.
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
-                  Verktygs- och dataflöden som gör verksamheten styrbar i realtid.
+                  Customer Success- och Supportfunktioner med tydlig KPI-struktur och playbooks.
                 </li>
               </ul>
 
@@ -102,22 +102,22 @@ export default function Home() {
                 <div className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
                   <div className="text-sm text-zinc-600">
+                    <div className="font-semibold text-zinc-900">AI & Automation</div>
+                    <div>Strategi & implementation</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
+                  <div className="text-sm text-zinc-600">
+                    <div className="font-semibold text-zinc-900">SEO & Marknad</div>
+                    <div>Google • LinkedIn • Meta</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
+                  <div className="text-sm text-zinc-600">
                     <div className="font-semibold text-zinc-900">10+ år</div>
                     <div>CS & Support Leadership</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
-                  <div className="text-sm text-zinc-600">
-                    <div className="font-semibold text-zinc-900">SaaS & Enterprise</div>
-                    <div>Global Operations</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
-                  <div className="text-sm text-zinc-600">
-                    <div className="font-semibold text-zinc-900">AI-styrning</div>
-                    <div>Datadriven uppföljning</div>
                   </div>
                 </div>
               </div>
@@ -169,11 +169,11 @@ export default function Home() {
             <div className="max-w-2xl">
               <h2 className="text-2xl font-semibold tracking-tight">Tjänster</h2>
               <p className="mt-3 text-zinc-600">
-                Tre program som känns som affärsflöden – inte en konsultmeny.
+                Fem program som känns som affärsflöden – inte en konsultmeny. Customer Success, Contact Center, AI, automation och AI-driven marknadsföring.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold text-indigo-700">🧭 Program 1: Revenue Protection (Customer Success)</div>
                 <p className="mt-2 text-sm text-zinc-600">För bolag med återkommande intäkter</p>
@@ -207,18 +207,66 @@ export default function Home() {
               </div>
 
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
-                <div className="text-sm font-semibold text-zinc-900">🤖 Program 3: AI & Systems Enablement</div>
-                <p className="mt-2 text-sm text-zinc-600">För bolag som vill styra verksamheten med data, inte magkänsla</p>
+                <div className="text-sm font-semibold text-zinc-900">🤖 Program 3: AI-konsulting</div>
+                <p className="mt-2 text-sm text-zinc-600">För bolag som vill omsätta AI till mätbar affärsnytta</p>
                 <div className="mt-5 text-sm font-semibold">Fokus</div>
                 <ul className="mt-3 space-y-2 text-sm text-zinc-700">
-                  <li>Verktygsarkitektur (CRM, CS, Support, BI)</li>
-                  <li>AI-baserad risk- och prioriteringsmodell</li>
-                  <li>Dashboards för ledning & team managers</li>
-                  <li>Automatiserade playbooks och signalsystem</li>
+                  <li>AI-strategi, use case-portfölj och prioritering</li>
+                  <li>Egna AI-verktyg och AI-agenter (LLM, RAG, copilots)</li>
+                  <li>AI för Customer Success, support och sälj</li>
+                  <li>Governance, datakvalitet och säker användning</li>
                 </ul>
                 <div className="mt-5 rounded-2xl bg-zinc-50 p-4">
                   <div className="text-xs font-semibold text-zinc-900">Resultat</div>
-                  <div className="mt-1 text-sm text-zinc-700">Ledningsbeslut baserade på affärsläge i realtid.</div>
+                  <div className="mt-1 text-sm text-zinc-700">AI som faktiskt används i drift – inte som pilot. Snabbare beslut, lägre kostnad, högre kvalitet.</div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-zinc-200 bg-white p-6">
+                <div className="text-sm font-semibold text-emerald-700">🔁 Program 4: Automation</div>
+                <p className="mt-2 text-sm text-zinc-600">För bolag som vill ta bort manuellt arbete och skala utan att växa headcount</p>
+                <div className="mt-5 text-sm font-semibold">Fokus</div>
+                <ul className="mt-3 space-y-2 text-sm text-zinc-700">
+                  <li>Processkartläggning & automation roadmap</li>
+                  <li>Workflow-automation (n8n, Make, Zapier, Power Automate)</li>
+                  <li>Integrationer mellan CRM, CS, Support, BI och marknad</li>
+                  <li>AI + automation: triggers, signaler och autonoma flöden</li>
+                </ul>
+                <div className="mt-5 rounded-2xl bg-zinc-50 p-4">
+                  <div className="text-xs font-semibold text-zinc-900">Resultat</div>
+                  <div className="mt-1 text-sm text-zinc-700">Lägre operativ kostnad. Färre fel. Skalbar leverans utan att teamet växer linjärt.</div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-zinc-200 bg-white p-6">
+                <div className="text-sm font-semibold text-pink-700">📈 Program 5: AI-driven SEO & Marknadsföring</div>
+                <p className="mt-2 text-sm text-zinc-600">Google, LinkedIn & Meta – med AI-verktyg som gör innehåll och kampanjer skalbara</p>
+                <div className="mt-5 text-sm font-semibold">Fokus</div>
+                <ul className="mt-3 space-y-2 text-sm text-zinc-700">
+                  <li>AI-verktyg för SEO: keyword, content och teknisk optimering</li>
+                  <li>Google Ads & Performance Max med AI-styrd bud- och creative-logik</li>
+                  <li>LinkedIn Ads & ABM för B2B – ICP, copy och pipeline</li>
+                  <li>Meta (Facebook & Instagram) – kampanjer, kreativ och funnel</li>
+                </ul>
+                <div className="mt-5 rounded-2xl bg-zinc-50 p-4">
+                  <div className="text-xs font-semibold text-zinc-900">Resultat</div>
+                  <div className="mt-1 text-sm text-zinc-700">Mer kvalificerad trafik och pipeline – till lägre CAC och med mätbar attribution.</div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-indigo-50 to-purple-50 p-6">
+                <div className="text-sm font-semibold text-indigo-700">🛠️ AI-verktyg & paket</div>
+                <p className="mt-2 text-sm text-zinc-600">Färdiga AI-verktyg som kan tas i drift snabbt</p>
+                <div className="mt-5 text-sm font-semibold">Exempel</div>
+                <ul className="mt-3 space-y-2 text-sm text-zinc-700">
+                  <li>AI-assistent för support- och CS-team</li>
+                  <li>AI-driven content- & SEO-motor</li>
+                  <li>Lead scoring och churn-prediktion</li>
+                  <li>Kampanj-copilots för Google, LinkedIn, Meta</li>
+                </ul>
+                <div className="mt-5 rounded-2xl bg-white/70 p-4">
+                  <div className="text-xs font-semibold text-zinc-900">Leverans</div>
+                  <div className="mt-1 text-sm text-zinc-700">Konfigurerade i era verktyg, dokumenterade och med team som kan driva vidare.</div>
                 </div>
               </div>
             </div>
@@ -264,12 +312,20 @@ export default function Home() {
                 <p className="mt-2 text-sm text-zinc-600">Playbooks, milestones och enablement som gör värde tydligt och repeterbart.</p>
               </div>
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
+                <div className="text-sm font-semibold">AI och automation i drift</div>
+                <p className="mt-2 text-sm text-zinc-600">Konkreta AI-verktyg och automationsflöden som tar bort manuellt arbete och frigör kapacitet.</p>
+              </div>
+              <div className="rounded-3xl border border-zinc-200 bg-white p-6">
+                <div className="text-sm font-semibold">Mer pipeline från Google, LinkedIn & Meta</div>
+                <p className="mt-2 text-sm text-zinc-600">AI-driven SEO och kampanjstyrning som ger mer kvalificerad trafik till lägre CAC.</p>
+              </div>
+              <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold">Högre CSAT och leveransprecision</div>
                 <p className="mt-2 text-sm text-zinc-600">QA, coaching och operativ styrning som minskar brandkårsutryckningar.</p>
               </div>
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold">Tydligare ledningsrapportering</div>
-                <p className="mt-2 text-sm text-zinc-600">NRR, kundportfölj och intäktsrisk i ett format som håller för ledning och styrelse.</p>
+                <p className="mt-2 text-sm text-zinc-600">NRR, kundportfölj, kampanj-ROI och intäktsrisk i ett format som håller för ledning och styrelse.</p>
               </div>
             </div>
           </div>
