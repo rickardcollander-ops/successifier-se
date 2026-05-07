@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Successifier.se — Konsult inom Customer Success, AI, Automation & AI-driven Marknadsföring",
-  description: "Svensk konsultverksamhet inom Customer Success, Contact Center, AI och automation. Vi bygger AI-verktyg och driver SEO och marknadsföring med AI på Google, LinkedIn och Meta – för lägre churn, högre effektivitet och mätbar tillväxt.",
+  title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+  description: "Svensk konsultverksamhet inom Customer Success, Contact Center, AI och automation. Vi driver SEO och marknadsföring på Google, LinkedIn och Meta – med vår egen plattform SAMA för AI-synlighet, GEO-readiness och content-publicering.",
   keywords: [
     "AI-konsult",
     "AI konsulting",
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     "LinkedIn Ads",
     "Meta Ads",
     "AI-verktyg",
+    "SAMA",
+    "AI-synlighet",
+    "GEO readiness",
+    "AI-omnämnande",
     "Sverige",
   ],
   metadataBase: new URL("https://successifier.se"),
@@ -35,8 +39,8 @@ export const metadata: Metadata = {
     shortcut: ["/logo.svg"],
   },
   openGraph: {
-    title: "Successifier.se — Customer Success, AI, Automation & AI-driven Marknadsföring",
-    description: "Konsulting och verktyg inom AI, automation, SEO och marknadsföring på Google, LinkedIn och Meta – samt Customer Success och Contact Center.",
+    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+    description: "Konsulting och egen plattform (SAMA) för AI-synlighet, SEO och content – samt Customer Success, Contact Center och AI-driven marknadsföring på Google, LinkedIn och Meta.",
     url: "https://successifier.se",
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -44,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Successifier.se — Customer Success, AI, Automation & AI-driven Marknadsföring",
-    description: "Konsulting och verktyg inom AI, automation, SEO och AI-driven marknadsföring på Google, LinkedIn och Meta.",
+    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+    description: "Konsulting och egen plattform SAMA för AI-synlighet, SEO och content-publicering på Google, LinkedIn och Meta.",
   },
 };
 

@@ -23,6 +23,7 @@ export default function Home() {
           </div>
           <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
             <a href="#tjanster" className="hover:text-zinc-950">Tjänster</a>
+            <a href="#sama" className="hover:text-zinc-950">Plattform</a>
             <a href="#arbetssatt" className="hover:text-zinc-950">Arbetssätt</a>
             <a href="#resultat" className="hover:text-zinc-950">Resultat</a>
             <a href="#om-oss" className="hover:text-zinc-950">Om oss</a>
@@ -94,6 +95,10 @@ export default function Home() {
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
+                  Egen plattform <span className="font-semibold">SAMA</span> som spårar AI-omnämnanden, Google-synlighet och GEO-readiness – och driver content-publicering.
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
                   Customer Success- och Supportfunktioner med tydlig KPI-struktur och playbooks.
                 </li>
               </ul>
@@ -102,8 +107,8 @@ export default function Home() {
                 <div className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600" />
                   <div className="text-sm text-zinc-600">
-                    <div className="font-semibold text-zinc-900">AI & Automation</div>
-                    <div>Strategi & implementation</div>
+                    <div className="font-semibold text-zinc-900">SAMA-plattformen</div>
+                    <div>AI-synlighet • SEO • Content</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
@@ -240,9 +245,10 @@ export default function Home() {
 
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold text-pink-700">📈 Program 5: AI-driven SEO & Marknadsföring</div>
-                <p className="mt-2 text-sm text-zinc-600">Google, LinkedIn & Meta – med AI-verktyg som gör innehåll och kampanjer skalbara</p>
+                <p className="mt-2 text-sm text-zinc-600">Google, LinkedIn & Meta – drivet av vår plattform SAMA</p>
                 <div className="mt-5 text-sm font-semibold">Fokus</div>
                 <ul className="mt-3 space-y-2 text-sm text-zinc-700">
+                  <li>AI-synlighet & GEO-optimering – spårar hur ert varumärke nämns i ChatGPT, Perplexity och Google AI-svar</li>
                   <li>AI-verktyg för SEO: keyword, content och teknisk optimering</li>
                   <li>Google Ads & Performance Max med AI-styrd bud- och creative-logik</li>
                   <li>LinkedIn Ads & ABM för B2B – ICP, copy och pipeline</li>
@@ -254,19 +260,113 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-indigo-50 to-purple-50 p-6">
-                <div className="text-sm font-semibold text-indigo-700">🛠️ AI-verktyg & paket</div>
-                <p className="mt-2 text-sm text-zinc-600">Färdiga AI-verktyg som kan tas i drift snabbt</p>
-                <div className="mt-5 text-sm font-semibold">Exempel</div>
-                <ul className="mt-3 space-y-2 text-sm text-zinc-700">
-                  <li>AI-assistent för support- och CS-team</li>
-                  <li>AI-driven content- & SEO-motor</li>
-                  <li>Lead scoring och churn-prediktion</li>
-                  <li>Kampanj-copilots för Google, LinkedIn, Meta</li>
-                </ul>
-                <div className="mt-5 rounded-2xl bg-white/70 p-4">
-                  <div className="text-xs font-semibold text-zinc-900">Leverans</div>
-                  <div className="mt-1 text-sm text-zinc-700">Konfigurerade i era verktyg, dokumenterade och med team som kan driva vidare.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sama" className="relative overflow-hidden border-t border-zinc-200 bg-gradient-to-b from-white to-zinc-50">
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute left-[-10%] top-[10%] h-[420px] w-[420px] rounded-full bg-indigo-200/40 blur-3xl" />
+            <div className="absolute right-[-10%] bottom-[5%] h-[420px] w-[420px] rounded-full bg-purple-200/40 blur-3xl" />
+          </div>
+
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+            <div className="grid gap-10 md:grid-cols-2 md:items-start">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600">
+                  <span className="font-medium text-zinc-900">Vår plattform</span>
+                  <span className="text-zinc-300">/</span>
+                  <span>SAMA</span>
+                </div>
+                <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
+                  SAMA – AI-synlighet, SEO och content i ett system
+                </h2>
+                <p className="mt-4 text-zinc-600">
+                  SAMA är verktyget vi själva använder för att driva Google-, LinkedIn- och Meta-synlighet åt kunder. Den spårar hur ofta ert varumärke nämns i AI-svar (ChatGPT, Perplexity, Google AI Overviews), mäter SEO-hälsa och GEO-readiness, och publicerar AI-genererat content – med människa i loopen.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-5">
+                    <div className="text-sm font-semibold text-indigo-700">📊 Insikter</div>
+                    <p className="mt-2 text-sm text-zinc-600">AI-omnämnandegrad, Google-snittposition, klick & exponeringar från GSC – allt i en vy.</p>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-5">
+                    <div className="text-sm font-semibold text-emerald-700">🛡️ Tech & On-page</div>
+                    <p className="mt-2 text-sm text-zinc-600">Technical SEO, On-page SEO, GEO readiness, Link health och Performance – kontinuerligt.</p>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-5">
+                    <div className="text-sm font-semibold text-purple-700">✍️ Content-motor</div>
+                    <p className="mt-2 text-sm text-zinc-600">AI-genererade utkast, granskningsflöde, schemaläggning och publicering – från idé till live.</p>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-5">
+                    <div className="text-sm font-semibold text-pink-700">🤝 Konsulting runt SAMA</div>
+                    <p className="mt-2 text-sm text-zinc-600">Vi bemannar plattformen åt er – strategi, redaktör och optimering. Ni säljer inte bara licenser, ni får ett team.</p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="#kontakt"
+                    className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
+                  >
+                    Boka demo av SAMA
+                  </a>
+                  <a
+                    href="#sama-mockup"
+                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
+                  >
+                    Se exempelvy
+                  </a>
+                </div>
+              </div>
+
+              <div id="sama-mockup" className="space-y-4">
+                <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_20px_60px_-25px_rgba(2,6,23,0.35)]">
+                  <Image
+                    src="/sama-dashboard.png"
+                    alt="SAMA – dashboardvy med trafik och AI-synlighet"
+                    width={1600}
+                    height={1000}
+                    className="h-auto w-full"
+                  />
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-4">
+                    <div className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">AI-omnämnandegrad</div>
+                    <div className="mt-1 text-2xl font-semibold text-zinc-900">0%</div>
+                    <div className="text-xs text-zinc-500">Senast kollat 1d sen</div>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-4">
+                    <div className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">Google-synlighet</div>
+                    <div className="mt-1 text-2xl font-semibold text-zinc-900">29.9</div>
+                    <div className="text-xs text-zinc-500">Snittposition – lägre är bättre</div>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-200 bg-white p-4">
+                    <div className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">Publicerat content</div>
+                    <div className="mt-1 text-2xl font-semibold text-zinc-900">7</div>
+                    <div className="text-xs text-zinc-500">Artiklar de senaste 90 dagarna</div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-zinc-200 bg-white p-5">
+                  <div className="text-sm font-semibold text-zinc-900">Site health (exempel)</div>
+                  <div className="mt-4 grid grid-cols-5 gap-3">
+                    {[
+                      { label: "Technical SEO", score: 100 },
+                      { label: "On-page SEO", score: 87 },
+                      { label: "GEO readiness", score: 96 },
+                      { label: "Link health", score: 81 },
+                      { label: "Performance", score: 100 },
+                    ].map((d) => (
+                      <div key={d.label} className="flex flex-col items-center text-center">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-emerald-500 text-sm font-semibold text-zinc-900">
+                          {d.score}
+                        </div>
+                        <div className="mt-2 text-[11px] leading-tight text-zinc-600">{d.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,7 +417,7 @@ export default function Home() {
               </div>
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold">Mer pipeline från Google, LinkedIn & Meta</div>
-                <p className="mt-2 text-sm text-zinc-600">AI-driven SEO och kampanjstyrning som ger mer kvalificerad trafik till lägre CAC.</p>
+                <p className="mt-2 text-sm text-zinc-600">AI-driven SEO och kampanjstyrning – drivet av vår plattform SAMA, från sökord till publicerat content.</p>
               </div>
               <div className="rounded-3xl border border-zinc-200 bg-white p-6">
                 <div className="text-sm font-semibold">Högre CSAT och leveransprecision</div>
