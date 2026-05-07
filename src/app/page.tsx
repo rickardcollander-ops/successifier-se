@@ -25,7 +25,7 @@ export default function Home() {
             <a href="#tjanster" className="hover:text-zinc-950">Tjänster</a>
             <a href="#arbetssatt" className="hover:text-zinc-950">Arbetssätt</a>
             <a href="#resultat" className="hover:text-zinc-950">Resultat</a>
-            <a href="#om-mig" className="hover:text-zinc-950">Om mig</a>
+            <a href="#om-oss" className="hover:text-zinc-950">Om oss</a>
             <a href="#kontakt" className="hover:text-zinc-950">Kontakt</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -54,10 +54,10 @@ export default function Home() {
                 <span>Customer Success • AI • Automation • Marknadsföring</span>
               </div>
               <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Jag bygger AI-, automations- och kundfunktioner som säkrar intäkter, skalar team och tål ledningsgranskning.
+                Vi bygger AI-, automations- och kundfunktioner som säkrar intäkter, skalar team och tål ledningsgranskning.
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-                Från strategi till implementation. Jag hjälper bolag att gå från reaktiv drift till ett styrbart, mätbart och affärskritiskt system – med AI, automation och AI-driven marknadsföring på Google, LinkedIn och Meta.
+                Från strategi till implementation. Vi hjälper bolag att gå från reaktiv drift till ett styrbart, mätbart och affärskritiskt system – med AI, automation och AI-driven marknadsföring på Google, LinkedIn och Meta.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -71,14 +71,14 @@ export default function Home() {
                   href="#arbetssatt"
                   className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
                 >
-                  Se hur jag jobbar
+                  Se hur vi jobbar
                 </Link>
               </div>
 
             </div>
 
             <div className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_10px_30px_-18px_rgba(2,6,23,0.25)]">
-              <div className="text-sm font-semibold">Detta etablerar jag</div>
+              <div className="text-sm font-semibold">Detta etablerar vi</div>
               <ul className="mt-4 space-y-3 text-sm text-zinc-700">
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-indigo-600" />
@@ -136,28 +136,28 @@ export default function Home() {
         <section className="border-t border-zinc-200 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold tracking-tight">Varför bolag tar in mig när kundintäkter och leverans är affärskritiska</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">Varför bolag tar in oss när kundintäkter och leverans är affärskritiska</h2>
               <p className="mt-3 text-zinc-600">
-                När det finns intäktsrisk, kapacitetsbrist eller styrningsproblem bygger jag ett system som går att driva, följa upp och förbättra – med tydligt ansvar.
+                När det finns intäktsrisk, kapacitetsbrist eller styrningsproblem bygger vi ett system som går att driva, följa upp och förbättra – med tydligt ansvar.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">Ledningserfarenhet</div>
                 <p className="mt-2 text-sm text-zinc-600">
-                  Jag har byggt och lett globala Customer Success- och Supportfunktioner med ansvar för NRR, CSAT, SLA och operativ skala – inte bara processdesign.
+                  Vi har byggt och lett globala Customer Success- och Supportfunktioner med ansvar för NRR, CSAT, SLA och operativ skala – inte bara processdesign.
                 </p>
               </div>
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">Systemtänk</div>
                 <p className="mt-2 text-sm text-zinc-600">
-                  Jag arbetar inte i silos. Customer Success, Support, Revenue Operations och AI-styrning etableras som ett sammanhängande affärssystem.
+                  Vi arbetar inte i silos. Customer Success, Support, Revenue Operations och AI-styrning etableras som ett sammanhängande affärssystem.
                 </p>
               </div>
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">Implementation-first</div>
                 <p className="mt-2 text-sm text-zinc-600">
-                  Inga powerpoints utan leverans. Jag lämnar efter mig playbooks, dashboards, verktygskonfiguration och ett team som kan driva vidare utan mig.
+                  Inga powerpoints utan leverans. Vi lämnar efter oss playbooks, dashboards, verktygskonfiguration och ett team som kan driva vidare utan oss.
                 </p>
               </div>
             </div>
@@ -282,15 +282,15 @@ export default function Home() {
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">1. Diagnose</div>
-                <p className="mt-2 text-sm text-zinc-600">Jag kartlägger affärsmodell, kundportfölj, teamstruktur och systemlandskap. Fokus på var intäktsrisk, kapacitetsbrist och styrningsproblem faktiskt uppstår.</p>
+                <p className="mt-2 text-sm text-zinc-600">Vi kartlägger affärsmodell, kundportfölj, teamstruktur och systemlandskap. Fokus på var intäktsrisk, kapacitetsbrist och styrningsproblem faktiskt uppstår.</p>
               </div>
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">2. Architect</div>
-                <p className="mt-2 text-sm text-zinc-600">Jag designar operating model, KPI-struktur, playbooks och systemflöden som hänger ihop – från styrelserapport till daglig CSM-uppgift.</p>
+                <p className="mt-2 text-sm text-zinc-600">Vi designar operating model, KPI-struktur, playbooks och systemflöden som hänger ihop – från styrelserapport till daglig CSM-uppgift.</p>
               </div>
               <div className="rounded-3xl border border-zinc-200 p-6">
                 <div className="text-sm font-semibold">3. Implement & Enable</div>
-                <p className="mt-2 text-sm text-zinc-600">Jag bygger i verktygen, tränar teamet och etablerar uppföljning så lösningen lever vidare utan konsultberoende.</p>
+                <p className="mt-2 text-sm text-zinc-600">Vi bygger i verktygen, tränar teamet och etablerar uppföljning så lösningen lever vidare utan konsultberoende.</p>
               </div>
             </div>
           </div>
@@ -299,7 +299,7 @@ export default function Home() {
         <section id="resultat" className="border-t border-zinc-200 bg-zinc-50">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold tracking-tight">Resultat jag brukar bli inkopplad för att skapa</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">Resultat vi brukar bli inkopplade för att skapa</h2>
               <p className="mt-3 text-zinc-600">Typiska utfall när kundaffären behöver styras, inte hoppas på.</p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -357,16 +357,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="om-mig" className="border-t border-zinc-200 bg-zinc-50">
+        <section id="om-oss" className="border-t border-zinc-200 bg-zinc-50">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 md:grid-cols-2 md:items-start">
               <div>
-                <h2 className="text-2xl font-semibold tracking-tight">Om mig</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">Om oss</h2>
                 <p className="mt-4 text-zinc-600">
-                  Jag heter Rickard Collander och har lett Customer Success och Support i globala, digitala miljöer med ansvar för både intäktsskydd och operativ leverans. Min styrka ligger i att bygga system som fungerar för ledning, chefer och team samtidigt – där data, process och teknik arbetar tillsammans.
+                  Vi leds av Rickard Collander, som har byggt och drivit Customer Success och Support i globala, digitala miljöer med ansvar för både intäktsskydd och operativ leverans. Vår styrka ligger i att bygga system som fungerar för ledning, chefer och team samtidigt – där data, process och teknik arbetar tillsammans.
                 </p>
                 <p className="mt-4 text-zinc-600">
-                  Utanför jobbet laddar jag energi med familjen, fjällen och längdskidor – och när det finns en bana i närheten blir det gärna en padelmatch.
+                  Utanför jobbet laddar vi energi med familjen, fjällen och längdskidor – och när det finns en bana i närheten blir det gärna en padelmatch.
                 </p>
                 <div className="mt-5">
                   <a
@@ -397,7 +397,7 @@ export default function Home() {
                 </div>
                 <div className="text-sm font-semibold">När du lämnar sidan ska du tänka</div>
                 <p className="mt-2 text-sm text-zinc-600">
-                  “Den här personen kan ta ansvar för hela vår kundaffär, inte bara förbättra delar av den.”
+                  “Det här teamet kan ta ansvar för hela vår kundaffär, inte bara förbättra delar av den.”
                 </p>
                 <div className="mt-6 rounded-2xl bg-zinc-50 p-4 text-sm text-zinc-700">
                   <div className="font-semibold">Direkt</div>
