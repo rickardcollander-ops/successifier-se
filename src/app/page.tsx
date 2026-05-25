@@ -27,6 +27,7 @@ export default function Home() {
             <a href="#arbetssatt" className="hover:text-zinc-950">Arbetssätt</a>
             <a href="#resultat" className="hover:text-zinc-950">Resultat</a>
             <a href="#om-oss" className="hover:text-zinc-950">Om oss</a>
+            <Link href="/blog" className="hover:text-zinc-950">Blogg</Link>
             <a href="#kontakt" className="hover:text-zinc-950">Kontakt</a>
           </nav>
           <div className="flex items-center gap-2">
