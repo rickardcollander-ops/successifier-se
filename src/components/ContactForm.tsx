@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { Dict } from "@/lib/i18n";
 
 type FormState = {
   name: string;
@@ -10,7 +11,7 @@ type FormState = {
   message: string;
 };
 
-export default function ContactForm() {
+export default function ContactForm({ t }: { t: Dict["form"] }) {
   const [form, setForm] = useState<FormState>({
     name: "",
     company: "",
@@ -53,7 +54,7 @@ export default function ContactForm() {
         throw new Error(data.error || "Något gick fel");
       }
 
-      setSuccess("Tack! Vi återkommer så snart vi kan.");
+      setSuccess(t.successMessage);
       setForm({ name: "", company: "", email: "", phone: "", message: "" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Något gick fel");
@@ -67,58 +68,58 @@ export default function ContactForm() {
       <div className="grid gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-1.5">
-            <span className="text-sm font-medium text-zinc-700">Namn</span>
+            <span className="text-sm font-medium text-zinc-700">{t.nameLabel}</span>
             <input
               value={form.name}
               onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
               required
               className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
-              placeholder="Ditt namn"
+              placeholder={t.namePlaceholder}
             />
           </label>
           <label className="grid gap-1.5">
-            <span className="text-sm font-medium text-zinc-700">Företag</span>
+            <span className="text-sm font-medium text-zinc-700">{t.companyLabel}</span>
             <input
               value={form.company}
               onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
               className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
-              placeholder="Företagsnamn"
+              placeholder={t.companyPlaceholder}
             />
           </label>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-1.5">
-            <span className="text-sm font-medium text-zinc-700">Email</span>
+            <span className="text-sm font-medium text-zinc-700">{t.emailLabel}</span>
             <input
               value={form.email}
               onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
               type="email"
               required
               className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
-              placeholder="namn@bolag.se"
+              placeholder={t.emailPlaceholder}
             />
           </label>
           <label className="grid gap-1.5">
-            <span className="text-sm font-medium text-zinc-700">Telefon</span>
+            <span className="text-sm font-medium text-zinc-700">{t.phoneLabel}</span>
             <input
               value={form.phone}
               onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
               className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
-              placeholder="+46 ..."
+              placeholder={t.phonePlaceholder}
             />
           </label>
         </div>
 
         <label className="grid gap-1.5">
-          <span className="text-sm font-medium text-zinc-700">Vad vill du uppnå?</span>
+          <span className="text-sm font-medium text-zinc-700">{t.messageLabel}</span>
           <textarea
             value={form.message}
             onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
             required
             rows={5}
             className="resize-none rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm outline-none shadow-sm focus:border-indigo-400 focus:ring-4 focus:ring-[var(--ring)]"
-            placeholder="Kort beskrivning av nuläge, mål och tidsram..."
+            placeholder={t.messagePlaceholder}
           />
         </label>
 
@@ -139,19 +140,17 @@ export default function ContactForm() {
             disabled={submitting}
             className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)] disabled:opacity-60"
           >
-            {submitting ? "Skickar..." : "Boka strategisamtal"}
+            {submitting ? t.submittingLabel : t.submitLabel}
           </button>
           <a
             href={mailtoHref}
             className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--ring)]"
           >
-            Skicka via email
+            {t.emailFallbackLabel}
           </a>
         </div>
 
-        <p className="text-xs text-zinc-500">
-          Genom att skicka godkänner du att vi kontaktar dig tillbaka. Inga nyhetsbrev.
-        </p>
+        <p className="text-xs text-zinc-500">{t.consentText}</p>
       </div>
     </form>
   );

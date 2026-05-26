@@ -3,61 +3,58 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import { dict } from "@/lib/i18n";
 
-const t = dict.sv;
-
 export const metadata = {
-  title: t.blog.metaTitle,
-  description: t.blog.metaDescription,
+  title: dict.en.blog.metaTitle,
+  description: dict.en.blog.metaDescription,
 };
 
-export default function BlogPage() {
+export default function EnBlogPage() {
   const posts = getAllPosts();
+  const t = dict.en;
 
   return (
     <div className="min-h-screen text-zinc-950">
       <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/en" className="flex items-center gap-3">
             <Image src="/logo.svg" alt="Successifier" width={36} height={36} className="h-9 w-9 drop-shadow-sm" priority />
             <div className="leading-tight">
               <div className="text-sm font-semibold">Successifier.se</div>
-              <div className="text-xs text-zinc-500">Customer Success • AI • Automation • Marknadsföring</div>
+              <div className="text-xs text-zinc-500">Customer Success • AI • Automation • Marketing</div>
             </div>
           </Link>
           <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
-            <Link href="/#tjanster" className="hover:text-zinc-950">Tjänster</Link>
-            <Link href="/#sama" className="hover:text-zinc-950">Plattform</Link>
-            <Link href="/#arbetssatt" className="hover:text-zinc-950">Arbetssätt</Link>
-            <Link href="/#resultat" className="hover:text-zinc-950">Resultat</Link>
-            <Link href="/#om-oss" className="hover:text-zinc-950">Om oss</Link>
-            <Link href="/blog" className="font-medium text-zinc-950">Blogg</Link>
-            <Link href="/#kontakt" className="hover:text-zinc-950">Kontakt</Link>
+            <Link href="/en#tjanster" className="hover:text-zinc-950">{t.nav.services}</Link>
+            <Link href="/en#sama" className="hover:text-zinc-950">{t.nav.platform}</Link>
+            <Link href="/en#arbetssatt" className="hover:text-zinc-950">{t.nav.approach}</Link>
+            <Link href="/en#resultat" className="hover:text-zinc-950">{t.nav.results}</Link>
+            <Link href="/en#om-oss" className="hover:text-zinc-950">{t.nav.about}</Link>
+            <Link href="/en/blog" className="font-medium text-zinc-950">{t.nav.blog}</Link>
+            <Link href="/" className="rounded-md border border-zinc-200 px-2 py-0.5 text-xs font-semibold text-zinc-600 hover:bg-zinc-50">SV</Link>
           </nav>
           <a
-            href="/#kontakt"
+            href="/en#kontakt"
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95"
           >
-            Boka strategisamtal
+            {t.nav.cta}
           </a>
         </div>
       </header>
 
       <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="max-w-2xl">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Blogg</h1>
-          <p className="mt-3 text-zinc-600">
-            Insikter och guider om Customer Success, AI, automation och marknadsföring.
-          </p>
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.blog.heading}</h1>
+          <p className="mt-3 text-zinc-600">{t.blog.description}</p>
         </div>
 
         {posts.length === 0 ? (
-          <p className="mt-12 text-zinc-500">Inga inlägg publicerade än.</p>
+          <p className="mt-12 text-zinc-500">{t.blog.noPosts}</p>
         ) : (
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`/en/blog/${post.slug}`}
                 className="group flex flex-col rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:shadow-md"
               >
                 {post.tags.length > 0 && (
@@ -69,12 +66,10 @@ export default function BlogPage() {
                     ))}
                   </div>
                 )}
-                <h2 className="text-base font-semibold leading-snug text-zinc-900 group-hover:text-indigo-700">
-                  {post.title}
-                </h2>
+                <h2 className="text-base font-semibold leading-snug text-zinc-900 group-hover:text-indigo-700">{post.title}</h2>
                 <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-zinc-600">{post.excerpt}</p>
                 <div className="mt-auto pt-4 text-xs text-zinc-400">
-                  {new Date(post.date).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })}
+                  {new Date(post.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}
                 </div>
               </Link>
             ))}
