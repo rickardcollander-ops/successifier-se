@@ -47,7 +47,7 @@ export default function ContactForm() {
 
       if (!res.ok || !data.ok) {
         if (data.fallbackToMailto) {
-          setError("Mailutskick är inte konfigurerat på servern ännu. Använd knappen för att skicka via email.");
+          window.location.href = mailtoHref;
           return;
         }
         throw new Error(data.error || "Något gick fel");

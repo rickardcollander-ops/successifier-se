@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 type Payload = {
   name: string;
@@ -22,31 +22,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Missing required fields" }, { status: 400 });
   }
 
-  const {
-    SMTP_HOST,
-    SMTP_PORT,
-    SMTP_SECURE,
-    SMTP_USER,
-    SMTP_PASS,
-    BOOKING_TO,
-  } = process.env;
+  const { RESEND_API_KEY, BOOKING_TO } = process.env;
 
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !BOOKING_TO) {
+  if (!RESEND_API_KEY || !BOOKING_TO) {
     return NextResponse.json(
-      { ok: false, fallbackToMailto: true, error: "SMTP not configured" },
+      { ok: false, fallbackToMailto: true, error: "Email not configured" },
       { status: 503 }
     );
   }
 
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT),
-    secure: SMTP_SECURE === "true" || SMTP_SECURE === "1",
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASS,
-    },
-  });
+  const resend = new Resend(RESEND_API_KEY);
 
   const subject = `Bokningsförfrågan — Successifier.se — ${body.company ? body.company + " — " : ""}${body.name}`;
 
@@ -62,18 +47,17 @@ export async function POST(req: Request) {
     .filter(Boolean)
     .join("\n");
 
-  try {
-    await transporter.sendMail({
-      from: SMTP_USER,
-      to: BOOKING_TO,
-      replyTo: body.email,
-      subject,
-      text,
-    });
+  const { error } = await resend.emails.send({
+    from: "Successifier.se <no-reply@successifier.se>",
+    to: BOOKING_TO,
+    replyTo: body.email,
+    subject,
+    text,
+  });
 
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : "Failed to send email";
-    return NextResponse.json({ ok: false, error: msg }, { status: 500 });
+  if (error) {
+    return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
+
+  return NextResponse.json({ ok: true });
 }
