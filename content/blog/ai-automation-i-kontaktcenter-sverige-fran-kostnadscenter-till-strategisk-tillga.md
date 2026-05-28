@@ -1,7 +1,7 @@
 ---
 title: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång"
 slug: "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga"
-date: 2026-05-25T12:29:23.080Z
+date: 2026-05-28T18:03:47.114Z
 excerpt: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång Svenska kontaktcenter förlorar miljontals kronor varje år på repetitivt…"
 description: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång Svenska kontaktcenter förlorar miljontals kronor varje år på repetitivt…"
 language: "en"
