@@ -6,6 +6,14 @@ import { dict } from "@/lib/i18n";
 export const metadata = {
   title: dict.en.blog.metaTitle,
   description: dict.en.blog.metaDescription,
+  alternates: {
+    canonical: "/en/blog",
+    languages: {
+      "sv-SE": "/blog",
+      "en": "/en/blog",
+      "x-default": "/blog",
+    },
+  },
 };
 
 export default function EnBlogPage() {

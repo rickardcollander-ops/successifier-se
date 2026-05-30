@@ -12,7 +12,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
-  return { title: `${post.title} — Successifier.se`, description: post.excerpt };
+  return {
+    title: `${post.title} — Successifier.se`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+      languages: {
+        "sv-SE": `/blog/${slug}`,
+        "en": `/en/blog/${slug}`,
+        "x-default": `/blog/${slug}`,
+      },
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -22,8 +33,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const html = await marked(post.content);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: "sv-SE",
+    mainEntityOfPage: `https://successifier.se/blog/${slug}`,
+    author: { "@type": "Organization", name: "Successifier.se", url: "https://successifier.se" },
+    publisher: {
+      "@type": "Organization",
+      name: "Successifier.se",
+      logo: { "@type": "ImageObject", url: "https://successifier.se/logo.svg" },
+    },
+  };
+
   return (
     <div className="min-h-screen text-zinc-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center gap-3">
