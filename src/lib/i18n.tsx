@@ -195,7 +195,7 @@ const sv = {
   about: {
     overline: "Om oss",
     heading: "Om oss",
-    p1: "Successifier leds av Rickard Collander med erfarenhet av att bygga och driva Customer Success och Support hos {{VAR_RICKARD_BYGGT_CS_SUPPORT}} — med ansvar för intäktsskydd, operativ leverans och ledningsrapportering. Vår styrka är att bygga system som fungerar för ledning, chefer och team samtidigt.",
+    p1: "Successifier leds av Rickard Collander med erfarenhet av att bygga och driva Customer Success och Support hos Scania, Telia, Länsförsäkringar, SBAB, Söderberg & Partners och Releasy — med ansvar för intäktsskydd, operativ leverans och ledningsrapportering. Vår styrka är att bygga system som fungerar för ledning, chefer och team samtidigt.",
     p2: "Vi levererar inte slides — vi lämnar efter oss ett system som teamet faktiskt driver vidare.",
     p3: "Rickard leder uppdraget. Beroende på scope kopplar vi in ett kurerat nätverk av specialister och underkonsulter — valda för uppgiften, inte för att fylla ett schema.",
     linkedIn: "LinkedIn",
@@ -440,7 +440,7 @@ const en: typeof sv = {
   about: {
     overline: "About us",
     heading: "About us",
-    p1: "Successifier is led by Rickard Collander with experience building and operating Customer Success and Support at {{WHERE_RICKARD_BUILT_CS_SUPPORT}} — with accountability for revenue protection, operational delivery, and management reporting. Our strength is building systems that work for management, managers, and teams simultaneously.",
+    p1: "Successifier is led by Rickard Collander with experience building and operating Customer Success and Support at Scania, Telia, Länsförsäkringar, SBAB, Söderberg & Partners and Releasy — with accountability for revenue protection, operational delivery, and management reporting. Our strength is building systems that work for management, managers, and teams simultaneously.",
     p2: "We don't deliver slides — we leave behind a system the team actually operates.",
     p3: "Rickard leads the engagement. Depending on scope, we bring in a curated network of specialists and sub-consultants — selected for the task, not to fill a schedule.",
     linkedIn: "LinkedIn",
