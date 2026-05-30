@@ -1,7 +1,7 @@
 ---
 title: "SEO-konsult för B2B-företag: Så dominerar du Google med rätt strategi"
 slug: "seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi"
-date: 2026-05-28T18:03:59.167Z
+date: 2026-05-30T10:39:05.427Z
 excerpt: "SEO konsult för B2B företag: Så dominerar du Google med rätt strategi De flesta B2B företag som anlitar en SEO byrå får en strategi designad för e handel…"
 description: "SEO konsult för B2B företag: Så dominerar du Google med rätt strategi De flesta B2B företag som anlitar en SEO byrå får en strategi designad för e handel…"
 language: "en"
