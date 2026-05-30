@@ -50,11 +50,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Hem", item: "https://successifier.se/" },
+      { "@type": "ListItem", position: 2, name: "Blogg", item: "https://successifier.se/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://successifier.se/blog/${slug}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen text-zinc-950">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
@@ -65,7 +79,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <div className="text-xs text-zinc-500">Customer Success • AI • Automation • Marknadsföring</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex" aria-label="Huvudmeny">
             <Link href="/#tjanster" className="hover:text-zinc-950">Tjänster</Link>
             <Link href="/#sama" className="hover:text-zinc-950">Plattform</Link>
             <Link href="/#arbetssatt" className="hover:text-zinc-950">Arbetssätt</Link>
@@ -83,10 +97,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
-      <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-        <Link href="/blog" className="mb-8 inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-900">
-          ← Alla inlägg
-        </Link>
+      <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6" aria-label="Artikel">
+        <nav aria-label="Brödsmulor" className="mb-8 text-sm text-zinc-500">
+          <ol className="flex flex-wrap items-center gap-1.5">
+            <li><Link href="/" className="hover:text-zinc-900">Hem</Link></li>
+            <li aria-hidden="true" className="text-zinc-300">/</li>
+            <li><Link href="/blog" className="hover:text-zinc-900">Blogg</Link></li>
+            <li aria-hidden="true" className="text-zinc-300">/</li>
+            <li className="text-zinc-700" aria-current="page">{post.title}</li>
+          </ol>
+        </nav>
 
         <div className="mt-4">
           {post.tags.length > 0 && (
@@ -122,13 +142,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </main>
 
-      <footer className="border-t border-zinc-200 bg-white">
+      <footer className="border-t border-zinc-200 bg-white" aria-label="Sidfot">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-10 text-sm text-zinc-500 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Successifier.se</div>
           <div className="flex gap-4">
             <a className="hover:text-zinc-900" href="mailto:rc@successifier.com">rc@successifier.com</a>
             <a className="hover:text-zinc-900" href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="hover:text-zinc-900" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a className="hover:text-zinc-900" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
           </div>
         </div>
       </footer>
