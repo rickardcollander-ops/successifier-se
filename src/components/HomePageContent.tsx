@@ -39,14 +39,14 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <Image src="/logo.svg" alt="Successifier" width={32} height={32} className="h-8 w-8" priority />
             <div className="leading-tight">
               <div className="text-sm font-semibold tracking-tight">Successifier.se</div>
-              <div className="text-xs text-zinc-400">Customer Success · AI · Automation</div>
+              <div className="text-xs text-zinc-400">AI-konsulting · Bygg & implementering</div>
             </div>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-zinc-500 md:flex">
+            <a href="#passar" className="hover:text-zinc-900 transition-colors">{t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}</a>
             <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
             <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
             <a href="#arbetssatt" className="hover:text-zinc-900 transition-colors">{t.nav.approach}</a>
-            <a href="#resultat" className="hover:text-zinc-900 transition-colors">{t.nav.results}</a>
             <a href="#om-oss" className="hover:text-zinc-900 transition-colors">{t.nav.about}</a>
             <Link href={t.nav.blogHref} className="hover:text-zinc-900 transition-colors">{t.nav.blog}</Link>
             <a href="#kontakt" className="hover:text-zinc-900 transition-colors">{t.nav.contact}</a>
@@ -85,13 +85,15 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 <span className="text-zinc-200">|</span>
                 <span>{t.hero.badge2}</span>
               </div>
+              {/* Primär H1: "AI-konsulting som bygger och driftsätter — inte PowerPoint." */}
+              {/* Variant: "Vi bygger AI:n. Vi driftsätter den. Sen driver ni vidare." */}
               <h1 className="text-4xl font-light tracking-tight text-zinc-950 sm:text-5xl leading-tight">
                 {t.hero.heading}
               </h1>
               <p className="mt-5 text-[15px] leading-7 text-zinc-600">
                 {t.hero.description}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href="#kontakt"
                   className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors"
@@ -101,7 +103,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 </a>
                 <a
                   href="#arbetssatt"
-                  className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50 transition-colors"
+                  className="text-sm font-medium text-zinc-600 underline underline-offset-4 hover:text-zinc-900 transition-colors"
                 >
                   {t.hero.cta2}
                 </a>
@@ -141,6 +143,34 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
+        {/* Fit — "Det här passar er om…" */}
+        <section id="passar" className="border-b border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+            <div className="max-w-2xl">
+              <Overline>{t.fit.overline}</Overline>
+              <h2 className="text-2xl font-light tracking-tight">{t.fit.heading}</h2>
+            </div>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {t.fit.items.map((item) => (
+                <li key={item} className="flex gap-3 rounded-lg border border-zinc-200 bg-white p-5">
+                  <span className="mt-0.5 text-zinc-300 select-none shrink-0">—</span>
+                  <span className="text-sm leading-6 text-zinc-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 flex flex-wrap items-center gap-6">
+              <p className="text-sm text-zinc-500 italic">{t.fit.closing}</p>
+              <a
+                href="#kontakt"
+                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shrink-0 transition-colors"
+                style={{ backgroundColor: BRAND }}
+              >
+                {t.fit.cta}
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Why — dark section */}
         <section className="border-b border-zinc-900" style={{ backgroundColor: BRAND }}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -170,7 +200,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <div className="max-w-2xl">
               <Overline>{t.services.overline}</Overline>
               <h2 className="text-2xl font-light tracking-tight">{t.services.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.services.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.services.intro}</p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {services.map((p) => (
@@ -197,7 +227,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* SAMA */}
+        {/* SAMA — reframed as proof + engine */}
         <section id="sama" className="border-b border-zinc-100 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
             <div className="grid gap-12 md:grid-cols-2 md:items-start">
@@ -205,45 +235,50 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 <Overline>{t.sama.overline}</Overline>
                 <h2 className="text-2xl font-light tracking-tight sm:text-3xl">{t.sama.heading}</h2>
                 <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.sama.description}</p>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="mt-8 space-y-4">
                   {[
-                    { title: t.sama.f1Title, text: t.sama.f1Text },
-                    { title: t.sama.f2Title, text: t.sama.f2Text },
-                    { title: t.sama.f3Title, text: t.sama.f3Text },
-                    { title: t.sama.f4Title, text: t.sama.f4Text },
-                  ].map((f) => (
-                    <div key={f.title} className="rounded-lg border border-zinc-200 bg-slate-50 p-4">
-                      <div className="text-xs font-medium text-zinc-900">{f.title}</div>
-                      <p className="mt-1.5 text-sm leading-6 text-zinc-500">{f.text}</p>
+                    { title: t.sama.v1Title, text: t.sama.v1Text },
+                    { title: t.sama.v2Title, text: t.sama.v2Text },
+                    { title: t.sama.v3Title, text: t.sama.v3Text },
+                  ].map((v) => (
+                    <div key={v.title} className="flex gap-4 rounded-lg border border-zinc-200 bg-slate-50 p-4">
+                      <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 mt-2" />
+                      <div>
+                        <div className="text-sm font-medium text-zinc-900">{v.title}</div>
+                        <p className="mt-1 text-sm leading-6 text-zinc-500">{v.text}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="#kontakt"
-                    className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium text-white transition-colors"
-                    style={{ backgroundColor: BRAND }}
-                  >
-                    {t.sama.cta1}
+                {/* Nedtonad CTA — text-länk, pekar mot strategisamtal */}
+                <p className="mt-6 text-sm text-zinc-400 italic">
+                  <a href="#kontakt" className="underline underline-offset-4 hover:text-zinc-700 transition-colors">
+                    {t.sama.ctaText}
                   </a>
-                  <a
-                    href="#sama-mockup"
-                    className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50 transition-colors"
-                  >
-                    {t.sama.cta2}
-                  </a>
-                </div>
+                </p>
               </div>
 
-              <div id="sama-mockup" className="space-y-4">
-                <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-md">
-                  <Image
-                    src="/sama-dashboard.png"
-                    alt="SAMA dashboard"
-                    width={1600}
-                    height={1000}
-                    className="h-auto w-full"
-                  />
+              <div className="space-y-4">
+                <div className="rounded-lg border border-zinc-200 bg-slate-50 p-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.sama.healthLabel}</div>
+                    <span className="rounded-full border border-zinc-200 bg-white px-2 py-0.5 text-[10px] font-medium text-zinc-400">
+                      {t.sama.exampleBadge}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-5 gap-3">
+                    {healthScores.map((d) => (
+                      <div key={d.label} className="flex flex-col items-center text-center">
+                        <div
+                          className="flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-medium text-zinc-900"
+                          style={{ borderColor: BRAND }}
+                        >
+                          {d.score}
+                        </div>
+                        <div className="mt-1.5 text-[10px] leading-tight text-zinc-400">{d.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   {[
@@ -258,21 +293,15 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     </div>
                   ))}
                 </div>
-                <div className="rounded-lg border border-zinc-200 bg-white p-5">
-                  <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-4">{t.sama.healthLabel}</div>
-                  <div className="grid grid-cols-5 gap-3">
-                    {healthScores.map((d) => (
-                      <div key={d.label} className="flex flex-col items-center text-center">
-                        <div
-                          className="flex h-11 w-11 items-center justify-center rounded-full border-2 text-sm font-medium text-zinc-900"
-                          style={{ borderColor: BRAND }}
-                        >
-                          {d.score}
-                        </div>
-                        <div className="mt-2 text-[10px] leading-tight text-zinc-400">{d.label}</div>
-                      </div>
-                    ))}
-                  </div>
+                {/* Dashboard image — visas om filen finns */}
+                <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+                  <Image
+                    src="/sama-dashboard.png"
+                    alt="SAMA dashboard"
+                    width={1600}
+                    height={1000}
+                    className="h-auto w-full"
+                  />
                 </div>
               </div>
             </div>
@@ -329,8 +358,32 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
+        {/* Mini-cases / Social proof */}
+        <section className="border-b border-zinc-100 bg-slate-50">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+            <div className="max-w-2xl">
+              <Overline>{t.cases.overline}</Overline>
+              <h2 className="text-2xl font-light tracking-tight">{t.cases.heading}</h2>
+              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.cases.description}</p>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              {[
+                { title: t.cases.case1Title, result: t.cases.case1Result, detail: t.cases.case1Detail },
+                { title: t.cases.case2Title, result: t.cases.case2Result, detail: t.cases.case2Detail },
+              ].map((c) => (
+                <div key={c.title} className="rounded-lg border border-zinc-200 bg-white p-6">
+                  <div className="text-sm font-medium text-zinc-900">{c.title}</div>
+                  <div className="mt-3 text-xl font-light text-zinc-900">{c.result}</div>
+                  <p className="mt-2 text-sm leading-6 text-zinc-500">{c.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs text-zinc-400">{t.cases.note}</p>
+          </div>
+        </section>
+
         {/* FAQ */}
-        <section id="faq" className="border-b border-zinc-100 bg-slate-50">
+        <section id="faq" className="border-b border-zinc-100 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.faq.overline}</Overline>
@@ -353,7 +406,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* About */}
-        <section id="om-oss" className="border-b border-zinc-100 bg-white">
+        <section id="om-oss" className="border-b border-zinc-100 bg-slate-50">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 md:grid-cols-2 md:items-start">
               <div>
@@ -361,6 +414,8 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 <h2 className="text-2xl font-light tracking-tight">{t.about.heading}</h2>
                 <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.about.p1}</p>
                 <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.about.p2}</p>
+                {/* Partnermodell */}
+                <p className="mt-4 text-[15px] leading-7 text-zinc-500 border-l-2 border-zinc-200 pl-4">{t.about.p3}</p>
                 <div className="mt-6">
                   <a
                     className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50 transition-colors"
@@ -379,11 +434,15 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div>
                     <div className="text-sm font-medium text-zinc-900">Rickard Collander</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">Customer Success & Support Leadership</div>
+                    <div className="text-xs text-zinc-400 mt-0.5">Grundare, Successifier.se</div>
                   </div>
                 </div>
+                {/* Kundcitat — fyll i {{KUNDCITAT}} och {{KUND_NAMN_ROLL_FÖRETAG}} */}
                 <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.quoteHeading}</div>
                 <p className="text-sm leading-6 text-zinc-600 italic">{t.about.quote}</p>
+                {t.about.quotePerson && (
+                  <div className="mt-2 text-xs text-zinc-400">— {t.about.quotePerson}</div>
+                )}
                 <div className="mt-6 rounded border border-zinc-100 bg-slate-50 p-4">
                   <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.contactLabel}</div>
                   <a className="text-sm text-zinc-700 hover:text-zinc-900 underline" href="mailto:rc@successifier.com">rc@successifier.com</a>
@@ -395,7 +454,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Contact */}
-        <section id="kontakt" className="bg-slate-50">
+        <section id="kontakt" className="bg-white">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2">
             <div>
               <Overline>{t.contact.overline}</Overline>
@@ -404,7 +463,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 {t.contact.description}{" "}
                 <span className="font-medium text-zinc-900">rc@successifier.com</span>.
               </p>
-              <div className="mt-6 rounded-lg border border-zinc-200 bg-white p-5">
+              <div className="mt-6 rounded-lg border border-zinc-200 bg-slate-50 p-5">
                 <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">{t.contact.directLabel}</div>
                 <div className="text-sm text-zinc-700 space-y-1">
                   <div>{t.contact.emailLabel}: <a className="underline hover:text-zinc-900" href="mailto:rc@successifier.com">rc@successifier.com</a></div>
