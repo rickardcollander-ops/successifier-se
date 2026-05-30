@@ -30,10 +30,49 @@ export default function HomePageContent({ t }: { t: Dict }) {
     { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result },
   ];
 
+  const pageUrl = t.locale === "sv" ? "https://successifier.se/" : "https://successifier.se/en";
+
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://successifier.se/#service",
+        name: "Successifier.se",
+        url: pageUrl,
+        image: "https://successifier.se/logo.svg",
+        email: "rc@successifier.com",
+        telephone: "+46722136422",
+        areaServed: "SE",
+        description: t.hero.description,
+        founder: { "@type": "Person", name: "Rickard Collander" },
+        sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          { q: t.faq.q1, a: t.faq.a1 },
+          { q: t.faq.q2, a: t.faq.a2 },
+          { q: t.faq.q3, a: t.faq.a3 },
+          { q: t.faq.q4, a: t.faq.a4 },
+        ].map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen text-zinc-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white/90 backdrop-blur" aria-label={t.locale === "sv" ? "Sidhuvud" : "Site header"}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
             <Image src="/logo.svg" alt="Successifier" width={32} height={32} className="h-8 w-8" priority />
@@ -42,7 +81,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               <div className="text-xs text-zinc-400">AI-konsulting · Bygg & implementering</div>
             </div>
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-500 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-zinc-500 md:flex" aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}>
             <a href="#passar" className="hover:text-zinc-900 transition-colors">{t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}</a>
             <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
             <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
@@ -75,9 +114,9 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </div>
       </header>
 
-      <main>
+      <main aria-label={t.locale === "sv" ? "Huvudinnehåll" : "Main content"}>
         {/* Hero */}
-        <section className="border-b border-zinc-100">
+        <section className="border-b border-zinc-100" aria-label={t.locale === "sv" ? "Introduktion" : "Introduction"}>
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
             <div className="flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 text-xs text-zinc-400 mb-5">
@@ -144,7 +183,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Fit — "Det här passar er om…" */}
-        <section id="passar" className="border-b border-zinc-100 bg-white">
+        <section id="passar" className="border-b border-zinc-100 bg-white" aria-label={t.fit.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.fit.overline}</Overline>
@@ -172,7 +211,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Why — dark section */}
-        <section className="border-b border-zinc-900" style={{ backgroundColor: BRAND }}>
+        <section className="border-b border-zinc-900" style={{ backgroundColor: BRAND }} aria-label={t.why.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline><span className="text-white/40">{t.why.overline}</span></Overline>
@@ -195,7 +234,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Services */}
-        <section id="tjanster" className="border-b border-zinc-100 bg-slate-50">
+        <section id="tjanster" className="border-b border-zinc-100 bg-slate-50" aria-label={t.services.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.services.overline}</Overline>
@@ -228,7 +267,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* SAMA — reframed as proof + engine */}
-        <section id="sama" className="border-b border-zinc-100 bg-white">
+        <section id="sama" className="border-b border-zinc-100 bg-white" aria-label={t.sama.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
             <div className="grid gap-12 md:grid-cols-2 md:items-start">
               <div>
@@ -309,7 +348,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Approach */}
-        <section id="arbetssatt" className="border-b border-zinc-100 bg-slate-50">
+        <section id="arbetssatt" className="border-b border-zinc-100 bg-slate-50" aria-label={t.approach.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.approach.overline}</Overline>
@@ -333,7 +372,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Results */}
-        <section id="resultat" className="border-b border-zinc-100 bg-white">
+        <section id="resultat" className="border-b border-zinc-100 bg-white" aria-label={t.results.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.results.overline}</Overline>
@@ -359,7 +398,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Mini-cases / Social proof */}
-        <section className="border-b border-zinc-100 bg-slate-50">
+        <section className="border-b border-zinc-100 bg-slate-50" aria-label={t.cases.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.cases.overline}</Overline>
@@ -383,7 +422,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="border-b border-zinc-100 bg-white">
+        <section id="faq" className="border-b border-zinc-100 bg-white" aria-label={t.faq.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <Overline>{t.faq.overline}</Overline>
@@ -406,7 +445,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* About */}
-        <section id="om-oss" className="border-b border-zinc-100 bg-slate-50">
+        <section id="om-oss" className="border-b border-zinc-100 bg-slate-50" aria-label={t.about.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 md:grid-cols-2 md:items-start">
               <div>
@@ -421,7 +460,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50 transition-colors"
                     href="https://www.linkedin.com/in/rickard-collander/"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                   >
                     {t.about.linkedIn}
                   </a>
@@ -454,7 +493,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Contact */}
-        <section id="kontakt" className="bg-white">
+        <section id="kontakt" className="bg-white" aria-label={t.contact.heading}>
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2">
             <div>
               <Overline>{t.contact.overline}</Overline>
@@ -476,13 +515,13 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
       </main>
 
-      <footer className="border-t border-zinc-200 bg-white">
+      <footer className="border-t border-zinc-200 bg-white" aria-label={t.locale === "sv" ? "Sidfot" : "Site footer"}>
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-xs text-zinc-400 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} {t.footer.rights}</div>
           <div className="flex gap-5">
             <a className="hover:text-zinc-700 transition-colors" href="mailto:rc@successifier.com">rc@successifier.com</a>
             <a className="hover:text-zinc-700 transition-colors" href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="hover:text-zinc-700 transition-colors" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a className="hover:text-zinc-700 transition-colors" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
           </div>
         </div>
       </footer>

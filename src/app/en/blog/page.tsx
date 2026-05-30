@@ -20,8 +20,39 @@ export default function EnBlogPage() {
   const posts = getAllPosts();
   const t = dict.en;
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://successifier.se/en" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://successifier.se/en/blog" },
+        ],
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://successifier.se/en/blog#blog",
+        name: t.blog.metaTitle,
+        description: t.blog.metaDescription,
+        inLanguage: "en",
+        url: "https://successifier.se/en/blog",
+        blogPost: posts.map((post) => ({
+          "@type": "BlogPosting",
+          headline: post.title,
+          datePublished: post.date,
+          url: `https://successifier.se/en/blog/${post.slug}`,
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen text-zinc-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <header className="sticky top-0 z-20 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <Link href="/en" className="flex items-center gap-3">
@@ -31,7 +62,7 @@ export default function EnBlogPage() {
               <div className="text-xs text-zinc-500">Customer Success • AI • Automation • Marketing</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex" aria-label="Main navigation">
             <Link href="/en#tjanster" className="hover:text-zinc-950">{t.nav.services}</Link>
             <Link href="/en#sama" className="hover:text-zinc-950">{t.nav.platform}</Link>
             <Link href="/en#arbetssatt" className="hover:text-zinc-950">{t.nav.approach}</Link>
@@ -49,7 +80,14 @@ export default function EnBlogPage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6" aria-label="Blog overview">
+        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-zinc-500">
+          <ol className="flex flex-wrap items-center gap-1.5">
+            <li><Link href="/en" className="hover:text-zinc-900">Home</Link></li>
+            <li aria-hidden="true" className="text-zinc-300">/</li>
+            <li className="text-zinc-700" aria-current="page">Blog</li>
+          </ol>
+        </nav>
         <div className="max-w-2xl">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.blog.heading}</h1>
           <p className="mt-3 text-zinc-600">{t.blog.description}</p>
@@ -85,13 +123,13 @@ export default function EnBlogPage() {
         )}
       </main>
 
-      <footer className="border-t border-zinc-200 bg-white">
+      <footer className="border-t border-zinc-200 bg-white" aria-label="Site footer">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-10 text-sm text-zinc-500 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Successifier.se</div>
           <div className="flex gap-4">
             <a className="hover:text-zinc-900" href="mailto:rc@successifier.com">rc@successifier.com</a>
             <a className="hover:text-zinc-900" href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="hover:text-zinc-900" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a className="hover:text-zinc-900" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
           </div>
         </div>
       </footer>
