@@ -8,6 +8,14 @@ const t = dict.sv;
 export const metadata = {
   title: t.blog.metaTitle,
   description: t.blog.metaDescription,
+  alternates: {
+    canonical: "/blog",
+    languages: {
+      "sv-SE": "/blog",
+      "en": "/en/blog",
+      "x-default": "/blog",
+    },
+  },
 };
 
 export default function BlogPage() {

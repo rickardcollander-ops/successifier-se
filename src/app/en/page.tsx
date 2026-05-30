@@ -2,9 +2,17 @@ import HomePageContent from "@/components/HomePageContent";
 import { dict } from "@/lib/i18n";
 
 export const metadata = {
-  title: "Successifier.se — Customer Success, AI, Automation & the SAMA Platform",
+  title: "Successifier.se — Customer Success, AI & Automation",
   description:
-    "Swedish consultancy specialising in Customer Success, Contact Center, AI and automation. We drive SEO and marketing on Google, LinkedIn and Meta — with our own SAMA platform for AI visibility, GEO-readiness and content publishing.",
+    "Swedish consultancy for Customer Success, AI and automation. We drive SEO and marketing — with our own SAMA platform for AI visibility and GEO-readiness.",
+  alternates: {
+    canonical: "/en",
+    languages: {
+      "sv-SE": "/",
+      "en": "/en",
+      "x-default": "/",
+    },
+  },
 };
 
 export default function EnglishHome() {

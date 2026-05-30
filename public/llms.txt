@@ -1,0 +1,26 @@
+# Successifier.se
+
+> Svensk konsultverksamhet inom Customer Success, Contact Center, AI och automation. Vi driver SEO och marknadsföring på Google, LinkedIn och Meta – med vår egen plattform SAMA för AI-synlighet, GEO-readiness och content-publicering.
+
+## Huvudsidor
+
+- [Startsida (svenska)](https://successifier.se/): Tjänster inom Customer Success, AI, automation och marknadsföring samt SAMA-plattformen.
+- [Home (English)](https://successifier.se/en): Customer Success, AI, automation and marketing services plus the SAMA platform.
+- [Blogg](https://successifier.se/blog): Insikter och guider om Customer Success, AI, automation och marknadsföring.
+- [Blog (English)](https://successifier.se/en/blog): Insights and guides on Customer Success, AI, automation and marketing.
+
+## Artiklar
+
+- [AI-konsult för B2B: 5 projekt som ger ROI inom 90 dagar](https://successifier.se/blog/ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar)
+- [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](https://successifier.se/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga)
+- [AI-synlighet i marknadsföring 2026: allt du behöver veta](https://successifier.se/blog/ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta)
+- [SEO-konsult för B2B-företag: så dominerar du Google med rätt strategi](https://successifier.se/blog/seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi)
+- [Customer Success-plattform för SaaS: så väljer du rätt 2026](https://successifier.se/blog/customer-success-plattform-for-saas-sa-valjer-du-ratt-2026)
+- [Varför varje B2B-bolag i Sverige behöver en AI-konsult 2026](https://successifier.se/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026)
+- [De 7 bästa Customer Success-verktygen för B2B 2026](https://successifier.se/blog/de-7-basta-customer-success-verktygen-for-b2b-2026)
+
+## Kontakt
+
+- E-post: rc@successifier.com
+- Telefon: +46 72 213 64 22
+- LinkedIn: https://www.linkedin.com/in/rickard-collander/
