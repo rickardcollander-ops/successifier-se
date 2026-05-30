@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult för B2B: 5 projekt som ger ROI inom 90 dagar"
 slug: "ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar"
-date: 2026-05-28T18:04:08.959Z
+date: 2026-05-30T10:38:50.118Z
 excerpt: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
 description: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
 language: "en"
