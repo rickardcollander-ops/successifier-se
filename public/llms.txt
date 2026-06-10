@@ -6,6 +6,7 @@
 
 - [Startsida (svenska)](https://successifier.se/): Tjänster inom Customer Success, AI, automation och marknadsföring samt SAMA-plattformen.
 - [Home (English)](https://successifier.se/en): Customer Success, AI, automation and marketing services plus the SAMA platform.
+- [Successifier Support (AI-kundtjänst)](https://successifier.se/ai-kundtjanst): AI-kundtjänst som läser, kategoriserar och besvarar kundmail med svarsförslag, säkerhetspoäng och en självlärande kunskapsbas.
 - [Blogg](https://successifier.se/blog): Insikter och guider om Customer Success, AI, automation och marknadsföring.
 - [Blog (English)](https://successifier.se/en/blog): Insights and guides on Customer Success, AI, automation and marketing.
 
