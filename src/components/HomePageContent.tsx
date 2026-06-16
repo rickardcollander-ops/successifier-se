@@ -335,26 +335,24 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     </div>
                   ))}
                 </div>
-                {/* SAMA dashboards, anonymiserade exempel på Insights- och Content-vyerna */}
+                {/* SAMA dashboards, skärmdumpar av Insights- och Content-vyerna */}
                 <div className="space-y-4">
                   <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
                     <Image
-                      src="/sama-dashboard.svg"
+                      src="/Insights.png"
                       alt={t.locale === "sv" ? "SAMA Insights-dashboard, exempel på siteanalys" : "SAMA Insights dashboard, example site audit"}
-                      width={1600}
-                      height={1000}
+                      width={2646}
+                      height={1554}
                       className="h-auto w-full"
-                      unoptimized
                     />
                   </div>
                   <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
                     <Image
-                      src="/sama-content.svg"
+                      src="/Content.png"
                       alt={t.locale === "sv" ? "SAMA Content-dashboard, AI-driven content-pipeline" : "SAMA Content dashboard, AI-driven content pipeline"}
-                      width={1600}
-                      height={1000}
+                      width={2750}
+                      height={1752}
                       className="h-auto w-full"
-                      unoptimized
                     />
                   </div>
                 </div>
