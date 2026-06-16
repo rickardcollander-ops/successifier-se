@@ -5,14 +5,6 @@ import type { Dict } from "@/lib/i18n";
 
 const BRAND = "#0B1F3A";
 
-const healthScores = [
-  { label: "Technical SEO", score: 100 },
-  { label: "On-page SEO", score: 87 },
-  { label: "GEO readiness", score: 96 },
-  { label: "Link health", score: 81 },
-  { label: "Performance", score: 100 },
-];
-
 function Overline({ children }: { children: React.ReactNode }) {
   return (
     <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">
@@ -301,27 +293,6 @@ export default function HomePageContent({ t }: { t: Dict }) {
               </div>
 
               <div className="space-y-4">
-                <div className="rounded-lg border border-zinc-200 bg-slate-50 p-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.sama.healthLabel}</div>
-                    <span className="rounded-full border border-zinc-200 bg-white px-2 py-0.5 text-[10px] font-medium text-zinc-400">
-                      {t.sama.exampleBadge}
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-5 gap-3">
-                    {healthScores.map((d) => (
-                      <div key={d.label} className="flex flex-col items-center text-center">
-                        <div
-                          className="flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-medium text-zinc-900"
-                          style={{ borderColor: BRAND }}
-                        >
-                          {d.score}
-                        </div>
-                        <div className="mt-1.5 text-[10px] leading-tight text-zinc-400">{d.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   {[
                     { label: t.sama.stat1Label, value: t.sama.stat1Value, sub: t.sama.stat1Sub },
