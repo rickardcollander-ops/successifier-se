@@ -24,7 +24,7 @@ export default function ContactForm({ t }: { t: Dict["form"] }) {
   const [error, setError] = useState<string | null>(null);
 
   const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent("Bokningsförfrågan — Successifier.se");
+    const subject = encodeURIComponent("Bokningsförfrågan, Successifier.se");
     const body = encodeURIComponent(
       `Namn: ${form.name}\nFöretag: ${form.company}\nEmail: ${form.email}\nTelefon: ${form.phone}\n\nMeddelande:\n${form.message}`
     );
@@ -134,21 +134,21 @@ export default function ContactForm({ t }: { t: Dict["form"] }) {
           </div>
         )}
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-2">
           <button
             type="submit"
             disabled={submitting}
-            className="inline-flex h-10 items-center justify-center rounded-md px-5 text-sm font-medium text-white shadow-sm transition-colors disabled:opacity-60"
+            className="inline-flex h-10 w-full items-center justify-center rounded-md px-5 text-sm font-medium text-white shadow-sm transition-colors disabled:opacity-60"
             style={{ backgroundColor: "#0B1F3A" }}
           >
             {submitting ? t.submittingLabel : t.submitLabel}
           </button>
-          <a
-            href={mailtoHref}
-            className="inline-flex h-10 items-center justify-center rounded-md border border-zinc-200 bg-white px-5 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-colors"
-          >
-            {t.emailFallbackLabel}
-          </a>
+          <p className="text-xs text-zinc-500">
+            {t.altHint}{" "}
+            <a href={mailtoHref} className="font-medium text-zinc-700 underline hover:text-zinc-900">
+              {t.emailFallbackLabel}
+            </a>
+          </p>
         </div>
 
         <p className="text-xs text-zinc-400">{t.consentText}</p>

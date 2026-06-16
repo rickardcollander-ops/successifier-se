@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Successifier.se — Customer Success, AI & Automation",
-  description: "Svensk konsult inom Customer Success, AI och automation. Vi driver SEO och marknadsföring – med vår egen plattform SAMA för AI-synlighet och GEO-readiness.",
+  title: "Successifier.se · Customer Success, AI & Automation",
+  description: "Svensk konsult inom Customer Success, AI och automation. Vi driver SEO och marknadsföring, med vår egen plattform SAMA för AI-synlighet och GEO-readiness.",
   keywords: [
     "AI-konsult",
     "AI konsulting",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     shortcut: ["/logo.svg"],
   },
   openGraph: {
-    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
-    description: "Konsulting och egen plattform (SAMA) för AI-synlighet, SEO och content – samt Customer Success, Contact Center och AI-driven marknadsföring på Google, LinkedIn och Meta.",
+    title: "Successifier.se · Customer Success, AI, Automation & SAMA-plattformen",
+    description: "Konsulting och egen plattform (SAMA) för AI-synlighet, SEO och content, samt Customer Success, Contact Center och AI-driven marknadsföring på Google, LinkedIn och Meta.",
     url: "https://successifier.se",
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Successifier.se — Customer Success, AI, Automation & SAMA-plattformen",
+    title: "Successifier.se · Customer Success, AI, Automation & SAMA-plattformen",
     description: "Konsulting och egen plattform SAMA för AI-synlighet, SEO och content-publicering på Google, LinkedIn och Meta.",
   },
 };

@@ -48,9 +48,9 @@ Många AI-initiativ misslyckas inte för att tekniken är dålig. De misslyckas 
 
 För att ett AI-projekt ska ge ROI inom 90 dagar behöver tre saker stämma:
 
-1. **Data finns redan** – du behöver inte samla in ny data i månader innan projektet kan starta.
-2. **Processen är definierad** – AI förbättrar en befintlig process, den ersätter inte en process som saknas.
-3. **KPI:erna är tydliga** – du vet i förväg vad du mäter: konverteringsgrad, handläggningstid, churn-rate.
+1. **Data finns redan**, du behöver inte samla in ny data i månader innan projektet kan starta.
+2. **Processen är definierad**, AI förbättrar en befintlig process, den ersätter inte en process som saknas.
+3. **KPI:erna är tydliga**, du vet i förväg vad du mäter: konverteringsgrad, handläggningstid, churn-rate.
 
 ### Typiska tidslinjor per projekttyp
 

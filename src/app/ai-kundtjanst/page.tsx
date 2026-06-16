@@ -5,7 +5,7 @@ const BRAND = "#0B1F3A";
 
 // ───────────────────────────────────────────────────────────────────
 // TODO: Ersätt platshållarvärdena nedan med riktiga siffror.
-// Demon visar 1 773 hanterade ärenden — övriga värden är exempel.
+// Demon visar 1 773 hanterade ärenden, övriga värden är exempel.
 // ───────────────────────────────────────────────────────────────────
 const metrics = [
   { value: "70 %", label: "Andel AI-besvarade", sub: "av inkommande mail får ett färdigt svarsförslag" },
@@ -17,11 +17,11 @@ const metrics = [
 const features = [
   {
     title: "AI-svarsförslag med säkerhetspoäng",
-    text: "Varje ärende får ett färdigt svarsförslag baserat på kundens historik och er kunskapsbas — med en säkerhetspoäng som visar hur trygg AI:n är i svaret.",
+    text: "Varje ärende får ett färdigt svarsförslag baserat på kundens historik och er kunskapsbas, med en säkerhetspoäng som visar hur trygg AI:n är i svaret.",
   },
   {
     title: "Automatisk kategorisering",
-    text: "Inkorgen sorteras automatiskt i Nya, Öppna, Granskning, Skickade och Stängda — med dublettrensning och hantering av studsade mail.",
+    text: "Inkorgen sorteras automatiskt i Nya, Öppna, Granskning, Skickade och Stängda, med dublettrensning och hantering av studsade mail.",
   },
   {
     title: "Kunskapsbas som lär sig",
@@ -33,11 +33,11 @@ const features = [
   },
   {
     title: "Integrationer",
-    text: "Koppla mot era befintliga verktyg som Billecta för fakturor och Resend för e-post — kunddata och utskick samlas på ett ställe.",
+    text: "Koppla mot era befintliga verktyg som Billecta för fakturor och Resend för e-post, kunddata och utskick samlas på ett ställe.",
   },
   {
     title: "Granskning innan utskick",
-    text: "Inget skickas utan att ni vill det. AI:n föreslår, ni granskar och godkänner — full mänsklig kontroll i varje steg.",
+    text: "Inget skickas utan att ni vill det. AI:n föreslår, ni granskar och godkänner, full mänsklig kontroll i varje steg.",
   },
 ];
 
@@ -48,16 +48,16 @@ const steps = [
 ];
 
 export const metadata = {
-  title: "Successifier Support — AI som besvarar kundmailen",
+  title: "Successifier Support · AI som besvarar kundmailen",
   description:
-    "Successifier Support är en AI-kundtjänst som läser, kategoriserar och besvarar kundmail – med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig.",
+    "Successifier Support är en AI-kundtjänst som läser, kategoriserar och besvarar kundmail, med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig.",
   alternates: {
     canonical: "/ai-kundtjanst",
   },
   openGraph: {
-    title: "Successifier Support — AI som besvarar kundmailen",
+    title: "Successifier Support · AI som besvarar kundmailen",
     description:
-      "AI-kundtjänst som läser, kategoriserar och besvarar kundmail – med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig av era konversationer.",
+      "AI-kundtjänst som läser, kategoriserar och besvarar kundmail, med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig av era konversationer.",
     url: "https://successifier.se/ai-kundtjanst",
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -146,7 +146,7 @@ export default function AiKundtjanstPage() {
               </h1>
               <p className="mt-5 text-[15px] leading-7 text-zinc-600">
                 Successifier Support tar emot era supportmail, kategoriserar dem automatiskt och
-                föreslår färdiga svar med säkerhetspoäng — byggt på en kunskapsbas som lär sig av
+                föreslår färdiga svar med säkerhetspoäng, byggt på en kunskapsbas som lär sig av
                 varje konversation. Ni behåller kontrollen och godkänner innan något skickas.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -193,7 +193,7 @@ export default function AiKundtjanstPage() {
               <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">Funktioner</div>
               <h2 className="text-2xl font-light tracking-tight">Allt teamet behöver i en vy</h2>
               <p className="mt-3 text-[15px] leading-7 text-zinc-600">
-                Från inkommet mail till godkänt svar — Successifier Support samlar ärenden, kunddata
+                Från inkommet mail till godkänt svar, Successifier Support samlar ärenden, kunddata
                 och AI-förslag på ett ställe.
               </p>
             </div>
@@ -233,7 +233,7 @@ export default function AiKundtjanstPage() {
             <div className="rounded-lg border border-zinc-200 bg-slate-50 p-8 sm:p-12 text-center">
               <h2 className="text-2xl font-light tracking-tight">Vill du se Successifier Support live?</h2>
               <p className="mx-auto mt-3 max-w-xl text-[15px] leading-7 text-zinc-600">
-                Boka en demo på en timme så visar vi hur AI:n hanterar era riktiga ärenden — och
+                Boka en demo på en timme så visar vi hur AI:n hanterar era riktiga ärenden, och
                 vad det skulle spara i tid.
               </p>
               <Link

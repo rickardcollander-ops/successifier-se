@@ -78,10 +78,10 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <Image src="/logo.svg" alt="Successifier" width={32} height={32} className="h-8 w-8" priority />
             <div className="leading-tight">
               <div className="text-sm font-semibold tracking-tight">Successifier.se</div>
-              <div className="text-xs text-zinc-400">AI-konsulting · Bygg & implementering</div>
+              <div className="hidden whitespace-nowrap text-xs text-zinc-400 sm:block">{t.hero.badge2}</div>
             </div>
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-500 md:flex" aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}>
+          <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-zinc-500 lg:flex" aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}>
             <a href="#passar" className="hover:text-zinc-900 transition-colors">{t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}</a>
             <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
             <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
@@ -99,16 +99,16 @@ export default function HomePageContent({ t }: { t: Dict }) {
               {t.langSwitcher.label}
             </Link>
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3 lg:ml-4">
             <Link
               href={t.langSwitcher.href}
-              className="rounded border border-zinc-200 px-2 py-0.5 text-xs font-medium text-zinc-500 hover:border-zinc-400 transition-colors md:hidden"
+              className="rounded border border-zinc-200 px-2 py-0.5 text-xs font-medium text-zinc-500 hover:border-zinc-400 transition-colors lg:hidden"
             >
               {t.langSwitcher.label}
             </Link>
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors"
               style={{ backgroundColor: BRAND }}
             >
               {t.nav.cta}
@@ -127,7 +127,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 <span className="text-zinc-200">|</span>
                 <span>{t.hero.badge2}</span>
               </div>
-              {/* Primär H1: "AI-konsulting som bygger och driftsätter — inte PowerPoint." */}
+              {/* Primär H1: "AI-konsulting som bygger och driftsätter, inte PowerPoint." */}
               {/* Variant: "Vi bygger AI:n. Vi driftsätter den. Sen driver ni vidare." */}
               <h1 className="text-4xl font-light tracking-tight text-zinc-950 sm:text-5xl leading-tight">
                 {t.hero.heading}
@@ -159,7 +159,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               <ul className="space-y-3 text-sm text-zinc-700">
                 {t.hero.bullets.map((b, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="mt-0.5 text-zinc-300 select-none">—</span>
+                    <span className="mt-0.5 text-zinc-300 select-none">·</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -185,7 +185,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* Fit — "Det här passar er om…" */}
+        {/* Fit, "Det här passar er om…" */}
         <section id="passar" className="border-b border-zinc-100 bg-white" aria-label={t.fit.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
@@ -195,7 +195,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {t.fit.items.map((item) => (
                 <li key={item} className="flex gap-3 rounded-lg border border-zinc-200 bg-white p-5">
-                  <span className="mt-0.5 text-zinc-300 select-none shrink-0">—</span>
+                  <span className="mt-0.5 text-zinc-300 select-none shrink-0">·</span>
                   <span className="text-sm leading-6 text-zinc-700">{item}</span>
                 </li>
               ))}
@@ -213,7 +213,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* Why — dark section */}
+        {/* Why, dark section */}
         <section className="border-b border-zinc-900" style={{ backgroundColor: BRAND }} aria-label={t.why.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
@@ -254,7 +254,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   <ul className="mt-2 space-y-1.5 text-sm text-zinc-600 flex-1">
                     {p.focus.map((f) => (
                       <li key={f} className="flex gap-2">
-                        <span className="text-zinc-300 shrink-0 mt-0.5">—</span>
+                        <span className="text-zinc-300 shrink-0 mt-0.5">·</span>
                         <span>{f}</span>
                       </li>
                     ))}
@@ -269,7 +269,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* SAMA — reframed as proof + engine */}
+        {/* SAMA, reframed as proof + engine */}
         <section id="sama" className="border-b border-zinc-100 bg-white" aria-label={t.sama.heading}>
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
             <div className="grid gap-12 md:grid-cols-2 md:items-start">
@@ -292,7 +292,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     </div>
                   ))}
                 </div>
-                {/* Nedtonad CTA — text-länk, pekar mot strategisamtal */}
+                {/* Nedtonad CTA, text-länk, pekar mot strategisamtal */}
                 <p className="mt-6 text-sm text-zinc-400 italic">
                   <a href="#kontakt" className="underline underline-offset-4 hover:text-zinc-700 transition-colors">
                     {t.sama.ctaText}
@@ -335,15 +335,28 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     </div>
                   ))}
                 </div>
-                {/* Dashboard image — visas om filen finns */}
-                <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
-                  <Image
-                    src="/sama-dashboard.png"
-                    alt="SAMA dashboard"
-                    width={1600}
-                    height={1000}
-                    className="h-auto w-full"
-                  />
+                {/* SAMA dashboards, anonymiserade exempel på Insights- och Content-vyerna */}
+                <div className="space-y-4">
+                  <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+                    <Image
+                      src="/sama-dashboard.svg"
+                      alt={t.locale === "sv" ? "SAMA Insights-dashboard, exempel på siteanalys" : "SAMA Insights dashboard, example site audit"}
+                      width={1600}
+                      height={1000}
+                      className="h-auto w-full"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+                    <Image
+                      src="/sama-content.svg"
+                      alt={t.locale === "sv" ? "SAMA Content-dashboard, AI-driven content-pipeline" : "SAMA Content dashboard, AI-driven content pipeline"}
+                      width={1600}
+                      height={1000}
+                      className="h-auto w-full"
+                      unoptimized
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -476,14 +489,18 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div>
                     <div className="text-sm font-medium text-zinc-900">Rickard Collander</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">Grundare, Successifier.se</div>
+                    <div className="text-xs text-zinc-400 mt-0.5">{t.about.founderTitle}</div>
                   </div>
                 </div>
-                {/* Kundcitat — fyll i {{KUNDCITAT}} och {{KUND_NAMN_ROLL_FÖRETAG}} */}
-                <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.quoteHeading}</div>
-                <p className="text-sm leading-6 text-zinc-600 italic">{t.about.quote}</p>
-                {t.about.quotePerson && (
-                  <div className="mt-2 text-xs text-zinc-400">— {t.about.quotePerson}</div>
+                {/* Kundcitat, renderas bara när ett godkänt citat finns (t.about.quote) */}
+                {t.about.quote && (
+                  <>
+                    <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.quoteHeading}</div>
+                    <p className="text-sm leading-6 text-zinc-600 italic">{t.about.quote}</p>
+                    {t.about.quotePerson && (
+                      <div className="mt-2 text-xs text-zinc-400">{t.about.quotePerson}</div>
+                    )}
+                  </>
                 )}
                 <div className="mt-6 rounded border border-zinc-100 bg-slate-50 p-4">
                   <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.contactLabel}</div>
