@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Successifier.se`,
+    title: `${post.title} · Successifier.se`,
     description: post.excerpt,
     alternates: {
       canonical: `/en/blog/${slug}`,

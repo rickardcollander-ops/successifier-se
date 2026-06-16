@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="SAMA Content dashboard, AI content pipeline overview">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .muted { fill: #a1a1aa; }
+      .label { fill: #71717a; }
+      .dark  { fill: #18181b; }
+    </style>
+  </defs>
+
+  <!-- App background -->
+  <rect width="1600" height="1000" fill="#f4f4f5"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="250" height="1000" fill="#ffffff"/>
+  <line x1="250" y1="0" x2="250" y2="1000" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Brand -->
+  <rect x="28" y="34" width="36" height="36" rx="9" fill="#7c3aed"/>
+  <path d="M52 42 l-10 16 h7 l-3 12 14 -18 h-7 z" fill="#ffffff"/>
+  <text x="78" y="60" font-size="22" font-weight="700" class="dark">SAMA</text>
+
+  <!-- Workspace switcher -->
+  <rect x="28" y="92" width="194" height="44" rx="10" fill="#f4f4f5" stroke="#e4e4e7"/>
+  <circle cx="50" cy="114" r="8" fill="#a1a1aa"/>
+  <text x="68" y="120" font-size="14" font-weight="600" class="dark">Successifier</text>
+
+  <!-- Nav items -->
+  <text x="64" y="186" font-size="14" class="label">Home</text>
+  <text x="64" y="224" font-size="14" class="label">Insights</text>
+  <rect x="20" y="246" width="210" height="34" rx="9" fill="#eff6ff"/>
+  <text x="64" y="268" font-size="14" font-weight="600" fill="#2563eb">Content</text>
+  <text x="84" y="308" font-size="13" class="muted">Overview</text>
+  <text x="84" y="342" font-size="13" class="muted">Plan</text>
+  <text x="64" y="390" font-size="14" class="label">Tech</text>
+  <text x="64" y="428" font-size="14" class="muted">Social</text>
+  <text x="64" y="466" font-size="14" class="label">Ads</text>
+  <text x="64" y="504" font-size="14" class="label">Settings</text>
+  <text x="64" y="542" font-size="14" class="label">Admin</text>
+
+  <!-- ===== Main content ===== -->
+  <!-- Header row -->
+  <text x="300" y="74" font-size="32" font-weight="700" class="dark">📝 Content</text>
+  <text x="300" y="108" font-size="14" class="label">This is where your articles are created and published. Ideas come</text>
+  <text x="300" y="130" font-size="14" class="label">from your strategy and gaps from Insights.</text>
+
+  <rect x="1118" y="40" width="180" height="44" rx="10" fill="#ffffff" stroke="#e4e4e7"/>
+  <text x="1144" y="67" font-size="13" font-weight="500" class="label">📅 Show plan</text>
+  <rect x="1308" y="40" width="190" height="44" rx="10" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="1334" y="67" font-size="13" font-weight="600" fill="#7c3aed">Run autopilot</text>
+  <rect x="1308" y="100" width="190" height="46" rx="10" fill="#7c3aed"/>
+  <text x="1334" y="129" font-size="14" font-weight="600" fill="#ffffff">+ Create content</text>
+
+  <!-- Autopilot banner -->
+  <rect x="300" y="172" width="1198" height="84" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+  <rect x="324" y="194" width="40" height="40" rx="10" fill="#eff6ff"/>
+  <text x="336" y="221" font-size="18">✈</text>
+  <text x="382" y="208" font-size="16" font-weight="700" class="dark">Autopilot</text>
+  <text x="382" y="232" font-size="13" class="muted">On, auto-publishing · weekly · 3 drafts/run</text>
+  <rect x="1392" y="200" width="82" height="28" rx="14" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="1433" y="219" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">Active</text>
+
+  <!-- Stat cards -->
+  <g>
+    <rect x="300" y="276" width="384" height="120" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="338" y="318" font-size="14" class="label">📄 Total</text>
+    <text x="324" y="372" font-size="40" font-weight="700" class="dark">18</text>
+
+    <rect x="708" y="276" width="384" height="120" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="746" y="318" font-size="14" class="label">✅ Published</text>
+    <text x="732" y="372" font-size="40" font-weight="700" class="dark">7</text>
+
+    <rect x="1116" y="276" width="382" height="120" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="1154" y="318" font-size="14" class="label"># Total words</text>
+    <text x="1140" y="372" font-size="40" font-weight="700" class="dark">50,922</text>
+  </g>
+
+  <!-- Get article ideas -->
+  <rect x="300" y="416" width="1198" height="110" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+  <text x="336" y="462" font-size="17" font-weight="700" class="dark">✨ Get article ideas</text>
+  <text x="336" y="492" font-size="13" class="muted">Based on your strategy and gaps in Insights. Import a suggestion and the Content agent will draft.</text>
+  <rect x="1262" y="446" width="200" height="50" rx="10" fill="#7c3aed"/>
+  <text x="1288" y="477" font-size="14" font-weight="600" fill="#ffffff">✨ Suggest with AI</text>
+
+  <!-- Status filter pills -->
+  <g>
+    <rect x="300" y="552" width="118" height="40" rx="20" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="359" y="577" font-size="13" class="label" text-anchor="middle">Ideas (26)</text>
+    <rect x="430" y="552" width="132" height="40" rx="20" fill="#f3e8ff" stroke="#d8b4fe"/>
+    <text x="496" y="577" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle">To review (4)</text>
+    <rect x="574" y="552" width="140" height="40" rx="20" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="644" y="577" font-size="13" class="label" text-anchor="middle">Scheduled (4)</text>
+    <rect x="726" y="552" width="142" height="40" rx="20" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="797" y="577" font-size="13" class="label" text-anchor="middle">Published (7)</text>
+    <rect x="880" y="552" width="128" height="40" rx="20" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="944" y="577" font-size="13" class="label" text-anchor="middle">Archived (3)</text>
+  </g>
+
+  <!-- Article rows -->
+  <g>
+    <!-- Row 1 -->
+    <rect x="300" y="616" width="1198" height="108" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <rect x="324" y="640" width="110" height="60" rx="8" fill="#e4e4e7"/>
+    <text x="324" y="676" font-size="13">🧑‍💼</text>
+    <text x="456" y="664" font-size="16" font-weight="600" class="dark">Customer Churn Reduction Software: How Top SaaS…</text>
+    <text x="456" y="692" font-size="12" class="muted">blog_article  ·  3,010 words  ·  customer churn reduction software</text>
+    <rect x="1090" y="676" width="118" height="26" rx="13" fill="#ecfdf5"/>
+    <text x="1149" y="694" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">Score 70/100</text>
+    <rect x="1320" y="650" width="120" height="40" rx="9" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="1380" y="675" font-size="13" font-weight="500" class="label" text-anchor="middle">→ Approve</text>
+
+    <!-- Row 2 -->
+    <rect x="300" y="736" width="1198" height="108" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <rect x="324" y="760" width="110" height="60" rx="8" fill="#e4e4e7"/>
+    <text x="324" y="796" font-size="13">🧑‍💼</text>
+    <text x="456" y="784" font-size="16" font-weight="600" class="dark">7 Warning Signs a Customer Is About to Churn…</text>
+    <text x="456" y="812" font-size="12" class="muted">blog_article  ·  3,105 words  ·  signs a customer is about to churn</text>
+    <rect x="1090" y="796" width="118" height="26" rx="13" fill="#ecfdf5"/>
+    <text x="1149" y="814" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">Score 77/100</text>
+    <rect x="1320" y="770" width="120" height="40" rx="9" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="1380" y="795" font-size="13" font-weight="500" class="label" text-anchor="middle">→ Approve</text>
+
+    <!-- Row 3 -->
+    <rect x="300" y="856" width="1198" height="108" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+    <rect x="324" y="880" width="110" height="60" rx="8" fill="#e4e4e7"/>
+    <text x="324" y="916" font-size="13">🧑‍💼</text>
+    <text x="456" y="904" font-size="16" font-weight="600" class="dark">What Is a Customer Health Score and How Do You…</text>
+    <text x="456" y="932" font-size="12" class="muted">blog_article  ·  2,785 words  ·  customer health score software</text>
+    <rect x="1090" y="916" width="118" height="26" rx="13" fill="#ecfdf5"/>
+    <text x="1149" y="934" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">Score 67/100</text>
+    <rect x="1320" y="890" width="120" height="40" rx="9" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="1380" y="915" font-size="13" font-weight="500" class="label" text-anchor="middle">→ Approve</text>
+  </g>
+</svg>

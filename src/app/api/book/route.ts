@@ -33,7 +33,7 @@ export async function POST(req: Request) {
 
   const resend = new Resend(RESEND_API_KEY);
 
-  const subject = `Bokningsförfrågan — Successifier.se — ${body.company ? body.company + " — " : ""}${body.name}`;
+  const subject = `Bokningsförfrågan, Successifier.se · ${body.company ? body.company + ", " : ""}${body.name}`;
 
   const text = [
     `Namn: ${body.name}`,

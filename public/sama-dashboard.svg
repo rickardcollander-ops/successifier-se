@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="SAMA Insights dashboard, site audit overview">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .muted { fill: #a1a1aa; }
+      .label { fill: #71717a; }
+      .dark  { fill: #18181b; }
+    </style>
+  </defs>
+
+  <!-- App background -->
+  <rect width="1600" height="1000" fill="#f4f4f5"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="250" height="1000" fill="#ffffff"/>
+  <line x1="250" y1="0" x2="250" y2="1000" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Brand -->
+  <rect x="28" y="34" width="36" height="36" rx="9" fill="#7c3aed"/>
+  <path d="M52 42 l-10 16 h7 l-3 12 14 -18 h-7 z" fill="#ffffff"/>
+  <text x="78" y="60" font-size="22" font-weight="700" class="dark">SAMA</text>
+
+  <!-- Workspace switcher -->
+  <rect x="28" y="92" width="194" height="44" rx="10" fill="#f4f4f5" stroke="#e4e4e7"/>
+  <circle cx="50" cy="114" r="8" fill="#a1a1aa"/>
+  <text x="68" y="120" font-size="14" font-weight="600" class="dark">Successifier</text>
+
+  <!-- Nav items -->
+  <text x="64" y="186" font-size="14" class="label">Home</text>
+  <rect x="20" y="208" width="210" height="34" rx="9" fill="#eff6ff"/>
+  <text x="64" y="230" font-size="14" font-weight="600" fill="#2563eb">Insights</text>
+  <text x="84" y="270" font-size="13" class="muted">Overview</text>
+  <text x="84" y="304" font-size="13" class="muted">Google</text>
+  <text x="84" y="338" font-size="13" class="muted">AI Assistants</text>
+  <text x="84" y="372" font-size="13" class="muted">Traffic</text>
+  <text x="64" y="420" font-size="14" class="label">Content</text>
+  <text x="64" y="458" font-size="14" class="label">Tech</text>
+  <text x="64" y="496" font-size="14" class="muted">Social</text>
+  <text x="64" y="534" font-size="14" class="label">Ads</text>
+  <text x="64" y="572" font-size="14" class="label">Settings</text>
+  <text x="64" y="610" font-size="14" class="label">Admin</text>
+
+  <!-- ===== Main content ===== -->
+  <!-- Header row -->
+  <text x="300" y="62" font-size="30" font-weight="700" class="dark">✨ Insights</text>
+  <rect x="300" y="80" width="170" height="28" rx="8" fill="#ffffff" stroke="#e4e4e7"/>
+  <text x="316" y="99" font-size="13" class="label">🔒 successifier.se</text>
+
+  <rect x="1290" y="34" width="160" height="44" rx="10" fill="#ffffff" stroke="#e4e4e7"/>
+  <text x="1314" y="61" font-size="13" font-weight="500" class="label">History ▾</text>
+  <rect x="1466" y="34" width="106" height="44" rx="10" fill="#7c3aed"/>
+  <text x="1490" y="61" font-size="12" font-weight="600" fill="#ffffff">Run analysis</text>
+
+  <!-- Site audit summary card -->
+  <text x="300" y="150" font-size="17" font-weight="600" class="dark">🌐 Site audit</text>
+  <text x="425" y="150" font-size="13" class="muted">· 30 May 2026</text>
+
+  <rect x="300" y="170" width="1272" height="96" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+  <rect x="324" y="196" width="44" height="44" rx="11" fill="#ede9fe"/>
+  <text x="334" y="225" font-size="20">🌐</text>
+  <text x="384" y="210" font-size="18" font-weight="700" class="dark">successifier.se</text>
+  <text x="384" y="234" font-size="13" class="muted">18 pages analyzed · 49.0s</text>
+
+  <!-- status badges -->
+  <g>
+    <rect x="1108" y="200" width="96" height="36" rx="18" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="1156" y="223" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">HTTPS</text>
+    <rect x="1214" y="200" width="110" height="36" rx="18" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="1269" y="223" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">robots.txt</text>
+    <rect x="1334" y="200" width="120" height="36" rx="18" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="1394" y="223" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">sitemap.xml</text>
+    <rect x="1464" y="200" width="88" height="36" rx="18" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="1508" y="223" font-size="12" font-weight="600" fill="#059669" text-anchor="middle">llms.txt</text>
+  </g>
+
+  <!-- Tabs -->
+  <text x="300" y="312" font-size="14" font-weight="600" fill="#7c3aed">Overview</text>
+  <line x1="300" y1="324" x2="376" y2="324" stroke="#7c3aed" stroke-width="2"/>
+  <text x="404" y="312" font-size="14" class="label">Findings</text>
+  <text x="476" y="312" font-size="12" class="muted">9</text>
+  <text x="514" y="312" font-size="14" class="label">Keywords</text>
+  <text x="596" y="312" font-size="12" class="muted">20</text>
+  <text x="636" y="312" font-size="14" class="label">Pages</text>
+  <text x="688" y="312" font-size="12" class="muted">18</text>
+  <text x="728" y="312" font-size="14" class="label">Broken links</text>
+  <text x="828" y="312" font-size="12" class="muted">11</text>
+
+  <!-- Main panel -->
+  <rect x="300" y="344" width="1272" height="612" rx="16" fill="#ffffff" stroke="#e4e4e7"/>
+
+  <!-- Overall health donut -->
+  <g transform="translate(470,520)">
+    <circle r="95" fill="none" stroke="#f4f4f5" stroke-width="16"/>
+    <circle r="95" fill="none" stroke="#f59e0b" stroke-width="16" stroke-linecap="round"
+            stroke-dasharray="459.5 596.9" transform="rotate(-90)"/>
+    <text x="0" y="6" font-size="58" font-weight="700" fill="#b45309" text-anchor="middle">77</text>
+    <text x="0" y="36" font-size="15" class="muted" text-anchor="middle">/ 100</text>
+  </g>
+  <text x="470" y="660" font-size="18" font-weight="600" class="dark" text-anchor="middle">Overall site health</text>
+  <text x="470" y="688" font-size="13" class="muted" text-anchor="middle">Weighted average across all five</text>
+  <text x="470" y="708" font-size="13" class="muted" text-anchor="middle">audit categories.</text>
+
+  <!-- Category rings -->
+  <!-- Technical SEO 100 (green) -->
+  <g transform="translate(800,520)">
+    <circle r="52" fill="none" stroke="#f4f4f5" stroke-width="9"/>
+    <circle r="52" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"
+            stroke-dasharray="326.7 0" transform="rotate(-90)"/>
+    <text x="0" y="9" font-size="26" font-weight="700" fill="#059669" text-anchor="middle">100</text>
+    <text x="0" y="86" font-size="14" font-weight="600" class="dark" text-anchor="middle">Technical SEO</text>
+  </g>
+  <!-- On-page SEO 60 (amber) -->
+  <g transform="translate(990,520)">
+    <circle r="52" fill="none" stroke="#f4f4f5" stroke-width="9"/>
+    <circle r="52" fill="none" stroke="#f59e0b" stroke-width="9" stroke-linecap="round"
+            stroke-dasharray="196.0 130.7" transform="rotate(-90)"/>
+    <text x="0" y="9" font-size="26" font-weight="700" fill="#b45309" text-anchor="middle">60</text>
+    <text x="0" y="86" font-size="14" font-weight="600" class="dark" text-anchor="middle">On-page SEO</text>
+  </g>
+  <!-- GEO readiness 98 (green) -->
+  <g transform="translate(1180,520)">
+    <circle r="52" fill="none" stroke="#f4f4f5" stroke-width="9"/>
+    <circle r="52" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"
+            stroke-dasharray="320.2 6.5" transform="rotate(-90)"/>
+    <text x="0" y="9" font-size="26" font-weight="700" fill="#059669" text-anchor="middle">98</text>
+    <text x="0" y="86" font-size="14" font-weight="600" class="dark" text-anchor="middle">GEO readiness</text>
+  </g>
+  <!-- Link health 29 (red) -->
+  <g transform="translate(1370,520)">
+    <circle r="52" fill="none" stroke="#f4f4f5" stroke-width="9"/>
+    <circle r="52" fill="none" stroke="#e11d48" stroke-width="9" stroke-linecap="round"
+            stroke-dasharray="94.7 232.0" transform="rotate(-90)"/>
+    <text x="0" y="9" font-size="26" font-weight="700" fill="#be123c" text-anchor="middle">29</text>
+    <text x="0" y="86" font-size="14" font-weight="600" class="dark" text-anchor="middle">Link health</text>
+  </g>
+  <!-- Performance 90 (green) -->
+  <g transform="translate(1500,520)">
+    <circle r="52" fill="none" stroke="#f4f4f5" stroke-width="9"/>
+    <circle r="52" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"
+            stroke-dasharray="294.0 32.7" transform="rotate(-90)"/>
+    <text x="0" y="9" font-size="26" font-weight="700" fill="#059669" text-anchor="middle">90</text>
+    <text x="0" y="86" font-size="14" font-weight="600" class="dark" text-anchor="middle">Performance</text>
+  </g>
+</svg>
