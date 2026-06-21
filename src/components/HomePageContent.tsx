@@ -3,11 +3,28 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import type { Dict } from "@/lib/i18n";
 
-const BRAND = "#0B1F3A";
+const serif = { fontFamily: "var(--font-spectral)" } as const;
+const mono = { fontFamily: "var(--font-plex-mono)" } as const;
 
-function Overline({ children }: { children: React.ReactNode }) {
+function Overline({
+  children,
+  onAccent = false,
+  center = false,
+}: {
+  children: React.ReactNode;
+  onAccent?: boolean;
+  center?: boolean;
+}) {
   return (
-    <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">
+    <div
+      className={`mb-[18px] uppercase ${center ? "text-center" : ""}`}
+      style={{
+        ...mono,
+        fontSize: "12px",
+        letterSpacing: "0.2em",
+        color: onAccent ? "rgba(242,238,230,.55)" : "var(--accent)",
+      }}
+    >
       {children}
     </div>
   );
@@ -76,53 +93,61 @@ export default function HomePageContent({ t }: { t: Dict }) {
   };
 
   return (
-    <div className="min-h-screen text-zinc-950">
+    <div className="min-h-screen" style={{ color: "var(--ink)" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
+
       {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white/90 backdrop-blur" aria-label={t.locale === "sv" ? "Sidhuvud" : "Site header"}>
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <div className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="Successifier" width={32} height={32} className="h-8 w-8" priority />
-            <div className="leading-tight">
-              <div className="text-sm font-semibold tracking-tight">Successifier.se</div>
-              <div className="hidden whitespace-nowrap text-xs text-zinc-400 sm:block">{t.hero.badge2}</div>
-            </div>
-          </div>
-          <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-zinc-500 lg:flex" aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}>
-            <a href="#passar" className="hover:text-zinc-900 transition-colors">{t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}</a>
-            <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
-            <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
+      <header
+        className="sticky top-0 z-50 backdrop-blur-md"
+        style={{ background: "rgba(242,238,230,.82)", borderBottom: "1px solid var(--hairline)" }}
+        aria-label={t.locale === "sv" ? "Sidhuvud" : "Site header"}
+      >
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-5 sm:px-10">
+          <a href="#top" className="flex items-baseline gap-[9px] no-underline" style={{ color: "var(--ink)" }}>
+            <span className="text-[20px] font-semibold tracking-[-0.02em]">Successifier</span>
+            <span className="h-[6px] w-[6px] rounded-full" style={{ background: "var(--accent)" }} />
+          </a>
+          <nav
+            className="hidden items-center gap-7 whitespace-nowrap xl:flex"
+            aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}
+          >
+            <a href="#passar" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>
+              {t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}
+            </a>
+            <a href="#tjanster" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.services}</a>
+            <a href="#sama" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.platform}</a>
             {t.locale === "sv" && (
-              <Link href="/ai-konsult" className="hover:text-zinc-900 transition-colors">AI-konsult</Link>
+              <Link href="/ai-konsult" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>AI-konsult</Link>
             )}
             {t.locale === "sv" && (
-              <Link href="/ai-kundtjanst" className="hover:text-zinc-900 transition-colors">Support</Link>
+              <Link href="/ai-kundtjanst" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>Support</Link>
             )}
-            <a href="#arbetssatt" className="hover:text-zinc-900 transition-colors">{t.nav.approach}</a>
-            <a href="#om-oss" className="hover:text-zinc-900 transition-colors">{t.nav.about}</a>
-            <Link href={t.nav.blogHref} className="hover:text-zinc-900 transition-colors">{t.nav.blog}</Link>
-            <a href="#kontakt" className="hover:text-zinc-900 transition-colors">{t.nav.contact}</a>
+            <a href="#arbetssatt" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.approach}</a>
+            <a href="#om-oss" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.about}</a>
+            <Link href={t.nav.blogHref} className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.blog}</Link>
             <Link
               href={t.langSwitcher.href}
-              className="rounded border border-zinc-200 px-2 py-0.5 text-xs font-medium text-zinc-500 hover:border-zinc-400 hover:text-zinc-900 transition-colors"
+              className="rounded-[3px] px-2 py-0.5 text-[12px] font-medium no-underline"
+              style={{ border: "1px solid var(--hairline)", color: "var(--faint)" }}
             >
               {t.langSwitcher.label}
             </Link>
           </nav>
-          <div className="flex items-center gap-3 lg:ml-4">
+          <div className="flex items-center gap-3 xl:ml-4">
             <Link
               href={t.langSwitcher.href}
-              className="rounded border border-zinc-200 px-2 py-0.5 text-xs font-medium text-zinc-500 hover:border-zinc-400 transition-colors lg:hidden"
+              className="rounded-[3px] px-2 py-0.5 text-[12px] font-medium no-underline xl:hidden"
+              style={{ border: "1px solid var(--hairline)", color: "var(--faint)" }}
             >
               {t.langSwitcher.label}
             </Link>
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors"
-              style={{ backgroundColor: BRAND }}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-[3px] px-5 py-[11px] text-[14.5px] font-medium no-underline transition-opacity hover:opacity-90"
+              style={{ background: "var(--accent)", color: "var(--on-accent)" }}
             >
               {t.nav.cta}
             </a>
@@ -130,95 +155,87 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </div>
       </header>
 
-      <main aria-label={t.locale === "sv" ? "Huvudinnehåll" : "Main content"}>
+      <main id="top" aria-label={t.locale === "sv" ? "Huvudinnehåll" : "Main content"}>
         {/* Hero */}
-        <section className="border-b border-zinc-100" aria-label={t.locale === "sv" ? "Introduktion" : "Introduction"}>
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
-            <div className="flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 text-xs text-zinc-400 mb-5">
-                <span className="font-medium text-zinc-600">{t.hero.badge1}</span>
-                <span className="text-zinc-200">|</span>
-                <span>{t.hero.badge2}</span>
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.locale === "sv" ? "Introduktion" : "Introduction"}>
+          <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-end gap-12 px-6 pt-20 pb-16 sm:px-10 md:grid-cols-[1.5fr_.8fr] md:pt-24 md:pb-20">
+            <div>
+              <div className="mb-7 flex flex-wrap items-center gap-2 text-[12px]" style={{ ...mono, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--accent)" }}>
+                <span>{t.hero.badge1}</span>
+                <span style={{ color: "var(--faint-2)" }}>·</span>
+                <span style={{ color: "var(--faint-2)" }}>{t.hero.badge2}</span>
               </div>
-              {/* Primär H1: "AI-konsulting som bygger och driftsätter, inte PowerPoint." */}
-              {/* Variant: "Vi bygger AI:n. Vi driftsätter den. Sen driver ni vidare." */}
-              <h1 className="text-4xl font-light tracking-tight text-zinc-950 sm:text-5xl leading-tight">
+              <h1 className="max-w-[16ch] text-[clamp(40px,5.4vw,72px)] font-medium leading-[1.03] tracking-[-0.018em]" style={serif}>
                 {t.hero.heading}
               </h1>
-              <p className="mt-5 text-[15px] leading-7 text-zinc-600">
+              <p className="mt-7 max-w-[560px] text-[19px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>
                 {t.hero.description}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-9 flex flex-wrap items-center gap-7">
                 <a
                   href="#kontakt"
-                  className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors"
-                  style={{ backgroundColor: BRAND }}
+                  className="inline-flex items-center gap-2 rounded-[3px] px-[26px] py-[15px] text-[15.5px] font-medium no-underline transition-opacity hover:opacity-90"
+                  style={{ background: "var(--accent)", color: "var(--on-accent)" }}
                 >
                   {t.hero.cta1}
                 </a>
                 <a
                   href="#arbetssatt"
-                  className="text-sm font-medium text-zinc-600 underline underline-offset-4 hover:text-zinc-900 transition-colors"
+                  className="inline-flex items-center gap-2 pb-[3px] text-[15.5px] font-medium no-underline"
+                  style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}
                 >
-                  {t.hero.cta2}
+                  {t.hero.cta2} →
                 </a>
               </div>
             </div>
 
-            <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
-              <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-4">
-                {t.locale === "sv" ? "Detta etablerar vi" : "What we establish"}
-              </div>
-              <ul className="space-y-3 text-sm text-zinc-700">
+            <div>
+              <Overline>{t.locale === "sv" ? "Detta etablerar vi" : "What we establish"}</Overline>
+              <ul>
                 {t.hero.bullets.map((b, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="mt-0.5 text-zinc-300 select-none">·</span>
+                  <li key={i} className="flex gap-3 py-[13px] text-[15px]" style={{ borderBottom: "1px solid rgba(26,24,21,.1)", color: "var(--ink-soft)" }}>
+                    <span style={{ ...mono, fontSize: "12px", color: "var(--accent)" }}>{String(i + 1).padStart(2, "0")}</span>
                     <span>{b}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 grid gap-3 border-t border-zinc-100 pt-5 sm:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 {[
                   { title: t.hero.stat1Title, sub: t.hero.stat1Sub },
                   { title: t.hero.stat2Title, sub: t.hero.stat2Sub },
                   { title: t.hero.stat3Title, sub: t.hero.stat3Sub },
                 ].map((s) => (
                   <div key={s.title}>
-                    <div className="text-xs font-semibold text-zinc-900">{s.title}</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">{s.sub}</div>
+                    <div className="text-[13px] font-semibold" style={{ color: "var(--ink)" }}>{s.title}</div>
+                    <div className="mt-0.5 text-[12px]" style={{ color: "var(--faint-2)" }}>{s.sub}</div>
                   </div>
                 ))}
-              </div>
-              <div className="mt-5 rounded border border-zinc-100 bg-zinc-50 p-4 text-sm">
-                <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.hero.contactLabel}</div>
-                <a className="text-zinc-700 hover:text-zinc-900 underline" href="mailto:rc@successifier.com">rc@successifier.com</a>
-                <div className="text-zinc-400 text-xs mt-0.5">+46 72 213 64 22</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Fit, "Det här passar er om…" */}
-        <section id="passar" className="border-b border-zinc-100 bg-white" aria-label={t.fit.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        {/* Fit */}
+        <section id="passar" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.fit.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
             <div className="max-w-2xl">
               <Overline>{t.fit.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.fit.heading}</h2>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.fit.heading}</h2>
             </div>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-9 grid gap-x-10 sm:grid-cols-2" style={{ borderTop: "1px solid var(--hairline)" }}>
               {t.fit.items.map((item) => (
-                <li key={item} className="flex gap-3 rounded-lg border border-zinc-200 bg-white p-5">
-                  <span className="mt-0.5 text-zinc-300 select-none shrink-0">·</span>
-                  <span className="text-sm leading-6 text-zinc-700">{item}</span>
+                <li key={item} className="flex gap-3 py-[18px] text-[15.5px] leading-[1.55]" style={{ borderBottom: "1px solid var(--hairline)", color: "var(--ink-soft)" }}>
+                  <span className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: "var(--accent)" }} />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex flex-wrap items-center gap-6">
-              <p className="text-sm text-zinc-500 italic">{t.fit.closing}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
+              <p className="text-[15px] italic" style={{ color: "var(--faint)" }}>{t.fit.closing}</p>
               <a
                 href="#kontakt"
-                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shrink-0 transition-colors"
-                style={{ backgroundColor: BRAND }}
+                className="inline-flex shrink-0 items-center rounded-[3px] px-5 py-[11px] text-[14.5px] font-medium no-underline transition-opacity hover:opacity-90"
+                style={{ background: "var(--accent)", color: "var(--on-accent)" }}
               >
                 {t.fit.cta}
               </a>
@@ -226,23 +243,24 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* Why, dark section */}
-        <section className="border-b border-zinc-900" style={{ backgroundColor: BRAND }} aria-label={t.why.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        {/* Why (dark) */}
+        <section style={{ background: "var(--accent)", color: "var(--on-accent)" }} aria-label={t.why.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
             <div className="max-w-2xl">
-              <Overline><span className="text-white/40">{t.why.overline}</span></Overline>
-              <h2 className="text-2xl font-light tracking-tight text-white">{t.why.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-white/60">{t.why.description}</p>
+              <Overline onAccent>{t.why.overline}</Overline>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.why.heading}</h2>
+              <p className="mt-4 text-[17px] leading-[1.6] text-pretty" style={{ color: "rgba(242,238,230,.7)" }}>{t.why.description}</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-px md:grid-cols-3" style={{ borderTop: "1px solid rgba(242,238,230,.18)" }}>
               {[
-                { title: t.why.card1Title, text: t.why.card1Text },
-                { title: t.why.card2Title, text: t.why.card2Text },
-                { title: t.why.card3Title, text: t.why.card3Text },
+                { num: "01", title: t.why.card1Title, text: t.why.card1Text },
+                { num: "02", title: t.why.card2Title, text: t.why.card2Text },
+                { num: "03", title: t.why.card3Title, text: t.why.card3Text },
               ].map((c) => (
-                <div key={c.title} className="rounded-lg border border-white/10 bg-white/5 p-6">
-                  <div className="text-sm font-medium text-white">{c.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-white/60">{c.text}</p>
+                <div key={c.title} className="pt-7 md:pr-8" >
+                  <div style={{ ...mono, fontSize: "12px", color: "rgba(242,238,230,.55)", marginBottom: "12px" }}>{c.num}</div>
+                  <div className="text-[20px] font-medium" style={serif}>{c.title}</div>
+                  <p className="mt-2 text-[15px] leading-[1.6] text-pretty" style={{ color: "rgba(242,238,230,.65)" }}>{c.text}</p>
                 </div>
               ))}
             </div>
@@ -250,31 +268,33 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Services */}
-        <section id="tjanster" className="border-b border-zinc-100 bg-slate-50" aria-label={t.services.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <div className="max-w-2xl">
-              <Overline>{t.services.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.services.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.services.intro}</p>
+        <section id="tjanster" style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label={t.services.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
+            <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[.8fr_1.2fr]">
+              <div>
+                <Overline>{t.services.overline}</Overline>
+                <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.services.heading}</h2>
+              </div>
+              <p className="max-w-[460px] pt-1 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.services.intro}</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {services.map((p) => (
-                <div key={p.num} className="rounded-lg border border-zinc-200 bg-white p-6 flex flex-col">
-                  <div className="text-xs font-medium tabular-nums text-zinc-300">{p.num}</div>
-                  <div className="mt-2 text-base font-medium text-zinc-900">{p.title}</div>
-                  <p className="mt-1 text-xs text-zinc-400">{p.sub}</p>
-                  <div className="mt-5 text-[11px] font-medium uppercase tracking-widest text-zinc-400">{p.focusLabel}</div>
-                  <ul className="mt-2 space-y-1.5 text-sm text-zinc-600 flex-1">
+                <div key={p.num} className="flex flex-col rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
+                  <div className="text-[12px]" style={{ ...mono, color: "var(--accent)" }}>{p.num}</div>
+                  <div className="mt-2 text-[21px] font-medium leading-[1.2] tracking-[-0.01em]" style={serif}>{p.title}</div>
+                  <p className="mt-1 text-[13px]" style={{ color: "var(--faint-2)" }}>{p.sub}</p>
+                  <div className="mt-5 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{p.focusLabel}</div>
+                  <ul className="mt-2 flex-1 space-y-1.5 text-[14.5px]" style={{ color: "var(--muted)" }}>
                     {p.focus.map((f) => (
                       <li key={f} className="flex gap-2">
-                        <span className="text-zinc-300 shrink-0 mt-0.5">·</span>
+                        <span className="mt-[7px] h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: "var(--accent)" }} />
                         <span>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-5 border-t border-zinc-100 pt-4">
-                    <div className="text-[11px] font-medium uppercase tracking-widest text-zinc-400">{p.resultLabel}</div>
-                    <div className="mt-1 text-sm font-medium text-zinc-900">{p.result}</div>
+                  <div className="mt-5 pt-4" style={{ borderTop: "1px solid var(--hairline)" }}>
+                    <div className="uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{p.resultLabel}</div>
+                    <div className="mt-1 text-[15px] font-medium" style={{ color: "var(--ink)" }}>{p.result}</div>
                   </div>
                 </div>
               ))}
@@ -282,54 +302,50 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* SAMA, reframed as proof + engine */}
-        <section id="sama" className="border-b border-zinc-100 bg-white" aria-label={t.sama.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+        {/* SAMA */}
+        <section id="sama" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.sama.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="grid gap-12 md:grid-cols-2 md:items-start">
               <div>
                 <Overline>{t.sama.overline}</Overline>
-                <h2 className="text-2xl font-light tracking-tight sm:text-3xl">{t.sama.heading}</h2>
-                <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.sama.description}</p>
-                <div className="mt-8 space-y-4">
+                <h2 className="text-[clamp(28px,3.6vw,44px)] font-medium leading-[1.08] tracking-[-0.015em]" style={serif}>{t.sama.heading}</h2>
+                <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.sama.description}</p>
+                <div className="mt-8" style={{ borderTop: "1px solid var(--hairline)" }}>
                   {[
                     { title: t.sama.v1Title, text: t.sama.v1Text },
                     { title: t.sama.v2Title, text: t.sama.v2Text },
                     { title: t.sama.v3Title, text: t.sama.v3Text },
                   ].map((v) => (
-                    <div key={v.title} className="flex gap-4 rounded-lg border border-zinc-200 bg-slate-50 p-4">
-                      <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 mt-2" />
+                    <div key={v.title} className="flex gap-4 py-[18px]" style={{ borderBottom: "1px solid var(--hairline)" }}>
+                      <span className="mt-[9px] h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: "var(--accent)" }} />
                       <div>
-                        <div className="text-sm font-medium text-zinc-900">{v.title}</div>
-                        <p className="mt-1 text-sm leading-6 text-zinc-500">{v.text}</p>
+                        <div className="text-[16px] font-medium" style={{ color: "var(--ink)" }}>{v.title}</div>
+                        <p className="mt-1 text-[14.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>{v.text}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-                {/* Nedtonad CTA, text-länk, pekar mot strategisamtal */}
-                <p className="mt-6 text-sm text-zinc-400 italic">
-                  <a href="#kontakt" className="underline underline-offset-4 hover:text-zinc-700 transition-colors">
-                    {t.sama.ctaText}
-                  </a>
+                <p className="mt-6 text-[15px] italic" style={{ color: "var(--faint)" }}>
+                  <a href="#kontakt" className="no-underline" style={{ borderBottom: "1px solid rgba(26,24,21,.3)" }}>{t.sama.ctaText} →</a>
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className="grid gap-3 sm:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-3">
                   {[
                     { label: t.sama.stat1Label, value: t.sama.stat1Value, sub: t.sama.stat1Sub },
                     { label: t.sama.stat2Label, value: t.sama.stat2Value, sub: t.sama.stat2Sub },
                     { label: t.sama.stat3Label, value: t.sama.stat3Value, sub: t.sama.stat3Sub },
                   ].map((s) => (
-                    <div key={s.label} className="rounded-lg border border-zinc-200 bg-white p-4">
-                      <div className="text-[10px] font-medium uppercase tracking-widest text-zinc-400">{s.label}</div>
-                      <div className="mt-1 text-2xl font-light text-zinc-900">{s.value}</div>
-                      <div className="text-xs text-zinc-400 mt-0.5">{s.sub}</div>
+                    <div key={s.label} className="rounded-[6px] p-4" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
+                      <div className="uppercase" style={{ ...mono, fontSize: "10px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{s.label}</div>
+                      <div className="mt-1 text-[28px] font-medium leading-none" style={serif}>{s.value}</div>
+                      <div className="mt-1 text-[12px]" style={{ color: "var(--faint-2)" }}>{s.sub}</div>
                     </div>
                   ))}
                 </div>
-                {/* SAMA dashboards, skärmdumpar av Insights- och Content-vyerna */}
                 <div className="space-y-4">
-                  <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+                  <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
                       src="/Insights.png"
                       alt={t.locale === "sv" ? "SAMA Insights-dashboard, exempel på siteanalys" : "SAMA Insights dashboard, example site audit"}
@@ -338,7 +354,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                       className="h-auto w-full"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+                  <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
                       src="/Content.png"
                       alt={t.locale === "sv" ? "SAMA Content-dashboard, AI-driven content-pipeline" : "SAMA Content dashboard, AI-driven content pipeline"}
@@ -354,23 +370,24 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Approach */}
-        <section id="arbetssatt" className="border-b border-zinc-100 bg-slate-50" aria-label={t.approach.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <section id="arbetssatt" style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label={t.approach.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
               <Overline>{t.approach.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.approach.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.approach.description}</p>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.approach.heading}</h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.approach.description}</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-7 md:grid-cols-3">
               {[
                 { num: "01", title: t.approach.s1Title, text: t.approach.s1Text },
                 { num: "02", title: t.approach.s2Title, text: t.approach.s2Text },
                 { num: "03", title: t.approach.s3Title, text: t.approach.s3Text },
               ].map((s) => (
-                <div key={s.num} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-xs font-medium tabular-nums text-zinc-300">{s.num}</div>
-                  <div className="mt-2 text-sm font-medium text-zinc-900">{s.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">{s.text}</p>
+                <div key={s.num} className="relative pt-[22px]" style={{ borderTop: "1px solid var(--hairline-strong)" }}>
+                  <div className="absolute left-0 top-[-5px] h-[9px] w-[9px] rounded-full" style={{ background: "var(--accent)" }} />
+                  <div style={{ ...mono, fontSize: "12px", color: "var(--faint-2)", marginBottom: "12px" }}>{s.num}</div>
+                  <div className="text-[21px] font-medium tracking-[-0.01em]" style={serif}>{s.title}</div>
+                  <p className="mt-2 text-[15px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>{s.text}</p>
                 </div>
               ))}
             </div>
@@ -378,14 +395,14 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Results */}
-        <section id="resultat" className="border-b border-zinc-100 bg-white" aria-label={t.results.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <section id="resultat" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.results.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
               <Overline>{t.results.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.results.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.results.description}</p>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.results.heading}</h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.results.description}</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
               {[
                 { title: t.results.r1Title, text: t.results.r1Text },
                 { title: t.results.r2Title, text: t.results.r2Text },
@@ -394,56 +411,56 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 { title: t.results.r5Title, text: t.results.r5Text },
                 { title: t.results.r6Title, text: t.results.r6Text },
               ].map((r) => (
-                <div key={r.title} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-sm font-medium text-zinc-900">{r.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-500">{r.text}</p>
+                <div key={r.title} className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
+                  <div className="text-[17px] font-medium" style={serif}>{r.title}</div>
+                  <p className="mt-2 text-[15px] leading-[1.6]" style={{ color: "var(--muted)" }}>{r.text}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Mini-cases / Social proof */}
-        <section className="border-b border-zinc-100 bg-slate-50" aria-label={t.cases.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        {/* Cases */}
+        <section style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label={t.cases.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
               <Overline>{t.cases.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.cases.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">{t.cases.description}</p>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.cases.heading}</h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.cases.description}</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
               {[
                 { title: t.cases.case1Title, result: t.cases.case1Result, detail: t.cases.case1Detail },
                 { title: t.cases.case2Title, result: t.cases.case2Result, detail: t.cases.case2Detail },
               ].map((c) => (
-                <div key={c.title} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-sm font-medium text-zinc-900">{c.title}</div>
-                  <div className="mt-3 text-xl font-light text-zinc-900">{c.result}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-500">{c.detail}</p>
+                <div key={c.title} className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
+                  <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>{c.title}</div>
+                  <div className="mt-3 text-[32px] font-medium leading-none" style={serif}>{c.result}</div>
+                  <p className="mt-3 text-[15px] leading-[1.6]" style={{ color: "var(--muted)" }}>{c.detail}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-5 text-xs text-zinc-400">{t.cases.note}</p>
+            <p className="mt-5 text-[12px]" style={{ color: "var(--faint-2)" }}>{t.cases.note}</p>
           </div>
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="border-b border-zinc-100 bg-white" aria-label={t.faq.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <div className="max-w-2xl">
-              <Overline>{t.faq.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.faq.heading}</h2>
+        <section id="faq" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.faq.heading}>
+          <div className="mx-auto max-w-[1000px] px-6 py-[100px] sm:px-10">
+            <div className="mb-10 text-center">
+              <Overline center>{t.faq.overline}</Overline>
+              <h2 className="text-[clamp(28px,3.4vw,42px)] font-medium tracking-[-0.015em]" style={serif}>{t.faq.heading}</h2>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div style={{ borderBottom: "1px solid var(--hairline)" }}>
               {[
                 { q: t.faq.q1, a: t.faq.a1 },
                 { q: t.faq.q2, a: t.faq.a2 },
                 { q: t.faq.q3, a: t.faq.a3 },
                 { q: t.faq.q4, a: t.faq.a4 },
               ].map((item) => (
-                <div key={item.q} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-sm font-medium text-zinc-900">{item.q}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-500">{item.a}</p>
+                <div key={item.q} className="grid grid-cols-1 gap-x-10 gap-y-3 py-[28px] md:grid-cols-[1fr_1.3fr]" style={{ borderTop: "1px solid var(--hairline)" }}>
+                  <h3 className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={serif}>{item.q}</h3>
+                  <p className="text-[15.5px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{item.a}</p>
                 </div>
               ))}
             </div>
@@ -451,19 +468,19 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* About */}
-        <section id="om-oss" className="border-b border-zinc-100 bg-slate-50" aria-label={t.about.heading}>
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <div className="grid gap-10 md:grid-cols-2 md:items-start">
+        <section id="om-oss" style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label={t.about.heading}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
+            <div className="grid gap-12 md:grid-cols-2 md:items-start">
               <div>
                 <Overline>{t.about.overline}</Overline>
-                <h2 className="text-2xl font-light tracking-tight">{t.about.heading}</h2>
-                <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.about.p1}</p>
-                <p className="mt-4 text-[15px] leading-7 text-zinc-600">{t.about.p2}</p>
-                {/* Partnermodell */}
-                <p className="mt-4 text-[15px] leading-7 text-zinc-500 border-l-2 border-zinc-200 pl-4">{t.about.p3}</p>
-                <div className="mt-6">
+                <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.about.heading}</h2>
+                <p className="mt-5 text-[16px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.about.p1}</p>
+                <p className="mt-4 text-[16px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{t.about.p2}</p>
+                <p className="mt-5 pl-4 text-[15px] leading-[1.6] italic" style={{ color: "var(--faint)", borderLeft: "2px solid var(--accent)" }}>{t.about.p3}</p>
+                <div className="mt-7">
                   <a
-                    className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50 transition-colors"
+                    className="inline-flex items-center rounded-[3px] px-4 py-[11px] text-[14.5px] font-medium no-underline transition-colors"
+                    style={{ border: "1px solid var(--hairline-strong)", color: "var(--ink)" }}
                     href="https://www.linkedin.com/in/rickard-collander/"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
@@ -472,30 +489,29 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </a>
                 </div>
               </div>
-              <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+              <div className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="h-16 w-16 overflow-hidden rounded-full border border-zinc-200 bg-zinc-50">
+                  <div className="h-16 w-16 overflow-hidden rounded-full" style={{ border: "1px solid var(--hairline)" }}>
                     <Image src="/rc2.jpg" alt="Rickard Collander" width={320} height={320} className="h-full w-full object-cover" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-zinc-900">Rickard Collander</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">{t.about.founderTitle}</div>
+                    <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>Rickard Collander</div>
+                    <div className="mt-0.5 text-[12px]" style={{ color: "var(--faint-2)" }}>{t.about.founderTitle}</div>
                   </div>
                 </div>
-                {/* Kundcitat, renderas bara när ett godkänt citat finns (t.about.quote) */}
                 {t.about.quote && (
                   <>
-                    <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.quoteHeading}</div>
-                    <p className="text-sm leading-6 text-zinc-600 italic">{t.about.quote}</p>
+                    <div className="mb-2 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{t.about.quoteHeading}</div>
+                    <p className="text-[15px] leading-[1.6] italic" style={{ color: "var(--muted)" }}>{t.about.quote}</p>
                     {t.about.quotePerson && (
-                      <div className="mt-2 text-xs text-zinc-400">{t.about.quotePerson}</div>
+                      <div className="mt-2 text-[12px]" style={{ color: "var(--faint-2)" }}>{t.about.quotePerson}</div>
                     )}
                   </>
                 )}
-                <div className="mt-6 rounded border border-zinc-100 bg-slate-50 p-4">
-                  <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-2">{t.about.contactLabel}</div>
-                  <a className="text-sm text-zinc-700 hover:text-zinc-900 underline" href="mailto:rc@successifier.com">rc@successifier.com</a>
-                  <div className="text-xs text-zinc-400 mt-0.5">+46 72 213 64 22</div>
+                <div className="mt-6 rounded-[6px] p-4" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
+                  <div className="mb-2 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{t.about.contactLabel}</div>
+                  <a className="text-[14.5px] no-underline" style={{ color: "var(--ink-soft)", borderBottom: "1px solid var(--hairline)" }} href="mailto:rc@successifier.com">rc@successifier.com</a>
+                  <div className="mt-0.5 text-[12px]" style={{ color: "var(--faint-2)" }}>+46 72 213 64 22</div>
                 </div>
               </div>
             </div>
@@ -503,20 +519,20 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
 
         {/* Contact */}
-        <section id="kontakt" className="bg-white" aria-label={t.contact.heading}>
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2">
+        <section id="kontakt" aria-label={t.contact.heading}>
+          <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-[100px] sm:px-10 md:grid-cols-2">
             <div>
               <Overline>{t.contact.overline}</Overline>
-              <h2 className="text-2xl font-light tracking-tight">{t.contact.heading}</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.contact.heading}</h2>
+              <p className="mt-4 text-[16px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>
                 {t.contact.description}{" "}
-                <span className="font-medium text-zinc-900">rc@successifier.com</span>.
+                <span className="font-medium" style={{ color: "var(--ink)" }}>rc@successifier.com</span>.
               </p>
-              <div className="mt-6 rounded-lg border border-zinc-200 bg-slate-50 p-5">
-                <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">{t.contact.directLabel}</div>
-                <div className="text-sm text-zinc-700 space-y-1">
-                  <div>{t.contact.emailLabel}: <a className="underline hover:text-zinc-900" href="mailto:rc@successifier.com">rc@successifier.com</a></div>
-                  <div>{t.contact.phoneLabel}: <a className="underline hover:text-zinc-900" href="tel:+46722136422">+46 72 213 64 22</a></div>
+              <div className="mt-6 rounded-[6px] p-5" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
+                <div className="mb-3 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{t.contact.directLabel}</div>
+                <div className="space-y-1 text-[14.5px]" style={{ color: "var(--ink-soft)" }}>
+                  <div>{t.contact.emailLabel}: <a className="no-underline" style={{ borderBottom: "1px solid var(--hairline)" }} href="mailto:rc@successifier.com">rc@successifier.com</a></div>
+                  <div>{t.contact.phoneLabel}: <a className="no-underline" style={{ borderBottom: "1px solid var(--hairline)" }} href="tel:+46722136422">+46 72 213 64 22</a></div>
                 </div>
               </div>
             </div>
@@ -525,13 +541,17 @@ export default function HomePageContent({ t }: { t: Dict }) {
         </section>
       </main>
 
-      <footer className="border-t border-zinc-200 bg-white" aria-label={t.locale === "sv" ? "Sidfot" : "Site footer"}>
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-xs text-zinc-400 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} {t.footer.rights}</div>
-          <div className="flex gap-5">
-            <a className="hover:text-zinc-700 transition-colors" href="mailto:rc@successifier.com">rc@successifier.com</a>
-            <a className="hover:text-zinc-700 transition-colors" href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="hover:text-zinc-700 transition-colors" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
+      <footer style={{ borderTop: "1px solid var(--hairline)", background: "var(--paper)" }} aria-label={t.locale === "sv" ? "Sidfot" : "Site footer"}>
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 px-6 py-[50px] sm:px-10">
+          <div className="flex items-baseline gap-[9px]">
+            <span className="text-[17px] font-semibold tracking-[-0.02em]">Successifier</span>
+            <span className="h-[5px] w-[5px] rounded-full" style={{ background: "var(--accent)" }} />
+            <span className="ml-2 text-[14px]" style={{ color: "var(--faint-2)" }}>{t.footer.rights}</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
+            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="mailto:rc@successifier.com">rc@successifier.com</a>
+            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="tel:+46722136422">+46 72 213 64 22</a>
+            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
           </div>
         </div>
       </footer>
