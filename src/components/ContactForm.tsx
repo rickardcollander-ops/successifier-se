@@ -63,26 +63,46 @@ export default function ContactForm({ t }: { t: Dict["form"] }) {
     }
   }
 
+  const labelStyle = {
+    fontFamily: "var(--font-plex-mono)",
+    fontSize: "11px",
+    letterSpacing: "0.16em",
+    color: "var(--faint-2)",
+  } as const;
+  const inputClass =
+    "h-11 rounded-[3px] px-3 text-[15px] outline-none transition-colors focus:border-[color:var(--accent)]";
+  const inputStyle = {
+    border: "1px solid var(--hairline)",
+    background: "var(--paper)",
+    color: "var(--ink)",
+  } as const;
+
   return (
-    <form onSubmit={onSubmit} className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+    <form
+      onSubmit={onSubmit}
+      className="rounded-[6px] p-6"
+      style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}
+    >
       <div className="grid gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.nameLabel}</span>
+            <span className="uppercase" style={labelStyle}>{t.nameLabel}</span>
             <input
               value={form.name}
               onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
               required
-              className="h-10 rounded-md border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200"
+              className={inputClass}
+              style={inputStyle}
               placeholder={t.namePlaceholder}
             />
           </label>
           <label className="grid gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.companyLabel}</span>
+            <span className="uppercase" style={labelStyle}>{t.companyLabel}</span>
             <input
               value={form.company}
               onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
-              className="h-10 rounded-md border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200"
+              className={inputClass}
+              style={inputStyle}
               placeholder={t.companyPlaceholder}
             />
           </label>
@@ -90,46 +110,49 @@ export default function ContactForm({ t }: { t: Dict["form"] }) {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.emailLabel}</span>
+            <span className="uppercase" style={labelStyle}>{t.emailLabel}</span>
             <input
               value={form.email}
               onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
               type="email"
               required
-              className="h-10 rounded-md border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200"
+              className={inputClass}
+              style={inputStyle}
               placeholder={t.emailPlaceholder}
             />
           </label>
           <label className="grid gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.phoneLabel}</span>
+            <span className="uppercase" style={labelStyle}>{t.phoneLabel}</span>
             <input
               value={form.phone}
               onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-              className="h-10 rounded-md border border-zinc-200 bg-white px-3 text-sm outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200"
+              className={inputClass}
+              style={inputStyle}
               placeholder={t.phonePlaceholder}
             />
           </label>
         </div>
 
         <label className="grid gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">{t.messageLabel}</span>
+          <span className="uppercase" style={labelStyle}>{t.messageLabel}</span>
           <textarea
             value={form.message}
             onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
             required
             rows={5}
-            className="resize-none rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm outline-none focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200"
+            className="resize-none rounded-[3px] px-3 py-2 text-[15px] outline-none transition-colors focus:border-[color:var(--accent)]"
+            style={inputStyle}
             placeholder={t.messagePlaceholder}
           />
         </label>
 
         {success && (
-          <div className="rounded-md border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+          <div className="rounded-[3px] px-4 py-3 text-[14px]" style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--accent)" }}>
             {success}
           </div>
         )}
         {error && (
-          <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          <div className="rounded-[3px] px-4 py-3 text-[14px]" style={{ border: "1px solid #6E2A2A", background: "rgba(110,42,42,.06)", color: "#6E2A2A" }}>
             {error}
           </div>
         )}
@@ -138,20 +161,20 @@ export default function ContactForm({ t }: { t: Dict["form"] }) {
           <button
             type="submit"
             disabled={submitting}
-            className="inline-flex h-10 w-full items-center justify-center rounded-md px-5 text-sm font-medium text-white shadow-sm transition-colors disabled:opacity-60"
-            style={{ backgroundColor: "#0B1F3A" }}
+            className="inline-flex h-11 w-full items-center justify-center rounded-[3px] px-5 text-[15px] font-medium transition-opacity hover:opacity-90 disabled:opacity-60"
+            style={{ background: "var(--accent)", color: "var(--on-accent)" }}
           >
             {submitting ? t.submittingLabel : t.submitLabel}
           </button>
-          <p className="text-xs text-zinc-500">
+          <p className="text-[12px]" style={{ color: "var(--faint)" }}>
             {t.altHint}{" "}
-            <a href={mailtoHref} className="font-medium text-zinc-700 underline hover:text-zinc-900">
+            <a href={mailtoHref} className="font-medium no-underline" style={{ color: "var(--ink-soft)", borderBottom: "1px solid var(--hairline)" }}>
               {t.emailFallbackLabel}
             </a>
           </p>
         </div>
 
-        <p className="text-xs text-zinc-400">{t.consentText}</p>
+        <p className="text-[12px]" style={{ color: "var(--faint-2)" }}>{t.consentText}</p>
       </div>
     </form>
   );

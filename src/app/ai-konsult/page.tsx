@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import AgentLeadForm from "@/components/AgentLeadForm";
+import { publicAssetExists } from "@/lib/publicAsset";
+
+// Drop the real files here and they are picked up automatically on the
+// next build; until then a placeholder renders in their place.
+const FEATURE_IMG = "/ai-konsult/feature.jpg";
+const PORTRAIT_IMG = "/ai-konsult/portrait.jpg";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -24,37 +31,45 @@ const plexMono = IBM_Plex_Mono({
 
 const PAGE_URL = "https://successifier.se/ai-konsult";
 
-export const metadata: Metadata = {
-  title: "AI-konsult för agentic AI · Successifier.se",
-  description:
-    "Successifier är specialistbyrån som kartlägger, bygger och driftsätter autonoma AI-agenter — från idé till produktion på veckor, med mätbar effekt och människan i loopen.",
-  keywords: [
-    "AI-konsult",
-    "agentic AI",
-    "AI-agenter",
-    "AI-automatisering",
-    "autonoma agenter",
-    "AI-implementation",
-    "AI-konsult Sverige",
-    "agentic AI konsult",
-  ],
-  alternates: { canonical: "/ai-konsult" },
-  openGraph: {
-    type: "website",
+export function generateMetadata(): Metadata {
+  const ogImages = publicAssetExists(FEATURE_IMG)
+    ? [{ url: FEATURE_IMG, alt: "Successifier — agentic AI i arbete" }]
+    : undefined;
+
+  return {
     title: "AI-konsult för agentic AI · Successifier.se",
     description:
-      "Specialistbyrå för AI-automatisering. Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — med mätbar effekt och människan i loopen.",
-    url: PAGE_URL,
-    siteName: "Successifier.se",
-    locale: "sv_SE",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AI-konsult för agentic AI · Successifier.se",
-    description:
-      "Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — från idé till produktion på veckor.",
-  },
-};
+      "Successifier är specialistbyrån som kartlägger, bygger och driftsätter autonoma AI-agenter — från idé till produktion på veckor, med mätbar effekt och människan i loopen.",
+    keywords: [
+      "AI-konsult",
+      "agentic AI",
+      "AI-agenter",
+      "AI-automatisering",
+      "autonoma agenter",
+      "AI-implementation",
+      "AI-konsult Sverige",
+      "agentic AI konsult",
+    ],
+    alternates: { canonical: "/ai-konsult" },
+    openGraph: {
+      type: "website",
+      title: "AI-konsult för agentic AI · Successifier.se",
+      description:
+        "Specialistbyrå för AI-automatisering. Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — med mätbar effekt och människan i loopen.",
+      url: PAGE_URL,
+      siteName: "Successifier.se",
+      locale: "sv_SE",
+      images: ogImages,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "AI-konsult för agentic AI · Successifier.se",
+      description:
+        "Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — från idé till produktion på veckor.",
+      images: ogImages?.map((i) => i.url),
+    },
+  };
+}
 
 const indexItems = [
   { num: "01", label: "Verksamhetskartläggning" },
@@ -173,6 +188,45 @@ function Mono({
   );
 }
 
+function ImageSlot({
+  src,
+  alt,
+  heightClass,
+  sizes,
+  placeholder,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  heightClass: string;
+  sizes: string;
+  placeholder: string;
+  className?: string;
+}) {
+  const exists = publicAssetExists(src);
+  return (
+    <div
+      className={`relative w-full overflow-hidden rounded-[6px] ${heightClass} ${className}`}
+      style={{ border: "1px solid rgba(26,24,21,.14)" }}
+    >
+      {exists ? (
+        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />
+      ) : (
+        <div
+          className="flex h-full w-full items-center justify-center"
+          style={{
+            background: "linear-gradient(135deg, rgba(20,67,59,.06), rgba(26,24,21,.04))",
+          }}
+        >
+          <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
+            {placeholder}
+          </Mono>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function AiKonsultPage() {
   const serif = { fontFamily: "var(--font-spectral)" };
   const tokenStyle = {
@@ -242,18 +296,6 @@ export default function AiKonsultPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Paper grain overlay */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-[60]"
-        style={{
-          opacity: 0.05,
-          mixBlendMode: "multiply",
-          backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
-        }}
       />
 
       {/* NAV */}
@@ -397,18 +439,13 @@ export default function AiKonsultPage() {
 
       {/* FEATURE IMAGE */}
       <section className="mx-auto max-w-[1200px] px-6 pt-16 pb-2 sm:px-10">
-        <div
-          className="flex h-[300px] w-full items-center justify-center rounded-[6px] sm:h-[420px] md:h-[520px]"
-          style={{
-            border: "1px solid rgba(26,24,21,.14)",
-            background:
-              "linear-gradient(135deg, rgba(20,67,59,.06), rgba(26,24,21,.04))",
-          }}
-        >
-          <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
-            Bildplats — team, kontor eller teknik
-          </Mono>
-        </div>
+        <ImageSlot
+          src={FEATURE_IMG}
+          alt="Successifier i arbete med agentic AI"
+          heightClass="h-[300px] sm:h-[420px] md:h-[520px]"
+          sizes="(max-width: 1280px) 100vw, 1200px"
+          placeholder="Bildplats — team, kontor eller teknik"
+        />
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
           <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
             Fig. 01 — Successifier i arbete
@@ -572,17 +609,14 @@ export default function AiKonsultPage() {
             >
               Strategibyråns disciplin, ingenjörens leverans.
             </h2>
-            <div
-              className="mt-8 flex h-[280px] w-full items-center justify-center rounded-[6px] md:h-[380px]"
-              style={{
-                border: "1px solid rgba(26,24,21,.14)",
-                background: "linear-gradient(135deg, rgba(20,67,59,.06), rgba(26,24,21,.04))",
-              }}
-            >
-              <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
-                Porträtt / teambild
-              </Mono>
-            </div>
+            <ImageSlot
+              src={PORTRAIT_IMG}
+              alt="Teamet bakom Successifier"
+              heightClass="h-[280px] md:h-[380px]"
+              sizes="(max-width: 768px) 100vw, 40vw"
+              placeholder="Porträtt / teambild"
+              className="mt-8"
+            />
           </div>
           <div style={{ borderBottom: "1px solid rgba(26,24,21,.14)" }}>
             {principles.map((pr) => (

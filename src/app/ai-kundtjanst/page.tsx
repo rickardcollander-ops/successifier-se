@@ -1,7 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "@/components/site/SiteHeader";
+import SiteFooter from "@/components/site/SiteFooter";
 
-const BRAND = "#0B1F3A";
+const serif = { fontFamily: "var(--font-spectral)" } as const;
+const mono = { fontFamily: "var(--font-plex-mono)" } as const;
 
 // ───────────────────────────────────────────────────────────────────
 // TODO: Ersätt platshållarvärdena nedan med riktiga siffror.
@@ -92,76 +94,53 @@ export default function AiKundtjanstPage() {
   };
 
   return (
-    <div className="min-h-screen text-zinc-950">
+    <div className="min-h-screen" style={{ color: "var(--ink)" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white/90 backdrop-blur" aria-label="Sidhuvud">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="Successifier" width={32} height={32} className="h-8 w-8" priority />
-            <div className="leading-tight">
-              <div className="text-sm font-semibold tracking-tight">Successifier.se</div>
-              <div className="text-xs text-zinc-400">AI-konsulting · Bygg & implementering</div>
-            </div>
-          </Link>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-500 md:flex" aria-label="Huvudmeny">
-            <Link href="/#tjanster" className="hover:text-zinc-900 transition-colors">Tjänster</Link>
-            <Link href="/#sama" className="hover:text-zinc-900 transition-colors">Plattform</Link>
-            <Link href="/ai-kundtjanst" className="font-medium text-zinc-900">Support</Link>
-            <Link href="/blog" className="hover:text-zinc-900 transition-colors">Blogg</Link>
-            <Link href="/#kontakt" className="hover:text-zinc-900 transition-colors">Kontakt</Link>
-          </nav>
-          <Link
-            href="/#kontakt"
-            className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors"
-            style={{ backgroundColor: BRAND }}
-          >
-            Boka demo
-          </Link>
-        </div>
-      </header>
+      <SiteHeader locale="sv" />
 
       <main aria-label="Huvudinnehåll">
         {/* Hero */}
-        <section className="border-b border-zinc-100" aria-label="Introduktion">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-            <nav aria-label="Brödsmulor" className="mb-8 text-sm text-zinc-500">
-              <ol className="flex flex-wrap items-center gap-1.5">
-                <li><Link href="/" className="hover:text-zinc-900">Hem</Link></li>
-                <li aria-hidden="true" className="text-zinc-300">/</li>
-                <li className="text-zinc-700" aria-current="page">Successifier Support</li>
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Introduktion">
+          <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-10 md:py-24">
+            <nav aria-label="Brödsmulor" className="mb-8 text-[13px]" style={{ ...mono, color: "var(--faint-2)" }}>
+              <ol className="flex flex-wrap items-center gap-2">
+                <li><Link href="/" className="no-underline" style={{ color: "var(--faint)" }}>Hem</Link></li>
+                <li aria-hidden="true">/</li>
+                <li aria-current="page" style={{ color: "var(--ink-soft)" }}>Successifier Support</li>
               </ol>
             </nav>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 text-xs text-zinc-400 mb-5">
-                <span className="font-medium text-zinc-600">Successifier Support</span>
-                <span className="text-zinc-200">|</span>
-                <span>AI-kundtjänst för mail</span>
+              <div className="mb-6 flex flex-wrap items-center gap-2 uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.16em", color: "var(--accent)" }}>
+                <span>Successifier Support</span>
+                <span style={{ color: "var(--faint-2)" }}>·</span>
+                <span style={{ color: "var(--faint-2)" }}>AI-kundtjänst för mail</span>
               </div>
-              <h1 className="text-4xl font-light tracking-tight text-zinc-950 sm:text-5xl leading-tight">
+              <h1 className="max-w-[18ch] text-[clamp(38px,5vw,68px)] font-medium leading-[1.04] tracking-[-0.018em]" style={serif}>
                 AI som läser, sorterar och besvarar kundmailen åt er.
               </h1>
-              <p className="mt-5 text-[15px] leading-7 text-zinc-600">
+              <p className="mt-6 max-w-[620px] text-[18px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>
                 Successifier Support tar emot era supportmail, kategoriserar dem automatiskt och
                 föreslår färdiga svar med säkerhetspoäng, byggt på en kunskapsbas som lär sig av
                 varje konversation. Ni behåller kontrollen och godkänner innan något skickas.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-7">
                 <Link
                   href="/#kontakt"
-                  className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors"
-                  style={{ backgroundColor: BRAND }}
+                  className="inline-flex items-center gap-2 rounded-[3px] px-[26px] py-[15px] text-[15.5px] font-medium no-underline transition-opacity hover:opacity-90"
+                  style={{ background: "var(--accent)", color: "var(--on-accent)" }}
                 >
                   Boka demo
                 </Link>
                 <a
                   href="#sa-fungerar-det"
-                  className="text-sm font-medium text-zinc-600 underline underline-offset-4 hover:text-zinc-900 transition-colors"
+                  className="inline-flex items-center gap-2 pb-[3px] text-[15.5px] font-medium no-underline"
+                  style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}
                 >
-                  Se hur det fungerar
+                  Se hur det fungerar →
                 </a>
               </div>
             </div>
@@ -169,17 +148,17 @@ export default function AiKundtjanstPage() {
         </section>
 
         {/* Metrics */}
-        <section className="border-b border-zinc-100 bg-slate-50" aria-label="Nyckeltal">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-8">
+        <section style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Nyckeltal">
+          <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
+            <div className="mb-10 uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>
               Resultat i siffror
             </div>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {metrics.map((m) => (
-                <div key={m.label} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-3xl font-light text-zinc-900">{m.value}</div>
-                  <div className="mt-2 text-sm font-medium text-zinc-900">{m.label}</div>
-                  <p className="mt-1 text-xs leading-5 text-zinc-400">{m.sub}</p>
+                <div key={m.label} className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
+                  <div className="text-[40px] font-medium leading-none tracking-[-0.02em]" style={serif}>{m.value}</div>
+                  <div className="mt-3 text-[15px] font-medium" style={{ color: "var(--ink)" }}>{m.label}</div>
+                  <p className="mt-1 text-[13px] leading-[1.5]" style={{ color: "var(--faint-2)" }}>{m.sub}</p>
                 </div>
               ))}
             </div>
@@ -187,21 +166,21 @@ export default function AiKundtjanstPage() {
         </section>
 
         {/* Features */}
-        <section className="border-b border-zinc-100 bg-white" aria-label="Funktioner">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Funktioner">
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
-              <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">Funktioner</div>
-              <h2 className="text-2xl font-light tracking-tight">Allt teamet behöver i en vy</h2>
-              <p className="mt-3 text-[15px] leading-7 text-zinc-600">
+              <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Funktioner</div>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>Allt teamet behöver i en vy</h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>
                 Från inkommet mail till godkänt svar, Successifier Support samlar ärenden, kunddata
                 och AI-förslag på ett ställe.
               </p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {features.map((f) => (
-                <div key={f.title} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-sm font-medium text-zinc-900">{f.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">{f.text}</p>
+                <div key={f.title} className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
+                  <div className="text-[17px] font-medium" style={serif}>{f.title}</div>
+                  <p className="mt-2 text-[15px] leading-[1.6]" style={{ color: "var(--muted)" }}>{f.text}</p>
                 </div>
               ))}
             </div>
@@ -209,18 +188,19 @@ export default function AiKundtjanstPage() {
         </section>
 
         {/* How it works */}
-        <section id="sa-fungerar-det" className="border-b border-zinc-100 bg-slate-50" aria-label="Så fungerar det">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <section id="sa-fungerar-det" style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Så fungerar det">
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
-              <div className="text-xs font-medium uppercase tracking-widest text-zinc-400 mb-3">Så fungerar det</div>
-              <h2 className="text-2xl font-light tracking-tight">Tre steg till svar</h2>
+              <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Så fungerar det</div>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>Tre steg till svar</h2>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-7 md:grid-cols-3">
               {steps.map((s) => (
-                <div key={s.num} className="rounded-lg border border-zinc-200 bg-white p-6">
-                  <div className="text-xs font-medium tabular-nums text-zinc-300">{s.num}</div>
-                  <div className="mt-2 text-sm font-medium text-zinc-900">{s.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">{s.text}</p>
+                <div key={s.num} className="relative pt-[22px]" style={{ borderTop: "1px solid var(--hairline-strong)" }}>
+                  <div className="absolute left-0 top-[-5px] h-[9px] w-[9px] rounded-full" style={{ background: "var(--accent)" }} />
+                  <div style={{ ...mono, fontSize: "12px", color: "var(--faint-2)", marginBottom: "12px" }}>{s.num}</div>
+                  <div className="text-[21px] font-medium tracking-[-0.01em]" style={serif}>{s.title}</div>
+                  <p className="mt-2 text-[15px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>{s.text}</p>
                 </div>
               ))}
             </div>
@@ -228,36 +208,27 @@ export default function AiKundtjanstPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-white" aria-label="Boka demo">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <div className="rounded-lg border border-zinc-200 bg-slate-50 p-8 sm:p-12 text-center">
-              <h2 className="text-2xl font-light tracking-tight">Vill du se Successifier Support live?</h2>
-              <p className="mx-auto mt-3 max-w-xl text-[15px] leading-7 text-zinc-600">
+        <section aria-label="Boka demo">
+          <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
+            <div className="rounded-[6px] p-8 text-center sm:p-14" style={{ background: "var(--accent)", color: "var(--on-accent)" }}>
+              <h2 className="text-[clamp(28px,3.6vw,44px)] font-medium tracking-[-0.015em]" style={serif}>Vill du se Successifier Support live?</h2>
+              <p className="mx-auto mt-4 max-w-xl text-[17px] leading-[1.6] text-pretty" style={{ color: "rgba(242,238,230,.72)" }}>
                 Boka en demo på en timme så visar vi hur AI:n hanterar era riktiga ärenden, och
                 vad det skulle spara i tid.
               </p>
               <Link
                 href="/#kontakt"
-                className="mt-6 inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors"
-                style={{ backgroundColor: BRAND }}
+                className="mt-7 inline-flex items-center justify-center rounded-[3px] px-6 py-[15px] text-[15.5px] font-semibold no-underline transition-opacity hover:opacity-90"
+                style={{ background: "var(--on-accent)", color: "var(--ink)" }}
               >
-                Boka demo
+                Boka demo →
               </Link>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-zinc-200 bg-white" aria-label="Sidfot">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-xs text-zinc-400 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Successifier.se</div>
-          <div className="flex gap-5">
-            <a className="hover:text-zinc-700 transition-colors" href="mailto:rc@successifier.com">rc@successifier.com</a>
-            <a className="hover:text-zinc-700 transition-colors" href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="hover:text-zinc-700 transition-colors" href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale="sv" />
     </div>
   );
 }
