@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import SiteNav, { type NavLink } from "@/components/site/SiteNav";
 import type { Dict } from "@/lib/i18n";
 
 const serif = { fontFamily: "var(--font-spectral)" } as const;
@@ -40,6 +40,22 @@ export default function HomePageContent({ t }: { t: Dict }) {
   ];
 
   const pageUrl = t.locale === "sv" ? "https://successifier.se/" : "https://successifier.se/en";
+
+  const navLinks: NavLink[] =
+    t.locale === "sv"
+      ? [
+          { href: "#tjanster", label: t.nav.services },
+          { href: "#sama", label: t.nav.platform },
+          { href: "/ai-konsult", label: "AI-konsult" },
+          { href: "/ai-kundtjanst", label: "Support" },
+          { href: t.nav.blogHref, label: t.nav.blog },
+        ]
+      : [
+          { href: "#tjanster", label: t.nav.services },
+          { href: "#sama", label: t.nav.platform },
+          { href: "#arbetssatt", label: t.nav.approach },
+          { href: t.nav.blogHref, label: t.nav.blog },
+        ];
 
   const pageJsonLd = {
     "@context": "https://schema.org",
@@ -100,60 +116,13 @@ export default function HomePageContent({ t }: { t: Dict }) {
       />
 
       {/* Header */}
-      <header
-        className="sticky top-0 z-50 backdrop-blur-md"
-        style={{ background: "rgba(242,238,230,.82)", borderBottom: "1px solid var(--hairline)" }}
-        aria-label={t.locale === "sv" ? "Sidhuvud" : "Site header"}
-      >
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-5 sm:px-10">
-          <a href="#top" className="flex items-baseline gap-[9px] no-underline" style={{ color: "var(--ink)" }}>
-            <span className="text-[20px] font-semibold tracking-[-0.02em]">Successifier</span>
-            <span className="h-[6px] w-[6px] rounded-full" style={{ background: "var(--accent)" }} />
-          </a>
-          <nav
-            className="hidden items-center gap-7 whitespace-nowrap xl:flex"
-            aria-label={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}
-          >
-            <a href="#passar" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>
-              {t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}
-            </a>
-            <a href="#tjanster" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.services}</a>
-            <a href="#sama" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.platform}</a>
-            {t.locale === "sv" && (
-              <Link href="/ai-konsult" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>AI-konsult</Link>
-            )}
-            {t.locale === "sv" && (
-              <Link href="/ai-kundtjanst" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>Support</Link>
-            )}
-            <a href="#arbetssatt" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.approach}</a>
-            <a href="#om-oss" className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.about}</a>
-            <Link href={t.nav.blogHref} className="text-[14.5px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{t.nav.blog}</Link>
-            <Link
-              href={t.langSwitcher.href}
-              className="rounded-[3px] px-2 py-0.5 text-[12px] font-medium no-underline"
-              style={{ border: "1px solid var(--hairline)", color: "var(--faint)" }}
-            >
-              {t.langSwitcher.label}
-            </Link>
-          </nav>
-          <div className="flex items-center gap-3 xl:ml-4">
-            <Link
-              href={t.langSwitcher.href}
-              className="rounded-[3px] px-2 py-0.5 text-[12px] font-medium no-underline xl:hidden"
-              style={{ border: "1px solid var(--hairline)", color: "var(--faint)" }}
-            >
-              {t.langSwitcher.label}
-            </Link>
-            <a
-              href="#kontakt"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-[3px] px-5 py-[11px] text-[14.5px] font-medium no-underline transition-opacity hover:opacity-90"
-              style={{ background: "var(--accent)", color: "var(--on-accent)" }}
-            >
-              {t.nav.cta}
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteNav
+        home="#top"
+        links={navLinks}
+        cta={{ href: "#kontakt", label: t.nav.cta }}
+        lang={{ href: t.langSwitcher.href, label: t.langSwitcher.label }}
+        ariaLabel={t.locale === "sv" ? "Huvudmeny" : "Main navigation"}
+      />
 
       <main id="top" aria-label={t.locale === "sv" ? "Huvudinnehåll" : "Main content"}>
         {/* Hero */}

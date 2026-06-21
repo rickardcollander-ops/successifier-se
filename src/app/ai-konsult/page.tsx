@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import AgentLeadForm from "@/components/AgentLeadForm";
+import SiteNav from "@/components/site/SiteNav";
 import { publicAssetExists } from "@/lib/publicAsset";
 
 // Drop the real files here and they are picked up automatically on the
@@ -299,51 +300,16 @@ export default function AiKonsultPage() {
       />
 
       {/* NAV */}
-      <header
-        className="sticky top-0 z-50 backdrop-blur-md"
-        style={{
-          background: "rgba(242,238,230,.82)",
-          borderBottom: "1px solid rgba(26,24,21,.12)",
-        }}
-      >
-        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-5 sm:px-10">
-          <a href="#top" className="flex items-baseline gap-[9px] no-underline" style={{ color: "var(--ink)" }}>
-            <span className="text-[20px] font-semibold tracking-[-0.02em]">Successifier</span>
-            <span className="h-[6px] w-[6px] rounded-full" style={{ background: "var(--accent)" }} />
-          </a>
-          <div className="hidden items-center gap-9 md:flex">
-            {[
-              ["#tjanster", "Tjänster"],
-              ["#angreppssatt", "Angreppssätt"],
-              ["#effekt", "Effekt"],
-              ["#faq", "FAQ"],
-            ].map(([href, label]) => (
-              <a
-                key={href}
-                href={href}
-                className="text-[14.5px] no-underline transition-colors"
-                style={{ color: "var(--faint)" }}
-              >
-                {label}
-              </a>
-            ))}
-            <a
-              href="#kontakt"
-              className="rounded-[3px] px-5 py-[11px] text-[14.5px] font-medium whitespace-nowrap no-underline transition-opacity hover:opacity-90"
-              style={{ background: "var(--accent)", color: "var(--on-accent)" }}
-            >
-              Boka samtal
-            </a>
-          </div>
-          <a
-            href="#kontakt"
-            className="rounded-[3px] px-4 py-2 text-[14px] font-medium whitespace-nowrap no-underline md:hidden"
-            style={{ background: "var(--accent)", color: "var(--on-accent)" }}
-          >
-            Boka samtal
-          </a>
-        </nav>
-      </header>
+      <SiteNav
+        home="#top"
+        links={[
+          { href: "#tjanster", label: "Tjänster" },
+          { href: "#angreppssatt", label: "Angreppssätt" },
+          { href: "#effekt", label: "Effekt" },
+          { href: "#faq", label: "FAQ" },
+        ]}
+        cta={{ href: "#kontakt", label: "Boka samtal" }}
+      />
 
       {/* HERO */}
       <section className="mx-auto grid max-w-[1200px] grid-cols-1 items-end gap-12 px-6 pt-20 pb-16 sm:px-10 md:grid-cols-[1.5fr_.65fr] md:gap-16 md:pt-24">
