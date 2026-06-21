@@ -24,6 +24,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         "x-default": `/blog/${slug}`,
       },
     },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `https://successifier.se/en/blog/${slug}`,
+      siteName: "Successifier.se",
+      locale: "en",
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      authors: ["Rickard Collander"],
+      tags: post.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -44,7 +61,13 @@ export default async function EnBlogPostPage({ params }: { params: Promise<{ slu
     dateModified: post.date,
     inLanguage: "en",
     mainEntityOfPage: `https://successifier.se/en/blog/${slug}`,
-    author: { "@type": "Organization", name: "Successifier.se", url: "https://successifier.se" },
+    keywords: post.tags.join(", "),
+    author: {
+      "@type": "Person",
+      name: "Rickard Collander",
+      url: "https://successifier.se/#rickard-collander",
+      sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
+    },
     publisher: {
       "@type": "Organization",
       name: "Successifier.se",
