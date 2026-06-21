@@ -28,6 +28,24 @@ export default function HomePageContent({ t }: { t: Dict }) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Person",
+        "@id": "https://successifier.se/#rickard-collander",
+        name: "Rickard Collander",
+        jobTitle: t.about.founderTitle,
+        url: "https://successifier.se/",
+        image: "https://successifier.se/rc2.jpg",
+        worksFor: { "@id": "https://successifier.se/#service" },
+        knowsAbout: [
+          "Customer Success",
+          "AI-konsulting",
+          "Automation",
+          "GEO readiness",
+          "Generative Engine Optimization",
+          "Contact Center",
+        ],
+        sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
+      },
+      {
         "@type": "ProfessionalService",
         "@id": "https://successifier.se/#service",
         name: "Successifier.se",
@@ -37,7 +55,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
         telephone: "+46722136422",
         areaServed: "SE",
         description: t.hero.description,
-        founder: { "@type": "Person", name: "Rickard Collander" },
+        founder: { "@id": "https://successifier.se/#rickard-collander" },
         sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
       },
       {
@@ -77,6 +95,9 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <a href="#passar" className="hover:text-zinc-900 transition-colors">{t.locale === "sv" ? "Passar det er?" : "Is this a fit?"}</a>
             <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
             <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
+            {t.locale === "sv" && (
+              <Link href="/ai-konsult" className="hover:text-zinc-900 transition-colors">AI-konsult</Link>
+            )}
             {t.locale === "sv" && (
               <Link href="/ai-kundtjanst" className="hover:text-zinc-900 transition-colors">Support</Link>
             )}
