@@ -96,6 +96,9 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <a href="#tjanster" className="hover:text-zinc-900 transition-colors">{t.nav.services}</a>
             <a href="#sama" className="hover:text-zinc-900 transition-colors">{t.nav.platform}</a>
             {t.locale === "sv" && (
+              <Link href="/ai-konsult" className="hover:text-zinc-900 transition-colors">AI-konsult</Link>
+            )}
+            {t.locale === "sv" && (
               <Link href="/ai-kundtjanst" className="hover:text-zinc-900 transition-colors">Support</Link>
             )}
             <a href="#arbetssatt" className="hover:text-zinc-900 transition-colors">{t.nav.approach}</a>
