@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
@@ -143,6 +144,32 @@ export default function AiKundtjanstPage() {
                   Se hur det fungerar →
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature image: före/efter */}
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Från manuellt till AI-drivet">
+          <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-10">
+            <div
+              className="relative h-[260px] w-full overflow-hidden rounded-[6px] sm:h-[380px] md:h-[460px]"
+              style={{ border: "1px solid var(--hairline)" }}
+            >
+              <Image
+                src="/delad.png"
+                alt="Före och efter: från manuell ärendehantering med papper och anteckningar till ett samlat AI-drivet dashboard"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                Fig. 01 — Från manuellt till AI-drivet
+              </span>
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                Successifier Support
+              </span>
             </div>
           </div>
         </section>

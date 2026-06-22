@@ -5,10 +5,9 @@ import AgentLeadForm from "@/components/AgentLeadForm";
 import SiteNav from "@/components/site/SiteNav";
 import { publicAssetExists } from "@/lib/publicAsset";
 
-// Drop the real files here and they are picked up automatically on the
-// next build; until then a placeholder renders in their place.
-const FEATURE_IMG = "/ai-konsult/feature.jpg";
-const PORTRAIT_IMG = "/ai-konsult/portrait.jpg";
+// Riktiga bilder i /public. ImageSlot växlar till next/image när de finns.
+const FEATURE_IMG = "/agentic-ai.png";
+const PORTRAIT_IMG = "/person-vid-skarm.png";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -407,14 +406,14 @@ export default function AiKonsultPage() {
       <section className="mx-auto max-w-[1200px] px-6 pt-16 pb-2 sm:px-10">
         <ImageSlot
           src={FEATURE_IMG}
-          alt="Successifier i arbete med agentic AI"
+          alt="Diagram över ett agentiskt AI-flöde: inbound, orkestrering, routing, eskalering med mänsklig granskning och CRM-synk"
           heightClass="h-[300px] sm:h-[420px] md:h-[520px]"
           sizes="(max-width: 1280px) 100vw, 1200px"
           placeholder="Bildplats — team, kontor eller teknik"
         />
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
           <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
-            Fig. 01 — Successifier i arbete
+            Fig. 01 — Agentiskt AI-flöde
           </Mono>
           <Mono className="text-[11.5px]" style={{ color: "var(--faint-2)", letterSpacing: "0.16em" }}>
             Stockholm · 2026
@@ -424,17 +423,33 @@ export default function AiKonsultPage() {
 
       {/* POV STATEMENT */}
       <section style={{ background: "var(--accent)", color: "var(--on-accent)" }}>
-        <div className="mx-auto max-w-[1080px] px-6 py-24 sm:px-10">
-          <Mono className="mb-[34px] text-[12px]" style={{ color: "rgba(242,238,230,.55)" }}>
-            Vår övertygelse
-          </Mono>
-          <p
-            className="max-w-[20ch] text-[clamp(26px,3.4vw,42px)] leading-[1.28] tracking-[-0.01em] text-pretty"
-            style={serif}
-          >
-            De flesta AI-initiativ fastnar i pilot. Vi bygger för <em className="italic">produktion</em> —
-            med mänsklig kontroll och mätbar effekt från första veckan.
-          </p>
+        <div className="mx-auto max-w-[1200px] px-6 py-24 sm:px-10">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[1.25fr_.75fr]">
+            <div>
+              <Mono className="mb-[34px] text-[12px]" style={{ color: "rgba(242,238,230,.55)" }}>
+                Vår övertygelse
+              </Mono>
+              <p
+                className="max-w-[20ch] text-[clamp(26px,3.4vw,42px)] leading-[1.28] tracking-[-0.01em] text-pretty"
+                style={serif}
+              >
+                De flesta AI-initiativ fastnar i pilot. Vi bygger för <em className="italic">produktion</em> —
+                med mänsklig kontroll och mätbar effekt från första veckan.
+              </p>
+            </div>
+            <div
+              className="relative aspect-square w-full overflow-hidden rounded-[6px]"
+              style={{ border: "1px solid rgba(242,238,230,.18)" }}
+            >
+              <Image
+                src="/shack.png"
+                alt="Schackbräde med AI-formade pjäser — agentic AI som strategiskt beslutsfattande"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -577,7 +592,7 @@ export default function AiKonsultPage() {
             </h2>
             <ImageSlot
               src={PORTRAIT_IMG}
-              alt="Teamet bakom Successifier"
+              alt="Konsult från Successifier vid en processkarta på kontoret i Stockholm"
               heightClass="h-[280px] md:h-[380px]"
               sizes="(max-width: 768px) 100vw, 40vw"
               placeholder="Porträtt / teambild"
