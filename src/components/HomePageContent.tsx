@@ -184,6 +184,34 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
+        {/* Feature image */}
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.locale === "sv" ? "Successifier i arbete" : "Successifier at work"}>
+          <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-10">
+            <div
+              className="relative h-[260px] w-full overflow-hidden rounded-[6px] sm:h-[400px] md:h-[500px]"
+              style={{ border: "1px solid var(--hairline)" }}
+            >
+              <Image
+                src="/tre-skarmar.png"
+                alt={t.locale === "sv"
+                  ? "Strateg vid tre skärmar med dashboards, med Stockholms skyline i bakgrunden"
+                  : "Strategist at three screens with dashboards, Stockholm skyline in the background"}
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                {t.locale === "sv" ? "Fig. 01 — Successifier i arbete" : "Fig. 01 — Successifier at work"}
+              </span>
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                Stockholm · 2026
+              </span>
+            </div>
+          </div>
+        </section>
+
         {/* Fit */}
         <section id="passar" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.fit.heading}>
           <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
@@ -314,6 +342,15 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   ))}
                 </div>
                 <div className="space-y-4">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
+                    <Image
+                      src="/ai-content.png"
+                      alt={t.locale === "sv" ? "SAMA: AI Content Hub med AI-omnämnandepoäng, sökordstrend, SEO-hälsa och content-pipeline" : "SAMA: AI Content Hub with AI mention score, keyword trend, SEO health and content pipeline"}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
                       src="/Insights.png"
@@ -456,6 +493,18 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   >
                     {t.about.linkedIn}
                   </a>
+                </div>
+                <div
+                  className="relative mt-8 h-[200px] w-full overflow-hidden rounded-[6px] sm:h-[260px]"
+                  style={{ border: "1px solid var(--hairline)" }}
+                >
+                  <Image
+                    src="/skrivbord.png"
+                    alt={t.locale === "sv" ? "Skrivbord med projektplan och bärbar dator som visar en tillväxtkurva" : "Desk with project plan and laptop showing a growth curve"}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
