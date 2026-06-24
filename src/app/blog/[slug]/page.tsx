@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { marked } from "marked";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAllPosts, getPostBySlug, getRelatedPosts, relatedServices, renderMarkdown } from "@/lib/blog";
+import { dict } from "@/lib/i18n";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} · Successifier.se`,
+    title: post.metaTitle ?? post.title,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
@@ -49,7 +49,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const html = await marked(post.content);
+  const html = renderMarkdown(post.content);
+  const t = dict.sv;
+  const related = getRelatedPosts(slug);
+  const services = relatedServices(slug, "sv");
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -123,9 +126,56 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         <article
+          lang="sv"
           className="article-prose prose mt-10 max-w-none prose-a:no-underline hover:prose-a:underline prose-img:rounded-[6px] prose-table:text-sm"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+
+        {services.length > 0 && (
+          <aside className="mt-16" aria-label={t.blog.relatedServicesHeading}>
+            <div className="mb-4 uppercase" style={{ fontFamily: "var(--font-plex-mono)", fontSize: "11px", letterSpacing: "0.16em", color: "var(--accent)" }}>
+              {t.blog.relatedServicesHeading}
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {services.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="group rounded-[6px] p-5 no-underline transition-colors hover:bg-[color:var(--paper-alt)]"
+                  style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--ink)" }}
+                >
+                  <div className="text-[16px] font-medium" style={{ fontFamily: "var(--font-spectral)" }}>{s.label} →</div>
+                  <p className="mt-1 text-[14px] leading-[1.55]" style={{ color: "var(--muted)" }}>{s.description}</p>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        {related.length > 0 && (
+          <aside className="mt-14" aria-label={t.blog.relatedHeading}>
+            <div className="mb-5 flex items-baseline justify-between gap-4">
+              <h2 className="text-[22px] font-medium tracking-[-0.01em]" style={{ fontFamily: "var(--font-spectral)" }}>{t.blog.relatedHeading}</h2>
+              <Link href="/blog" className="text-[13px] no-underline" style={{ color: "var(--faint)", borderBottom: "1px solid var(--hairline)" }}>{t.blog.allPostsLabel} →</Link>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-3">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/blog/${r.slug}`}
+                  className="group flex flex-col rounded-[6px] p-5 no-underline transition-colors hover:bg-[color:var(--paper-alt)]"
+                  style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--ink)" }}
+                >
+                  {r.tags.length > 0 && (
+                    <div className="mb-2 uppercase" style={{ fontFamily: "var(--font-plex-mono)", fontSize: "10px", letterSpacing: "0.12em", color: "var(--accent)" }}>{r.tags[0]}</div>
+                  )}
+                  <h3 className="text-[16px] font-medium leading-[1.3] tracking-[-0.01em]" style={{ fontFamily: "var(--font-spectral)" }}>{r.title}</h3>
+                  <p className="mt-2 line-clamp-2 text-[13.5px] leading-[1.55]" style={{ color: "var(--muted)" }}>{r.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        )}
 
         <div className="mt-16 rounded-[6px] p-8 text-center" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
           <div className="text-[22px] font-medium" style={{ fontFamily: "var(--font-spectral)" }}>Vill du prata med oss?</div>

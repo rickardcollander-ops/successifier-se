@@ -245,8 +245,8 @@ const sv = {
     rights: "Successifier.se",
   },
   blog: {
-    metaTitle: "Blogg · Successifier.se",
-    metaDescription: "Insikter om Customer Success, AI, automation och marknadsföring av Successifier.se.",
+    metaTitle: "Blogg om Customer Success, AI, automation & marknad",
+    metaDescription: "Insikter och guider om Customer Success, AI, automation, SEO och B2B-marknadsföring från Successifier.se — byggt på riktiga uppdrag.",
     heading: "Blogg",
     description: "Analyser och guider inom Customer Success, AI, automation och marknadsföring.",
     noPosts: "Inga inlägg publicerade än.",
@@ -254,6 +254,9 @@ const sv = {
     ctaHeading: "Vill du prata med oss?",
     ctaDescription: "Boka ett kostnadsfritt strategisamtal på 30 minuter.",
     ctaButton: "Boka strategisamtal",
+    relatedHeading: "Relaterade artiklar",
+    relatedServicesHeading: "Relaterade tjänster",
+    allPostsLabel: "Se alla artiklar",
   },
 };
 
@@ -502,8 +505,8 @@ const en: typeof sv = {
     rights: "Successifier.se",
   },
   blog: {
-    metaTitle: "Blog · Successifier.se",
-    metaDescription: "Insights on Customer Success, AI, automation, and marketing by Successifier.se.",
+    metaTitle: "Blog on Customer Success, AI, automation & marketing",
+    metaDescription: "Insights and guides on Customer Success, AI, automation, SEO, and B2B marketing from Successifier.se — built on real client engagements.",
     heading: "Blog",
     description: "Analysis and guides on Customer Success, AI, automation, and marketing.",
     noPosts: "No posts published yet.",
@@ -511,6 +514,9 @@ const en: typeof sv = {
     ctaHeading: "Want to talk with us?",
     ctaDescription: "Book a free 30-minute strategy call.",
     ctaButton: "Book strategy call",
+    relatedHeading: "Related articles",
+    relatedServicesHeading: "Related services",
+    allPostsLabel: "See all articles",
   },
 };
 
