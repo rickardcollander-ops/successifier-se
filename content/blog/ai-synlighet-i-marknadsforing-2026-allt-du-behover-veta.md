@@ -1,10 +1,11 @@
 ---
 title: "AI-synlighet i marknadsföring 2026: Allt du behöver veta"
 slug: "ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta"
-date: 2026-05-30T10:38:33.974Z
+date: 2026-06-24T20:28:37.036Z
 excerpt: "AI synlighet i marknadsföring 2026: Allt du behöver veta Sökmotorer slutade vara enkla i samma stund som Google rullade ut AI Overviews globalt. Nu läser…"
 description: "AI synlighet i marknadsföring 2026: Allt du behöver veta Sökmotorer slutade vara enkla i samma stund som Google rullade ut AI Overviews globalt. Nu läser…"
-language: "en"
+language: "sv"
+canonical_url: "https://successifier.se/ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta"
 tags:
   - "AI-synlighet marknadsföring 2026"
 status: "published"
