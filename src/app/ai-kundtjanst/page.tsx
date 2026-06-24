@@ -2,19 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
+import { InboxMockup, KnowledgeBaseMockup } from "@/components/site/SupportMockups";
 
 const serif = { fontFamily: "var(--font-spectral)" } as const;
 const mono = { fontFamily: "var(--font-plex-mono)" } as const;
 
-// ───────────────────────────────────────────────────────────────────
-// TODO: Ersätt platshållarvärdena nedan med riktiga siffror.
-// Demon visar 1 773 hanterade ärenden, övriga värden är exempel.
-// ───────────────────────────────────────────────────────────────────
 const metrics = [
-  { value: "70 %", label: "Andel AI-besvarade", sub: "av inkommande mail får ett färdigt svarsförslag" },
-  { value: "< 2 min", label: "Svarstid", sub: "från inkommet mail till föreslaget svar" },
-  { value: "1 700+", label: "Hanterade ärenden", sub: "kategoriserade och besvarade i systemet" },
-  { value: "95 %", label: "Träffsäkerhet", sub: "av AI-svaren godkänns utan omskrivning" },
+  { value: "100 000+", label: "Hanterade mail", sub: "lästa, kategoriserade och besvarade i systemet" },
+  { value: "100 %", label: "Får svarsförslag", sub: "av inkommande mail får ett färdigt förslag till kundsvar" },
+  { value: "25 %", label: "Kan skickas direkt", sub: "av svaren kan skickas helt utan att ändra en bokstav" },
 ];
 
 const features = [
@@ -126,7 +122,8 @@ export default function AiKundtjanstPage() {
               <p className="mt-6 max-w-[620px] text-[18px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>
                 Successifier Support tar emot era supportmail, kategoriserar dem automatiskt och
                 föreslår färdiga svar med säkerhetspoäng, byggt på en kunskapsbas som lär sig av
-                varje konversation. Ni behåller kontrollen och godkänner innan något skickas.
+                varje konversation. Över <strong style={{ color: "var(--ink)", fontWeight: 600 }}>100 000 mail</strong> har
+                redan hanterats — och ni behåller kontrollen och godkänner innan något skickas.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-7">
                 <Link
@@ -148,29 +145,24 @@ export default function AiKundtjanstPage() {
           </div>
         </section>
 
-        {/* Feature image: före/efter */}
-        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Från manuellt till AI-drivet">
+        {/* Produktmockup: ärendevy + AI-svar */}
+        <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Så ser ärendevyn ut">
           <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-10">
-            <div
-              className="relative h-[260px] w-full overflow-hidden rounded-[6px] sm:h-[380px] md:h-[460px]"
-              style={{ border: "1px solid var(--hairline)" }}
-            >
-              <Image
-                src="/delad.png"
-                alt="Före och efter: från manuell ärendehantering med papper och anteckningar till ett samlat AI-drivet dashboard"
-                fill
-                sizes="(max-width: 1280px) 100vw, 1200px"
-                className="object-cover"
-              />
+            <div className="mb-8 max-w-2xl">
+              <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Så ser det ut</div>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+                Ärende in, färdigt svar ut
+              </h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>
+                Varje inkommande mail kategoriseras, kopplas till kundens historik och får ett färdigt
+                svarsförslag med säkerhetspoäng. Ni granskar och skickar — eller låter de självsäkra
+                svaren gå direkt.
+              </p>
             </div>
-            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                Fig. 01 — Från manuellt till AI-drivet
-              </span>
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                Successifier Support
-              </span>
-            </div>
+            <InboxMockup />
+            <p className="mt-4 text-[12px]" style={{ ...mono, color: "var(--faint-2)" }}>
+              Illustration. Kunduppgifter är anonymiserade.
+            </p>
           </div>
         </section>
 
@@ -180,10 +172,10 @@ export default function AiKundtjanstPage() {
             <div className="mb-10 uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>
               Resultat i siffror
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-3">
               {metrics.map((m) => (
                 <div key={m.label} className="rounded-[6px] p-6" style={{ border: "1px solid var(--hairline)", background: "var(--paper)" }}>
-                  <div className="text-[40px] font-medium leading-none tracking-[-0.02em]" style={serif}>{m.value}</div>
+                  <div className="text-[clamp(44px,5vw,60px)] font-medium leading-none tracking-[-0.02em]" style={serif}>{m.value}</div>
                   <div className="mt-3 text-[15px] font-medium" style={{ color: "var(--ink)" }}>{m.label}</div>
                   <p className="mt-1 text-[13px] leading-[1.5]" style={{ color: "var(--faint-2)" }}>{m.sub}</p>
                 </div>
@@ -214,8 +206,26 @@ export default function AiKundtjanstPage() {
           </div>
         </section>
 
+        {/* Knowledge base */}
+        <section style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Kunskapsbas">
+          <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-[100px] sm:px-10 md:grid-cols-[.9fr_1.1fr]">
+            <div>
+              <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Kunskapsbas</div>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+                En kunskapsbas som lär sig av varje konversation
+              </h2>
+              <p className="mt-4 text-[17px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>
+                Manuella artiklar kompletteras med kunskap som AI:n plockar upp direkt från era
+                mailkonversationer. Ju fler ärenden ni löser, desto vassare blir svaren — och AI:n
+                föreslår själv nya artiklar för återkommande frågor.
+              </p>
+            </div>
+            <KnowledgeBaseMockup />
+          </div>
+        </section>
+
         {/* How it works */}
-        <section id="sa-fungerar-det" style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Så fungerar det">
+        <section id="sa-fungerar-det" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Så fungerar det">
           <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
             <div className="max-w-2xl">
               <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Så fungerar det</div>
@@ -230,6 +240,32 @@ export default function AiKundtjanstPage() {
                   <p className="mt-2 text-[15px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>{s.text}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Före/efter */}
+        <section style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Från manuellt till AI-drivet">
+          <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-10">
+            <div
+              className="relative h-[240px] w-full overflow-hidden rounded-[6px] sm:h-[340px] md:h-[420px]"
+              style={{ border: "1px solid var(--hairline)" }}
+            >
+              <Image
+                src="/delad.png"
+                alt="Före och efter: från manuell ärendehantering med papper och anteckningar till ett samlat AI-drivet dashboard"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                Fig. 02 — Från manuellt till AI-drivet
+              </span>
+              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
+                Successifier Support
+              </span>
             </div>
           </div>
         </section>
