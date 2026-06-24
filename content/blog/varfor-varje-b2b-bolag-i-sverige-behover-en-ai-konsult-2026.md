@@ -1,7 +1,7 @@
 ---
 title: "Varför varje B2B-bolag i Sverige behöver en AI-konsult 2026"
 slug: "varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026"
-date: 2026-05-25T06:31:57.970Z
+date: 2026-04-15T09:12:00.000Z
 excerpt: "Varför varje B2B bolag i Sverige behöver en AI konsult 2026 Svenska B2B bolag som fortfarande utvärderar AI tappar mark varje kvartal. Det är inte en prognos,…"
 description: "Varför varje B2B bolag i Sverige behöver en AI konsult 2026 Svenska B2B bolag som fortfarande utvärderar AI tappar mark varje kvartal. Det är inte en prognos,…"
 language: "en"
@@ -39,7 +39,7 @@ Den här artikeln går igenom vad en AI-konsult konkret levererar för svenska B
 
 ## Vad gör en AI-konsult egentligen? {#vad-gor-en-ai-konsult}
 
-![consultant presenting AI data analysis to business team in modern Stockholm office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-konsult-b2b-sverige-2026/inline-aa21d7787b-1779227235.png?)
+![consultant presenting AI data analysis to business team in modern Stockholm office](/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026.png)
 
 Titeln "AI-konsult" används för allt från frilansande promptkursledare till team som bygger produktionsatta maskininlärningssystem. Det gör det svårt att veta vad du faktiskt köper. Låt oss konkretisera.
 

@@ -1,7 +1,7 @@
 ---
 title: "Customer Success plattform för SaaS: Så väljer du rätt 2026"
 slug: "customer-success-plattform-for-saas-sa-valjer-du-ratt-2026"
-date: 2026-05-25T06:32:05.960Z
+date: 2026-05-14T10:15:00.000Z
 excerpt: "Customer Success plattform för SaaS: Så väljer du rätt 2026 De flesta SaaS bolag förlorar kunder de aldrig borde ha förlorat. Inte för att produkten var…"
 description: "Customer Success plattform för SaaS: Så väljer du rätt 2026 De flesta SaaS bolag förlorar kunder de aldrig borde ha förlorat. Inte för att produkten var…"
 language: "en"
@@ -39,7 +39,7 @@ Den här guiden hjälper dig att hitta rätt plattform för 2026. Vi går igenom
 
 ## Varför du behöver en dedikerad CS-plattform {#varfor-du-behover-en-plattform}
 
-![customer success team analyzing churn data on dashboards in modern SaaS office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/customer-success-plattform-saas-valj-ratt/inline-3bf2c38751-1779227160.png?)
+![customer success team analyzing churn data on dashboards in modern SaaS office](/blog/customer-success-plattform-for-saas-sa-valjer-du-ratt-2026.png)
 
 Många SaaS-bolag försöker driva customer success med en kombination av Salesforce, Excel och manuella uppföljningar i Slack. Det fungerar tills det inte gör det, och det slutar fungera ungefär när ni passerar 100 kunder.
 
