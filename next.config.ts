@@ -9,6 +9,7 @@ const contentSecurityPolicy = [
   "img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com",
   "font-src 'self' data:",
   "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com",
+  "frame-src https://calendar.google.com",
   "frame-ancestors 'self'",
   "base-uri 'self'",
   "form-action 'self'",

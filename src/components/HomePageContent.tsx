@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactForm from "@/components/ContactForm";
+import BookingEmbed from "@/components/site/BookingEmbed";
 import SiteNav, { type NavLink } from "@/components/site/SiteNav";
 import type { Dict } from "@/lib/i18n";
 
@@ -536,14 +536,16 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Contact / Booking */}
         <section id="kontakt" aria-label={t.contact.heading}>
-          <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-[100px] sm:px-10 md:grid-cols-2">
+          <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-[100px] sm:px-10 md:grid-cols-[.8fr_1.2fr] md:items-start">
             <div>
               <Overline>{t.contact.overline}</Overline>
               <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.contact.heading}</h2>
               <p className="mt-4 text-[16px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>
-                {t.contact.description}{" "}
+                {t.locale === "sv"
+                  ? "Välj en tid som passar er direkt i kalendern — 30 minuter, ingen pitch. Vi identifierar er största intäkts- eller leveransrisk. Föredrar du mejl? Skriv till "
+                  : "Pick a time that works for you right in the calendar — 30 minutes, no pitch. We pinpoint your biggest revenue or delivery risk. Prefer email? Write to "}
                 <span className="font-medium" style={{ color: "var(--ink)" }}>rc@successifier.com</span>.
               </p>
               <div className="mt-6 rounded-[6px] p-5" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
@@ -554,7 +556,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 </div>
               </div>
             </div>
-            <ContactForm t={t.form} />
+            <BookingEmbed locale={t.locale} />
           </div>
         </section>
       </main>
