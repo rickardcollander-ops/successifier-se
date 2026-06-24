@@ -202,9 +202,18 @@ const sv = {
     founderTitle: "Grundare, Successifier.se",
     quoteHeading: "Kundcitat",
     // Lämna tomt tills ett godkänt kundcitat finns, citatblocket döljs då helt.
-    quote: "",
-    quotePerson: "",
+    quote:
+      "Successifier automatiserade vår mailhantering på ett sätt som faktiskt fungerar i praktiken. Kunderna får snabbare svar och vårt team kan lägga tiden där den behövs som mest. Rickard förstod vår verksamhet från dag ett.",
+    quotePerson: "Ida Rosell, COO, Dold Adress",
     contactLabel: "Direktkontakt",
+  },
+  testimonial: {
+    overline: "Referens",
+    heading: "Det här säger våra kunder",
+    quote:
+      "Vi hade en växande mängd kundmail och kände att vi inte riktigt hann med utan att tumma på kvaliteten. Successifier byggde en lösning som tar hand om de återkommande ärendena automatiskt — men utan att tappa den personliga och diskreta ton som är så viktig i vår bransch. Resultatet är kortare svarstider och ett team som får fokusera på det som verkligen kräver en människa. Rickard är lyhörd, snabb och förstår både tekniken och vår vardag. En partner snarare än en leverantör.",
+    name: "Ida Rosell",
+    title: "COO, Dold Adress",
   },
   contact: {
     overline: "Kontakt",
@@ -450,9 +459,18 @@ const en: typeof sv = {
     founderTitle: "Founder, Successifier.se",
     quoteHeading: "Client quote",
     // Leave empty until an approved client quote exists, the quote block is hidden entirely.
-    quote: "",
-    quotePerson: "",
+    quote:
+      "Successifier automated our email handling in a way that actually works in practice. Customers get faster replies and our team can spend time where it's needed most. Rickard understood our business from day one.",
+    quotePerson: "Ida Rosell, COO, Dold Adress",
     contactLabel: "Direct contact",
+  },
+  testimonial: {
+    overline: "Reference",
+    heading: "What our clients say",
+    quote:
+      "We had a growing volume of customer emails and felt we couldn't quite keep up without compromising on quality. Successifier built a solution that handles the recurring cases automatically — without losing the personal, discreet tone that matters so much in our industry. The result is shorter response times and a team that gets to focus on what truly requires a human. Rickard is attentive, fast, and understands both the technology and our day-to-day. A partner rather than a vendor.",
+    name: "Ida Rosell",
+    title: "COO, Dold Adress",
   },
   contact: {
     overline: "Contact",

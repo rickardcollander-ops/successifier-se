@@ -450,6 +450,34 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
+        {/* Testimonial */}
+        <section id="referens" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.testimonial.heading}>
+          <div className="mx-auto max-w-[1000px] px-6 py-[100px] sm:px-10">
+            <div className="text-center">
+              <Overline center>{t.testimonial.overline}</Overline>
+            </div>
+            <figure className="mt-6">
+              <blockquote
+                className="mx-auto max-w-[820px] text-center text-[clamp(22px,2.8vw,30px)] font-medium leading-[1.32] tracking-[-0.015em] text-balance"
+                style={serif}
+              >
+                <span style={{ color: "var(--accent)" }}>“</span>
+                {t.testimonial.quote}
+                <span style={{ color: "var(--accent)" }}>”</span>
+              </blockquote>
+              <figcaption className="mt-9 flex items-center justify-center gap-4">
+                <div className="h-14 w-14 overflow-hidden rounded-full" style={{ border: "1px solid var(--hairline)" }}>
+                  <Image src="/ida-rosell.png" alt={t.testimonial.name} width={320} height={320} className="h-full w-full object-cover" />
+                </div>
+                <div className="text-left">
+                  <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>{t.testimonial.name}</div>
+                  <div className="mt-0.5 text-[13px]" style={{ color: "var(--faint-2)" }}>{t.testimonial.title}</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.faq.heading}>
           <div className="mx-auto max-w-[1000px] px-6 py-[100px] sm:px-10">
