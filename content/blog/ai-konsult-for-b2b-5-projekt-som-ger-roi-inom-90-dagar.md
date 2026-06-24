@@ -1,10 +1,11 @@
 ---
 title: "AI-konsult för B2B: 5 projekt som ger ROI inom 90 dagar"
 slug: "ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar"
-date: 2026-05-30T10:38:50.118Z
+date: 2026-06-24T20:28:49.117Z
 excerpt: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
 description: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
-language: "en"
+language: "sv"
+canonical_url: "https://successifier.se/ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar"
 tags:
   - "AI-konsult B2B"
 status: "published"
@@ -48,9 +49,9 @@ Många AI-initiativ misslyckas inte för att tekniken är dålig. De misslyckas 
 
 För att ett AI-projekt ska ge ROI inom 90 dagar behöver tre saker stämma:
 
-1. **Data finns redan**, du behöver inte samla in ny data i månader innan projektet kan starta.
-2. **Processen är definierad**, AI förbättrar en befintlig process, den ersätter inte en process som saknas.
-3. **KPI:erna är tydliga**, du vet i förväg vad du mäter: konverteringsgrad, handläggningstid, churn-rate.
+1. **Data finns redan** – du behöver inte samla in ny data i månader innan projektet kan starta.
+2. **Processen är definierad** – AI förbättrar en befintlig process, den ersätter inte en process som saknas.
+3. **KPI:erna är tydliga** – du vet i förväg vad du mäter: konverteringsgrad, handläggningstid, churn-rate.
 
 ### Typiska tidslinjor per projekttyp
 
