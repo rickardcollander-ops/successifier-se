@@ -1,7 +1,7 @@
 ---
 title: "Customer Success plattform för SaaS: Så väljer du rätt 2026"
 slug: "customer-success-plattform-for-saas-sa-valjer-du-ratt-2026"
-date: 2026-05-14T10:15:00.000Z
+date: 2026-04-02T08:15:00.000Z
 excerpt: "Customer Success plattform för SaaS: Så väljer du rätt 2026 De flesta SaaS bolag förlorar kunder de aldrig borde ha förlorat. Inte för att produkten var…"
 description: "Customer Success plattform för SaaS: Så väljer du rätt 2026 De flesta SaaS bolag förlorar kunder de aldrig borde ha förlorat. Inte för att produkten var…"
 language: "en"

@@ -1,7 +1,7 @@
 ---
 title: "Varför varje B2B-bolag i Sverige behöver en AI-konsult 2026"
 slug: "varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026"
-date: 2026-04-15T09:12:00.000Z
+date: 2026-02-11T09:12:00.000Z
 excerpt: "Varför varje B2B bolag i Sverige behöver en AI konsult 2026 Svenska B2B bolag som fortfarande utvärderar AI tappar mark varje kvartal. Det är inte en prognos,…"
 description: "Varför varje B2B bolag i Sverige behöver en AI konsult 2026 Svenska B2B bolag som fortfarande utvärderar AI tappar mark varje kvartal. Det är inte en prognos,…"
 language: "en"

@@ -1,10 +1,11 @@
 ---
 title: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång"
 slug: "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga"
-date: 2026-05-23T08:00:00.000Z
+date: 2026-04-28T07:30:00.000Z
 excerpt: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång Svenska kontaktcenter förlorar miljontals kronor varje år på repetitivt…"
 description: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång Svenska kontaktcenter förlorar miljontals kronor varje år på repetitivt…"
-language: "en"
+language: "sv"
+canonical_url: "https://successifier.se/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga"
 tags:
   - "AI automation kontaktcenter Sverige"
 status: "published"
