@@ -1,5 +1,6 @@
 ---
 title: "AI-konsult i Sverige: Hur hittar du rätt partner för ditt B2B-bolag?"
+metaTitle: "AI-konsult i Sverige: hitta rätt partner för B2B"
 slug: "ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag"
 date: 2026-02-24T08:20:00.000Z
 excerpt: "AI konsult i Sverige: Hur hittar du rätt partner för ditt B2B bolag? De flesta AI konsulter i Sverige är bra på en sak: demos. Snygga dashboards, imponerande…"

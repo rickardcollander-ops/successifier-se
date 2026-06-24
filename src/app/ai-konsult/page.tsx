@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import BookingEmbed from "@/components/site/BookingEmbed";
 import SiteNav from "@/components/site/SiteNav";
+import { getAllPosts, clusterForSlug } from "@/lib/blog";
 import { publicAssetExists } from "@/lib/publicAsset";
 
 // Riktiga bilder i /public. ImageSlot växlar till next/image när de finns.
@@ -39,7 +41,7 @@ export function generateMetadata(): Metadata {
   return {
     title: "AI-konsult för agentic AI · Successifier.se",
     description:
-      "Successifier är specialistbyrån som kartlägger, bygger och driftsätter autonoma AI-agenter — från idé till produktion på veckor, med mätbar effekt och människan i loopen.",
+      "Vi bygger och driftsätter autonoma AI-agenter — från idé till produktion på veckor, med mätbar effekt och människan i loopen. Specialistbyrå för AI-automatisering.",
     keywords: [
       "AI-konsult",
       "agentic AI",
@@ -229,6 +231,9 @@ function ImageSlot({
 
 export default function AiKonsultPage() {
   const serif = { fontFamily: "var(--font-spectral)" };
+  const guidePosts = getAllPosts()
+    .filter((p) => clusterForSlug(p.slug) === "ai-konsult")
+    .slice(0, 3);
   const tokenStyle = {
     "--paper": "#F2EEE6",
     "--paper-alt": "#EDE8DE",
@@ -300,12 +305,13 @@ export default function AiKonsultPage() {
 
       {/* NAV */}
       <SiteNav
-        home="#top"
+        home="/"
         links={[
           { href: "#tjanster", label: "Tjänster" },
           { href: "#angreppssatt", label: "Angreppssätt" },
-          { href: "#effekt", label: "Effekt" },
           { href: "#faq", label: "FAQ" },
+          { href: "/ai-kundtjanst", label: "Support" },
+          { href: "/blog", label: "Blogg" },
         ]}
         cta={{ href: "#kontakt", label: "Boka samtal" }}
       />
@@ -626,6 +632,47 @@ export default function AiKonsultPage() {
         </div>
       </section>
 
+      {/* GUIDES / INTERN LÄNKNING */}
+      {guidePosts.length > 0 && (
+        <section style={{ borderTop: "1px solid rgba(26,24,21,.12)" }}>
+          <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div className="max-w-[560px]">
+                <Mono className="mb-[18px] text-[12px]" style={{ color: "var(--accent)" }}>
+                  {"// Fördjupning"}
+                </Mono>
+                <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+                  Läs vidare om AI-konsulting
+                </h2>
+              </div>
+              <Link href="/blog" className="text-[14.5px] no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}>
+                Alla artiklar →
+              </Link>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {guidePosts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="group flex flex-col rounded-[6px] p-6 no-underline transition-colors hover:bg-[rgba(26,24,21,.025)]"
+                  style={{ border: "1px solid rgba(26,24,21,.14)", background: "var(--paper)", color: "var(--ink)" }}
+                >
+                  <h3 className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={serif}>
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-[14.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>
+                    {p.excerpt}
+                  </p>
+                  <span className="mt-4 text-[13px] font-medium" style={{ color: "var(--accent)" }}>
+                    Läs artikeln →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
       <section id="faq" style={{ borderTop: "1px solid rgba(26,24,21,.12)", background: "var(--paper-alt)" }}>
         <div className="mx-auto max-w-[900px] px-6 py-[108px] sm:px-10">
@@ -688,8 +735,10 @@ export default function AiKonsultPage() {
           </div>
           <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
             {[
+              ["/", "Hem"],
               ["#tjanster", "Tjänster"],
-              ["#angreppssatt", "Angreppssätt"],
+              ["/ai-kundtjanst", "Support"],
+              ["/blog", "Blogg"],
               ["#faq", "FAQ"],
             ].map(([href, label]) => (
               <a

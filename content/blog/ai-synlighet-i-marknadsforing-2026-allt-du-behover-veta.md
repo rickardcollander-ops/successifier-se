@@ -125,7 +125,7 @@ B2B-köpare är mer benägna än konsumenter att använda generativa verktyg fö
 
 ### Prioritera ämnesauktoritet framför bredd
 
-B2B-varumärken med hög AI-synlighet tenderar att äga ett smalt ämnesområde djupt snarare än att täcka allt ytligt. Välj två till tre kärnämnen där din produkt eller tjänst är direkt relevant, och bygg ett [tematiskt kluster av innehåll](https://moz.com/blog/topic-clusters-seo) kring varje område.
+B2B-varumärken med hög AI-synlighet tenderar att äga ett smalt ämnesområde djupt snarare än att täcka allt ytligt. Välj två till tre kärnämnen där din produkt eller tjänst är direkt relevant, och bygg ett [tematiskt kluster av innehåll](/blog/ai-driven-content-marknadsforing-b2b-strategi-som-skalar) kring varje område.
 
 Exempel: Ett B2B-bolag som säljer HR-tech bör inte försöka äga allt om "HR". Fokusera istället på specifika frågor som "automatiserad onboarding för snabbväxande tech-bolag" eller "compliance-spårning vid internationell expansion". Djup inom ett smalt område ger starkare AI-omnämnanden än ytlig bredd.
 
