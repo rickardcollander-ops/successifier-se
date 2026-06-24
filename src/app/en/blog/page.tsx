@@ -27,22 +27,22 @@ export default function EnBlogPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://successifier.se/en" },
-          { "@type": "ListItem", position: 2, name: "Blog", item: "https://successifier.se/en/blog" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.successifier.se/en" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.successifier.se/en/blog" },
         ],
       },
       {
         "@type": "Blog",
-        "@id": "https://successifier.se/en/blog#blog",
+        "@id": "https://www.successifier.se/en/blog#blog",
         name: t.blog.metaTitle,
         description: t.blog.metaDescription,
         inLanguage: "en",
-        url: "https://successifier.se/en/blog",
+        url: "https://www.successifier.se/en/blog",
         blogPost: posts.map((post) => ({
           "@type": "BlogPosting",
           headline: post.title,
           datePublished: post.date,
-          url: `https://successifier.se/en/blog/${post.slug}`,
+          url: `https://www.successifier.se/en/blog/${post.slug}`,
         })),
       },
     ],

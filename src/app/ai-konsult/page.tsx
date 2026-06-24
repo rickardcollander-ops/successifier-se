@@ -31,7 +31,7 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const PAGE_URL = "https://successifier.se/ai-konsult";
+const PAGE_URL = "https://www.successifier.se/ai-konsult";
 
 export function generateMetadata(): Metadata {
   const ogImages = publicAssetExists(FEATURE_IMG)
@@ -258,7 +258,7 @@ export default function AiKonsultPage() {
         areaServed: "SE",
         description:
           "Kartläggning, design, utveckling, integration och drift av autonoma AI-agenter för svenska företag.",
-        provider: { "@id": "https://successifier.se/#organization" },
+        provider: { "@id": "https://www.successifier.se/#organization" },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Tjänster",
@@ -280,7 +280,7 @@ export default function AiKonsultPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Hem", item: "https://successifier.se/" },
+          { "@type": "ListItem", position: 1, name: "Hem", item: "https://www.successifier.se/" },
           { "@type": "ListItem", position: 2, name: "AI-konsult", item: PAGE_URL },
         ],
       },

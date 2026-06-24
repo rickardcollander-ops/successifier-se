@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       title: post.title,
       description: post.excerpt,
-      url: `https://successifier.se/en/blog/${slug}`,
+      url: `https://www.successifier.se/en/blog/${slug}`,
       siteName: "Successifier.se",
       locale: "en",
       publishedTime: post.date,
@@ -62,18 +62,18 @@ export default async function EnBlogPostPage({ params }: { params: Promise<{ slu
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "en",
-    mainEntityOfPage: `https://successifier.se/en/blog/${slug}`,
+    mainEntityOfPage: `https://www.successifier.se/en/blog/${slug}`,
     keywords: post.tags.join(", "),
     author: {
       "@type": "Person",
       name: "Rickard Collander",
-      url: "https://successifier.se/#rickard-collander",
+      url: "https://www.successifier.se/#rickard-collander",
       sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
     },
     publisher: {
       "@type": "Organization",
       name: "Successifier.se",
-      logo: { "@type": "ImageObject", url: "https://successifier.se/logo.svg" },
+      logo: { "@type": "ImageObject", url: "https://www.successifier.se/logo.svg" },
     },
   };
 
@@ -81,9 +81,9 @@ export default async function EnBlogPostPage({ params }: { params: Promise<{ slu
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://successifier.se/en" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://successifier.se/en/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://successifier.se/en/blog/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.successifier.se/en" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.successifier.se/en/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.successifier.se/en/blog/${slug}` },
     ],
   };
 

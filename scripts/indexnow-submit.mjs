@@ -8,7 +8,9 @@
 // Nyckeln måste finnas publicerad på  https://<host>/<KEY>.txt  (se public/).
 
 const KEY = "353fce3a7a4d405982de292bdfb12540";
-const HOST = "successifier.se";
+// Kanonisk host (matchar sitemap, metadataBase och structured data). Servern
+// serverar www med 200; non-www redirectar hit.
+const HOST = "www.successifier.se";
 const SITEMAP = `https://${HOST}/sitemap.xml`;
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";

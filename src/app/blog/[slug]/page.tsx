@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       title: post.title,
       description: post.excerpt,
-      url: `https://successifier.se/blog/${slug}`,
+      url: `https://www.successifier.se/blog/${slug}`,
       siteName: "Successifier.se",
       locale: "sv_SE",
       publishedTime: post.date,
@@ -62,18 +62,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "sv-SE",
-    mainEntityOfPage: `https://successifier.se/blog/${slug}`,
+    mainEntityOfPage: `https://www.successifier.se/blog/${slug}`,
     keywords: post.tags.join(", "),
     author: {
       "@type": "Person",
       name: "Rickard Collander",
-      url: "https://successifier.se/#rickard-collander",
+      url: "https://www.successifier.se/#rickard-collander",
       sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
     },
     publisher: {
       "@type": "Organization",
       name: "Successifier.se",
-      logo: { "@type": "ImageObject", url: "https://successifier.se/logo.svg" },
+      logo: { "@type": "ImageObject", url: "https://www.successifier.se/logo.svg" },
     },
   };
 
@@ -81,9 +81,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Hem", item: "https://successifier.se/" },
-      { "@type": "ListItem", position: 2, name: "Blogg", item: "https://successifier.se/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://successifier.se/blog/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Hem", item: "https://www.successifier.se/" },
+      { "@type": "ListItem", position: 2, name: "Blogg", item: "https://www.successifier.se/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.successifier.se/blog/${slug}` },
     ],
   };
 
