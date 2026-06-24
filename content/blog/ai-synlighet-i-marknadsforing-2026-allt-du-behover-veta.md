@@ -1,7 +1,7 @@
 ---
 title: "AI-synlighet i marknadsföring 2026: Allt du behöver veta"
 slug: "ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta"
-date: 2026-06-24T20:28:37.036Z
+date: 2026-06-17T07:20:00.000Z
 excerpt: "AI synlighet i marknadsföring 2026: Allt du behöver veta Sökmotorer slutade vara enkla i samma stund som Google rullade ut AI Overviews globalt. Nu läser…"
 description: "AI synlighet i marknadsföring 2026: Allt du behöver veta Sökmotorer slutade vara enkla i samma stund som Google rullade ut AI Overviews globalt. Nu läser…"
 language: "sv"

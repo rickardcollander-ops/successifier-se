@@ -1,7 +1,7 @@
 ---
 title: "SEO-konsult för B2B-företag: Så dominerar du Google med rätt strategi"
 slug: "seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi"
-date: 2026-06-24T20:28:59.235Z
+date: 2026-05-22T09:30:00.000Z
 excerpt: "SEO konsult för B2B företag: Så dominerar du Google med rätt strategi De flesta B2B företag som anlitar en SEO byrå får en strategi designad för e handel…"
 description: "SEO konsult för B2B företag: Så dominerar du Google med rätt strategi De flesta B2B företag som anlitar en SEO byrå får en strategi designad för e handel…"
 language: "sv"
@@ -40,7 +40,7 @@ Den här artikeln bryter ner vad som faktiskt skiljer B2B SEO från generalistar
 
 ## Vad är B2B SEO och varför skiljer det sig åt? {#vad-ar-b2b-seo}
 
-![team analyzing B2B sales pipeline dashboards in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/seo-konsult-b2b-foretag-strategi/inline-e103315ee9-1779705424.png?)
+![team analyzing B2B sales pipeline dashboards in modern office](/blog/seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi.png)
 
 SEO för B2B-företag handlar om att synas när dina potentiella kunder söker efter lösningar på problem som du löser. Enkelt i teorin. Svårt i praktiken, eftersom B2B-sök är märkbart annorlunda mot konsumentsök på tre avgörande punkter.
 

@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult för B2B: 5 projekt som ger ROI inom 90 dagar"
 slug: "ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar"
-date: 2026-06-24T20:28:49.117Z
+date: 2026-03-09T07:45:00.000Z
 excerpt: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
 description: "AI konsult för B2B: 5 projekt som ger ROI inom 90 dagar De flesta B2B bolag vet att AI kan göra skillnad. Problemet är att de inte vet var de ska börja, och…"
 language: "sv"
@@ -41,7 +41,7 @@ Om du funderar på att anlita en AI-konsult, eller om du är mitt i en utvärder
 
 ## Varför 90 dagar är rätt tidshorisont för AI-ROI {#varfor-90-dagar}
 
-![team analyzing dashboards in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-konsult-b2b-projekt-roi-90-dagar/inline-7758eb09ab-1779705419.png?)
+![team analyzing dashboards in modern office](/blog/ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar.png)
 
 Många AI-initiativ misslyckas inte för att tekniken är dålig. De misslyckas för att tidshorisonten är fel. Projekt som planeras på 12-18 månader tappar momentum, byter ägare och dör av intern tröghet. Tre månader är tillräckligt kort för att hålla fokus och tillräckligt långt för att se faktiska resultat.
 

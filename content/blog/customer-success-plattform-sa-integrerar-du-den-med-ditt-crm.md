@@ -1,7 +1,7 @@
 ---
 title: "Customer Success-plattform: Så integrerar du den med ditt CRM"
 slug: "customer-success-plattform-sa-integrerar-du-den-med-ditt-crm"
-date: 2026-06-24T20:29:07.896Z
+date: 2026-04-15T09:40:00.000Z
 excerpt: "Customer Success plattform: Så integrerar du den med ditt CRM Ditt CRM vet att kunden finns. Din customer success plattform vet hur kunden mår. Problemet är…"
 description: "Customer Success plattform: Så integrerar du den med ditt CRM Ditt CRM vet att kunden finns. Din customer success plattform vet hur kunden mår. Problemet är…"
 language: "sv"

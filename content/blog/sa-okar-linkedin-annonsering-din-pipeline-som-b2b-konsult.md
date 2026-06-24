@@ -1,7 +1,7 @@
 ---
 title: "Så ökar LinkedIn-annonsering din pipeline som B2B-konsult"
 slug: "sa-okar-linkedin-annonsering-din-pipeline-som-b2b-konsult"
-date: 2026-06-24T20:29:18.057Z
+date: 2026-05-11T08:50:00.000Z
 excerpt: "Så ökar LinkedIn annonsering din pipeline som B2B konsult De flesta B2B konsulter vet att deras bästa kunder finns på LinkedIn. Problemet är att de flesta…"
 description: "Så ökar LinkedIn annonsering din pipeline som B2B konsult De flesta B2B konsulter vet att deras bästa kunder finns på LinkedIn. Problemet är att de flesta…"
 language: "sv"
@@ -40,7 +40,7 @@ Den här artikeln går igenom exakt hur du sätter upp kampanjer, väljer rätt 
 
 ## Varför LinkedIn är rätt kanal för B2B-konsulter {#varfor-linkedin-for-konsulter}
 
-![professional reviewing LinkedIn analytics on laptop in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/linkedin-annonsering-b2b-konsult-pipeline/inline-6386267e68-1779991622.png?)
+![professional reviewing LinkedIn analytics on laptop in modern office](/blog/sa-okar-linkedin-annonsering-din-pipeline-som-b2b-konsult.png)
 
 Google Ads kan ge dig trafik från folk som söker efter din tjänst. Meta kan ge dig räckvidd till lågt pris. Men ingen annan plattform låter dig filtrera på jobbtitel, bolagets storlek, bransch och senioritetsnivå på det sätt LinkedIn gör.
 

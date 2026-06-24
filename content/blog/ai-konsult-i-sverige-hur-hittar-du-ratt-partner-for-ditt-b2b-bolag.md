@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult i Sverige: Hur hittar du rätt partner för ditt B2B-bolag?"
 slug: "ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag"
-date: 2026-06-24T20:29:28.212Z
+date: 2026-02-24T08:20:00.000Z
 excerpt: "AI konsult i Sverige: Hur hittar du rätt partner för ditt B2B bolag? De flesta AI konsulter i Sverige är bra på en sak: demos. Snygga dashboards, imponerande…"
 description: "AI konsult i Sverige: Hur hittar du rätt partner för ditt B2B bolag? De flesta AI konsulter i Sverige är bra på en sak: demos. Snygga dashboards, imponerande…"
 language: "sv"
@@ -40,7 +40,7 @@ Oavsett om du tittar på ett första AI-pilotprojekt eller ska skala upp en befi
 
 ## Varför anlita en AI-konsult överhuvudtaget? {#varfor-ai-konsult}
 
-![business team reviewing AI strategy on laptop in Swedish office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-konsult-sverige-valja-ratt-partner-b2b/inline-7a2a38e8b0-1779991613.png?)
+![business team reviewing AI strategy on laptop in Swedish office](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag.png)
 
 Det finns tre vanliga skäl till att B2B-bolag söker extern hjälp med AI: intern kompetens saknas, ledningen vill ha en neutral bedömning, eller ett specifikt projekt är för komplext för att byggas in-house. Alla tre är legitima.
 
