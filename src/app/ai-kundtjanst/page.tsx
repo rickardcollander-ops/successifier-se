@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
+import BookingEmbed from "@/components/site/BookingEmbed";
 import { InboxMockup, KnowledgeBaseMockup } from "@/components/site/SupportMockups";
 
 const serif = { fontFamily: "var(--font-spectral)" } as const;
@@ -126,13 +127,13 @@ export default function AiKundtjanstPage() {
                 redan hanterats — och ni behåller kontrollen och godkänner innan något skickas.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-7">
-                <Link
-                  href="/#kontakt"
+                <a
+                  href="#boka"
                   className="inline-flex items-center gap-2 rounded-[3px] px-[26px] py-[15px] text-[15.5px] font-medium no-underline transition-opacity hover:opacity-90"
                   style={{ background: "var(--accent)", color: "var(--on-accent)" }}
                 >
                   Boka demo
-                </Link>
+                </a>
                 <a
                   href="#sa-fungerar-det"
                   className="inline-flex items-center gap-2 pb-[3px] text-[15.5px] font-medium no-underline"
@@ -270,22 +271,20 @@ export default function AiKundtjanstPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section aria-label="Boka demo">
+        {/* CTA / Boka demo */}
+        <section id="boka" aria-label="Boka demo">
           <div className="mx-auto max-w-[1200px] px-6 py-[100px] sm:px-10">
-            <div className="rounded-[6px] p-8 text-center sm:p-14" style={{ background: "var(--accent)", color: "var(--on-accent)" }}>
-              <h2 className="text-[clamp(28px,3.6vw,44px)] font-medium tracking-[-0.015em]" style={serif}>Vill du se Successifier Support live?</h2>
-              <p className="mx-auto mt-4 max-w-xl text-[17px] leading-[1.6] text-pretty" style={{ color: "rgba(242,238,230,.72)" }}>
-                Boka en demo på en timme så visar vi hur AI:n hanterar era riktiga ärenden, och
-                vad det skulle spara i tid.
-              </p>
-              <Link
-                href="/#kontakt"
-                className="mt-7 inline-flex items-center justify-center rounded-[3px] px-6 py-[15px] text-[15.5px] font-semibold no-underline transition-opacity hover:opacity-90"
-                style={{ background: "var(--on-accent)", color: "var(--ink)" }}
-              >
-                Boka demo →
-              </Link>
+            <div className="rounded-[6px] p-8 sm:p-14" style={{ background: "var(--accent)", color: "var(--on-accent)" }}>
+              <div className="mx-auto max-w-2xl text-center">
+                <h2 className="text-[clamp(28px,3.6vw,44px)] font-medium tracking-[-0.015em]" style={serif}>Vill du se Successifier Support live?</h2>
+                <p className="mx-auto mt-4 max-w-xl text-[17px] leading-[1.6] text-pretty" style={{ color: "rgba(242,238,230,.72)" }}>
+                  Boka en demo på en timme så visar vi hur AI:n hanterar era riktiga ärenden, och
+                  vad det skulle spara i tid. Välj en tid som passar nedan.
+                </p>
+              </div>
+              <div className="mx-auto mt-9 max-w-[760px]">
+                <BookingEmbed onAccent />
+              </div>
             </div>
           </div>
         </section>

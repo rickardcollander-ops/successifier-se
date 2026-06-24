@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
-import AgentLeadForm from "@/components/AgentLeadForm";
+import BookingEmbed from "@/components/site/BookingEmbed";
 import SiteNav from "@/components/site/SiteNav";
 import { publicAssetExists } from "@/lib/publicAsset";
 
@@ -670,7 +670,9 @@ export default function AiKonsultPage() {
             Boka en kostnadsfri genomgång — vi tittar på en process och visar konkret vad agentic AI
             kan göra för er.
           </p>
-          <AgentLeadForm />
+          <div className="mx-auto max-w-[760px] text-left">
+            <BookingEmbed onAccent />
+          </div>
         </div>
       </section>
 
