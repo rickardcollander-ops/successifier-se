@@ -201,14 +201,6 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 className="object-cover"
               />
             </div>
-            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                {t.locale === "sv" ? "Fig. 01 — Successifier i arbete" : "Fig. 01 — Successifier at work"}
-              </span>
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                Stockholm · 2026
-              </span>
-            </div>
           </div>
         </section>
 
