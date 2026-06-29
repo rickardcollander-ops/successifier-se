@@ -58,7 +58,7 @@ export const metadata = {
     title: "Successifier Support · AI som besvarar kundmailen",
     description:
       "AI-kundtjänst som läser, kategoriserar och besvarar kundmail, med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig av era konversationer.",
-    url: "https://successifier.se/ai-kundtjanst",
+    url: "https://www.successifier.se/ai-kundtjanst",
     siteName: "Successifier.se",
     locale: "sv_SE",
     type: "website",
@@ -74,18 +74,18 @@ export default function AiKundtjanstPage() {
         name: "Successifier Support",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
-        url: "https://successifier.se/ai-kundtjanst",
+        url: "https://www.successifier.se/ai-kundtjanst",
         description:
           "AI-kundtjänst som läser, kategoriserar och besvarar inkommande kundmail med svarsförslag, säkerhetspoäng och en självlärande kunskapsbas.",
         inLanguage: "sv-SE",
-        publisher: { "@id": "https://successifier.se/#organization" },
+        publisher: { "@id": "https://www.successifier.se/#organization" },
         offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Hem", item: "https://successifier.se/" },
-          { "@type": "ListItem", position: 2, name: "Successifier Support", item: "https://successifier.se/ai-kundtjanst" },
+          { "@type": "ListItem", position: 1, name: "Hem", item: "https://www.successifier.se/" },
+          { "@type": "ListItem", position: 2, name: "Successifier Support", item: "https://www.successifier.se/ai-kundtjanst" },
         ],
       },
     ],

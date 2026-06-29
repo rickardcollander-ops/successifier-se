@@ -39,7 +39,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
     { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result },
   ];
 
-  const pageUrl = t.locale === "sv" ? "https://successifier.se/" : "https://successifier.se/en";
+  const pageUrl = t.locale === "sv" ? "https://www.successifier.se/" : "https://www.successifier.se/en";
 
   const navLinks: NavLink[] =
     t.locale === "sv"
@@ -62,12 +62,12 @@ export default function HomePageContent({ t }: { t: Dict }) {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://successifier.se/#rickard-collander",
+        "@id": "https://www.successifier.se/#rickard-collander",
         name: "Rickard Collander",
         jobTitle: t.about.founderTitle,
-        url: "https://successifier.se/",
-        image: "https://successifier.se/rc2.jpg",
-        worksFor: { "@id": "https://successifier.se/#service" },
+        url: "https://www.successifier.se/",
+        image: "https://www.successifier.se/rc2.jpg",
+        worksFor: { "@id": "https://www.successifier.se/#service" },
         knowsAbout: [
           "Customer Success",
           "AI-konsulting",
@@ -80,15 +80,15 @@ export default function HomePageContent({ t }: { t: Dict }) {
       },
       {
         "@type": "ProfessionalService",
-        "@id": "https://successifier.se/#service",
+        "@id": "https://www.successifier.se/#service",
         name: "Successifier.se",
         url: pageUrl,
-        image: "https://successifier.se/logo.svg",
+        image: "https://www.successifier.se/logo.svg",
         email: "rc@successifier.com",
         telephone: "+46722136422",
         areaServed: "SE",
         description: t.hero.description,
-        founder: { "@id": "https://successifier.se/#rickard-collander" },
+        founder: { "@id": "https://www.successifier.se/#rickard-collander" },
         sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
       },
       {
@@ -200,14 +200,6 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 sizes="(max-width: 1280px) 100vw, 1200px"
                 className="object-cover"
               />
-            </div>
-            <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                {t.locale === "sv" ? "Fig. 01 — Successifier i arbete" : "Fig. 01 — Successifier at work"}
-              </span>
-              <span className="uppercase" style={{ ...mono, fontSize: "11.5px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>
-                Stockholm · 2026
-              </span>
             </div>
           </div>
         </section>

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
-const BASE = "https://successifier.se";
+const BASE = "https://www.successifier.se";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

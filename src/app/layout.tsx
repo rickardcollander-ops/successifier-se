@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "AI-omnämnande",
     "Sverige",
   ],
-  metadataBase: new URL("https://successifier.se"),
+  metadataBase: new URL("https://www.successifier.se"),
   alternates: {
     canonical: "/",
     languages: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Successifier.se · Customer Success, AI, Automation & SAMA-plattformen",
     description: "Konsulting och egen plattform (SAMA) för AI-synlighet, SEO och content, samt Customer Success, Contact Center och AI-driven marknadsföring på Google, LinkedIn och Meta.",
-    url: "https://successifier.se",
+    url: "https://www.successifier.se",
     siteName: "Successifier.se",
     locale: "sv_SE",
     type: "website",
@@ -84,10 +84,10 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://successifier.se/#organization",
+        "@id": "https://www.successifier.se/#organization",
         name: "Successifier.se",
-        url: "https://successifier.se",
-        logo: "https://successifier.se/logo.svg",
+        url: "https://www.successifier.se",
+        logo: "https://www.successifier.se/logo.svg",
         email: "rc@successifier.com",
         telephone: "+46722136422",
         sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
@@ -95,11 +95,11 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://successifier.se/#website",
-        url: "https://successifier.se",
+        "@id": "https://www.successifier.se/#website",
+        url: "https://www.successifier.se",
         name: "Successifier.se",
         inLanguage: "sv-SE",
-        publisher: { "@id": "https://successifier.se/#organization" },
+        publisher: { "@id": "https://www.successifier.se/#organization" },
       },
     ],
   };
