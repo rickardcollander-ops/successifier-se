@@ -45,20 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const postRoutes: MetadataRoute.Sitemap = posts.flatMap((post) => [
-    {
-      url: `${BASE}/blog/${post.slug}`,
-      lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    {
-      url: `${BASE}/en/blog/${post.slug}`,
-      lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    },
-  ]);
+  // Endast kanoniska artikel-URL:er: /en/blog/[slug] kanoniserar till
+  // /blog/[slug] och ska därför inte listas i sitemapen.
+  const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   return [...staticRoutes, ...postRoutes];
 }

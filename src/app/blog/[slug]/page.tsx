@@ -16,13 +16,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.metaTitle ?? post.title,
     description: post.excerpt,
+    // Ingen hreflang här: /en/blog/[slug] är ingen översättning utan en kopia
+    // som kanoniserar hit.
     alternates: {
       canonical: `/blog/${slug}`,
-      languages: {
-        "sv-SE": `/blog/${slug}`,
-        "en": `/en/blog/${slug}`,
-        "x-default": `/blog/${slug}`,
-      },
     },
     openGraph: {
       type: "article",
