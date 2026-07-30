@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult och automationsflöden: Så kartlägger du dina processer på rätt sätt"
 slug: "ai-konsult-och-automationsfloden-sa-kartlagger-du-dina-processer-pa-ratt-satt"
-date: 2026-07-30T07:51:36.022Z
+date: 2026-07-30T07:51:46.910Z
 excerpt: "AI konsult och automationsflöden: Så kartlägger du dina processer på rätt sätt De flesta AI projekt misslyckas inte för att tekniken är fel. De misslyckas för…"
 description: "AI konsult och automationsflöden: Så kartlägger du dina processer på rätt sätt De flesta AI projekt misslyckas inte för att tekniken är fel. De misslyckas för…"
 language: "sv"
