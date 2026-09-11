@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult och automationsflöden: Varför ditt företag behöver det nu"
 slug: "ai-konsult-och-automationsfloden-varfor-ditt-foretag-behover-det-nu"
-date: 2026-09-11T13:29:25.113Z
+date: 2026-08-13T07:45:00.000Z
 excerpt: "AI konsult och automationsflöden: Varför ditt företag behöver det nu De flesta företag vet att de borde automatisera mer. Ändå fastnar projekten i pilotfasen,…"
 description: "AI konsult och automationsflöden: Varför ditt företag behöver det nu De flesta företag vet att de borde automatisera mer. Ändå fastnar projekten i pilotfasen,…"
 language: "sv"
