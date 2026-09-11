@@ -5,10 +5,33 @@ import { Marked } from "marked";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
+// Gör en rubriktext till ett id: "Varför AI just nu?" -> "varfor-ai-just-nu".
+// Diakriter normaliseras bort så att å/ä/ö blir a/a/o.
+function slugifyHeading(html: string): string {
+  return html
+    .replace(/<[^>]*>/g, "")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 // Centraliserad markdown-rendering så artikelmallarna (sv/en) beter sig lika.
 // Bilder får explicita dimensioner (CLS/Core Web Vitals) och lazy-loading.
 const md = new Marked({
   renderer: {
+    // Artiklarna skriver ankare med "## Rubrik {#mitt-id}", vilket marked inte
+    // stöder ur lådan. Utan det här hamnar "{#mitt-id}" som synlig text i
+    // rubriken och innehållsförteckningens länkar pekar på id:n som saknas.
+    heading({ tokens, depth }) {
+      const html = this.parser.parseInline(tokens);
+      const explicit = html.match(/\s*\{#([A-Za-z0-9_-]+)\}\s*$/);
+      const text = explicit ? html.slice(0, explicit.index) : html;
+      const id = explicit ? explicit[1] : slugifyHeading(text);
+      const idAttr = id ? ` id="${id}"` : "";
+      return `<h${depth}${idAttr}>${text}</h${depth}>\n`;
+    },
     image({ href, title, text }) {
       const titleAttr = title ? ` title="${title}"` : "";
       const alt = text ?? "";

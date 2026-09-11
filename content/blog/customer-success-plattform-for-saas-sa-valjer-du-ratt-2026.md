@@ -23,7 +23,7 @@ Den här guiden hjälper dig att hitta rätt plattform för 2026. Vi går igenom
 - [Varför du behöver en dedikerad CS-plattform](#varfor-du-behover-en-plattform)
 - [Kärnfunktioner att kräva av en plattform](#krav-och-funktioner)
 - [AI-native vs. AI i efterhand: varför det spelar roll](#ai-native-vs-ai-boltad)
-- [Så utvärderar du plattformar: checklista och jämförelse](#jämförelse-och-urvalskriterier)
+- [Så utvärderar du plattformar: checklista och jämförelse](#jamforelse-och-urvalskriterier)
 - [ROI, prissättning och vad du faktiskt betalar för](#roi-och-pris)
 - [Implementering och snabb time-to-value](#implementering-och-time-to-value)
 
@@ -115,7 +115,7 @@ När AI är ett tillägg snarare än en grundpelare är modellerna ofta generisk
 
 Frågan att ställa till en leverantör är enkel: är AI en del av kärnprodukten, eller är det en funktion ni lagt till? Be dem visa hur modellen tränas på din data.
 
-## Så utvärderar du plattformar: checklista och jämförelse {#jämförelse-och-urvalskriterier}
+## Så utvärderar du plattformar: checklista och jämförelse {#jamforelse-och-urvalskriterier}
 
 Att utvärdera CS-plattformar tar tid. Här är ett strukturerat sätt att göra det utan att drunkna i demo-presentationer.
 
