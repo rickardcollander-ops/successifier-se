@@ -40,7 +40,7 @@ Den här artikeln visar exakt hur B2B-bolag bygger AI-drivna content-strategier 
 
 ## Varför traditionell content-marknadsföring inte skalar i B2B {#varfor-traditionell-content-inte-skalar}
 
-![marketing team reviewing content analytics on large office monitor](/blog/ai-driven-content-marknadsforing-b2b-strategi-som-skalar.png)
+![marketing team reviewing content analytics on large office monitor](/blog/ai-driven-content-marknadsforing-b2b-strategi-som-skalar.webp)
 
 Ett typiskt B2B-marknadsföringsteam på tre till fem personer hanterar blogg, LinkedIn, e-postkampanjer, case studies, whitepapers och produktsidor. Varje format kräver research, skrivande, redigering, formgivning och distribution. Det är inte ovanligt att en enda case study tar tre till fyra veckor från intervju till publicering.
 

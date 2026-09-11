@@ -40,7 +40,7 @@ Den här artikeln går igenom hur du konkret skalar dina operationer med AI och 
 
 ## Varför manuella processer är en broms på tillväxt {#varfor-manuella-processer-broms}
 
-![customer success team analyzing dashboards in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/saas-bolag-skala-ai-automation/inline-89bbe5f3fc-1782333163.png?)
+![customer success team analyzing dashboards in modern office](/blog/saas-bolag-sa-skalar-du-med-ai-och-automation-utan-att-tappa-kontrollen.webp)
 
 Föreställ dig ett CS-team på fem personer som hanterar 200 kunder. Varje vecka loggar de möten manuellt, uppdaterar health scores i ett kalkylark, och skickar individuella uppföljningsmejl. Det fungerar. Sedan kommer det kvartal när kundbasen växer till 400. Samma team, dubbla kunderna. Det fungerar inte längre.
 

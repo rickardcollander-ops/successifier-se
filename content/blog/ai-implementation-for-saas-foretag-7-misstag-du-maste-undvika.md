@@ -41,7 +41,7 @@ Den här artikeln är en varningslista baserad på verkliga implementeringsfall.
 
 ## Misstag 1: Diffust mål utan mätbara KPI:er {#misstag-1-diffust-mal}
 
-![team reviewing customer success metrics on dashboard in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-implementation-saas-misstag/inline-fd9b9fd46b-1785398033.png?)
+![team reviewing customer success metrics on dashboard in modern office](/blog/ai-implementation-for-saas-foretag-7-misstag-du-maste-undvika.webp)
 
 "Vi vill använda AI för att bli bättre på customer success" är inte ett mål. Det är en ambition. Och ambitioner utan mätpunkter leder till projekt som aldrig kan förklaras lyckade eller misslyckade.
 

@@ -38,7 +38,7 @@ För B2B-bolag med återkommande intäkter och komplexa kundrelationer räcker d
 
 ## Varför rätt Customer Success-verktyg spelar roll {#varfor-cs-verktyg-spelar-roll}
 
-![customer success team analyzing dashboards in modern office](/blog/de-7-basta-customer-success-verktygen-for-b2b-2026.png)
+![customer success team analyzing dashboards in modern office](/blog/de-7-basta-customer-success-verktygen-for-b2b-2026.webp)
 
 Siffrorna talar för sig själva. Bolag som investerar i dedikerade Customer Success-plattformar [rapporterar i genomsnitt 40% lägre churn](https://www.gainsight.com/guides/the-definitive-guide-to-customer-success/) och 25% förbättrad NRR jämfört med team som förlitar sig på CRM-anteckningar och magkänsla.
 

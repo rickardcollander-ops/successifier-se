@@ -40,7 +40,7 @@ Den här artikeln går igenom exakt hur du sätter upp kampanjer, väljer rätt 
 
 ## Varför LinkedIn är rätt kanal för B2B-konsulter {#varfor-linkedin-for-konsulter}
 
-![professional reviewing LinkedIn analytics on laptop in modern office](/blog/sa-okar-linkedin-annonsering-din-pipeline-som-b2b-konsult.png)
+![professional reviewing LinkedIn analytics on laptop in modern office](/blog/sa-okar-linkedin-annonsering-din-pipeline-som-b2b-konsult.webp)
 
 Google Ads kan ge dig trafik från folk som söker efter din tjänst. Meta kan ge dig räckvidd till lågt pris. Men ingen annan plattform låter dig filtrera på jobbtitel, bolagets storlek, bransch och senioritetsnivå på det sätt LinkedIn gör.
 

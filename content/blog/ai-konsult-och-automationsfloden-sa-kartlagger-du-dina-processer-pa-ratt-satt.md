@@ -40,7 +40,7 @@ Den här artikeln presenterar en strukturerad metod för processkartläggning an
 
 ## Vad är processkartläggning i ett AI-sammanhang? {#vad-ar-processkartlaggning}
 
-![team analyzing process diagrams on whiteboard in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-konsult-automationsfloden-processkartlaggning/inline-fd10498867-1785155881.png?)
+![team analyzing process diagrams on whiteboard in modern office](/blog/ai-konsult-och-automationsfloden-sa-kartlagger-du-dina-processer-pa-ratt-satt.webp)
 
 Processkartläggning är dokumentationen av hur arbete faktiskt utförs, steg för steg, från trigger till levererat resultat. Det låter enkelt. Det är det inte.
 

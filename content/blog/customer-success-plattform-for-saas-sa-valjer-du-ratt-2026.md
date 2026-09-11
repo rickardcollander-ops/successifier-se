@@ -39,7 +39,7 @@ Den här guiden hjälper dig att hitta rätt plattform för 2026. Vi går igenom
 
 ## Varför du behöver en dedikerad CS-plattform {#varfor-du-behover-en-plattform}
 
-![customer success team analyzing churn data on dashboards in modern SaaS office](/blog/customer-success-plattform-for-saas-sa-valjer-du-ratt-2026.png)
+![customer success team analyzing churn data on dashboards in modern SaaS office](/blog/customer-success-plattform-for-saas-sa-valjer-du-ratt-2026.webp)
 
 Många SaaS-bolag försöker driva customer success med en kombination av Salesforce, Excel och manuella uppföljningar i Slack. Det fungerar tills det inte gör det, och det slutar fungera ungefär när ni passerar 100 kunder.
 

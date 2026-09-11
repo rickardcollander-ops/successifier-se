@@ -40,7 +40,7 @@ Siffrorna är konkreta: företag som byter till en proaktiv, AI-native Customer 
 
 ## Misstag 1: Reaktiv Customer Success utan tidiga varningssignaler {#misstag-1-reaktiv-cs}
 
-![customer success team analyzing dashboard data in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/customer-success-strategi-b2b/inline-fb8f48b11f-1784111076.png?)
+![customer success team analyzing dashboard data in modern office](/blog/customer-success-strategi-b2b-sa-bygger-du-en-maskin-som-minskar-churn.webp)
 
 Det vanligaste misstaget är det enklaste att förklara: Customer Success-teamet agerar bara när kunden redan är på väg ut.
 

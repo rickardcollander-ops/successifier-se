@@ -38,7 +38,7 @@ En dedikerad AI-konsult med fokus på automationsflöden löser det problemet sn
 
 ## Varför intern kompetensuppbyggnad tar för lång tid {#varfor-intern-kompetens-tar-for-lang-tid}
 
-![team discussing AI strategy on whiteboard in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-konsult-automationsfloden-foretag/inline-7f878dcf06-1785155873.png?)
+![team discussing AI strategy on whiteboard in modern office](/blog/ai-konsult-och-automationsfloden-varfor-ditt-foretag-behover-det-nu.webp)
 
 Att bygga AI-kompetens internt är ett legitimt långsiktigt mål. Problemet är tidshorisonten.
 

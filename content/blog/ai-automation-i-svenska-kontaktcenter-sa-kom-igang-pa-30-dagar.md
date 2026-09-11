@@ -40,7 +40,7 @@ Resultaten som svenska bolag rapporterar när de gör detta rätt är konkreta: 
 
 ## Förutsättningar innan du startar {#forutsattningar}
 
-![team analyzing customer service dashboards in modern Swedish office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-automation-svenska-kontaktcenter-30-dagar/inline-cd61773777-1782756222.png?)
+![team analyzing customer service dashboards in modern Swedish office](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar.webp)
 
 Att rusa in i en AI-implementation utan rätt förutsättningar är det snabbaste sättet att bränna budget och förtroende på en gång. Gå igenom checklistan nedan innan dag ett.
 

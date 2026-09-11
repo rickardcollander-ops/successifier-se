@@ -40,7 +40,7 @@ Siffrorna vi använder bygger på publicerad branschdata från Gartner, McKinsey
 
 ## Varför ROI-kalkylen ofta räknas fel {#varfor-roi-raknas-fel}
 
-![CFO reviewing financial dashboard in modern Swedish office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-automation-kontaktcenter-roi-kalkyl/inline-92e01753d6-1783494345.png?)
+![CFO reviewing financial dashboard in modern Swedish office](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare.webp)
 
 De flesta ROI-kalkyler för kontaktcenter-AI görs på ett av två sätt. Antingen tar man bara licensavgiften och dividerar med estimerade handläggartimmar. Eller så fyller man ett Excel-ark med optimistiska antaganden och presenterar ett payback-tal som ingen tror på.
 

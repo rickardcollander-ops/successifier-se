@@ -40,7 +40,7 @@ Den här artikeln tar upp fem konkreta strategier för att skala SaaS utan linj�
 
 ## 1. Produktledd tillväxt (PLG): Produkten säljer sig själv {#produktledd-tillvaxt}
 
-![SaaS product dashboard freemium user onboarding](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/skala-saas-utan-linear-tillvaxt-strategier/inline-8899c28d7c-1785155872.png?)
+![SaaS product dashboard freemium user onboarding](/blog/skala-saas-utan-linjar-tillvaxt-5-strategier-som-faktiskt-fungerar-2026.webp)
 
 Produktledd tillväxt är inte ett trendord. Det är en affärsmodell där produkten i sig är den primära kanalen för anskaffning, aktivering och expansion. Användaren provar, ser värde och uppgraderar, utan att en säljare behöver vara inblandad.
 

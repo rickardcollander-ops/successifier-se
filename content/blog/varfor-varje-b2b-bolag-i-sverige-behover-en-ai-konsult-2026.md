@@ -39,7 +39,7 @@ Den här artikeln går igenom vad en AI-konsult konkret levererar för svenska B
 
 ## Vad gör en AI-konsult egentligen? {#vad-gor-en-ai-konsult}
 
-![consultant presenting AI data analysis to business team in modern Stockholm office](/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026.png)
+![consultant presenting AI data analysis to business team in modern Stockholm office](/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026.webp)
 
 Titeln "AI-konsult" används för allt från frilansande promptkursledare till team som bygger produktionsatta maskininlärningssystem. Det gör det svårt att veta vad du faktiskt köper. Låt oss konkretisera.
 

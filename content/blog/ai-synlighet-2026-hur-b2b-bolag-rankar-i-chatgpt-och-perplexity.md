@@ -40,7 +40,7 @@ Den här artikeln går igenom exakt vad som avgör om ett B2B-bolag nämns i gen
 
 ## Vad är GEO och varför ersätter det inte SEO {#vad-ar-geo}
 
-![marketer analyzing AI search results on laptop in modern office](https://vpewxdvurzcboqsajpcu.supabase.co/storage/v1/object/public/article-images/c4eb7ef9-906f-466b-b521-66da276db1b9/ai-synlighet-b2b-chatgpt-perplexity/inline-b084252f4a-1782333170.png?)
+![marketer analyzing AI search results on laptop in modern office](/blog/ai-synlighet-2026-hur-b2b-bolag-rankar-i-chatgpt-och-perplexity.webp)
 
 Generative Engine Optimization (GEO) är ett samlingsnamn för de åtgärder ett bolag vidtar för att synas i svar från AI-drivna sökmotorer och chattar. Begreppet myntades av forskare vid Princeton och Georgia Tech i en studie från 2023, och har sedan dess blivit branschstandard för diskussionen om synlighet i ChatGPT, Perplexity och liknande verktyg.
 

@@ -41,7 +41,7 @@ Den här artikeln bryter ner vad som faktiskt skiljer B2B SEO från generalistar
 
 ## Vad är B2B SEO och varför skiljer det sig åt? {#vad-ar-b2b-seo}
 
-![team analyzing B2B sales pipeline dashboards in modern office](/blog/seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi.png)
+![team analyzing B2B sales pipeline dashboards in modern office](/blog/seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi.webp)
 
 SEO för B2B-företag handlar om att synas när dina potentiella kunder söker efter lösningar på problem som du löser. Enkelt i teorin. Svårt i praktiken, eftersom B2B-sök är märkbart annorlunda mot konsumentsök på tre avgörande punkter.
 
