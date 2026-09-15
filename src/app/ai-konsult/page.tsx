@@ -39,9 +39,9 @@ export function generateMetadata(): Metadata {
     : undefined;
 
   return {
-    title: "AI-konsult för agentic AI · Successifier.se",
+    title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor",
     description:
-      "Vi bygger och driftsätter autonoma AI-agenter — från idé till produktion på veckor, med mätbar effekt och människan i loopen. Specialistbyrå för AI-automatisering.",
+      "AI-konsult som kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet. Från idé till produktion på 3–6 veckor, med mätbar effekt, governance och människan i loopen.",
     keywords: [
       "AI-konsult",
       "agentic AI",
@@ -51,11 +51,13 @@ export function generateMetadata(): Metadata {
       "AI-implementation",
       "AI-konsult Sverige",
       "agentic AI konsult",
+      "AI-agenter för företag",
+      "AI-konsult Stockholm",
     ],
     alternates: { canonical: "/ai-konsult" },
     openGraph: {
       type: "website",
-      title: "AI-konsult för agentic AI · Successifier.se",
+      title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor · Successifier",
       description:
         "Specialistbyrå för AI-automatisering. Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — med mätbar effekt och människan i loopen.",
       url: PAGE_URL,
@@ -65,7 +67,7 @@ export function generateMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: "AI-konsult för agentic AI · Successifier.se",
+      title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor · Successifier",
       description:
         "Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — från idé till produktion på veckor.",
       images: ogImages?.map((i) => i.url),
@@ -259,6 +261,8 @@ export default function AiKonsultPage() {
         description:
           "Kartläggning, design, utveckling, integration och drift av autonoma AI-agenter för svenska företag.",
         provider: { "@id": "https://www.successifier.se/#organization" },
+        audience: { "@type": "BusinessAudience", audienceType: "B2B-bolag, SaaS, finans, industri, retail och offentlig sektor i Sverige" },
+        availableLanguage: ["sv", "en"],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Tjänster",
@@ -278,7 +282,18 @@ export default function AiKonsultPage() {
         })),
       },
       {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: "AI-konsult för agentic AI",
+        inLanguage: "sv-SE",
+        isPartOf: { "@id": "https://www.successifier.se/#website" },
+        about: { "@id": `${PAGE_URL}#service` },
+        breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      },
+      {
         "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Hem", item: "https://www.successifier.se/" },
           { "@type": "ListItem", position: 2, name: "AI-konsult", item: PAGE_URL },

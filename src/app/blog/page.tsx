@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/blog";
+import { categoryLabel, getAllPosts } from "@/lib/blog";
 import { dict } from "@/lib/i18n";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
@@ -39,10 +39,16 @@ export default function BlogPage() {
         description: t.blog.metaDescription,
         inLanguage: "sv-SE",
         url: "https://www.successifier.se/blog",
+        publisher: { "@id": "https://www.successifier.se/#organization" },
+        author: { "@id": "https://www.successifier.se/#rickard-collander" },
         blogPost: posts.map((post) => ({
           "@type": "BlogPosting",
+          "@id": `https://www.successifier.se/blog/${post.slug}#article`,
           headline: post.title,
+          description: post.excerpt,
           datePublished: post.date,
+          dateModified: post.updated || post.date,
+          author: { "@id": "https://www.successifier.se/#rickard-collander" },
           url: `https://www.successifier.se/blog/${post.slug}`,
         })),
       },
@@ -83,11 +89,9 @@ export default function BlogPage() {
                 className="group flex flex-col rounded-[6px] p-6 no-underline transition-colors hover:bg-[color:var(--paper-alt)]"
                 style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--ink)" }}
               >
-                {post.tags.length > 0 && (
+                {(categoryLabel(post.category) || post.tags[0]) && (
                   <div className="mb-3 flex flex-wrap gap-2 uppercase" style={{ fontFamily: "var(--font-plex-mono)", fontSize: "11px", letterSpacing: "0.12em", color: "var(--accent)" }}>
-                    {post.tags.slice(0, 2).map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
+                    <span>{categoryLabel(post.category) ?? post.tags[0]}</span>
                   </div>
                 )}
                 <h2 className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={{ fontFamily: "var(--font-spectral)" }}>
@@ -95,7 +99,9 @@ export default function BlogPage() {
                 </h2>
                 <p className="mt-2 line-clamp-3 text-[14.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>{post.excerpt}</p>
                 <div className="mt-auto pt-5 text-[12px]" style={{ fontFamily: "var(--font-plex-mono)", color: "var(--faint-2)" }}>
-                  {new Date(post.date).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })}
+                  <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })}</time>
+                  <span aria-hidden="true"> · </span>
+                  {post.readingMinutes} {t.blog.readingTimeLabel}
                 </div>
               </Link>
             ))}
