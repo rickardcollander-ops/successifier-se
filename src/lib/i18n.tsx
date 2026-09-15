@@ -257,6 +257,15 @@ const sv = {
     relatedHeading: "Relaterade artiklar",
     relatedServicesHeading: "Relaterade tjänster",
     allPostsLabel: "Se alla artiklar",
+    shortAnswerLabel: "Kort svar",
+    publishedLabel: "Publicerad",
+    updatedLabel: "Uppdaterad",
+    readingTimeLabel: "min läsning",
+    authorLabel: "Skriven av",
+    authorBio:
+      "Rickard Collander är grundare av Successifier och har över tio års erfarenhet av att bygga och leda Customer Success- och supportfunktioner i SaaS- och scale-up-bolag. I dag hjälper han svenska B2B-bolag att gå från AI-strategi till driftsatta AI-agenter, automationsflöden och mätbar synlighet i Google och AI-sökmotorer.",
+    authorLinkLabel: "Rickard på LinkedIn",
+    categoryLabel: "Kategori",
   },
 };
 
@@ -517,6 +526,15 @@ const en: typeof sv = {
     relatedHeading: "Related articles",
     relatedServicesHeading: "Related services",
     allPostsLabel: "See all articles",
+    shortAnswerLabel: "Short answer",
+    publishedLabel: "Published",
+    updatedLabel: "Updated",
+    readingTimeLabel: "min read",
+    authorLabel: "Written by",
+    authorBio:
+      "Rickard Collander is the founder of Successifier and has more than ten years of experience building and leading Customer Success and support functions in SaaS and scale-up companies. Today he helps Swedish B2B companies go from AI strategy to deployed AI agents, automation flows, and measurable visibility in Google and AI search engines.",
+    authorLinkLabel: "Rickard on LinkedIn",
+    categoryLabel: "Category",
   },
 };
 

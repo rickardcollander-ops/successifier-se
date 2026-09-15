@@ -24,11 +24,23 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  images: {
+    // Moderna format för next/image (hero- och produktbilder). Bloggbilderna
+    // är redan WebP via scripts/localize-blog-images.mjs.
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
     return [
       {
         source: "/:path*",
         headers: securityHeaders,
+      },
+      {
+        // Bloggbilder och statiska tillgångar är innehållsadresserade per slug
+        // och ändras sällan – låt CDN och webbläsare cacha dem länge.
+        source: "/blog/:slug*.webp",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];
   },

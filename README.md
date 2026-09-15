@@ -20,6 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Innehåll, SEO och GEO
+
+- Blogginlägg ligger i `content/blog/*.md` med frontmatter: `title`, `metaTitle` (≤ 55 tecken), `slug`, `date`, `updated`, `excerpt` (meta description, 130–158 tecken), `summary` ("Kort svar"-ruta, används av AI-sökmotorer), `category` (`ai-konsult` | `customer-success` | `marknad` | `saas`), `tags`, `keywords`, `imageAlt`, `status`.
+- Rubriker kan ha explicit ankar-id: `## Rubrik {#mitt-id}`. Sektionen `## Vanliga frågor` (H3 = fråga) exponeras automatiskt som FAQPage-schema.
+- Sätt inte samma `date` på flera inlägg; publicera med spridning.
+- Bilder: lägg bilden som `![alt](/blog/<slug>.webp)` eller peka på en extern URL och kör `node scripts/localize-blog-images.mjs` som laddar ner, skalar (1536 px) och konverterar till WebP.
+- `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` och OG-bilder (`/opengraph-image`, `/blog/<slug>/opengraph-image`) genereras automatiskt vid bygge.
+- Efter publicering: `node scripts/indexnow-submit.mjs` skickar sitemapens URL:er till IndexNow (Bing m.fl.).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

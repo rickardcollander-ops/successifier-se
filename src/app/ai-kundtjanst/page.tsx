@@ -4,6 +4,9 @@ import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import BookingEmbed from "@/components/site/BookingEmbed";
 import { InboxMockup, KnowledgeBaseMockup } from "@/components/site/SupportMockups";
+import { getPostsByCategory } from "@/lib/blog";
+
+const PAGE_URL = "https://www.successifier.se/ai-kundtjanst";
 
 const serif = { fontFamily: "var(--font-spectral)" } as const;
 const mono = { fontFamily: "var(--font-plex-mono)" } as const;
@@ -47,45 +50,124 @@ const steps = [
   { num: "03", title: "Ni granskar & skickar", text: "Godkänn, justera eller skriv om. Varje godkänt svar gör AI:n vassare till nästa gång." },
 ];
 
+const faqs = [
+  {
+    q: "Vad är en AI-kundtjänst för e-post?",
+    a: "Ett system som läser inkommande kundmail, kategoriserar dem och tar fram ett färdigt svarsförslag utifrån er kunskapsbas och kundens historik. Successifier Support gör detta för varje mail och sätter en säkerhetspoäng på förslaget, så att ni vet vilka svar som kan gå direkt och vilka som bör granskas.",
+  },
+  {
+    q: "Skickas svaren automatiskt utan att någon granskar dem?",
+    a: "Inte om ni inte vill. Standardläget är att AI:n föreslår och en människa godkänner, justerar eller skriver om innan något skickas. Ni kan sedan välja att låta svar med hög säkerhetspoäng i utvalda kategorier gå ut automatiskt.",
+  },
+  {
+    q: "Hur lång tid tar det att komma igång?",
+    a: "Ni kopplar era supportadresser, och systemet börjar läsa och kategorisera direkt. I de flesta införanden får teamet användbara svarsförslag inom de första dagarna, och kvaliteten förbättras i takt med att ni godkänner svar och kunskapsbasen växer.",
+  },
+  {
+    q: "Hur hanteras personuppgifter och GDPR?",
+    a: "Kunddata används bara för att besvara det aktuella ärendet och för att bygga er egen kunskapsbas. Vi går igenom dataflöden, lagring och personuppgiftsbiträdesavtal tillsammans med er innan driftsättning, så att lösningen uppfyller era krav.",
+  },
+  {
+    q: "Vilka system kan Successifier Support integreras med?",
+    a: "Vanliga e-postplattformar för inkorgen samt verktyg som Billecta för fakturor och Resend för utskick. Andra integrationer, till exempel mot CRM eller ärendesystem, byggs vid behov via API.",
+  },
+  {
+    q: "Vad kostar en AI-kundtjänst för mail?",
+    a: "Priset beror på mailvolym och integrationsbehov. Vi visar lösningen på era riktiga ärenden i en demo och ger en uppskattning av tidsbesparing och kostnad utifrån er volym.",
+  },
+];
+
 export const metadata = {
-  title: "Successifier Support · AI som besvarar kundmailen",
+  title: "AI-kundtjänst för e-post: Successifier Support besvarar kundmailen",
   description:
-    "Successifier Support är en AI-kundtjänst som läser, kategoriserar och besvarar kundmail, med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig.",
+    "Successifier Support är en AI-kundtjänst för e-post som läser, kategoriserar och besvarar kundmail med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig. Över 100 000 hanterade mail.",
+  keywords: [
+    "AI-kundtjänst",
+    "AI-kundtjänst e-post",
+    "automatisera kundmail",
+    "AI-svarsförslag kundtjänst",
+    "kunskapsbas AI support",
+    "AI i kundservice",
+    "Successifier Support",
+  ],
   alternates: {
     canonical: "/ai-kundtjanst",
   },
   openGraph: {
-    title: "Successifier Support · AI som besvarar kundmailen",
+    title: "AI-kundtjänst för e-post: Successifier Support besvarar kundmailen · Successifier",
     description:
       "AI-kundtjänst som läser, kategoriserar och besvarar kundmail, med svarsförslag, säkerhetspoäng och en kunskapsbas som lär sig av era konversationer.",
-    url: "https://www.successifier.se/ai-kundtjanst",
+    url: PAGE_URL,
     siteName: "Successifier.se",
     locale: "sv_SE",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-kundtjänst för e-post: Successifier Support · Successifier",
+    description:
+      "AI som läser, sorterar och föreslår svar på kundmail, med säkerhetspoäng och mänsklig granskning innan utskick.",
+  },
 };
 
 export default function AiKundtjanstPage() {
+  const guidePosts = getPostsByCategory("customer-success").slice(0, 3);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "SoftwareApplication",
+        "@id": `${PAGE_URL}#software`,
         name: "Successifier Support",
+        alternateName: "AI-kundtjänst för e-post",
         applicationCategory: "BusinessApplication",
+        applicationSubCategory: "Customer service software",
         operatingSystem: "Web",
-        url: "https://www.successifier.se/ai-kundtjanst",
+        url: PAGE_URL,
         description:
-          "AI-kundtjänst som läser, kategoriserar och besvarar inkommande kundmail med svarsförslag, säkerhetspoäng och en självlärande kunskapsbas.",
+          "AI-kundtjänst som läser, kategoriserar och besvarar inkommande kundmail med svarsförslag, säkerhetspoäng och en självlärande kunskapsbas. Människan granskar och godkänner innan utskick.",
+        featureList: features.map((f) => f.title),
         inLanguage: "sv-SE",
         publisher: { "@id": "https://www.successifier.se/#organization" },
-        offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+        provider: { "@id": "https://www.successifier.se/#organization" },
+        offers: { "@type": "Offer", availability: "https://schema.org/InStock", priceCurrency: "SEK", description: "Pris efter mailvolym och integrationsbehov. Demo på era riktiga ärenden." },
+      },
+      {
+        "@type": "Service",
+        "@id": `${PAGE_URL}#service`,
+        name: "AI-kundtjänst för e-post",
+        serviceType: "AI-kundtjänst / automatiserad e-postsupport",
+        url: PAGE_URL,
+        areaServed: "SE",
+        provider: { "@id": "https://www.successifier.se/#organization" },
+        description: "Införande och drift av AI-driven mailsupport: koppling av inkorg, kunskapsbas, svarsförslag med säkerhetspoäng och granskningsflöde.",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${PAGE_URL}#faq`,
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: "AI-kundtjänst för e-post: Successifier Support",
+        inLanguage: "sv-SE",
+        isPartOf: { "@id": "https://www.successifier.se/#website" },
+        about: { "@id": `${PAGE_URL}#software` },
+        breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
       },
       {
         "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Hem", item: "https://www.successifier.se/" },
-          { "@type": "ListItem", position: 2, name: "Successifier Support", item: "https://www.successifier.se/ai-kundtjanst" },
+          { "@type": "ListItem", position: 2, name: "Successifier Support", item: PAGE_URL },
         ],
       },
     ],
@@ -270,6 +352,61 @@ export default function AiKundtjanstPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ */}
+        <section id="faq" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Vanliga frågor">
+          <div className="mx-auto max-w-[900px] px-6 py-[100px] sm:px-10">
+            <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Vanliga frågor</div>
+            <h2 className="mb-12 text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+              Frågor och svar om AI-kundtjänst för e-post
+            </h2>
+            <div style={{ borderBottom: "1px solid var(--hairline-strong)" }}>
+              {faqs.map((f) => (
+                <div
+                  key={f.q}
+                  className="grid grid-cols-1 gap-x-10 gap-y-3 px-1 py-[28px] md:grid-cols-[1fr_1.3fr]"
+                  style={{ borderTop: "1px solid var(--hairline-strong)" }}
+                >
+                  <h3 className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={serif}>{f.q}</h3>
+                  <p className="text-[15.5px] leading-[1.62] text-pretty" style={{ color: "var(--muted)" }}>{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Guides / intern länkning */}
+        {guidePosts.length > 0 && (
+          <section style={{ borderBottom: "1px solid var(--hairline)", background: "var(--paper-alt)" }} aria-label="Fördjupning">
+            <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
+              <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+                <div className="max-w-[560px]">
+                  <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Fördjupning</div>
+                  <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+                    Läs vidare om AI i kundtjänst och Customer Success
+                  </h2>
+                </div>
+                <Link href="/blog" className="text-[14.5px] no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}>
+                  Alla artiklar →
+                </Link>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {guidePosts.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/blog/${p.slug}`}
+                    className="group flex flex-col rounded-[6px] p-6 no-underline transition-colors hover:bg-[color:var(--paper)]"
+                    style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--ink)" }}
+                  >
+                    <h3 className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={serif}>{p.title}</h3>
+                    <p className="mt-2 line-clamp-3 text-[14.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>{p.excerpt}</p>
+                    <span className="mt-4 text-[13px] font-medium" style={{ color: "var(--accent)" }}>Läs artikeln →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA / Boka demo */}
         <section id="boka" aria-label="Boka demo">
