@@ -1,7 +1,7 @@
 ---
 title: "Bästa AI-konsultbolag i Sverige 2026 – så väljer du rätt partner"
 slug: "basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner"
-date: 2026-09-11T14:49:03.009Z
+date: 2026-08-26T08:00:00.000Z
 excerpt: "Så hittar du det bästa AI-konsultbolaget i Sverige 2026: urvalskriterier, frågor att ställa, varningssignaler och vad avtalet måste reglera."
 language: "sv"
 tags:

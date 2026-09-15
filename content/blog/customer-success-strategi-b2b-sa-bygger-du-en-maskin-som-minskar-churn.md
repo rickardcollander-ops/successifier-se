@@ -1,7 +1,7 @@
 ---
 title: "Customer Success strategi B2B: Så bygger du en maskin som minskar churn"
 slug: "customer-success-strategi-b2b-sa-bygger-du-en-maskin-som-minskar-churn"
-date: 2026-07-27T12:35:59.432Z
+date: 2026-07-23T08:00:00.000Z
 excerpt: "Customer Success-strategi för B2B som ersätter reaktivt arbete med health scores, playbooks och automation. Så sänker du churn med 40 procent och höjer NRR."
 language: "sv"
 tags:

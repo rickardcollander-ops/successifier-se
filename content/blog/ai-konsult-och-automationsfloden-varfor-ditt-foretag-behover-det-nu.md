@@ -1,7 +1,7 @@
 ---
 title: "AI-konsult och automationsflöden: Varför ditt företag behöver det nu"
 slug: "ai-konsult-och-automationsfloden-varfor-ditt-foretag-behover-det-nu"
-date: 2026-09-11T13:29:25.113Z
+date: 2026-08-05T08:00:00.000Z
 excerpt: "En AI-konsult får automationsflöden i drift på 2–6 veckor i stället för 6–12 månader. Så räknar du på ROI, väljer rätt partner och undviker fallgroparna."
 language: "sv"
 tags:

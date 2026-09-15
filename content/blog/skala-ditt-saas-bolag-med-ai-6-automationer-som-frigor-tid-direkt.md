@@ -2,7 +2,7 @@
 title: "Skala ditt SaaS-bolag med AI: 6 automationer som frigör tid direkt"
 metaTitle: "Skala SaaS med AI: 6 automationer som frigör tid"
 slug: "skala-ditt-saas-bolag-med-ai-6-automationer-som-frigor-tid-direkt"
-date: 2026-07-09T12:43:55.151Z
+date: 2026-07-16T08:00:00.000Z
 excerpt: "Sex AI-automationer som låter dig skala ditt SaaS-bolag utan att anställa fler: onboarding, health score och churn-intervention. Effekt inom 30 dagar."
 language: "sv"
 tags:
