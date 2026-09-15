@@ -2,7 +2,7 @@
 title: "AI-implementation för SaaS-företag: 7 misstag du måste undvika"
 metaTitle: "AI-implementation för SaaS: 7 misstag att undvika"
 slug: "ai-implementation-for-saas-foretag-7-misstag-du-maste-undvika"
-date: 2026-09-11T13:29:37.133Z
+date: 2026-08-19T08:00:00.000Z
 excerpt: "Sju vanliga misstag vid AI-implementation för SaaS-företag, från diffusa mål till dålig datakvalitet, och konkreta råd för att undvika dem och nå ROI."
 summary: "De sju vanligaste misstagen vid AI-implementation för SaaS-företag är diffusa mål utan KPI:er, dålig datakvalitet, att CSM-teamet hålls utanför, AI som tillägg i stället för kärna, för bred utrullning, playbooks som aldrig byggs in i flödet och att ROI inte mäts från dag ett. Sätt baseline och mål först, kör en pilot på 60–90 dagar och mät churn och NRR varje kvartal."
 keywords:

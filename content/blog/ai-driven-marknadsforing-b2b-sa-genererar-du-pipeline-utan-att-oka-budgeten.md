@@ -2,7 +2,7 @@
 title: "AI-driven marknadsföring B2B: Så genererar du pipeline utan att öka budgeten"
 metaTitle: "AI-driven marknadsföring B2B: pipeline utan ny budget"
 slug: "ai-driven-marknadsforing-b2b-sa-genererar-du-pipeline-utan-att-oka-budgeten"
-date: 2026-09-11T14:49:09.524Z
+date: 2026-09-02T08:00:00.000Z
 excerpt: "AI-driven marknadsföring B2B: så använder du predictive scoring, personalisering och automatiserade playbooks för att bygga pipeline utan att öka budgeten."
 language: "sv"
 tags:

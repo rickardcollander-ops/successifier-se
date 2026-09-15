@@ -2,7 +2,7 @@
 title: "Skala SaaS utan linjär tillväxt: 5 strategier som faktiskt fungerar 2026"
 metaTitle: "Skala SaaS utan linjär tillväxt: 5 strategier 2026"
 slug: "skala-saas-utan-linjar-tillvaxt-5-strategier-som-faktiskt-fungerar-2026"
-date: 2026-09-11T13:29:31.531Z
+date: 2026-08-12T08:00:00.000Z
 excerpt: "Så skalar du SaaS utan linjär tillväxt: PLG, AI i customer success, expansion revenue, självbetjäning och partners. Dubbla ARR utan att dubbla teamet."
 language: "sv"
 tags:
