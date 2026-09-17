@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ORG, SUPPORTIFIER } from "@/lib/site";
 
 type Locale = "sv" | "en";
 
@@ -15,8 +16,12 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
           [blog, "Blog"],
         ]
       : [
-          [`${home}#tjanster`, "Tjänster"],
-          [`${home}#sama`, "Plattform"],
+          ["/tjanster", "Tjänster"],
+          ["/ai-agenter", "AI-agenter"],
+          ["/seo-geo", "GEO & SEO"],
+          ["/customer-success", "Customer Success"],
+          ["/contact-center-automation", "Contact center"],
+          ["/ai-kundtjanst", "Supportifier"],
           [blog, "Blogg"],
         ];
 
@@ -42,18 +47,30 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
             </Link>
           ))}
           <a
-            href="https://www.linkedin.com/in/rickard-collander/"
+            href={ORG.linkedInCompany}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener noreferrer"
             className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]"
             style={{ color: "var(--faint)" }}
           >
             LinkedIn
           </a>
+          <a
+            href={SUPPORTIFIER.url}
+            className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]"
+            style={{ color: "var(--faint)" }}
+          >
+            supportifier.se
+          </a>
           <span className="text-[13.5px]" style={{ fontFamily: "var(--font-plex-mono)", color: "var(--faint-2)" }}>
             © {new Date().getFullYear()} successifier.se
           </span>
         </div>
+      </div>
+      <div className="mx-auto max-w-[1200px] px-6 pb-8 sm:px-10">
+        <p className="text-[12.5px] leading-[1.6]" style={{ color: "var(--faint-2)" }}>
+          {ORG.legalName} · Org.nr {ORG.orgNr} · {ORG.address.streetAddress}, {ORG.address.postalCode} {ORG.address.addressLocality} · {ORG.email} · {ORG.phoneDisplay}
+        </p>
       </div>
     </footer>
   );

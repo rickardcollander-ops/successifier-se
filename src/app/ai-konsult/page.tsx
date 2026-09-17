@@ -324,8 +324,8 @@ export default function AiKonsultPage() {
         links={[
           { href: "#tjanster", label: "Tjänster" },
           { href: "#angreppssatt", label: "Angreppssätt" },
-          { href: "#faq", label: "FAQ" },
-          { href: "/ai-kundtjanst", label: "Support" },
+          { href: "/ai-agenter", label: "AI-agenter" },
+          { href: "/ai-kundtjanst", label: "Supportifier" },
           { href: "/blog", label: "Blogg" },
         ]}
         cta={{ href: "#kontakt", label: "Boka samtal" }}
@@ -751,8 +751,9 @@ export default function AiKonsultPage() {
           <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
             {[
               ["/", "Hem"],
-              ["#tjanster", "Tjänster"],
-              ["/ai-kundtjanst", "Support"],
+              ["/tjanster", "Tjänster"],
+              ["/ai-agenter", "AI-agenter"],
+              ["/ai-kundtjanst", "Supportifier"],
               ["/blog", "Blogg"],
               ["#faq", "FAQ"],
             ].map(([href, label]) => (

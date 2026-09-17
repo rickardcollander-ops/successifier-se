@@ -14,10 +14,10 @@ export default function SiteHeader({ locale = "sv" }: { locale?: Locale }) {
           { href: "/en/blog", label: "Blog" },
         ]
       : [
-          { href: `${home}#tjanster`, label: "Tjänster" },
-          { href: `${home}#sama`, label: "Plattform" },
-          { href: "/ai-konsult", label: "AI-konsult" },
-          { href: "/ai-kundtjanst", label: "Support" },
+          { href: "/tjanster", label: "Tjänster" },
+          { href: "/ai-agenter", label: "AI-agenter" },
+          { href: "/seo-geo", label: "GEO & SEO" },
+          { href: "/ai-kundtjanst", label: "Supportifier" },
           { href: "/blog", label: "Blogg" },
         ];
 
