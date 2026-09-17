@@ -2,30 +2,50 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { SITE_URL, categoryLabel, getAllPosts, type Category } from "@/lib/blog";
+import { ORG, SERVICE_PAGES, SUPPORTIFIER } from "@/lib/site";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
 const CATEGORY_ORDER: Category[] = ["ai-konsult", "customer-success", "marknad", "saas"];
 
+const SERVICE_LINES = SERVICE_PAGES.map((s) => `- [${s.label}](${SITE_URL}${s.href}): ${s.short}`).join("\n");
+
 const HEADER = `# Successifier.se
 
-> Svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter, automationsflöden och kundfunktioner, och driver SEO och marknadsföring på Google, LinkedIn och Meta med vår egen plattform SAMA för AI-synlighet, GEO-readiness och content-publicering. Grundare: Rickard Collander. Baserade i Sverige, uppdrag internationellt.
+> Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter, automationsflöden och kundfunktioner, driver SEO och GEO med vår egen plattform SAMA och utvecklar AI-kundtjänstplattformen Supportifier (${SUPPORTIFIER.url}). Grundare: ${ORG.founderName}. Säte i Stockholmsområdet, uppdrag i Sverige, Norden och Europa.
 
-Successifier hjälper B2B- och SaaS-bolag att gå från AI-strategi till drift: kartläggning, pilot, integration och skalning av AI-agenter (3–6 veckor till produktion), AI-kundtjänst för e-post (Successifier Support), Customer Success-program för minskad churn och högre NRR, samt AI-driven SEO/GEO och annonsering. Allt innehåll på sajten är på svenska.
+Successifier hjälper B2B- och SaaS-bolag att gå från AI-strategi till drift: kartläggning, pilot, integration och skalning av AI-agenter (3–6 veckor till produktion), contact center-automation (granskad automatik inom fyra veckor), Customer Success-program för minskad churn och högre NRR (30/60/90-dagarsplan), samt GEO/SEO och annonsering med SAMA. Fast pris för analys- och designfas (2–4 veckor), därefter månads- eller programupplägg. Allt innehåll på sajten är på svenska.
+
+## Företagsfakta
+
+- Juridiskt namn: ${ORG.legalName}
+- Organisationsnummer: ${ORG.orgNr}
+- Adress: ${ORG.address.streetAddress}, ${ORG.address.postalCode} ${ORG.address.addressLocality} (Stockholm), Sverige
+- Grundare: ${ORG.founderName}
+- Grundat: ${ORG.foundingDate.slice(0, 4)}
+- Produkter: SAMA (AI-synlighet, SEO och content) och Supportifier (AI-plattform för kundservice, ${SUPPORTIFIER.url})
+- LinkedIn (företag): ${ORG.linkedInCompany}
+- Allabolag: ${ORG.allabolag}
+
+## Tjänster
+
+${SERVICE_LINES}
 
 ## Huvudsidor
 
-- [Startsida](${SITE_URL}/): Tjänster inom AI-konsulting, automation, Customer Success och AI-driven marknadsföring samt SAMA-plattformen. Innehåller FAQ och kontakt.
-- [AI-konsult & agentic AI](${SITE_URL}/ai-konsult): Kartläggning, design, utveckling, integration och drift av autonoma AI-agenter, med människan i loopen.
-- [Successifier Support – AI-kundtjänst för e-post](${SITE_URL}/ai-kundtjanst): AI som läser, kategoriserar och föreslår svar på kundmail med säkerhetspoäng och självlärande kunskapsbas. Över 100 000 hanterade mail.
+- [Startsida](${SITE_URL}/): Tjänster, SAMA-plattformen, kundresultat, citerbara fakta, FAQ och kontakt.
+- [Tjänster](${SITE_URL}/tjanster): Översikt över alla erbjudanden med tidsramar och prismodell.
+- [Supportifier – AI-kundtjänst](${SITE_URL}/ai-kundtjanst): Ingång till vår produkt Supportifier. Plattformsdetaljer, priser och demo finns på ${SUPPORTIFIER.url}.
 - [Blogg](${SITE_URL}/blog): Guider och analyser om AI-konsulting, automation, Customer Success, SEO och GEO.
 - [Home (English)](${SITE_URL}/en): English overview of services.
 
 ## Kontakt
 
-- E-post: rc@successifier.com
-- Telefon: +46 72 213 64 22
-- LinkedIn: https://www.linkedin.com/in/rickard-collander/
+- E-post: ${ORG.email}
+- Telefon: ${ORG.phoneDisplay}
+- LinkedIn (företag): ${ORG.linkedInCompany}
+- LinkedIn (grundare): ${ORG.linkedInFounder}
+- Supportifier: ${SUPPORTIFIER.url}
 `;
 
 export function buildLlmsTxt(): string {

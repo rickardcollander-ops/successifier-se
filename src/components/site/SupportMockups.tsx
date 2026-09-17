@@ -1,4 +1,4 @@
-// Styliserade, anonymiserade produktmockups för Successifier Support.
+// Styliserade, anonymiserade produktmockups för Supportifier (supportifier.se).
 // Ren JSX/Tailwind i sajtens paper-palett – inga riktiga kunduppgifter.
 
 const serif = { fontFamily: "var(--font-spectral)" } as const;

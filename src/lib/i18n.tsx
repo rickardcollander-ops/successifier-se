@@ -180,6 +180,37 @@ const sv = {
     case2Detail: "Successifier etablerade kundfunktion, definierade processer och implementerade verktyg som gav teamet ett driftbart system att ta över.",
     note: "Kundnamn och detaljer publiceras efter godkännande.",
   },
+  facts: {
+    overline: "Fakta i korthet",
+    heading: "Det här kan ni citera om Successifier",
+    description: "Korta, självständiga svar på de vanligaste frågorna. Siffror och tidsramar är desamma som i våra offerter.",
+    items: [
+      {
+        heading: "Vad är Successifier?",
+        text: "Successifier AB (org.nr 559566-3864) är en svensk konsult inom AI, automation och Customer Success med säte i Stockholmsområdet, grundad av Rickard Collander. Vi bygger och driftsätter AI-agenter, automationsflöden och Customer Success-funktioner för B2B- och SaaS-bolag, och driver SEO och GEO med vår egen plattform SAMA.",
+      },
+      {
+        heading: "Hur snabbt går det?",
+        text: "Första workshop inom 1–2 veckor. AI-agenter går från start till produktion på 3–6 veckor: två veckors kartläggning och tre till fyra veckors pilot. Contact center-automation når granskad automatik inom fyra veckor. Customer Success-program följer en 30/60/90-dagarsplan.",
+      },
+      {
+        heading: "Vad kostar det?",
+        text: "Fast pris för analys- och designfasen (2–4 veckor). Därefter löpande stöd per månad eller ett programbaserat upplägg. Alltid tydlig leverans och tydligt ansvar.",
+      },
+      {
+        heading: "Vilka resultat har ni levererat?",
+        text: "I genomförda piloter har handläggningstiden minskat med upp till 85 procent. Hos ett SaaS-bolag med 80 anställda halverade AI-agenter handläggningstiden utan byte av plattform. I vår plattform Supportifier har över 100 000 kundmail hanterats, och cirka 25 procent av svaren kan skickas utan ändring.",
+      },
+      {
+        heading: "Vilka produkter har ni byggt?",
+        text: "SAMA, vår plattform för AI-synlighet, SEO och content som spårar AI-omnämnanden i ChatGPT, Perplexity och Google AI. Supportifier, vår AI-plattform för kundservice med kunskapsbas, hjälpcenter, AI-chatt, AI-formulär, inkorg och kundportal, på supportifier.se.",
+      },
+      {
+        heading: "Var finns ni och vilka jobbar ni med?",
+        text: "Kontoret ligger i Älta utanför Stockholm. Uppdrag i Sverige, Norden och Europa, på svenska och engelska. Kunderna är B2B- och SaaS-bolag inom bland annat finans, industri, retail, tjänster och offentlig sektor.",
+      },
+    ],
+  },
   faq: {
     overline: "Vanliga frågor",
     heading: "FAQ",
@@ -448,6 +479,37 @@ const en: typeof sv = {
     case2Result: "Customer Success function built from scratch",
     case2Detail: "Successifier established the customer function, defined processes, and implemented tooling that gave the team an operational system to take ownership of.",
     note: "Client names and details published upon approval.",
+  },
+  facts: {
+    overline: "Facts in brief",
+    heading: "What you can cite about Successifier",
+    description: "Short, self-contained answers to the most common questions. Numbers and timeframes match our proposals.",
+    items: [
+      {
+        heading: "What is Successifier?",
+        text: "Successifier AB (Swedish company reg. no. 559566-3864) is a Swedish consultancy in AI, automation and Customer Success based in the Stockholm area, founded by Rickard Collander. We build and deploy AI agents, automation flows and Customer Success functions for B2B and SaaS companies, and run SEO and GEO with our own platform SAMA.",
+      },
+      {
+        heading: "How fast is it?",
+        text: "First workshop within 1–2 weeks. AI agents go from kickoff to production in 3–6 weeks: two weeks of mapping and three to four weeks of pilot. Contact center automation reaches reviewed automation within four weeks. Customer Success programs follow a 30/60/90-day plan.",
+      },
+      {
+        heading: "What does it cost?",
+        text: "Fixed price for the analysis and design phase (2–4 weeks). Then ongoing support per month or a program-based setup. Always a clear deliverable and clear ownership.",
+      },
+      {
+        heading: "What results have you delivered?",
+        text: "In completed pilots, handling time has dropped by up to 85 percent. At a SaaS company with 80 employees, AI agents halved handling time without replacing the platform. Our platform Supportifier has handled over 100,000 customer emails, and about 25 percent of replies can be sent unchanged.",
+      },
+      {
+        heading: "Which products have you built?",
+        text: "SAMA, our platform for AI visibility, SEO and content, which tracks AI mentions in ChatGPT, Perplexity and Google AI. Supportifier, our AI platform for customer service with knowledge base, help center, AI chat, AI forms, inbox and customer portal, at supportifier.se.",
+      },
+      {
+        heading: "Where are you and who do you work with?",
+        text: "The office is in Älta outside Stockholm. Engagements in Sweden, the Nordics and Europe, in Swedish and English. Clients are B2B and SaaS companies in finance, industry, retail, services and the public sector, among others.",
+      },
+    ],
   },
   faq: {
     overline: "Common questions",

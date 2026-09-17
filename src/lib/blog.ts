@@ -268,26 +268,30 @@ export function relatedServices(slug: string, locale: "sv" | "en" = "sv"): Relat
   const cluster = clusterForSlug(slug);
   const homeAnchor = locale === "en" ? "/en#sama" : "/#sama";
   const sv = {
-    konsult: { href: "/ai-konsult", label: "AI-konsult & agentic AI", description: "Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet." },
-    support: { href: "/ai-kundtjanst", label: "Successifier Support", description: "AI-kundtjänst som läser, sorterar och föreslår svar på era kundmail." },
-    sama: { href: homeAnchor, label: "SAMA – AI-synlighet & SEO", description: "Vår plattform som driver synlighet på Google, LinkedIn och i AI-svar." },
+    konsult: { href: "/ai-agenter", label: "AI-agenter & agentic AI", description: "Vi kartlägger, bygger och driftsätter AI-agenter i era system, 3–6 veckor till produktion." },
+    support: { href: "/ai-kundtjanst", label: "Supportifier – AI-kundtjänst", description: "Vår produkt för AI-kundtjänst: kunskapsbas, inkorg med svarsförslag, hjälpcenter och AI-chatt." },
+    sama: { href: "/seo-geo", label: "GEO & SEO med SAMA", description: "Vår plattform som driver synlighet i Google och i AI-svar från ChatGPT, Perplexity och Google AI." },
+    cs: { href: "/customer-success", label: "Customer Success", description: "Operating model, health scoring och renewal-playbooks som skyddar NRR och minskar churn." },
+    cc: { href: "/contact-center-automation", label: "Contact center-automation", description: "AI-svarsförslag, routing, QA och KPI-styrning i kontaktcenter och support." },
   };
   // Engelska tjänstesidor finns inte separat – vi länkar till sektioner på /en.
   const en = {
     konsult: { href: "/ai-konsult", label: "AI consulting & agentic AI", description: "We map, build, and deploy autonomous AI agents in your operations." },
-    support: { href: "/ai-kundtjanst", label: "Successifier Support", description: "AI customer service that reads, sorts, and drafts replies to your emails." },
+    support: { href: "/ai-kundtjanst", label: "Supportifier – AI customer service", description: "Our product for AI customer service: knowledge base, inbox with AI drafts, help center and AI chat." },
     sama: { href: homeAnchor, label: "SAMA – AI visibility & SEO", description: "Our platform driving visibility on Google, LinkedIn, and in AI answers." },
+    cs: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Customer Success", description: "Operating model, health scoring and renewal playbooks that protect NRR and reduce churn." },
+    cc: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Contact center automation", description: "AI reply drafts, routing, QA and KPI governance in contact centers and support." },
   };
   const s = locale === "en" ? en : sv;
   switch (cluster) {
     case "ai-konsult":
       return [s.konsult, s.sama];
     case "customer-success":
-      return [s.support, s.konsult];
+      return [s.cs, s.cc];
     case "marknad":
       return [s.sama, s.konsult];
     case "saas":
-      return [s.konsult, s.support];
+      return [s.konsult, s.cs];
     default:
       return [s.konsult, s.support];
   }

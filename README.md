@@ -28,6 +28,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Bilder: lägg bilden som `![alt](/blog/<slug>.webp)` eller peka på en extern URL och kör `node scripts/localize-blog-images.mjs` som laddar ner, skalar (1536 px) och konverterar till WebP.
 - `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` och OG-bilder (`/opengraph-image`, `/blog/<slug>/opengraph-image`) genereras automatiskt vid bygge.
 - Efter publicering: `node scripts/indexnow-submit.mjs` skickar sitemapens URL:er till IndexNow (Bing m.fl.).
+- Företagsfakta (juridiskt namn, org.nr, adress, grundare, LinkedIn-företagssida, Allabolag, Microsoft Partner-URL) ligger i `src/lib/site.ts` och används av Organization-schemat i `src/app/layout.tsx`, sidfötterna, `/llms.txt` och tjänstesidorna. Ändra där, inte på enskilda sidor. `ORG.microsoftPartner` är tom tills partnerprofilens URL finns.
+- Tjänstesidorna (`/ai-agenter`, `/seo-geo`, `/customer-success`, `/contact-center-automation`) bygger på mallen `src/components/site/ServicePage.tsx` och listas i `SERVICE_PAGES` i `src/lib/site.ts`. `/ai-kundtjanst` är ingången till produkten Supportifier och länkar vidare till supportifier.se.
 
 ## Learn More
 

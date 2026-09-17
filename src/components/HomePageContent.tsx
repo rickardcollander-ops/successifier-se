@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ORG, SUPPORTIFIER } from "@/lib/site";
 import BookingEmbed from "@/components/site/BookingEmbed";
 import SiteNav, { type NavLink } from "@/components/site/SiteNav";
 import type { Dict } from "@/lib/i18n";
@@ -31,12 +33,14 @@ function Overline({
 }
 
 export default function HomePageContent({ t }: { t: Dict }) {
+  // Tjänstesidorna finns bara på svenska; på /en länkas korten inte vidare.
+  const sv = t.locale === "sv";
   const services = [
-    { num: t.services.p1Num, title: t.services.p1Title, sub: t.services.p1Sub, focusLabel: t.services.p1FocusLabel, focus: t.services.p1Focus, resultLabel: t.services.p1ResultLabel, result: t.services.p1Result },
-    { num: t.services.p2Num, title: t.services.p2Title, sub: t.services.p2Sub, focusLabel: t.services.p2FocusLabel, focus: t.services.p2Focus, resultLabel: t.services.p2ResultLabel, result: t.services.p2Result },
-    { num: t.services.p3Num, title: t.services.p3Title, sub: t.services.p3Sub, focusLabel: t.services.p3FocusLabel, focus: t.services.p3Focus, resultLabel: t.services.p3ResultLabel, result: t.services.p3Result },
-    { num: t.services.p4Num, title: t.services.p4Title, sub: t.services.p4Sub, focusLabel: t.services.p4FocusLabel, focus: t.services.p4Focus, resultLabel: t.services.p4ResultLabel, result: t.services.p4Result },
-    { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result },
+    { num: t.services.p1Num, title: t.services.p1Title, sub: t.services.p1Sub, focusLabel: t.services.p1FocusLabel, focus: t.services.p1Focus, resultLabel: t.services.p1ResultLabel, result: t.services.p1Result, href: sv ? "/customer-success" : null },
+    { num: t.services.p2Num, title: t.services.p2Title, sub: t.services.p2Sub, focusLabel: t.services.p2FocusLabel, focus: t.services.p2Focus, resultLabel: t.services.p2ResultLabel, result: t.services.p2Result, href: sv ? "/contact-center-automation" : null },
+    { num: t.services.p3Num, title: t.services.p3Title, sub: t.services.p3Sub, focusLabel: t.services.p3FocusLabel, focus: t.services.p3Focus, resultLabel: t.services.p3ResultLabel, result: t.services.p3Result, href: sv ? "/ai-konsult" : null },
+    { num: t.services.p4Num, title: t.services.p4Title, sub: t.services.p4Sub, focusLabel: t.services.p4FocusLabel, focus: t.services.p4Focus, resultLabel: t.services.p4ResultLabel, result: t.services.p4Result, href: sv ? "/ai-agenter" : null },
+    { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result, href: sv ? "/seo-geo" : null },
   ];
 
   const pageUrl = t.locale === "sv" ? "https://www.successifier.se/" : "https://www.successifier.se/en";
@@ -44,10 +48,10 @@ export default function HomePageContent({ t }: { t: Dict }) {
   const navLinks: NavLink[] =
     t.locale === "sv"
       ? [
-          { href: "#tjanster", label: t.nav.services },
-          { href: "#sama", label: t.nav.platform },
-          { href: "/ai-konsult", label: "AI-konsult" },
-          { href: "/ai-kundtjanst", label: "Support" },
+          { href: "/tjanster", label: t.nav.services },
+          { href: "/ai-agenter", label: "AI-agenter" },
+          { href: "/seo-geo", label: "GEO & SEO" },
+          { href: "/ai-kundtjanst", label: "Supportifier" },
           { href: t.nav.blogHref, label: t.nav.blog },
         ]
       : [
@@ -265,9 +269,23 @@ export default function HomePageContent({ t }: { t: Dict }) {
                     <div className="uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{p.resultLabel}</div>
                     <div className="mt-1 text-[15px] font-medium" style={{ color: "var(--ink)" }}>{p.result}</div>
                   </div>
+                  {p.href && (
+                    <Link href={p.href} className="mt-4 text-[13.5px] font-medium no-underline" style={{ color: "var(--accent)" }}>
+                      Läs mer om tjänsten →
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
+            {sv && (
+              <p className="mt-8 text-[15px]" style={{ color: "var(--muted)" }}>
+                Vår produkt för AI-kundtjänst heter{" "}
+                <Link href="/ai-kundtjanst" className="no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>Supportifier</Link>
+                {" "}och har en egen webbplats:{" "}
+                <a href={SUPPORTIFIER.url} className="no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>supportifier.se</a>.
+                {" "}Alla erbjudanden finns samlade på <Link href="/tjanster" className="no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>tjänstesidan</Link>.
+              </p>
+            )}
           </div>
         </section>
 
@@ -422,6 +440,23 @@ export default function HomePageContent({ t }: { t: Dict }) {
           </div>
         </section>
 
+        {/* Citerbara fakta */}
+        <section id="fakta" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.facts.heading}>
+          <div className="mx-auto max-w-[1000px] px-6 py-[100px] sm:px-10">
+            <Overline>{t.facts.overline}</Overline>
+            <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{t.facts.heading}</h2>
+            <p className="mt-4 max-w-2xl text-[16px] leading-[1.62]" style={{ color: "var(--muted)" }}>{t.facts.description}</p>
+            <dl className="mt-10" style={{ borderTop: "1px solid var(--hairline)" }}>
+              {t.facts.items.map((f) => (
+                <div key={f.heading} className="grid grid-cols-1 gap-x-10 gap-y-2 py-[26px] md:grid-cols-[.9fr_1.4fr]" style={{ borderBottom: "1px solid var(--hairline)" }}>
+                  <dt className="text-[19px] font-medium leading-[1.25] tracking-[-0.01em]" style={serif}>{f.heading}</dt>
+                  <dd className="text-[15.5px] leading-[1.62]" style={{ color: "var(--muted)" }}>{f.text}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
         {/* Testimonial */}
         <section id="referens" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.testimonial.heading}>
           <div className="mx-auto max-w-[1000px] px-6 py-[100px] sm:px-10">
@@ -571,8 +606,14 @@ export default function HomePageContent({ t }: { t: Dict }) {
           <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
             <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="mailto:rc@successifier.com">rc@successifier.com</a>
             <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="tel:+46722136422">+46 72 213 64 22</a>
-            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href="https://www.linkedin.com/in/rickard-collander/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
+            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href={ORG.linkedInCompany} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href={SUPPORTIFIER.url}>supportifier.se</a>
           </div>
+        </div>
+        <div className="mx-auto max-w-[1200px] px-6 pb-8 sm:px-10">
+          <p className="text-[12.5px] leading-[1.6]" style={{ color: "var(--faint-2)" }}>
+            {ORG.legalName} · {t.locale === "sv" ? "Org.nr" : "Reg. no."} {ORG.orgNr} · {ORG.address.streetAddress}, {ORG.address.postalCode} {ORG.address.addressLocality} · {ORG.email} · {ORG.phoneDisplay}
+          </p>
         </div>
       </footer>
     </div>

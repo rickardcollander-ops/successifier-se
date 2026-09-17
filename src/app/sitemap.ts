@@ -10,8 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, lastModified: latestDate, changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE}/tjanster`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/ai-agenter`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/ai-konsult`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/ai-kundtjanst`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/seo-geo`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/customer-success`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/contact-center-automation`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/ai-kundtjanst`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/blog`, lastModified: latestDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/en`, lastModified: latestDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/en/blog`, lastModified: latestDate, changeFrequency: "weekly", priority: 0.5 },

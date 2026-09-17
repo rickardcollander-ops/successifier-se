@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { ORG, SERVICE_PAGES, SUPPORTIFIER, orgSameAs } from "@/lib/site";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -100,10 +101,10 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": ["Organization", "ProfessionalService"],
-        "@id": "https://www.successifier.se/#organization",
-        name: "Successifier.se",
-        alternateName: "Successifier",
-        legalName: "Successifier",
+        "@id": ORG.id,
+        name: ORG.name,
+        alternateName: ["Successifier.se", ORG.legalName],
+        legalName: ORG.legalName,
         url: "https://www.successifier.se",
         logo: {
           "@type": "ImageObject",
@@ -113,14 +114,60 @@ export default function RootLayout({
         },
         image: "https://www.successifier.se/opengraph-image",
         description:
-          "Svensk konsult inom AI, automation, Customer Success och Contact Center. Bygger och driftsätter AI-agenter, AI-kundtjänst och automationsflöden, och driver SEO, GEO och marknadsföring med den egna plattformen SAMA.",
+          "Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Bygger och driftsätter AI-agenter och automationsflöden, driver SEO och GEO med den egna plattformen SAMA och utvecklar AI-kundtjänstplattformen Supportifier.",
         slogan: "AI-konsulting som bygger och driftsätter, inte PowerPoint.",
-        email: "rc@successifier.com",
-        telephone: "+46722136422",
-        address: { "@type": "PostalAddress", addressLocality: "Stockholm", addressCountry: "SE" },
+        foundingDate: ORG.foundingDate,
+        foundingLocation: { "@type": "Place", name: "Stockholm, Sverige" },
+        // Organisationsnummer och momsnummer, så att bolaget kan matchas mot
+        // Bolagsverket, Allabolag och andra register.
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "Organisationsnummer",
+          value: ORG.orgNr,
+        },
+        taxID: ORG.orgNr,
+        vatID: ORG.vatId,
+        email: ORG.email,
+        telephone: ORG.phone,
+        address: { "@type": "PostalAddress", ...ORG.address },
+        location: {
+          "@type": "Place",
+          name: "Successifier AB",
+          address: { "@type": "PostalAddress", ...ORG.address },
+        },
         areaServed: [{ "@type": "Country", name: "Sweden" }, "Nordics", "Europe"],
         founder: { "@id": "https://www.successifier.se/#rickard-collander" },
         employee: { "@id": "https://www.successifier.se/#rickard-collander" },
+        numberOfEmployees: { "@type": "QuantitativeValue", minValue: 1, maxValue: 4 },
+        brand: [
+          { "@type": "Brand", name: "Supportifier", url: SUPPORTIFIER.url },
+          { "@type": "Brand", name: "SAMA", url: "https://www.successifier.se/seo-geo" },
+        ],
+        owns: [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://supportifier.se/#software",
+            name: "Supportifier",
+            url: SUPPORTIFIER.url,
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            description: SUPPORTIFIER.description,
+          },
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Tjänster",
+          itemListElement: SERVICE_PAGES.map((s) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: s.label,
+              url: `https://www.successifier.se${s.href}`,
+              description: s.short,
+              provider: { "@id": ORG.id },
+            },
+          })),
+        },
         knowsAbout: [
           "AI-konsulting",
           "Agentic AI",
@@ -134,12 +181,13 @@ export default function RootLayout({
           "B2B-marknadsföring",
         ],
         knowsLanguage: ["sv", "en"],
-        sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
+        sameAs: orgSameAs(),
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",
-          email: "rc@successifier.com",
-          telephone: "+46722136422",
+          email: ORG.email,
+          telephone: ORG.phone,
+          areaServed: "SE",
           availableLanguage: ["Swedish", "English"],
         },
       },
@@ -149,9 +197,9 @@ export default function RootLayout({
         name: "Rickard Collander",
         givenName: "Rickard",
         familyName: "Collander",
-        jobTitle: "Grundare, Successifier.se",
+        jobTitle: "Grundare, Successifier AB",
         description:
-          "Grundare av Successifier med över tio års erfarenhet av att bygga och leda Customer Success- och supportfunktioner i SaaS- och scale-up-bolag. Hjälper svenska B2B-bolag från AI-strategi till driftsatta AI-agenter, automation och synlighet i Google och AI-sökmotorer.",
+          "Grundare av Successifier AB med över tio års erfarenhet av att bygga och leda Customer Success- och supportfunktioner i SaaS- och scale-up-bolag. Hjälper svenska B2B-bolag från AI-strategi till driftsatta AI-agenter, automation och synlighet i Google och AI-sökmotorer.",
         url: "https://www.successifier.se/#om-oss",
         image: "https://www.successifier.se/rc2.jpg",
         email: "rc@successifier.com",
@@ -165,7 +213,7 @@ export default function RootLayout({
           "Generative Engine Optimization",
           "SEO",
         ],
-        sameAs: ["https://www.linkedin.com/in/rickard-collander/"],
+        sameAs: [ORG.linkedInFounder],
       },
       {
         "@type": "WebSite",
