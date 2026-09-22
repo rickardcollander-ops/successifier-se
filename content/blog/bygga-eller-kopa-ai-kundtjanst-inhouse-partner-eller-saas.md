@@ -83,8 +83,6 @@ Antag ett kontaktcenter med en e-postinkorg och en chatt, och en horisont på tr
 
 Poängen med exemplet är inte vilket alternativ som vinner med just dessa antaganden. Poängen är formen på kurvan. Inhouse har hög fast kostnad som bara lönar sig om volymen är stor eller om lösningen ger ett konkurrensförsprång som inte går att köpa. SaaS har låg tröskel men en licens som löper så länge ni använder den. Kontrollera därför prismodellen noga: per ärende, per användare eller per volym ger helt olika kurvor när automationen ökar. Mer om det i [vad AI i kundservice kostar, med prismodeller och räkneexempel](/blog/vad-kostar-ai-i-kundservice-prismodeller-och-rakneexempel), och om hur ni räknar nyttan i [ROI-kalkylen för AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare).
 
-Hur stor andel av svenska företag som väljer respektive väg: [KÄLLA/SIFFRA SAKNAS].
-
 ## När inhouse faktiskt är rätt {#nar-inhouse-ar-ratt}
 
 Att bygga själv är inte ett misstag i sig. Det är rätt val i fler fall än leverantörer brukar erkänna:
@@ -97,8 +95,6 @@ Att bygga själv är inte ett misstag i sig. Det är rätt val i fler fall än l
 - **Ärendena är smala och tekniska.** En enda välavgränsad uppgift, som att klassificera inkommande ärenden åt ett befintligt system, kan vara enklare att bygga själv än att köpa en hel plattform för.
 
 Det inhouse sällan passar är ett företag där kundservice är en stödfunktion och där IT redan har fullt upp. Där blir AI-projektet ofta ett sidoprojekt som ingen hinner förvalta.
-
-[EGET EXEMPEL SAKNAS: situation från Rickards erfarenhet där ett egenutvecklat verktyg i kundservice antingen blev rätt val eller blev svårt att förvalta när nyckelpersoner slutade]
 
 ## Beslutsstöd: vilken väg passar er? {#beslutsstod}
 

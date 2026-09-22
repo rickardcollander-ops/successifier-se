@@ -153,8 +153,6 @@ Fyra frågor att reda ut:
 
 Skillnaden mellan röst-AI, AI-agenter och traditionell IVR går vi igenom i jämförelsen [AI-agenter, chatbots och IVR i svensk kundservice](/blog/ai-agenter-vs-chatbots-vs-ivr-i-svensk-kundservice).
 
-[EGET EXEMPEL SAKNAS: situation från Rickards tid i kontaktcenter där rutiner för samtalsinspelning eller informationsmeddelande behövde ses över, och vad man lärde sig]
-
 ## Känsliga personuppgifter i ärenden {#kansliga-personuppgifter}
 
 Kunder skriver det de skriver. En fråga om en försenad leverans kan innehålla en upplysning om sjukdom. En reklamation kan nämna en diagnos, en fackförening eller en religiös högtid. Sådana uppgifter är känsliga enligt art. 9 och får bara behandlas om ett undantag gäller.
