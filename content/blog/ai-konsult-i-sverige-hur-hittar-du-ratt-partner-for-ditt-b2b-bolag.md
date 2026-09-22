@@ -13,7 +13,7 @@ keywords:
   - "vad kostar en AI-konsult"
   - "AI-partner för B2B-bolag"
 category: "ai-konsult"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-02-24T08:20:00.000Z
 imageAlt: "Ledningsgrupp utvärderar AI-strategi och konsultförslag på laptop i ett svenskt kontor"
 language: "sv"
 tags:

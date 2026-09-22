@@ -17,7 +17,7 @@ keywords:
   - "upphandla AI-konsult"
   - "AI-konsult pris per dag"
 category: "ai-konsult"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-08-26T08:00:00.000Z
 imageAlt: "Team analyserar AI-dashboards tillsammans på ett modernt kontor i Stockholm"
 ---
 

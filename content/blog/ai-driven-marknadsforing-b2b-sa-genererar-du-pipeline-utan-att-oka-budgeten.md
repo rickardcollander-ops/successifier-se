@@ -17,7 +17,7 @@ keywords:
   - "automatiserade playbooks marknadsföring"
   - "ROI AI marknadsföring"
 category: "marknad"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-09-02T08:00:00.000Z
 imageAlt: "B2B-marknadsteam analyserar pipeline-dashboard för AI-driven marknadsföring i modernt kontor"
 ---
 

@@ -17,7 +17,7 @@ keywords:
   - "AI-sökmotorer B2B"
   - "mäta AI-synlighet"
 category: "marknad"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-12T09:15:19.708Z
 imageAlt: "Marknadsförare analyserar AI-sökresultat från ChatGPT och Perplexity på laptop"
 ---
 

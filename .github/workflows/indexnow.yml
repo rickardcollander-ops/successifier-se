@@ -1,0 +1,64 @@
+# Pingar IndexNow efter varje lyckad produktionsdeploy på Vercel, men bara för
+# URL:er som är nya eller har fått nytt lastmod i sitemap.xml sedan förra
+# körningen. Förra körningens sitemap sparas i Actions-cachen. Svaret från
+# IndexNow syns i jobbloggen och i körningens sammanfattning.
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Valfritt: URL:er att skicka (mellanslag- eller kommaseparerade). Tomt = jämför sitemap."
+        required: false
+      since:
+        description: "Valfritt vid första körningen: skicka URL:er med lastmod från och med ÅÅÅÅ-MM-DD."
+        required: false
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Hämta förra sitemap-ögonblicksbilden
+        uses: actions/cache/restore@v4
+        with:
+          path: .indexnow
+          key: indexnow-snapshot-${{ github.run_id }}
+          restore-keys: indexnow-snapshot-
+
+      - name: Skicka nya och ändrade URL:er till IndexNow
+        env:
+          URLS: ${{ github.event.inputs.urls }}
+          SINCE: ${{ github.event.inputs.since }}
+        run: |
+          set -o pipefail
+          if [ -n "$URLS" ]; then
+            node scripts/indexnow-submit.mjs --urls $URLS | tee indexnow.log
+          else
+            node scripts/indexnow-submit.mjs --changed --snapshot .indexnow/snapshot.json ${SINCE:+--since "$SINCE"} | tee indexnow.log
+          fi
+          { echo '### IndexNow'; echo '```'; cat indexnow.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Spara ny sitemap-ögonblicksbild
+        if: success() && hashFiles('.indexnow/snapshot.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .indexnow
+          key: indexnow-snapshot-${{ github.run_id }}

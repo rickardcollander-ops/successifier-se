@@ -85,3 +85,65 @@ export const SERVICE_PAGES = [
 export function orgSameAs(): string[] {
   return [ORG.linkedInCompany, ORG.linkedInFounder, ORG.allabolag, ORG.microsoftPartner].filter(Boolean);
 }
+
+// Senaste faktiska innehållsändring per statisk sida (lastmod i sitemap.xml).
+// Uppdatera datumet för hand när sidans text eller erbjudande ändras, inte vid
+// kodändringar, byggen eller deployer. Bing och Google slutar lita på lastmod
+// som ändras i klump. Bloggartiklarnas datum ligger i respektive frontmatter.
+export const PAGE_UPDATED: Record<string, string> = {
+  "/": "2026-09-17",
+  "/tjanster": "2026-09-17",
+  "/ai-agenter": "2026-09-17",
+  "/ai-konsult": "2026-06-24",
+  "/seo-geo": "2026-09-17",
+  "/customer-success": "2026-09-17",
+  "/contact-center-automation": "2026-09-17",
+  "/ai-kundtjanst": "2026-09-17",
+  "/en": "2026-09-17",
+  "/om/rickard-collander": "2026-09-22",
+};
+
+// Grundaren som författare och expert (E-E-A-T). Används av Person-schemat i
+// layout, författarsidan /om/rickard-collander och BlogPosting-schemat.
+export const FOUNDER = {
+  id: `${SITE_URL}/#rickard-collander`,
+  name: "Rickard Collander",
+  givenName: "Rickard",
+  familyName: "Collander",
+  jobTitle: "Grundare, Successifier AB",
+  path: "/om/rickard-collander",
+  url: `${SITE_URL}/om/rickard-collander`,
+  image: `${SITE_URL}/rc2.jpg`,
+  linkedin: "https://www.linkedin.com/in/rickard-collander/",
+  description:
+    "Grundare av Successifier AB med över 20 års erfarenhet av kundservice och kontaktcenter, bland annat från Scania, Releasy (över 350 medarbetare) och Telia. Hjälper svenska bolag att införa AI i kundservice och kontaktcenter, från strategi till drift.",
+  knowsAbout: [
+    "Kundservice",
+    "Kontaktcenter",
+    "Customer Success",
+    "AI i kundservice",
+    "AI-automation",
+    "Agentic AI",
+    "Customer engagement center",
+    "Generative Engine Optimization",
+  ],
+} as const;
+
+// Person-entiteten i schema.org-format, samma överallt där den bäddas in.
+export function founderPersonSchema() {
+  return {
+    "@type": "Person",
+    "@id": FOUNDER.id,
+    name: FOUNDER.name,
+    givenName: FOUNDER.givenName,
+    familyName: FOUNDER.familyName,
+    jobTitle: FOUNDER.jobTitle,
+    description: FOUNDER.description,
+    url: FOUNDER.url,
+    image: FOUNDER.image,
+    email: ORG.email,
+    worksFor: { "@id": ORG.id },
+    knowsAbout: [...FOUNDER.knowsAbout],
+    sameAs: [FOUNDER.linkedin],
+  };
+}

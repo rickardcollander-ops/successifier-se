@@ -17,8 +17,10 @@ keywords:
   - "containment rate"
   - "AHT-minskning AI"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-09T12:43:39.003Z
 imageAlt: "Ekonomichef granskar ROI-kalkyl för AI-automation i kontaktcenter på finansiell dashboard"
+cluster: "kontaktcenter"
+answers: "Hur du räknar ROI och payback på AI-automation i ett kontaktcenter, med full kostnadsbild, fyra nyttokällor och tre scenarier."
 ---
 
 # AI-automation i kontaktcenter: ROI-kalkyl för svenska beslutsfattare

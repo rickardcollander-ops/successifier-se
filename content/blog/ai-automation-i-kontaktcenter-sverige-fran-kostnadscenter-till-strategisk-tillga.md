@@ -17,7 +17,9 @@ keywords:
   - "AI-native kontaktcenter"
   - "minska churn med AI"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-04-28T07:30:00.000Z
+cluster: "kontaktcenter"
+answers: "Vilka uppgifter i ett svenskt kontaktcenter som ger mest effekt att automatisera med AI, och hur kontaktcentret går från kostnad till strategisk tillgång."
 ---
 
 # AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång

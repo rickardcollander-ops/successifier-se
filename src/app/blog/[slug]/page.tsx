@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.metaTitle ?? post.title,
     description: post.excerpt,
     keywords: [...post.keywords, ...post.tags],
-    authors: [{ name: AUTHOR.name, url: AUTHOR.linkedin }],
+    authors: [{ name: AUTHOR.name, url: AUTHOR.url }],
     creator: AUTHOR.name,
     publisher: "Successifier.se",
     category: categoryLabel(post.category) ?? undefined,

@@ -17,7 +17,7 @@ keywords:
   - "AI-sökmotorer B2B-marknadsföring"
   - "E-E-A-T för AI-synlighet"
 category: "marknad"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-06-17T07:20:00.000Z
 ---
 
 # AI-synlighet i marknadsföring 2026: Allt du behöver veta

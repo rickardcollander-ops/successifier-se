@@ -2,17 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Marked, type Tokens } from "marked";
+import { FOUNDER, SITE_URL } from "@/lib/site";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
-export const SITE_URL = "https://www.successifier.se";
-export const AUTHOR = {
-  name: "Rickard Collander",
-  id: `${SITE_URL}/#rickard-collander`,
-  url: `${SITE_URL}/#om-oss`,
-  image: `${SITE_URL}/rc2.jpg`,
-  linkedin: "https://www.linkedin.com/in/rickard-collander/",
-  jobTitle: "Grundare, Successifier.se",
-};
+export { SITE_URL };
+export const AUTHOR = FOUNDER;
 
 // Slugifierar rubriktext till ett ankar-id (svenska tecken → ASCII).
 export function slugifyHeading(text: string): string {
@@ -81,6 +75,17 @@ export interface FaqItem {
   a: string;
 }
 
+// Ämneskluster för intern länkning. Artiklar med samma cluster länkar till
+// varandra och till klustrets pillar-sida (frontmatter "pillar: true").
+export type Cluster = "kontaktcenter";
+
+export const CLUSTERS: Record<Cluster, { label: string; description: string }> = {
+  kontaktcenter: {
+    label: "AI i kontaktcenter och kundservice",
+    description: "Guider om att välja, bygga, räkna hem och mäta AI i svenska kontaktcenter.",
+  },
+};
+
 export interface PostMeta {
   slug: string;
   title: string;
@@ -92,6 +97,10 @@ export interface PostMeta {
   tags: string[];
   keywords: string[];
   category: Category | null;
+  cluster: Cluster | null;
+  pillar: boolean;
+  // En mening om vilken fråga artikeln besvarar (llms.txt och klusterlistor).
+  answers?: string;
   image?: string;
   imageAlt?: string;
   wordCount: number;
@@ -219,6 +228,9 @@ function buildMeta(file: string, raw: string): PostMeta & { body: string } {
     tags: (data.tags as string[]) || [],
     keywords: (data.keywords as string[]) || [],
     category: resolveCategory(slug, data.category),
+    cluster: typeof data.cluster === "string" && data.cluster in CLUSTERS ? (data.cluster as Cluster) : null,
+    pillar: data.pillar === true,
+    answers: (data.answers as string) || undefined,
     image: image && image.startsWith("/") ? image : undefined,
     imageAlt,
     wordCount,
@@ -297,17 +309,39 @@ export function relatedServices(slug: string, locale: "sv" | "en" = "sv"): Relat
   }
 }
 
-// Relaterade artiklar: samma kluster först, fyll på med senaste från övriga.
+// Alla artiklar i ett ämneskluster, pillar-sidan först, därefter nyast först.
+export function getClusterPosts(cluster: Cluster): PostMeta[] {
+  return getAllPosts()
+    .filter((p) => p.cluster === cluster)
+    .sort((a, b) => Number(b.pillar) - Number(a.pillar));
+}
+
+function overlap(a: string[], b: string[]): number {
+  const set = new Set(a.map((x) => x.toLowerCase()));
+  return b.filter((x) => set.has(x.toLowerCase())).length;
+}
+
+// Relaterade artiklar valda på ämne: samma ämneskluster väger tyngst, sedan
+// gemensamma taggar och nyckelord, sedan samma kategori. Vid lika poäng vinner
+// den nyaste artikeln.
 export function getRelatedPosts(slug: string, limit = 3): PostMeta[] {
   const all = getAllPosts();
-  const cluster = clusterForSlug(slug);
-  const sameCluster = cluster
-    ? all.filter((p) => p.slug !== slug && p.category === cluster)
-    : [];
-  const rest = all.filter(
-    (p) => p.slug !== slug && !sameCluster.some((c) => c.slug === p.slug),
-  );
-  return [...sameCluster, ...rest].slice(0, limit);
+  const self = all.find((p) => p.slug === slug);
+  if (!self) return all.slice(0, limit);
+  const scored = all
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      let score = 0;
+      if (self.cluster && p.cluster === self.cluster) score += 10;
+      score += 3 * overlap(self.tags, p.tags);
+      score += overlap(self.keywords, p.keywords);
+      if (self.category && p.category === self.category) score += 2;
+      return { p, score };
+    });
+  return scored
+    .sort((a, b) => b.score - a.score || (a.p.date < b.p.date ? 1 : -1))
+    .slice(0, limit)
+    .map((s) => s.p);
 }
 
 export function getPostBySlug(slug: string): Post | null {

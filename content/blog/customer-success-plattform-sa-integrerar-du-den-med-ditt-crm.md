@@ -16,7 +16,7 @@ keywords:
   - "customer success playbooks"
   - "CRM-synk customer success"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-04-15T09:40:00.000Z
 ---
 
 # Customer Success-plattform: Så integrerar du den med ditt CRM

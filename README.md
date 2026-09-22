@@ -22,12 +22,14 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Innehåll, SEO och GEO
 
-- Blogginlägg ligger i `content/blog/*.md` med frontmatter: `title`, `metaTitle` (≤ 55 tecken), `slug`, `date`, `updated`, `excerpt` (meta description, 130–158 tecken), `summary` ("Kort svar"-ruta, används av AI-sökmotorer), `category` (`ai-konsult` | `customer-success` | `marknad` | `saas`), `tags`, `keywords`, `imageAlt`, `status`.
+- Blogginlägg ligger i `content/blog/*.md` med frontmatter: `title`, `metaTitle` (≤ 55 tecken), `slug`, `date`, `updated`, `cluster` (valfritt, t.ex. `kontaktcenter`), `pillar` (valfritt, `true` för klustrets huvudguide), `answers` (en mening om vilken fråga artikeln besvarar, visas i llms.txt och klusterlistan), `excerpt` (meta description, 130–158 tecken), `summary` ("Kort svar"-ruta, används av AI-sökmotorer), `category` (`ai-konsult` | `customer-success` | `marknad` | `saas`), `tags`, `keywords`, `imageAlt`, `status`.
 - Rubriker kan ha explicit ankar-id: `## Rubrik {#mitt-id}`. Sektionen `## Vanliga frågor` (H3 = fråga) exponeras automatiskt som FAQPage-schema.
 - Sätt inte samma `date` på flera inlägg; publicera med spridning.
+- `updated` är sidans senaste **innehållsändring** och används som `dateModified` i BlogPosting-schemat och `lastmod` i sitemap. Ändra det bara när texten faktiskt ändras (nytt avsnitt, nya siffror, omskrivning), inte vid metadata-, länk- eller layoutändringar. Samma regel gäller `PAGE_UPDATED` för statiska sidor i `src/lib/site.ts`. Datum sätts aldrig vid bygge eller deploy.
 - Bilder: lägg bilden som `![alt](/blog/<slug>.webp)` eller peka på en extern URL och kör `node scripts/localize-blog-images.mjs` som laddar ner, skalar (1536 px) och konverterar till WebP.
 - `/llms.txt`, `/llms-full.txt`, `/sitemap.xml`, `/robots.txt` och OG-bilder (`/opengraph-image`, `/blog/<slug>/opengraph-image`) genereras automatiskt vid bygge.
-- Efter publicering: `node scripts/indexnow-submit.mjs` skickar sitemapens URL:er till IndexNow (Bing m.fl.).
+- IndexNow: `.github/workflows/indexnow.yml` körs efter varje lyckad produktionsdeploy och skickar bara URL:er som är nya eller har fått nytt `lastmod` sedan förra körningen (svaret loggas i Actions). Manuellt: `node scripts/indexnow-submit.mjs --urls <url ...>` eller `--changed --dry-run` för att se vad som skulle skickas.
+- Författarsidan `/om/rickard-collander` (ProfilePage + Person-schema) länkas från varje artikel. Personuppgifterna ligger i `FOUNDER` i `src/lib/site.ts`.
 - Företagsfakta (juridiskt namn, org.nr, adress, grundare, LinkedIn-företagssida, Allabolag, Microsoft Partner-URL) ligger i `src/lib/site.ts` och används av Organization-schemat i `src/app/layout.tsx`, sidfötterna, `/llms.txt` och tjänstesidorna. Ändra där, inte på enskilda sidor. `ORG.microsoftPartner` är tom tills partnerprofilens URL finns.
 - Tjänstesidorna (`/ai-agenter`, `/seo-geo`, `/customer-success`, `/contact-center-automation`) bygger på mallen `src/components/site/ServicePage.tsx` och listas i `SERVICE_PAGES` i `src/lib/site.ts`. `/ai-kundtjanst` är ingången till produkten Supportifier och länkar vidare till supportifier.se.
 
