@@ -57,7 +57,7 @@ Den här guiden är navet i vår serie om AI i kontaktcenter. Den ger dig helhet
 | Röst-AI och modern IVR | Förstår tal, routar och löser enkla ärenden i telefon | Kunden | Medel: dialekter och ljudkvalitet påverkar |
 | Analys och QA | Kategoriserar, mäter sentiment, granskar kvalitet i alla ärenden | Ledning och teamledare | Låg: påverkar inte kunden direkt |
 
-Skillnaden mellan AI-agenter, chatbots och IVR går vi igenom i en egen jämförelse. Den viktiga poängen här är att du ska veta vilken typ du köper, eftersom risk, införandetid och mätetal skiljer sig mellan dem.
+Skillnaden mellan AI-agenter, chatbots och IVR går vi igenom i [Jämförelse: AI-agenter vs. chatbots vs. IVR i svensk kundservice](/blog/ai-agenter-vs-chatbots-vs-ivr-i-svensk-kundservice), med styrkor, kostnad, införandetid och risker. Den viktiga poängen här är att du ska veta vilken typ du köper, eftersom risk, införandetid och mätetal skiljer sig mellan dem.
 
 ## Var AI ger effekt först {#var-ai-ger-effekt}
 
@@ -94,14 +94,15 @@ Vi har samlat tolv faktorer och en utvärderingsmall med nedladdningsbar kravmat
 
 ## Arkitektur och roller i ett AI-drivet kontaktcenter {#arkitektur-och-roller}
 
-Ett modernt, AI-drivet kontaktcenter kallas ofta customer engagement center. Det bygger på fyra lager:
+Ett modernt, AI-drivet kontaktcenter kallas ofta customer engagement center. Det bygger på fem lager:
 
 - **Kanaler:** telefon, e-post, chatt, formulär, sociala kanaler och kundportal.
 - **Orkestrering:** routing, kategorisering och prioritering som bestämmer vart varje ärende tar vägen.
 - **Kunskap och data:** en gemensam kunskapsbas, kundhistorik och kopplingar till affärssystem.
-- **AI-lager:** svarsförslag, AI-agenter, självservice och analys ovanpå allt ovan.
+- **AI-lager:** svarsförslag, AI-agenter och självservice ovanpå allt ovan.
+- **Analys och styrning:** KPI:er, kvalitetsgranskning och bemanningsplanering som visar vad AI:n gör för kunderna och verksamheten.
 
-AI förändrar också rollerna. Någon måste äga kunskapsbasen, någon måste granska AI:ns svar och någon måste styra vilka kategorier som får automatiseras. Hur du bygger upp det, med roller och en plan steg för steg, går vi igenom i [Customer engagement center med AI: arkitektur, roller och steg-för-steg-plan](/blog/customer-engagement-center-med-ai-arkitektur-roller-och-plan).
+AI förändrar också rollerna. Någon måste äga kunskapsbasen, någon måste granska AI:ns svar och någon måste styra vilka kategorier som får automatiseras. Om ni ska bygga själva, ta in en partner eller köpa en färdig tjänst jämför vi i [Bygga eller köpa? AI-kundtjänst inhouse vs. partner vs. SaaS](/blog/bygga-eller-kopa-ai-kundtjanst-inhouse-partner-eller-saas). Hur du bygger upp det, med roller och en plan steg för steg, går vi igenom i [Customer engagement center med AI: arkitektur, roller och steg-för-steg-plan](/blog/customer-engagement-center-med-ai-arkitektur-roller-och-plan).
 
 ## Vad det kostar och när det lönar sig {#kostnad-och-roi}
 
@@ -114,7 +115,7 @@ En trovärdig kalkyl räknar med hela kostnadsbilden: licens, integration, inter
 
 Bygg alltid tre scenarier (försiktigt, troligt och optimistiskt) och fatta beslut på det försiktiga. Hela modellen, med räkneexempel, finns i [ROI-kalkylen för AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare).
 
-Två frågor avgör mycket av kostnaden. Hur prissätts plattformen: per ärende, per användare eller per volym? Och hur mycket av arbetet med kunskapsbasen gör ni själva? Supportifier prissätts efter kanaler, volym och AI-användning, utan pris per ärende eller per användare. Jämför alltid totalkostnaden över tre år, inte månadspriset.
+Två frågor avgör mycket av kostnaden. Hur prissätts plattformen: per ärende, per användare eller per volym? Och hur mycket av arbetet med kunskapsbasen gör ni själva? Supportifier prissätts efter kanaler, volym och AI-användning, utan pris per ärende eller per användare. Jämför alltid totalkostnaden över tre år, inte månadspriset. Prismodellerna och räkneexempel för 10, 50 och 200 handläggare finns i [Vad kostar AI i kundservice?](/blog/vad-kostar-ai-i-kundservice-prismodeller-och-rakneexempel).
 
 ## GDPR och AI-förordningen {#gdpr-och-ai-forordningen}
 
@@ -123,6 +124,8 @@ Ett kontaktcenter hanterar personuppgifter i nästan varje ärende. Tre saker sk
 - **Personuppgiftsbiträdesavtal** med plattformsleverantören och med dess underbiträden, till exempel leverantören av AI-modellen.
 - **Datalagring och träning:** var lagras data, och används era kunders data för att träna leverantörens modeller? Kräv skriftligt svar. I Supportifier stannar kunddata inom EU/EES och används inte för att träna AI-modeller.
 - **Transparens mot kunden:** EU:s AI-förordning (förordning 2024/1689) kräver att människor får veta när de interagerar med ett AI-system, om det inte är uppenbart. Se till att chatt och automatiska svar är tydligt märkta. Kontrollera vilka datum som gäller för just era system med er jurist.
+
+Hela genomgången, fas för fas, finns i [checklistan för AI, GDPR och AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
 
 ## KPI:er som visar om AI:n gör nytta {#kpier}
 
@@ -136,11 +139,13 @@ Mät samma sak före och efter. De mätetal som avgör om AI:n gör nytta är:
 | FCR (lösta vid första kontakt) | Andel ärenden som inte återkommer | Mäts för kort tid efter kontakten |
 | Andel oförändrade AI-svar | Hur ofta svarsförslaget skickas som det är | Tolkas som kvalitet utan stickprov |
 
-Följ alltid containment och CSAT tillsammans. Hög containment och sjunkande CSAT betyder att AI:n stänger ärenden som kunden inte fått svar på.
+Följ alltid containment och CSAT tillsammans. Hög containment och sjunkande CSAT betyder att AI:n stänger ärenden som kunden inte fått svar på. Formler, mätfel och en mall för veckorapport finns i [KPI:er för AI-automatiserad kundservice](/blog/kpier-for-ai-automatiserad-kundservice-containment-csat-aht-fcr).
 
 ## Så kommer du igång {#kom-igang}
 
 Börja med en avgränsad pilot. Den ska ha en tydlig baseline, en eller två ärendetyper och en ägare med mandat. En beprövad struktur är fyra veckor: kartläggning och baseline, första use case i test, mätning och justering, och sedan skalning av det som fungerar. Planen dag för dag finns i [AI-automation i svenska kontaktcenter: så kom igång på 30 dagar](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar).
+
+De misstag vi oftast ser, och hur du undviker dem, har vi samlat i [Vanliga misstag vid AI-införande i kontaktcenter](/blog/vanliga-misstag-vid-ai-inforande-i-kontaktcenter). Svenska språket förtjänar en egen genomgång: dialekter, tonalitet och hur du kvalitetssäkrar AI:ns svar beskriver vi i [Svenska språket och AI-kundservice](/blog/svenska-spraket-och-ai-kundservice-dialekter-tonalitet-kvalitetssakring).
 
 Vill du förstå varför AI flyttar kontaktcentret från kostnadsställe till strategisk funktion, läs [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga).
 

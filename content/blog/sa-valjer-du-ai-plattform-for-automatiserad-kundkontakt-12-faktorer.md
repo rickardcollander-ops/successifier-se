@@ -71,7 +71,7 @@ En AI-plattform som inte kan läsa orderstatus, kundhistorik och fakturor kan ba
 
 Stora språkmodeller skriver bra svenska i allmänhet, men kundservice kräver mer: rätt tilltal, era produktnamn, branschtermer och en ton som passar varumärket. För röst tillkommer dialekter och ljudkvalitet. Testa med era egna ärenden. Plocka 50 till 100 verkliga, avidentifierade ärenden och låt varje leverantör svara på samma urval. Låt sedan två erfarna handläggare bedöma svaren blint.
 
-Det här området är så viktigt att vi skriver en egen fördjupning om svenska språket, dialekter och kvalitetssäkring i AI-kundservice.
+Hur du testar och kvalitetssäkrar språket, även för dialekter och röst, beskriver vi i [Svenska språket och AI-kundservice: dialekter, tonalitet och kvalitetssäkring](/blog/svenska-spraket-och-ai-kundservice-dialekter-tonalitet-kvalitetssakring).
 
 ### 3. Kunskapsbas
 
@@ -91,7 +91,7 @@ Börja där volymen finns, men välj en plattform som klarar de kanaler ni komme
 
 ### 7. Dataskydd och GDPR
 
-Kräv skriftliga svar på tre frågor. Var lagras och behandlas data? Vilka underbiträden används, till exempel leverantören av själva AI-modellen? Används era kunders data för att träna modeller? Personuppgiftsbiträdesavtal ska finnas innan AI:n läser ett enda kundärende. En fullständig checklista finns i vår kommande artikel om AI, GDPR och AI-förordningen i kundservice.
+Kräv skriftliga svar på tre frågor. Var lagras och behandlas data? Vilka underbiträden används, till exempel leverantören av själva AI-modellen? Används era kunders data för att träna modeller? Personuppgiftsbiträdesavtal ska finnas innan AI:n läser ett enda kundärende. En fullständig checklista finns i [AI och GDPR/AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
 
 ### 8. AI-förordningen
 
@@ -99,7 +99,7 @@ EU:s AI-förordning (förordning 2024/1689) innebär bland annat att människor 
 
 ### 9. Mätning och rapportering
 
-Ni ska kunna följa containment rate, CSAT, hanteringstid (AHT), lösningsgrad vid första kontakt (FCR) och andel AI-svar som skickas oförändrade. Allt ska kunna brytas ner per ärendekategori och exporteras. Utan det kan ni inte avgöra när en kategori är redo att gå upp en automationsnivå.
+Ni ska kunna följa containment rate, CSAT, hanteringstid (AHT), lösningsgrad vid första kontakt (FCR) och andel AI-svar som skickas oförändrade. Hur varje mått definieras finns i [KPI:er för AI-automatiserad kundservice](/blog/kpier-for-ai-automatiserad-kundservice-containment-csat-aht-fcr). Allt ska kunna brytas ner per ärendekategori och exporteras. Utan det kan ni inte avgöra när en kategori är redo att gå upp en automationsnivå.
 
 ### 10. Prismodell och totalkostnad
 
