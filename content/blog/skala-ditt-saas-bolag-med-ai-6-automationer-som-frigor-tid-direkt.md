@@ -17,7 +17,7 @@ keywords:
   - "churn-intervention"
   - "expansion revenue"
 category: "saas"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-16T08:00:00.000Z
 imageAlt: "Customer success-team följer AI-drivna health scores på dashboards i ett modernt techkontor"
 ---
 

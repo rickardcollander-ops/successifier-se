@@ -17,7 +17,7 @@ keywords:
   - "proaktiv customer success"
   - "time-to-value onboarding"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-23T08:00:00.000Z
 imageAlt: "Customer Success-team analyserar churnsignaler i en dashboard på ett modernt kontor"
 ---
 

@@ -17,7 +17,7 @@ keywords:
   - "minska manuellt arbete CS-team"
   - "skala SaaS utan att anställa"
 category: "saas"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-13T08:13:50.266Z
 imageAlt: "Customer Success-team i ett SaaS-bolag följer automatiserade health scores på skärmar"
 ---
 

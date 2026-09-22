@@ -294,8 +294,11 @@ const sv = {
     readingTimeLabel: "min läsning",
     authorLabel: "Skriven av",
     authorBio:
-      "Rickard Collander är grundare av Successifier och har över tio års erfarenhet av att bygga och leda Customer Success- och supportfunktioner i SaaS- och scale-up-bolag. I dag hjälper han svenska B2B-bolag att gå från AI-strategi till driftsatta AI-agenter, automationsflöden och mätbar synlighet i Google och AI-sökmotorer.",
+      "Rickard Collander är grundare av Successifier och har över 20 års erfarenhet av kundservice och kontaktcenter, bland annat från Scania, Releasy (över 350 medarbetare) och Telia. I dag hjälper han svenska bolag att gå från AI-strategi till driftsatta AI-agenter, AI-kundservice och automationsflöden.",
     authorLinkLabel: "Rickard på LinkedIn",
+    authorPageLabel: "Om Rickard Collander",
+    clusterLabel: "Fler guider i serien",
+    pillarPrefix: "Huvudguide",
     categoryLabel: "Kategori",
   },
 };
@@ -594,8 +597,11 @@ const en: typeof sv = {
     readingTimeLabel: "min read",
     authorLabel: "Written by",
     authorBio:
-      "Rickard Collander is the founder of Successifier and has more than ten years of experience building and leading Customer Success and support functions in SaaS and scale-up companies. Today he helps Swedish B2B companies go from AI strategy to deployed AI agents, automation flows, and measurable visibility in Google and AI search engines.",
+      "Rickard Collander is the founder of Successifier and has more than 20 years of experience in customer service and contact centers, including Scania, Releasy (350+ employees) and Telia. Today he helps Swedish companies go from AI strategy to deployed AI agents, AI customer service and automation flows.",
     authorLinkLabel: "Rickard on LinkedIn",
+    authorPageLabel: "About Rickard Collander",
+    clusterLabel: "More guides in this series",
+    pillarPrefix: "Main guide",
     categoryLabel: "Category",
   },
 };

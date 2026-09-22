@@ -17,7 +17,7 @@ keywords:
   - "churn verktyg SaaS"
   - "AI-native customer success"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-03-20T10:30:00.000Z
 imageAlt: "Customer Success-team jämför health scores i dashboards på ett modernt kontor"
 ---
 

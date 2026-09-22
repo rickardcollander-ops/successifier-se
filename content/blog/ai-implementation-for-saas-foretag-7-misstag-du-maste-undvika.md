@@ -13,7 +13,7 @@ keywords:
   - "AI i customer success SaaS"
   - "pilotprojekt AI"
 category: "saas"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-08-19T08:00:00.000Z
 imageAlt: "Customer success-team granskar mätvärden på en dashboard efter AI-implementation i SaaS-bolag"
 language: "sv"
 tags:

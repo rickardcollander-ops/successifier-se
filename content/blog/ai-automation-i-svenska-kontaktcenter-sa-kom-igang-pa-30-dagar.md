@@ -17,8 +17,10 @@ keywords:
   - "agent assist AI"
   - "GDPR AI-leverantör kontaktcenter"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-08T07:01:40.966Z
 imageAlt: "Kundtjänstteam analyserar dashboards med ärendedata inför AI-automation i svenskt kontaktcenter"
+cluster: "kontaktcenter"
+answers: "Hur ett svenskt kontaktcenter får sitt första AI-use case i drift på 30 dagar, vecka för vecka, med mål för containment och CSAT."
 ---
 
 # AI-automation i svenska kontaktcenter: Så kom igång på 30 dagar

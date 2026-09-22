@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { ORG, SERVICE_PAGES, SUPPORTIFIER, orgSameAs } from "@/lib/site";
+import { ORG, SERVICE_PAGES, SUPPORTIFIER, founderPersonSchema, orgSameAs } from "@/lib/site";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -191,30 +191,7 @@ export default function RootLayout({
           availableLanguage: ["Swedish", "English"],
         },
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.successifier.se/#rickard-collander",
-        name: "Rickard Collander",
-        givenName: "Rickard",
-        familyName: "Collander",
-        jobTitle: "Grundare, Successifier AB",
-        description:
-          "Grundare av Successifier AB med över tio års erfarenhet av att bygga och leda Customer Success- och supportfunktioner i SaaS- och scale-up-bolag. Hjälper svenska B2B-bolag från AI-strategi till driftsatta AI-agenter, automation och synlighet i Google och AI-sökmotorer.",
-        url: "https://www.successifier.se/#om-oss",
-        image: "https://www.successifier.se/rc2.jpg",
-        email: "rc@successifier.com",
-        worksFor: { "@id": "https://www.successifier.se/#organization" },
-        knowsAbout: [
-          "Customer Success",
-          "AI-konsulting",
-          "Agentic AI",
-          "Automation",
-          "Contact Center",
-          "Generative Engine Optimization",
-          "SEO",
-        ],
-        sameAs: [ORG.linkedInFounder],
-      },
+      founderPersonSchema(),
       {
         "@type": "WebSite",
         "@id": "https://www.successifier.se/#website",

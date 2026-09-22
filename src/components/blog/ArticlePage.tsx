@@ -2,14 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   AUTHOR,
+  CLUSTERS,
   SITE_URL,
   categoryLabel,
+  getClusterPosts,
   getRelatedPosts,
   relatedServices,
   renderMarkdown,
   type Post,
 } from "@/lib/blog";
 import { dict } from "@/lib/i18n";
+import { ORG } from "@/lib/site";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 
@@ -32,7 +35,12 @@ function formatDate(iso: string, locale: Locale) {
 export default function ArticlePage({ post, locale }: { post: Post; locale: Locale }) {
   const t = dict[locale];
   const html = renderMarkdown(post.content);
-  const related = getRelatedPosts(post.slug);
+  // Klusterartiklar visas i egen lista; "Relaterade artiklar" fyller på med
+  // närliggande ämnen utanför klustret.
+  const clusterPosts = post.cluster ? getClusterPosts(post.cluster).filter((p) => p.slug !== post.slug) : [];
+  const related = getRelatedPosts(post.slug, 3 + clusterPosts.length)
+    .filter((r) => !clusterPosts.some((c) => c.slug === r.slug))
+    .slice(0, 3);
   const services = relatedServices(post.slug, locale);
   const prefix = locale === "en" ? "/en" : "";
   const home = locale === "en" ? "/en" : "/";
@@ -67,8 +75,22 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
       articleSection: category ?? undefined,
       wordCount: post.wordCount,
       timeRequired: `PT${post.readingMinutes}M`,
-      author: { "@id": AUTHOR.id },
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      author: {
+        "@type": "Person",
+        "@id": AUTHOR.id,
+        name: AUTHOR.name,
+        jobTitle: AUTHOR.jobTitle,
+        url: AUTHOR.url,
+        image: AUTHOR.image,
+        sameAs: [AUTHOR.linkedin],
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": ORG.id,
+        name: ORG.legalName,
+        url: SITE_URL,
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
+      },
       isAccessibleForFree: true,
       copyrightHolder: { "@id": `${SITE_URL}/#organization` },
     },
@@ -132,9 +154,9 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]" style={{ ...mono, color: "var(--faint-2)" }}>
               <span>
                 {t.blog.authorLabel}{" "}
-                <a href={`${home === "/" ? "" : home}#om-oss`} className="no-underline" style={{ color: "var(--ink-soft)" }} itemProp="author">
+                <Link href={AUTHOR.path} rel="author" className="no-underline" style={{ color: "var(--ink-soft)" }}>
                   {AUTHOR.name}
-                </a>
+                </Link>
               </span>
               <span>
                 {t.blog.publishedLabel}{" "}
@@ -180,22 +202,53 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
                 <div className="uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--accent)" }}>
                   {t.blog.authorLabel}
                 </div>
-                <div className="mt-1 text-[18px] font-medium" style={serif}>{AUTHOR.name}</div>
+                <div className="mt-1 text-[18px] font-medium" style={serif}>
+                  <Link href={AUTHOR.path} rel="author" className="no-underline" style={{ color: "var(--ink)" }}>{AUTHOR.name}</Link>
+                </div>
                 <div className="text-[13px]" style={{ color: "var(--faint-2)" }}>{t.about.founderTitle}</div>
                 <p className="mt-3 text-[14.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>{t.blog.authorBio}</p>
-                <a
-                  href={AUTHOR.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block text-[13.5px] no-underline"
-                  style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}
-                >
-                  {t.blog.authorLinkLabel} →
-                </a>
+                <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+                  <Link
+                    href={AUTHOR.path}
+                    rel="author"
+                    className="inline-block text-[13.5px] no-underline"
+                    style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}
+                  >
+                    {t.blog.authorPageLabel} →
+                  </Link>
+                  <a
+                    href={AUTHOR.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-[13.5px] no-underline"
+                    style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}
+                  >
+                    {t.blog.authorLinkLabel} →
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
         </article>
+
+        {post.cluster && clusterPosts.length > 0 && (
+          <nav className="mt-16 rounded-[6px] p-6 sm:p-7" aria-label={CLUSTERS[post.cluster].label} style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
+            <div className="mb-1 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--accent)" }}>
+              {t.blog.clusterLabel}
+            </div>
+            <h2 className="text-[22px] font-medium tracking-[-0.01em]" style={serif}>{CLUSTERS[post.cluster].label}</h2>
+            <ul className="mt-4 space-y-3">
+              {clusterPosts.map((c) => (
+                <li key={c.slug} className="text-[15px] leading-[1.55]">
+                  <Link href={`/blog/${c.slug}`} className="font-medium no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>
+                    {c.pillar ? `${t.blog.pillarPrefix}: ${c.title}` : c.title}
+                  </Link>
+                  {c.answers && <span style={{ color: "var(--muted)" }}> – {c.answers}</span>}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         {services.length > 0 && (
           <aside className="mt-16" aria-label={t.blog.relatedServicesHeading}>

@@ -13,7 +13,7 @@ keywords:
   - "minska churn med AI"
   - "SaaS AI-strategi 2026"
 category: "saas"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-07-27T12:35:43.083Z
 imageAlt: "SaaS-team analyserar kundhälsodata på dashboards under en AI-implementation på kontoret"
 language: "sv"
 tags:

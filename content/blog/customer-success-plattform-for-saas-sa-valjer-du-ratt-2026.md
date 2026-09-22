@@ -17,7 +17,7 @@ keywords:
   - "customer success verktyg 2026"
   - "minska churn SaaS"
 category: "customer-success"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-04-02T08:15:00.000Z
 imageAlt: "Customer success-team analyserar churn-data på dashboards i ett modernt SaaS-kontor"
 ---
 

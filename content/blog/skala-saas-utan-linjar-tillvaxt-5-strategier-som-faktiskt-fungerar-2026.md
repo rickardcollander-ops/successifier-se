@@ -17,7 +17,7 @@ keywords:
   - "net revenue retention"
   - "partner-led growth"
 category: "saas"
-updated: 2026-09-15T08:00:00.000Z
+updated: 2026-08-12T08:00:00.000Z
 imageAlt: "Dashboard för SaaS-produkt visar freemium-onboarding och användaraktivering i realtid"
 ---
 
