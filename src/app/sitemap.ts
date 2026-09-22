@@ -33,11 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, lastModified: new Date(latestPost), changeFrequency: "weekly", priority: 0.8 },
     page("/om/rickard-collander", "monthly", 0.6),
     page("/en", "monthly", 0.7),
-    { url: `${SITE_URL}/en/blog`, lastModified: new Date(latestPost), changeFrequency: "weekly", priority: 0.5 },
   ];
 
-  // Artiklarna finns bara på svenska; /en/blog/[slug] har canonical mot
-  // /blog/[slug] och listas därför inte här.
+  // Artiklarna finns bara på svenska; /en/blog/* omdirigeras (301) till /blog/*.
   const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updated),

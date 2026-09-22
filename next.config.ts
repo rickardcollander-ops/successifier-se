@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
     // är redan WebP via scripts/localize-blog-images.mjs.
     formats: ["image/avif", "image/webp"],
   },
+  // /en/blog/* serverade samma svenska text som /blog/* (ingen översättning
+  // finns). Permanent omdirigering (301) samlar länkar och AI-citeringar på
+  // den svenska URL:en. Täcker även /en/blog och artiklarnas OG-bilder.
+  async redirects() {
+    return [
+      { source: "/en/blog/:path*", destination: "/blog/:path*", statusCode: 301 },
+    ];
+  },
   async headers() {
     return [
       {

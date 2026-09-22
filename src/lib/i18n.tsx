@@ -318,7 +318,7 @@ const en: typeof sv = {
     results: "Results",
     about: "About",
     blog: "Blog",
-    blogHref: "/en/blog",
+    blogHref: "/blog",
     contact: "Contact",
     cta: "Book strategy call",
   },

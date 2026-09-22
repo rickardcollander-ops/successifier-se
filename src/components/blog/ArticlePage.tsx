@@ -29,9 +29,9 @@ function formatDate(iso: string, locale: Locale) {
   });
 }
 
-// Gemensam artikelmall för /blog och /en/blog. Innehållet är svenskt i båda
-// fallen; /en-varianten har engelsk kringtext och canonical mot den svenska
-// URL:en (se respektive page.tsx).
+// Artikelmall för /blog. Artiklarna finns bara på svenska; /en/blog/*
+// omdirigeras (301) till /blog/* i next.config.ts. Locale "en" styr bara
+// kringtexten och används inte av några publicerade sidor i dag.
 export default function ArticlePage({ post, locale }: { post: Post; locale: Locale }) {
   const t = dict[locale];
   const html = renderMarkdown(post.content);

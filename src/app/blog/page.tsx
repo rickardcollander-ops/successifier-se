@@ -13,7 +13,6 @@ export const metadata = {
     canonical: "/blog",
     languages: {
       "sv-SE": "/blog",
-      "en": "/en/blog",
       "x-default": "/blog",
     },
   },

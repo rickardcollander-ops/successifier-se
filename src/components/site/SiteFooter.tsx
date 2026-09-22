@@ -5,7 +5,8 @@ type Locale = "sv" | "en";
 
 export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
   const home = locale === "en" ? "/en" : "/";
-  const blog = locale === "en" ? "/en/blog" : "/blog";
+  // Bloggen finns bara på svenska, även från den engelska startsidan.
+  const blog = "/blog";
   const tagline = locale === "en" ? "AI automation for business" : "AI-automatisering för företag";
 
   const links: [string, string][] =

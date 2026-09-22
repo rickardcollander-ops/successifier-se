@@ -11,7 +11,7 @@ export default function SiteHeader({ locale = "sv" }: { locale?: Locale }) {
           { href: `${home}#tjanster`, label: "Services" },
           { href: `${home}#sama`, label: "Platform" },
           { href: `${home}#arbetssatt`, label: "Approach" },
-          { href: "/en/blog", label: "Blog" },
+          { href: "/blog", label: "Blog" },
         ]
       : [
           { href: "/tjanster", label: "Tjänster" },
