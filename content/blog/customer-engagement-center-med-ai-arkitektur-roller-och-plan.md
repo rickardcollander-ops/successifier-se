@@ -86,7 +86,7 @@ Välj plattform för det här lagret med de [12 faktorerna för val av AI-plattf
 
 ### Lager 5: analys och styrning
 
-Utan mätning per kategori går det inte att avgöra när en kategori är redo för mer automatik. Mät containment rate, CSAT, hanteringstid, lösningsgrad vid första kontakt och andel AI-svar som skickas oförändrade. Bemanningsplaneringen (WFM) behöver också räkna med vad AI:n tar hand om, annars blir prognoserna fel.
+Utan mätning per kategori går det inte att avgöra när en kategori är redo för mer automatik. Mät containment rate, CSAT, hanteringstid, lösningsgrad vid första kontakt och andel AI-svar som skickas oförändrade, enligt definitionerna i [KPI:er för AI-automatiserad kundservice](/blog/kpier-for-ai-automatiserad-kundservice-containment-csat-aht-fcr). Bemanningsplaneringen (WFM) behöver också räkna med vad AI:n tar hand om, annars blir prognoserna fel.
 
 ## Rollerna som behövs {#roller}
 
@@ -104,6 +104,8 @@ AI tar bort arbete men skapar också nya ansvar. De här rollerna behöver finna
 | Handläggare | Ärenden som kräver bedömning, granskning av AI-förslag, förbättringsförslag | Hela teamet |
 
 Hur mycket tid rollerna kräver beror på volym och antal ärendekategorier: [KÄLLA/SIFFRA SAKNAS]. Vår erfarenhet är att kunskapsansvarig är den roll som oftast saknas och som gör störst skillnad. Utan en ägare åldras kunskapsbasen, och AI:ns svar blir sämre för varje månad.
+
+Om rollerna ska byggas upp internt eller om en partner eller SaaS-leverantör ska ta en del av dem jämför vi i [Bygga eller köpa? AI-kundtjänst inhouse vs. partner vs. SaaS](/blog/bygga-eller-kopa-ai-kundtjanst-inhouse-partner-eller-saas).
 
 Handläggarrollen förändras mest. När repetitiva ärenden försvinner blir kvarvarande ärenden svårare i snitt. Det kräver mer kompetens, bättre stöd och ofta en ny syn på hur prestation mäts.
 
