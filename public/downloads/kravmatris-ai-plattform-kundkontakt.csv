@@ -1,0 +1,13 @@
+﻿Nr;Faktor;Frågor till leverantören;Vikt (1-5);Leverantör A poäng (0-3);Leverantör B poäng (0-3);Leverantör C poäng (0-3);Kommentar
+1;Integrationer;Finns färdiga kopplingar till vårt ärendesystem, CRM och affärssystem? Kan AI:n både läsa och skriva via API? Vem bygger och underhåller integrationerna?;3;;;;
+2;Svenska språket;Hur bra är svaren på svenska, inklusive tonalitet och facktermer? Klarar röst-AI svenska dialekter? Testa med våra egna ärenden, inte leverantörens exempel.;3;;;;
+3;Kunskapsbas;Hur byggs och uppdateras kunskapsbasen? Lär den sig av godkända svar? Kan vi se vilken källa varje svar bygger på?;3;;;;
+4;Styrbar automationsnivå;Kan vi styra automationsnivå och tröskel för säkerhetspoäng per ärendekategori? Kan vi gå tillbaka en nivå direkt?;3;;;;
+5;Eskalering till människa;Hur lämnas ärendet över till en handläggare, och följer historik och sammanfattning med? Kan kunden alltid nå en människa?;3;;;;
+6;Kanaltäckning;Vilka kanaler stöds i dag (e-post, chatt, telefon, formulär, sociala kanaler, kundportal)? Delar alla kanaler samma kunskapsbas?;3;;;;
+7;Dataskydd och GDPR;Var lagras och behandlas data (EU/EES)? Finns personuppgiftsbiträdesavtal och lista över underbiträden? Används vår data för att träna modeller?;3;;;;
+8;AI-förordningen;Hur märks AI-svar och AI-chatt för kunden? Loggas AI:ns beslut så att de går att följa upp? Vilket stöd ger leverantören för våra skyldigheter?;3;;;;
+9;Mätning och rapportering;Kan vi följa containment, CSAT, AHT, FCR och andel oförändrade AI-svar per kategori? Kan data exporteras?;3;;;;
+10;Prismodell och totalkostnad;Prissätts plattformen per ärende, per användare eller per volym? Vad blir totalkostnaden över tre år inklusive integration och intern tid?;3;;;;
+11;Införandetid och egen insats;Hur lång tid till första användbara svar och till granskad automatik? Hur många timmar per vecka krävs av vårt team under införandet?;3;;;;
+12;Leverantör och exit;Support på svenska, referenskunder i Sverige, finansiell stabilitet. Kan vi ta med kunskapsbas och data om vi byter leverantör?;3;;;;
