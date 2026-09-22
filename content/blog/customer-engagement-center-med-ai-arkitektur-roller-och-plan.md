@@ -103,7 +103,7 @@ AI tar bort arbete men skapar också nya ansvar. De här rollerna behöver finna
 | Bemanningsplanerare (WFM) | Prognoser och scheman som räknar med AI:ns kapacitet | Planerare eller teamledare |
 | Handläggare | Ärenden som kräver bedömning, granskning av AI-förslag, förbättringsförslag | Hela teamet |
 
-Hur mycket tid rollerna kräver beror på volym och antal ärendekategorier: [KÄLLA/SIFFRA SAKNAS]. Vår erfarenhet är att kunskapsansvarig är den roll som oftast saknas och som gör störst skillnad. Utan en ägare åldras kunskapsbasen, och AI:ns svar blir sämre för varje månad.
+Hur mycket tid rollerna kräver beror på volym och antal ärendekategorier. Vår erfarenhet är att kunskapsansvarig är den roll som oftast saknas och som gör störst skillnad. Utan en ägare åldras kunskapsbasen, och AI:ns svar blir sämre för varje månad.
 
 Handläggarrollen förändras mest. När repetitiva ärenden försvinner blir kvarvarande ärenden svårare i snitt. Det kräver mer kompetens, bättre stöd och ofta en ny syn på hur prestation mäts.
 
