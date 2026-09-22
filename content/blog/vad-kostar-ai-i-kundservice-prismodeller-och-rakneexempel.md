@@ -100,7 +100,7 @@ Alla värden är antaganden. Byt ut dem mot era egna innan ni använder kalkylen
 | Arbetsveckor per år | 46 | 46 | 46 | Er kalender |
 | Licens | Räknas ut | Räknas ut | Räknas ut | [KÄLLA/SIFFRA SAKNAS]: ersätt med era offerter |
 
-Varför bara 50 procent av nyttan? ROI-kalkylen skiljer på hårda besparingar och mjuka vinster. Frigjord tid blir bara en kostnadsminskning om ni väljer att inte återbesätta tjänster, minskar övertid eller köper mindre kapacitet från en extern partner. Att räkna med halva nyttan motsvarar det pessimistiska scenariot i ROI-kalkylen och är ett rimligt golv för ett beslutsunderlag.
+Varför bara 50 procent av nyttan? Frigjord tid blir bara en kostnadsminskning om ni inte återbesätter tjänster, minskar övertid eller köper mindre extern kapacitet. Halva nyttan motsvarar det pessimistiska scenariot i ROI-kalkylen och är ett rimligt golv för ett beslutsunderlag.
 
 ## Räkneexempel för 10, 50 och 200 handläggare {#rakneexempel}
 
@@ -166,8 +166,6 @@ Andel som automatiseras och kostnad per ärende väger tyngst. Om automatisering
 
 En verklighetskontroll för automatiseringsgraden: i vår plattform Supportifier får alla inkommande mail ett svarsförslag, och ungefär 25 procent av svaren kan skickas utan ändring. Det är inte samma sak som 25 procent automatisering, men det visar att även en välfylld kunskapsbas lämnar de flesta ärenden till en människa. I genomförda piloter har handläggningstiden minskat med upp till 85 procent, men räkna aldrig med det bästa utfallet i en kalkyl.
 
-ROI-kalkylens basfall för 50 handläggare ger högre nytta än här, eftersom det räknar med hela effekten. Använd det försiktiga fallet för beslutet och basfallet för att visa potentialen.
-
 ## Så jämför du offerter {#jamfor-offerter}
 
 - [ ] Be alla leverantörer prissätta samma volym: dagens volym och volymen om tre år
@@ -199,10 +197,6 @@ Det varierar med hur mycket integration och intern tid som krävs. I ROI-kalkyle
 ### Lönar sig AI för ett litet kundserviceteam?
 
 Det kan det göra, men payback tar längre tid eftersom de fasta kostnaderna delas på färre ärenden. Välj en lösning med låg fast kostnad och färdiga kopplingar, börja i den största kanalen och räkna över två till tre år.
-
-### Vad ska räknas in i intern tid?
-
-Projektledning, IT och säkerhet, dataskyddsgranskning, uppbyggnad av kunskapsbasen, utbildning av handläggare och löpande förbättring med stickprov och uppdateringar. Den löpande förbättringen glöms oftast bort, trots att den avgör om kvaliteten håller efter lanseringen.
 
 ### Hur räknar jag ut vad licensen får kosta?
 
