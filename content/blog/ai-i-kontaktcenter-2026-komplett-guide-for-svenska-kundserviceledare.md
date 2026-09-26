@@ -72,7 +72,7 @@ Den vanligaste orsaken till att AI-projekt i kontaktcenter stannar i pilotfasen 
 | Reklamationer och klagomål | Svarsförslag, människa skickar | Ton och bedömning avgör kundupplevelsen |
 | Tekniskt komplexa ärenden | Agent assist (sammanfattning, historik) | AI:n hjälper handläggaren, ersätter inte |
 
-Hur stor andel av ett svenskt kontaktcenters volym som hamnar i de två första raderna varierar kraftigt mellan branscher: [KÄLLA/SIFFRA SAKNAS]. Gör därför alltid en egen ärendeanalys på minst sex månaders historik innan du sätter mål.
+Hur stor andel av ett svenskt kontaktcenters volym som hamnar i de två första raderna varierar kraftigt mellan branscher. Gör därför alltid en egen ärendeanalys på minst sex månaders historik innan du sätter mål.
 
 ## De tre automationsnivåerna {#tre-automationsnivaer}
 

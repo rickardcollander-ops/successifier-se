@@ -48,8 +48,6 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 **Så undviker du det:** Starta i ärenden med hög volym och låg komplexitet, där svaret går att hämta ur ett system eller en kunskapsbas: orderstatus, leveransfrågor, fakturafrågor och enkla kontoändringar. Gör en ärendeanalys på minst sex månaders historik och rangordna kategorierna efter volym, hanteringstid och risk vid fel svar.
 
-[EGET EXEMPEL SAKNAS: ett projekt där man började i de svåraste ärendena (till exempel klagomål eller teknisk support) och vad som hände med förtroendet för AI:n, jämfört med ett projekt som började i enkla volymärenden]
-
 ### 2. Att sakna baseline
 
 **Vad som händer:** Efter tre månader frågar ledningen vad AI:n har gett. Ingen kan svara, eftersom ingen mätte hanteringstid, lösningsgrad och kundnöjdhet per kategori innan piloten startade. Diskussionen blir en fråga om känsla.
@@ -57,8 +55,6 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 **Varför det händer:** Baseline känns som administration när alla vill komma igång. Ofta finns data, men den är inte uppdelad per ärendekategori eller kanal.
 
 **Så undviker du det:** Mät AHT, FCR, CSAT och kostnad per ärende för exakt de kategorier piloten gäller, under minst fyra veckor före start. Använd samma definitioner före och efter. Vilka mätetal som behövs och hur de definieras beskriver vi i [KPI:er för AI-automatiserad kundservice](/blog/kpier-for-ai-automatiserad-kundservice-containment-csat-aht-fcr).
-
-[EGET EXEMPEL SAKNAS: en situation där avsaknaden av baseline gjorde det omöjligt att visa effekt, eller där en baseline avslöjade att problemet låg någon annanstans än man trodde]
 
 ### 3. Att lämna kunskapsbasen utan ägare
 
@@ -75,8 +71,6 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 **Varför det händer:** Projektet ses som ett IT-projekt. Men AI i kontaktcentret ändrar arbetsinnehåll, schemaläggning och ibland bemanning, och det är arbetsmiljö- och förhandlingsfrågor.
 
 **Så undviker du det:** Ta med handläggare i projektgruppen från början och låt dem bedöma AI:ns svar i piloten. Var ärlig med vad som förändras. Om ni har kollektivavtal gäller medbestämmandelagen (MBL), som innebär förhandlingsskyldighet före viktigare förändringar av verksamheten. Stäm av med HR och er arbetsrättsjurist när och hur fackliga företrädare ska involveras, och gör det tidigt.
-
-[EGET EXEMPEL SAKNAS: hur handläggare eller fackliga företrädare reagerade på ett AI- eller automationsprojekt, och vad som vände motståndet (till exempel att handläggarna fick äga kvalitetsgranskningen)]
 
 ## Misstag vid val av leverantör {#misstag-vid-val-av-leverantor}
 
@@ -95,8 +89,6 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 **Varför det händer:** AI-delen syns i demon. Integrationerna mot ärendesystem, CRM, order- och fakturasystem syns inte, och de tar ofta längst tid.
 
 **Så undviker du det:** Lista vilka system AI:n måste läsa från och skriva till för varje ärendekategori i piloten. Kräv att leverantören visar integrationerna mot era faktiska system, inte mot en testmiljö. Budgetera intern IT-tid. Om ni funderar på att bygga delar själva, läs [Bygga eller köpa AI-kundtjänst](/blog/bygga-eller-kopa-ai-kundtjanst-inhouse-partner-eller-saas) innan beslutet.
-
-[EGET EXEMPEL SAKNAS: ett införande där en integration mot ett äldre ärende-, order- eller telefonisystem tog betydligt längre tid än planerat, och vad det lärde er om hur integrationer ska tidsättas]
 
 ## Misstag i piloten {#misstag-i-piloten}
 
@@ -123,8 +115,6 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 **Varför det händer:** Ingen bestämde i förväg vad som räknas som lyckat, vad som räknas som misslyckat och vem som fattar beslutet.
 
 **Så undviker du det:** Skriv ner exitkriterierna innan piloten startar: vilka mätetal, vilka nivåer, vilket datum och vem som beslutar. Ett exempel på formulering: "Om andelen svarsförslag som godkänns utan större ändring i kategorin fakturafrågor är minst X procent vecka 4, och CSAT inte har sjunkit mer än Y punkter mot baseline, går kategorin till nivå 2. Annars förlänger vi två veckor eller stoppar." X och Y sätter ni utifrån er egen baseline. En fyraveckorsstruktur finns i [så kommer du igång på 30 dagar](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar).
-
-[EGET EXEMPEL SAKNAS: en pilot som drog ut på tiden utan beslut, eller en pilot där tydliga exitkriterier gjorde att ni kunde stoppa eller skala i tid]
 
 ## Misstag när AI:n går i drift {#misstag-i-drift}
 
@@ -175,7 +165,7 @@ Vill du ha hjälp från start erbjuder vi [automation för kontaktcenter](/conta
 
 ### Varför fastnar så många AI-projekt i kontaktcenter i pilotfasen?
 
-Oftast för att piloten saknar baseline och exitkriterier, eller för att den startade i för komplexa ärenden. Utan en baseline går det inte att visa effekt, och utan exitkriterier fattas inget beslut. Hur stor andel av piloterna som faktiskt fastnar finns det ingen tillförlitlig svensk siffra på: [KÄLLA/SIFFRA SAKNAS].
+Oftast för att piloten saknar baseline och exitkriterier, eller för att den startade i för komplexa ärenden. Utan en baseline går det inte att visa effekt, och utan exitkriterier fattas inget beslut.
 
 ### Vilket är det dyraste misstaget vid AI-införande?
 

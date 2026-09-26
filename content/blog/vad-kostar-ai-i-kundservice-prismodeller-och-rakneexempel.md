@@ -50,14 +50,12 @@ Samma plattform kan bli billig eller dyr beroende på hur den prissätts i förh
 | Per volym eller paket | I steg, när ni passerar en volymnivå | Förutsägbar, uppmuntrar automation | Kräver en bra volymprognos, dyrt att ligga strax över en nivå | Stabil eller växande volym med tydlig prognos |
 | Plattform plus konsult | Fast plattformsavgift plus timmar eller fast pris för införande | Tydlig uppdelning mellan verktyg och arbete | Konsulttimmar kan dra iväg utan fast pris och tydlig leverans | Ni saknar intern kapacitet för kartläggning och design |
 
-Typiska marknadspriser för respektive modell i Sverige: [KÄLLA/SIFFRA SAKNAS]. Priserna varierar mellan leverantörer och förhandlas ofta. Därför använder räkneexemplen längre ner ingen antagen licenskostnad. De räknar i stället ut hur mycket licensen högst får kosta.
+Priserna varierar mellan leverantörer och förhandlas ofta. Därför använder räkneexemplen längre ner ingen antagen licenskostnad. De räknar i stället ut hur mycket licensen högst får kosta.
 
 Två detaljer är värda att fråga om i alla modeller:
 
 - **Vad räknas som ett ärende eller en konversation?** En chatt där kunden skriver tre gånger kan räknas som en eller tre konversationer. Ett mejl som AI:n bara kategoriserar kan räknas lika som ett mejl den besvarar.
 - **Ingår AI-användningen?** Vissa leverantörer tar betalt separat för anrop till språkmodellen. Då växer kostnaden med hur mycket AI:n används, inte bara med antal ärenden.
-
-[EGET EXEMPEL SAKNAS: ett upphandlingsfall där pris per ärende såg lågt ut i offerten men blev dyrt när volymen växte eller vid en säsongstopp]
 
 Som jämförelse: [Supportifier](/ai-kundtjanst), vår egen AI-kundtjänstplattform, prissätts efter kanaler, volym och AI-användning, utan pris per ärende eller per användare. Konsultdelen i vår tjänst för [automatisering av kontaktcenter](/contact-center-automation) har fast pris för kartläggning och design, som tar två till fyra veckor, och därefter löpande stöd per månad.
 
@@ -98,7 +96,7 @@ Alla värden är antaganden. Byt ut dem mot era egna innan ni använder kalkylen
 | Utbildning (4 h per handläggare) | 40 h | 200 h | 800 h | Er utbildningsplan |
 | Löpande förbättring per vecka | 3 h | 10 h | 30 h | Antal kategorier och kanaler |
 | Arbetsveckor per år | 46 | 46 | 46 | Er kalender |
-| Licens | Räknas ut | Räknas ut | Räknas ut | [KÄLLA/SIFFRA SAKNAS]: ersätt med era offerter |
+| Licens | Räknas ut | Räknas ut | Räknas ut | Era offerter |
 
 Varför bara 50 procent av nyttan? Frigjord tid blir bara en kostnadsminskning om ni inte återbesätter tjänster, minskar övertid eller köper mindre extern kapacitet. Halva nyttan motsvarar det pessimistiska scenariot i ROI-kalkylen och är ett rimligt golv för ett beslutsunderlag.
 
