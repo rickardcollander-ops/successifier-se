@@ -94,13 +94,11 @@ En AI-agent kräver inte nödvändigtvis ett nytt ärendesystem. Ett anonymt exe
 
 Den klassiska IVR:en är ett menyträd i telefon: "tryck 1 för faktura, tryck 2 för leverans". Den är billig att drifta och förutsägbar. Problemet är att kundens ärende sällan passar exakt i menyn. Djupa menyer leder till fel kö, och kunder som trycker sig förbi menyn för att nå en människa gör routingen sämre än den ser ut.
 
-[EGET EXEMPEL SAKNAS: erfarenhet från Telia, Releasy eller Scania av en knappstyrd IVR där kunderna valde fel meny eller tryckte sig förbi den, och vad det gjorde med felkopplingar och hanteringstid]
-
 ### Talbaserad eller konversationell IVR
 
 En konversationell IVR frågar "vad gäller ditt ärende?" och förstår svaret. Den kan routa rätt direkt, identifiera kunden, läsa upp orderstatus eller, om den är kopplad till en AI-agent, utföra enklare åtgärder i samtalet.
 
-För svensk kundservice finns två särskilda utmaningar. Taligenkänningen ska klara dialekter, brytning, bakgrundsljud och dålig mobiltäckning. Och kunder som ringer har ofta valt telefon för att ärendet är brådskande eller känsligt, vilket ställer högre krav på att en människa går att nå snabbt. Hur väl olika lösningar hanterar svenska dialekter i verklig trafik: [KÄLLA/SIFFRA SAKNAS]. Testa därför alltid med inspelade samtal från era egna kunder innan ni bestämmer er.
+För svensk kundservice finns två särskilda utmaningar. Taligenkänningen ska klara dialekter, brytning, bakgrundsljud och dålig mobiltäckning. Och kunder som ringer har ofta valt telefon för att ärendet är brådskande eller känsligt, vilket ställer högre krav på att en människa går att nå snabbt. Hur väl olika lösningar hanterar svenska dialekter i verklig trafik varierar. Testa därför alltid med inspelade samtal från era egna kunder innan ni bestämmer er.
 
 ## Den stora jämförelsetabellen {#jamforelsetabell}
 

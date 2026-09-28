@@ -29,7 +29,7 @@ ROI på AI-automation i ett kontaktcenter räknas som nyttan minus hela kostnade
 
 Den här artikeln ger dig en konkret ROI-modell, inte ett säljargument. Du får kostnadsposterna, en steg-för-steg-kalkyl och ett nytt avsnitt om hur du räknar på AI-svarsförslag i e-post, med siffror från vår egen plattform. Målet är att du ska kunna presentera ett beslutsunderlag vid nästa styrelsemöte, inte om tre månader. Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-2026-komplett-guide-for-svenska-kundserviceledare).
 
-Benchmark-siffrorna nedan bygger på publicerad branschdata [KÄLLA/SIFFRA SAKNAS: länka till de studier från Gartner, McKinsey och Forrester som avses] och på typiska utfall från nordiska SaaS- och tjänsteföretag med 20 till 200 handläggare. Kalibrera dem alltid mot er egen data.
+Siffrorna i räkneexemplen nedan är antaganden, inte uppmätta branschvärden. Kalibrera dem alltid mot er egen data.
 
 ## Innehåll
 
@@ -110,7 +110,7 @@ Nu till den del som är roligare att räkna på. Nyttan från [AI-automation i k
 
 ### 1. Minskad genomsnittlig hanteringstid (AHT)
 
-AI-assistans i realtid, automatisk sammanfattning efter samtal och smarta kunskapsbasor minskar AHT med 15 till 30 procent enligt McKinsey [KÄLLA/SIFFRA SAKNAS: länk till studien]. För ett kontaktcenter med 50 handläggare som hanterar 100 000 ärenden per år med en genomsnittlig hanteringstid på 6 minuter och en genomsnittlig lönekostnad på 350 kronor per timme ser kalkylen ut så här:
+AI-assistans i realtid, automatisk sammanfattning efter samtal och smarta kunskapsbasor kan minska AHT. Hur mycket beror på ärendemix och kunskapsbas, så exemplet nedan antar 20 procent. Ersätt det med ert eget pilotutfall. För ett kontaktcenter med 50 handläggare som hanterar 100 000 ärenden per år med en genomsnittlig hanteringstid på 6 minuter och en genomsnittlig lönekostnad på 350 kronor per timme ser kalkylen ut så här:
 
 > Nuläge: 100 000 ärenden × 6 min = 10 000 timmar × 350 kr = 3 500 000 kr/år
 > Med 20% AHT-minskning: 10 000 × 0,8 = 8 000 timmar × 350 kr = 2 800 000 kr/år
@@ -122,7 +122,7 @@ AI-assistans i realtid, automatisk sammanfattning efter samtal och smarta kunska
 
 ### 3. Förbättrad first contact resolution (FCR)
 
-Högre FCR minskar återkommande kontakter. Varje procentenhets ökning i FCR minskar ärendevolymen med ungefär 1 procent, enligt SQM Group [KÄLLA/SIFFRA SAKNAS: länk till källan]. Om din FCR i dag är 70 procent och AI hjälper dig nå 78 procent, minskar volymen med 8 procent.
+Högre FCR minskar återkommande kontakter. Antag att din FCR i dag är 70 procent och att AI hjälper dig nå 78 procent. Då sjunker andelen ärenden som kräver en ny kontakt från 30 till 22 procent.
 
 ### 4. Minskad onboarding-tid
 

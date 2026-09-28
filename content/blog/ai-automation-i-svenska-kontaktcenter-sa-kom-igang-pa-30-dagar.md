@@ -288,7 +288,7 @@ Du behöver ett databehandlingsavtal (DPA) med leverantören enligt GDPR artikel
 
 ### Vad är en rimlig containment rate att sikta mot de första 30 dagarna?
 
-För enkla use cases som orderstatus och lösenordsåterställning är 40-60 procent ett realistiskt mål under de första 30 dagarna. Branschen rapporterar högre containment rates för vältränade system med mogna träningsdata [KÄLLA/SIFFRA SAKNAS: nivå och källa], men det tar typiskt 3-6 månader att nå dit.
+För enkla use cases som orderstatus och lösenordsåterställning är 40-60 procent ett realistiskt mål under de första 30 dagarna. Vältränade system med en mogen kunskapsbas kan nå högre nivåer, men räkna med att det tar flera månader.
 
 ### Hur vet vi om AI faktiskt förbättrar kundupplevelsen och inte bara drar ner kostnaderna?
 

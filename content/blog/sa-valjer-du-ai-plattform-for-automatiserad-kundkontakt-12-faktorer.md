@@ -151,7 +151,7 @@ Ett e-handelsbolag med en stor andel orderfrågor via mejl och chatt och ett äl
 | Kanaltäckning | 3 | Mejl och chatt räcker de första två åren |
 | Övriga faktorer | 2–3 | Viktiga, men inte avgörande för just detta bolag |
 
-Hur stor del av ärendena som är automatiserbara i en sådan verksamhet varierar: [KÄLLA/SIFFRA SAKNAS]. Ta fram er egen siffra i ärendeanalysen innan ni sätter vikterna.
+Hur stor del av ärendena som är automatiserbara i en sådan verksamhet varierar mellan bolag. Ta fram er egen siffra i ärendeanalysen innan ni sätter vikterna.
 
 När plattformen är vald är nästa steg att bygga organisationen och arkitekturen runt den. Det går vi igenom i [Customer engagement center med AI](/blog/customer-engagement-center-med-ai-arkitektur-roller-och-plan).
 

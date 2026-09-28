@@ -85,7 +85,7 @@ Gör en ordlista med term, rätt skrivsätt och vad AI:n inte får skriva. Där 
 
 ## Talad svenska och röst-AI {#talad-svenska}
 
-Röst-AI möter större variation än text. Kunden ringer från bilen, blandar dialekt och engelska lånord och läser upp sitt personnummer snabbare än någon testade i demon. Hur väl taligenkänning fungerar för svenska i allmänhet, och för olika dialekter, finns det ingen siffra vi kan hänvisa till här: [KÄLLA/SIFFRA SAKNAS]. Ni behöver mäta det själva, med era kunder.
+Röst-AI möter större variation än text. Kunden ringer från bilen, blandar dialekt och engelska lånord och läser upp sitt personnummer snabbare än någon testade i demon. Det finns ingen siffra vi kan hänvisa till för hur väl taligenkänning fungerar för svenska och olika dialekter. Ni behöver mäta det själva, med era kunder.
 
 ### Dialekter och finlandssvenska
 
@@ -113,7 +113,7 @@ Glöm inte talsyntesen, alltså rösten som AI:n svarar med. Svenska har ordacce
 
 AI gör det möjligt att svara på fler språk än ni har handläggare för. Det är en risk om ingen kan granska svaren. Fatta tre beslut först:
 
-1. **Vilka språk ni svarar på.** Utgå från er egen ärendehistorik. Generella siffror för Sverige hjälper lite: [KÄLLA/SIFFRA SAKNAS].
+1. **Vilka språk ni svarar på.** Utgå från er egen ärendehistorik. Generella siffror för Sverige hjälper lite.
 2. **Vilken version som gäller.** Kunskapsbasen är oftast på svenska. När AI:n svarar på ett annat språk ska villkor, priser och juridiska formuleringar hänvisa till den version som är gällande.
 3. **Hur ni kvalitetssäkrar.** Om ingen i teamet kan läsa språket, börja på nivå 1 med människa som godkänner, eller begränsa AI:n till enklare kategorier på det språket.
 
@@ -194,7 +194,7 @@ I enkla, återkommande ärenden kan AI skriva svar som är svåra att skilja fr�
 
 ### Klarar röst-AI svenska dialekter?
 
-Det varierar mellan leverantörer och dialekter, och vi känner inte till någon oberoende svensk jämförelse att hänvisa till: [KÄLLA/SIFFRA SAKNAS]. Testa med talare från de regioner era kunder kommer från, inklusive finlandssvenska och andraspråkstalare, och i verkliga ljudmiljöer.
+Det varierar mellan leverantörer och dialekter, och vi känner inte till någon oberoende svensk jämförelse att hänvisa till. Testa med talare från de regioner era kunder kommer från, inklusive finlandssvenska och andraspråkstalare, och i verkliga ljudmiljöer.
 
 ### Ska AI:n säga du eller ni till kunden?
 

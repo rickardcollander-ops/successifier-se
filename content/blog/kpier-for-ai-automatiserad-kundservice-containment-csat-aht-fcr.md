@@ -52,8 +52,6 @@ När AI:n börjar ta de enkla ärendena ändras ärendemixen. Handläggarna får
 
 Därför gäller tre regler för all mätning av AI i kundservice. **Mät per ärendekategori**, inte bara totalt. **Mät mot en baseline** från tiden före AI. **Läs mätetalen tillsammans**, aldrig ett i taget.
 
-[EGET EXEMPEL SAKNAS: ett tillfälle från Telia, Releasy eller Scania där ett mätetal såg bra ut men dolde ett problem, till exempel kort hanteringstid som gav fler återkontakter]
-
 ## Containment rate {#containment}
 
 **Formel:** containment rate = ärenden som AI:n löste utan handläggare ÷ ärenden som AI:n tog emot × 100.
@@ -82,7 +80,7 @@ CSAT mäter kundens upplevelse direkt efter kontakten. Det är den viktigaste mo
 
 - **Enkäten skickas bara efter ärenden som en handläggare hanterat.** Då mäts inte AI:ns kvalitet alls.
 - **Ingen enkät efter avbrutna chattar.** De mest missnöjda kunderna syns aldrig.
-- **Låg svarsfrekvens.** Några få svar per kategori och vecka ger stora slumpmässiga svängningar. Typisk svarsfrekvens för CSAT-enkäter efter chatt och e-post i Sverige: [KÄLLA/SIFFRA SAKNAS]. Följ er egen svarsfrekvens som ett eget mått.
+- **Låg svarsfrekvens.** Några få svar per kategori och vecka ger stora slumpmässiga svängningar. Följ er egen svarsfrekvens som ett eget mått.
 
 **Så mäter du rätt:** skicka samma enkät efter AI-ärenden och handläggarärenden, och redovisa dem var för sig per kategori. Visa antal svar bredvid varje CSAT-värde.
 
@@ -117,7 +115,7 @@ FCR, lösta vid första kontakt, visar om kunden fick sitt ärende löst direkt.
 - **Bara samma kanal räknas.** Återkontakt i en annan kanal missas.
 - **Ärendet stängs för tidigt.** Om ärenden stängs automatiskt efter ett svar blir FCR högt på papperet.
 
-**Så mäter du rätt:** välj ett mätfönster som passar ärendetypen och håll fast vid det. Sju dagar är en rimlig start för de flesta kategorier. För leveransärenden kan fönstret behöva sträcka sig till leveransdagen. Matcha återkontakt på kund och ämne över alla kanaler. Jämförelsevärden för FCR i svenska kontaktcenter: [KÄLLA/SIFFRA SAKNAS]. Använd er egen baseline i stället för en branschsiffra.
+**Så mäter du rätt:** välj ett mätfönster som passar ärendetypen och håll fast vid det. Sju dagar är en rimlig start för de flesta kategorier. För leveransärenden kan fönstret behöva sträcka sig till leveransdagen. Matcha återkontakt på kund och ämne över alla kanaler. Använd er egen baseline i stället för en branschsiffra.
 
 ## AI-specifika mått {#ai-specifika-matt}
 
