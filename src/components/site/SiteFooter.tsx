@@ -18,6 +18,7 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
       : [
           ["/tjanster", "Tjänster"],
           ["/ai-agenter", "AI-agenter"],
+          ["/agentiska-floden", "Agentiska flöden"],
           ["/seo-geo", "GEO & SEO"],
           ["/customer-success", "Customer Success"],
           ["/contact-center-automation", "Contact center"],

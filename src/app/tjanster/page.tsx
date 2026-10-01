@@ -10,14 +10,14 @@ const serif = { fontFamily: "var(--font-spectral)" } as const;
 const mono = { fontFamily: "var(--font-plex-mono)" } as const;
 
 export const metadata: Metadata = {
-  title: "Tjänster: AI-agenter, GEO/SEO, Customer Success, contact center",
+  title: "Tjänster: AI-agenter, agentiska flöden, GEO/SEO, Customer Success",
   description:
-    "Successifiers tjänster för svenska B2B-bolag: AI-agenter och agentic AI, GEO och SEO med SAMA, Customer Success, contact center-automation och AI-kundtjänstplattformen Supportifier.",
+    "Successifiers tjänster för svenska B2B-bolag: AI-agenter, agentiska flöden och agentic AI, GEO och SEO med SAMA, Customer Success, contact center-automation och AI-kundtjänstplattformen Supportifier.",
   alternates: { canonical: "/tjanster" },
   openGraph: {
     type: "website",
     title: "Tjänster · Successifier",
-    description: "AI-agenter, GEO/SEO med SAMA, Customer Success, contact center-automation och Supportifier.",
+    description: "AI-agenter, agentiska flöden, GEO/SEO med SAMA, Customer Success, contact center-automation och Supportifier.",
     url: PAGE_URL,
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const overview = [
   {
     heading: "Vad gör Successifier?",
-    text: `Successifier AB (org.nr ${ORG.orgNr}) är en svensk konsult inom AI, automation och Customer Success med säte i Stockholmsområdet. Vi bygger och driftsätter AI-agenter och automationsflöden, etablerar Customer Success- och supportfunktioner och driver SEO och GEO med den egna plattformen SAMA. Vi utvecklar också AI-kundtjänstplattformen Supportifier.`,
+    text: `Successifier AB (org.nr ${ORG.orgNr}) är en svensk konsult inom AI, automation och Customer Success med säte i Stockholmsområdet. Vi bygger och driftsätter AI-agenter och agentiska flöden, där agenter driver hela processer i kundens system, etablerar Customer Success- och supportfunktioner och driver SEO och GEO med den egna plattformen SAMA. Vi utvecklar också AI-kundtjänstplattformen Supportifier.`,
   },
   {
     heading: "Hur arbetar vi?",
@@ -91,7 +91,7 @@ export default function TjansterPage() {
             </nav>
             <div className="mb-[18px] uppercase" style={{ ...mono, fontSize: "12px", letterSpacing: "0.2em", color: "var(--accent)" }}>Tjänster</div>
             <h1 className="max-w-[18ch] text-[clamp(38px,5vw,66px)] font-medium leading-[1.04] tracking-[-0.018em]" style={serif}>
-              Sex ingångar, samma princip: vi bygger och driftsätter.
+              Sju ingångar, samma princip: vi bygger och driftsätter.
             </h1>
             <p className="mt-6 max-w-[640px] text-[18px] leading-[1.6] text-pretty" style={{ color: "var(--muted)" }}>
               Välj det erbjudande som ligger närmast er fråga. Varje sida beskriver vad som ingår,

@@ -77,12 +77,16 @@ export interface FaqItem {
 
 // Ämneskluster för intern länkning. Artiklar med samma cluster länkar till
 // varandra och till klustrets pillar-sida (frontmatter "pillar: true").
-export type Cluster = "kontaktcenter";
+export type Cluster = "kontaktcenter" | "agenter";
 
 export const CLUSTERS: Record<Cluster, { label: string; description: string }> = {
   kontaktcenter: {
     label: "AI i kontaktcenter och kundservice",
     description: "Guider om att välja, bygga, räkna hem och mäta AI i svenska kontaktcenter.",
+  },
+  agenter: {
+    label: "AI-agenter och agentiska flöden",
+    description: "Guider om vad AI-agenter och agentiska flöden är, när de passar och hur Successifier bygger och styr dem i drift.",
   },
 };
 
@@ -285,6 +289,7 @@ export function relatedServices(slug: string, locale: "sv" | "en" = "sv"): Relat
     sama: { href: "/seo-geo", label: "GEO & SEO med SAMA", description: "Vår plattform som driver synlighet i Google och i AI-svar från ChatGPT, Perplexity och Google AI." },
     cs: { href: "/customer-success", label: "Customer Success", description: "Operating model, health scoring och renewal-playbooks som skyddar NRR och minskar churn." },
     cc: { href: "/contact-center-automation", label: "Contact center-automation", description: "AI-svarsförslag, routing, QA och KPI-styrning i kontaktcenter och support." },
+    flow: { href: "/agentiska-floden", label: "Agentiska flöden", description: "AI-agenter som driver hela processer i era system, med människan i loopen." },
   };
   // Engelska tjänstesidor finns inte separat – vi länkar till sektioner på /en.
   const en = {
@@ -293,8 +298,11 @@ export function relatedServices(slug: string, locale: "sv" | "en" = "sv"): Relat
     sama: { href: homeAnchor, label: "SAMA – AI visibility & SEO", description: "Our platform driving visibility on Google, LinkedIn, and in AI answers." },
     cs: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Customer Success", description: "Operating model, health scoring and renewal playbooks that protect NRR and reduce churn." },
     cc: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Contact center automation", description: "AI reply drafts, routing, QA and KPI governance in contact centers and support." },
+    flow: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Agentic workflows", description: "AI agents that run entire processes in your systems, with a human in the loop." },
   };
   const s = locale === "en" ? en : sv;
+  // Agentklustret pekar på agentsidorna oavsett kategori.
+  if (getAllPosts().find((p) => p.slug === slug)?.cluster === "agenter") return [s.flow, s.konsult];
   switch (cluster) {
     case "ai-konsult":
       return [s.konsult, s.sama];

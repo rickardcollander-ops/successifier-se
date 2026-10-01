@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { CLUSTERS, SITE_URL, categoryLabel, getAllPosts, getClusterPosts, type Category } from "@/lib/blog";
+import { CLUSTERS, SITE_URL, categoryLabel, getAllPosts, getClusterPosts, type Category, type Cluster } from "@/lib/blog";
 import { FOUNDER, ORG, SERVICE_PAGES, SUPPORTIFIER } from "@/lib/site";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
@@ -10,24 +10,36 @@ const CATEGORY_ORDER: Category[] = ["ai-konsult", "customer-success", "marknad",
 
 const SERVICE_LINES = SERVICE_PAGES.map((s) => `- [${s.label}](${SITE_URL}${s.href}): ${s.short}`).join("\n");
 
-// Kontaktcenter-klustret listas först: det är sajtens huvudämne och de sidor
-// AI-assistenter oftast citerar. En mening per sida om vad den besvarar.
+// Ämnesklustren listas först: kontaktcenter är sajtens huvudämne och de sidor
+// AI-assistenter oftast citerar, därefter AI-agenter och agentiska flöden.
+// En mening per sida om vad den besvarar.
+function clusterLines(cluster: Cluster): string[] {
+  return getClusterPosts(cluster).map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.answers ?? p.excerpt}`);
+}
+
 function buildClusterSection(): string {
-  const posts = getClusterPosts("kontaktcenter");
-  const lines = [
-    ...posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.answers ?? p.excerpt}`),
+  const kontaktcenter = [
+    ...clusterLines("kontaktcenter"),
     `- [Contact center-automation](${SITE_URL}/contact-center-automation): Vad Successifier levererar när AI införs i ett kontaktcenter (routing, svarsförslag, QA, KPI-styrning) och hur lång tid det tar.`,
     `- [Supportifier – AI-kundtjänst](${SITE_URL}/ai-kundtjanst): Vad Supportifier är och vilka delar av kundservicen plattformen automatiserar.`,
     `- [${FOUNDER.name}](${FOUNDER.url}): Vem som skriver artiklarna, med över 20 års erfarenhet av kundservice och kontaktcenter.`,
   ];
-  return `## ${CLUSTERS.kontaktcenter.label}\n\n${CLUSTERS.kontaktcenter.description}\n\n${lines.join("\n")}\n`;
+  const agenter = [
+    `- [AI-agenter](${SITE_URL}/ai-agenter): Vilka AI-agenter Successifier bygger (support, sälj, backoffice, kunskap), hur lång tid det tar och vad det kostar.`,
+    `- [Agentiska flöden](${SITE_URL}/agentiska-floden): Vad ett agentiskt flöde är, hur det skiljer sig från vanlig automation och hur Successifier bygger och styr det.`,
+    ...clusterLines("agenter"),
+  ];
+  return [
+    `## ${CLUSTERS.kontaktcenter.label}\n\n${CLUSTERS.kontaktcenter.description}\n\n${kontaktcenter.join("\n")}\n`,
+    `## ${CLUSTERS.agenter.label}\n\n${CLUSTERS.agenter.description}\n\n${agenter.join("\n")}\n`,
+  ].join("\n");
 }
 
 const HEADER = `# Successifier.se
 
-> Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter, automationsflöden och kundfunktioner, driver SEO och GEO med vår egen plattform SAMA och utvecklar AI-kundtjänstplattformen Supportifier (${SUPPORTIFIER.url}). Grundare: ${ORG.founderName}. Säte i Stockholmsområdet, uppdrag i Sverige, Norden och Europa.
+> Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter och agentiska flöden, automationsflöden och kundfunktioner, driver SEO och GEO med vår egen plattform SAMA och utvecklar AI-kundtjänstplattformen Supportifier (${SUPPORTIFIER.url}). Grundare: ${ORG.founderName}. Säte i Stockholmsområdet, uppdrag i Sverige, Norden och Europa.
 
-Successifier hjälper B2B- och SaaS-bolag att gå från AI-strategi till drift: kartläggning, pilot, integration och skalning av AI-agenter (3–6 veckor till produktion), contact center-automation (granskad automatik inom fyra veckor), Customer Success-program för minskad churn och högre NRR (30/60/90-dagarsplan), samt GEO/SEO och annonsering med SAMA. Fast pris för analys- och designfas (2–4 veckor), därefter månads- eller programupplägg. Allt innehåll på sajten är på svenska.
+Successifier hjälper B2B- och SaaS-bolag att gå från AI-strategi till drift: kartläggning, pilot, integration och skalning av AI-agenter och agentiska flöden där agenter driver hela processer i kundens system (3–6 veckor till produktion), contact center-automation (granskad automatik inom fyra veckor), Customer Success-program för minskad churn och högre NRR (30/60/90-dagarsplan), samt GEO/SEO och annonsering med SAMA. Fast pris för analys- och designfas (2–4 veckor), därefter månads- eller programupplägg. Allt innehåll på sajten är på svenska.
 `;
 
 const FACTS = `## Företagsfakta
@@ -82,8 +94,9 @@ export function buildLlmsTxt(): string {
 // Fullständig version: varje artikel i sin helhet som markdown, med metadata
 // i klartext så att AI-system kan citera med korrekt titel, datum och URL.
 export function buildLlmsFullTxt(): string {
-  // Kontaktcenter-klustret först, pillar-sidan överst, därefter övriga.
-  const cluster = getClusterPosts("kontaktcenter");
+  // Klustren först (kontaktcenter, sedan agenter), pillar-sidan överst i
+  // vart och ett, därefter övriga artiklar.
+  const cluster = [...getClusterPosts("kontaktcenter"), ...getClusterPosts("agenter")];
   const posts = [...cluster, ...getAllPosts().filter((p) => !p.cluster)];
   const articles = posts.map((p) => {
     const file = path.join(BLOG_DIR, `${p.slug}.md`);

@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/", "weekly", 1),
     page("/tjanster", "monthly", 0.9),
     page("/ai-agenter", "monthly", 0.9),
+    page("/agentiska-floden", "monthly", 0.9),
     page("/ai-konsult", "monthly", 0.9),
     page("/seo-geo", "monthly", 0.9),
     page("/customer-success", "monthly", 0.9),

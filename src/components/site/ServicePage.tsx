@@ -2,7 +2,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import BookingEmbed from "@/components/site/BookingEmbed";
-import { getPostsByCategory, type Category } from "@/lib/blog";
+import { getAllPosts, getPostsByCategory, type Category } from "@/lib/blog";
 import { ORG, SERVICE_PAGES, SITE_URL } from "@/lib/site";
 
 // Gemensam mall för tjänstesidorna (/ai-agenter, /seo-geo, /customer-success,
@@ -46,6 +46,12 @@ export interface ServiceFaq {
   a: string;
 }
 
+export interface ServiceLink {
+  href: string;
+  label: string;
+  text: string;
+}
+
 export interface ServicePageData {
   href: string;
   breadcrumb: string;
@@ -66,7 +72,12 @@ export interface ServicePageData {
   cases?: ServiceCase[];
   casesNote?: string;
   faqs: ServiceFaq[];
+  // Kontextlänkar till närliggande sidor och artiklar ("Hänger ihop med").
+  relatedHeading?: string;
+  related?: ServiceLink[];
   category: Category;
+  // Specifika artiklar för "Fördjupning"; annars de tre senaste i kategorin.
+  guideSlugs?: string[];
   guidesHeading: string;
   ctaHeading: string;
   ctaText: string;
@@ -146,7 +157,12 @@ export function buildServiceJsonLd(d: ServicePageData) {
 }
 
 export default function ServicePage({ data: d }: { data: ServicePageData }) {
-  const guidePosts = getPostsByCategory(d.category).slice(0, 3);
+  const guidePosts = d.guideSlugs
+    ? d.guideSlugs
+        .map((slug) => getAllPosts().find((p) => p.slug === slug))
+        .filter((p): p is NonNullable<typeof p> => Boolean(p))
+        .slice(0, 3)
+    : getPostsByCategory(d.category).slice(0, 3);
   const otherServices = SERVICE_PAGES.filter((s) => s.href !== d.href);
   const jsonLd = buildServiceJsonLd(d);
 
@@ -289,6 +305,31 @@ export default function ServicePage({ data: d }: { data: ServicePageData }) {
             </dl>
           </div>
         </section>
+
+        {/* Hänger ihop med */}
+        {d.related && d.related.length > 0 && (
+          <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={d.relatedHeading ?? "Hänger ihop med"}>
+            <div className="mx-auto max-w-[1200px] px-6 py-[88px] sm:px-10">
+              <Overline>Hänger ihop med</Overline>
+              <h2 className="text-[clamp(26px,3vw,36px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>
+                {d.relatedHeading ?? "Hänger ihop med"}
+              </h2>
+              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {d.related.map((r) => (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    className="rounded-[6px] p-5 no-underline transition-colors hover:bg-[color:var(--paper-alt)]"
+                    style={{ border: "1px solid var(--hairline)", background: "var(--paper)", color: "var(--ink)" }}
+                  >
+                    <div className="text-[17px] font-medium" style={serif}>{r.label} →</div>
+                    <p className="mt-1 text-[14px] leading-[1.55]" style={{ color: "var(--muted)" }}>{r.text}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Kundresultat */}
         {d.cases && d.cases.length > 0 && (

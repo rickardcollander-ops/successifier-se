@@ -132,6 +132,24 @@ const data: ServicePageData = {
     },
   ],
   casesNote: "Kundnamn och detaljer publiceras efter godkännande.",
+  relatedHeading: "AI-agenter i kundservicen",
+  related: [
+    {
+      href: "/agentiska-floden",
+      label: "Agentiska flöden",
+      text: "Hur AI-agenter tar ett ärende hela vägen från inkorg till löst, med människan i loopen.",
+    },
+    {
+      href: "/ai-agenter",
+      label: "AI-agenter",
+      text: "Support-, backoffice- och kunskapsagenter byggda mot era system.",
+    },
+    {
+      href: "/blog/agentiska-floden-i-kundservice-fran-inkorg-till-lost-arende",
+      label: "Från inkorg till löst ärende",
+      text: "Guide: så fungerar ett agentiskt flöde i kundservice, steg för steg.",
+    },
+  ],
   faqs: [
     {
       q: "Måste vi byta ärendesystem?",
@@ -144,6 +162,10 @@ const data: ServicePageData = {
     {
       q: "Hur skyddas kvaliteten?",
       a: "Trösklar för säkerhetspoäng per kategori, tydlig eskalering till människa, stickprov och QA på AI-genererade svar. Kategorier flyttas till högre automationsnivå först när mätetalen håller.",
+    },
+    {
+      q: "Använder ni AI-agenter i kontaktcentret?",
+      a: "Ja. På nivå 2 och 3 är det AI-agenter som driver ärendet: läser, hämtar order- och kunddata, svarar eller utför en åtgärd och uppdaterar ärendet. Vi kallar det ett agentiskt flöde. Allt loggas och osäkra ärenden går till en handläggare.",
     },
     {
       q: "Fungerar det för telefon och chatt också?",

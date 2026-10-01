@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "bygga AI-agenter Sverige",
     "AI-agent utveckling",
     "agentic AI Sverige",
+    "agentiska flöden",
     "AI-automation företag",
     "AI-konsult Stockholm",
   ],
@@ -70,8 +71,8 @@ const data: ServicePageData = {
       text: "Svarar ur er egen dokumentation, policys och historik, med källhänvisning. Används internt eller mot kund.",
     },
     {
-      title: "Orkestrering & integration",
-      text: "Flöden i n8n, Make, Zapier eller Power Automate och integrationer mot CRM, ERP, ärendesystem och interna API:er.",
+      title: "Agentiska flöden & orkestrering",
+      text: "Flera agenter som tillsammans driver en hel process, orkestrerade i n8n, Make, Zapier, Power Automate eller egen kod, med integrationer mot CRM, ERP, ärendesystem och interna API:er.",
     },
     {
       title: "Governance & drift",
@@ -118,6 +119,24 @@ const data: ServicePageData = {
       text: "LLM-baserade agenter med RAG mot egen data, orkestrering i n8n, Make, Zapier eller Power Automate och integrationer mot CRM, ERP, ärendesystem och interna API:er. Vi väljer modell och plattform efter era krav på säkerhet, kostnad och prestanda.",
     },
   ],
+  relatedHeading: "Från agent till agentiskt flöde",
+  related: [
+    {
+      href: "/agentiska-floden",
+      label: "Agentiska flöden",
+      text: "När agenterna driver hela processen, från inkommande ärende till löst ärende.",
+    },
+    {
+      href: "/contact-center-automation",
+      label: "Contact center-automation",
+      text: "AI-agenter i kundservice och kontaktcenter, med tre automationsnivåer.",
+    },
+    {
+      href: "/blog/sa-bygger-successifier-ai-agenter-metod-styrning-och-leverans",
+      label: "Så bygger vi AI-agenter",
+      text: "Vår metod från kartläggning till drift, och vad vi lärt oss av egna plattformar.",
+    },
+  ],
   cases: [
     {
       title: "SaaS-bolag, 80 anställda",
@@ -135,6 +154,10 @@ const data: ServicePageData = {
     {
       q: "Vad är skillnaden mellan en AI-agent och en chatbot?",
       a: "En chatbot svarar på frågor. En AI-agent planerar, använder verktyg och agerar självständigt mot ett mål, till exempel hämtar kunddata, uppdaterar CRM och skickar ett svar. Människan i loopen avgör var agenten får agera fritt.",
+    },
+    {
+      q: "Vad är ett agentiskt flöde?",
+      a: "En process där en eller flera AI-agenter driver arbetet från start till mål: tolkar det som kommer in, hämtar data, agerar i era system och lämnar över till en människa när det krävs. Agenten är byggstenen, flödet är det som ger affärsnyttan.",
     },
     {
       q: "Hur lång tid tar ett agentprojekt?",
@@ -158,6 +181,11 @@ const data: ServicePageData = {
     },
   ],
   category: "ai-konsult",
+  guideSlugs: [
+    "agentic-ai-for-foretag-vad-det-ar-nar-det-passar-och-hur-du-kommer-igang",
+    "agentiska-floden-sa-later-du-ai-agenter-driva-hela-processer",
+    "sa-bygger-successifier-ai-agenter-metod-styrning-och-leverans",
+  ],
   guidesHeading: "Läs vidare om AI-agenter och agentic AI",
   ctaHeading: "Låt oss kartlägga er första agent.",
   ctaText: "Boka ett strategisamtal på 30 minuter. Vi tittar på en process och visar konkret vad en AI-agent kan göra för er.",
