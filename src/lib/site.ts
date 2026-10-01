@@ -58,7 +58,7 @@ export const SERVICE_PAGES = [
   {
     href: "/agentiska-floden",
     label: "Agentiska flöden",
-    short: "AI-agenter som driver hela processer, från inkommande ärende till löst ärende, med människan i loopen.",
+    short: "AI-agenter i flöden anpassade efter era processer, från inkommande ärende till löst ärende, med människan i loopen.",
   },
   {
     href: "/ai-konsult",

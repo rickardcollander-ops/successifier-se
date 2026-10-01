@@ -193,4 +193,6 @@ Agenterna bygger på språkmodeller med verktygsanrop och RAG mot er egen data. 
 
 Agentiska flöden handlar om att låta AI ta ansvar för en process, inte bara hjälpa till i ett steg. Det kräver ett tydligt val av process, integrationer som håller och styrning som gör att ni vet vad agenten gör. Hur vi själva arbetar beskriver vi i [Så bygger Successifier AI-agenter](/blog/sa-bygger-successifier-ai-agenter-metod-styrning-och-leverans).
 
+Ett agentiskt flöde ska spegla hur just ni arbetar, därför bygger vi alltid flödet efter er process, era regler och era system i stället för att utgå från en färdig mall.
+
 Vill du veta vilken av era processer som passar först? Läs om hur vi bygger [agentiska flöden](/agentiska-floden) eller [boka ett strategisamtal](/agentiska-floden#kontakt), så skissar vi hur ett flöde skulle se ut hos er.

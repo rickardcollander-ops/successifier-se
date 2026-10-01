@@ -7,11 +7,12 @@ const PAGE_URL = "https://www.successifier.se/agentiska-floden";
 export const metadata: Metadata = {
   title: "Agentiska flöden: AI-agenter som driver hela processer",
   description:
-    "Successifier bygger agentiska flöden för svenska B2B- och SaaS-bolag: AI-agenter som tar en process från start till mål i era system, med orkestrering, loggning och människan i loopen där det behövs.",
+    "Successifier bygger agentiska flöden anpassade efter era processer: AI-agenter som tar en process från start till mål i era system, med orkestrering, loggning och människan i loopen där det behövs.",
   keywords: [
     "agentiska flöden",
     "agentiskt flöde",
     "agentic workflows",
+    "skräddarsydda AI-agenter",
     "agentisk automation",
     "AI-agenter processautomation",
     "multiagent-system företag",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Agentiska flöden: AI-agenter som driver hela processer · Successifier",
     description:
-      "Från inkommande ärende till löst ärende, från order till faktura. Vi bygger agentiska flöden i era egna system, med tydliga gränser och människan i loopen.",
+      "Från inkommande ärende till löst ärende, från order till faktura. Vi bygger agentiska flöden anpassade efter era processer, i era egna system, med tydliga gränser och människan i loopen.",
     url: PAGE_URL,
     siteName: "Successifier.se",
     locale: "sv_SE",
@@ -38,10 +39,10 @@ const data: ServicePageData = {
   href: "/agentiska-floden",
   breadcrumb: "Agentiska flöden",
   eyebrow: "Agentiska flöden · Bygg & drift",
-  title: "Agentiska flöden: hela processer, inte enskilda steg.",
+  title: "Agentiska flöden, byggda efter era processer.",
   lead:
-    "Ett agentiskt flöde låter AI-agenter driva en process från start till mål: läsa det som kommer in, hämta det som behövs ur era system, fatta beslut inom givna ramar, agera och lämna över till en människa när det krävs. Vi designar flödet, bygger agenterna och tar ansvar för driften.",
-  shortAnswer: `Ett agentiskt flöde är en process där en eller flera AI-agenter planerar, anropar system och agerar mot ett mål, i stället för att följa ett fast skript. Successifier AB (org.nr ${ORG.orgNr}) i Stockholm bygger agentiska flöden för svenska B2B- och SaaS-bolag, till exempel från inkommande kundärende till löst ärende eller från order till faktura. Första agenten går i produktion på 3–6 veckor, i kundens egen miljö, med loggning, behörighetsstyrning och människan i loopen.`,
+    "Ett agentiskt flöde låter AI-agenter driva en process från start till mål: läsa det som kommer in, hämta det som behövs ur era system, fatta beslut inom givna ramar, agera och lämna över till en människa när det krävs. Vi utgår från hur ni arbetar i dag, designar flödet efter era regler och system, bygger agenterna och tar ansvar för driften.",
+  shortAnswer: `Ett agentiskt flöde är en process där en eller flera AI-agenter planerar, anropar system och agerar mot ett mål, i stället för att följa ett fast skript. Successifier AB (org.nr ${ORG.orgNr}) i Stockholm bygger agentiska flöden som anpassas efter varje kunds egna processer, regler och system, för svenska B2B- och SaaS-bolag, till exempel från inkommande kundärende till löst ärende eller från order till faktura. Första agenten går i produktion på 3–6 veckor, i kundens egen miljö, med loggning, behörighetsstyrning och människan i loopen.`,
   serviceName: "Agentiska flöden och agentisk processautomation",
   serviceType: "Agentiska flöden / agentic workflow-utveckling",
   facts: [
@@ -51,7 +52,7 @@ const data: ServicePageData = {
   ],
   deliverablesHeading: "Flöden vi bygger",
   deliverablesIntro:
-    "Varje flöde har ett mätbart mål, en ägare hos er och tydliga regler för när agenten agerar själv och när en människa godkänner.",
+    "Inga färdiga mallar: varje flöde byggs efter er process, med ett mätbart mål, en ägare hos er och tydliga regler för när agenten agerar själv och när en människa godkänner. Exemplen nedan är utgångspunkter.",
   deliverables: [
     {
       title: "Ärende till löst ärende",
@@ -88,6 +89,11 @@ const data: ServicePageData = {
     { tag: "STEG 04", title: "Fler flöden", text: "Nästa process kopplas på samma grund: samma loggning, samma behörighetsmodell och ett team hos er som kan förvalta." },
   ],
   citable: [
+    {
+      id: "anpassade-floden",
+      heading: "Är flödena standardlösningar eller anpassade?",
+      text: "Anpassade. Successifier bygger varje agentiskt flöde efter kundens egna processer: hur arbetet går till i dag, vilka system som används, vilka regler och undantag som gäller och var en människa ska godkänna. Kartläggningen av processen är därför alltid första steget, och agenterna byggs mot kundens befintliga system i stället för att verksamheten anpassas efter ett verktyg.",
+    },
     {
       id: "vad-ar-agentiskt-flode",
       heading: "Vad är ett agentiskt flöde?",
@@ -154,6 +160,10 @@ const data: ServicePageData = {
     {
       q: "Vilka processer passar för agentiska flöden?",
       a: "Processer med hög volym, återkommande mönster och data i system ni redan har: kundärenden, orderändringar, fakturafrågor, leadhantering och intern routing. Processer där varje fall är unikt och kräver bedömning passar sämre.",
+    },
+    {
+      q: "Får vi en standardlösning eller något anpassat?",
+      a: "Något anpassat. Flödet byggs efter er process, era regler och era system. Exemplen på sidan är vanliga utgångspunkter, inte färdiga paket.",
     },
     {
       q: "Måste vi byta system?",
