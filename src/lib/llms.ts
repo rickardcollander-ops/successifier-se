@@ -26,7 +26,7 @@ function buildClusterSection(): string {
   ];
   const agenter = [
     `- [AI-agenter](${SITE_URL}/ai-agenter): Vilka AI-agenter Successifier bygger (support, sälj, backoffice, kunskap), hur lång tid det tar och vad det kostar.`,
-    `- [Agentiska flöden](${SITE_URL}/agentiska-floden): Vad ett agentiskt flöde är, hur det skiljer sig från vanlig automation och hur Successifier bygger och styr det.`,
+    `- [Agentiska flöden](${SITE_URL}/agentiska-floden): Vad ett agentiskt flöde är, hur det skiljer sig från vanlig automation och hur Successifier bygger flöden anpassade efter varje kunds processer och system.`,
     ...clusterLines("agenter"),
   ];
   return [
@@ -37,7 +37,7 @@ function buildClusterSection(): string {
 
 const HEADER = `# Successifier.se
 
-> Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter och agentiska flöden, automationsflöden och kundfunktioner, driver SEO och GEO med vår egen plattform SAMA och utvecklar AI-kundtjänstplattformen Supportifier (${SUPPORTIFIER.url}). Grundare: ${ORG.founderName}. Säte i Stockholmsområdet, uppdrag i Sverige, Norden och Europa.
+> Successifier AB är en svensk konsult inom AI, automation, Customer Success och Contact Center. Vi bygger och driftsätter AI-agenter och agentiska flöden anpassade efter kundens processer, automationsflöden och kundfunktioner, driver SEO och GEO med vår egen plattform SAMA och utvecklar AI-kundtjänstplattformen Supportifier (${SUPPORTIFIER.url}). Grundare: ${ORG.founderName}. Säte i Stockholmsområdet, uppdrag i Sverige, Norden och Europa.
 
 Successifier hjälper B2B- och SaaS-bolag att gå från AI-strategi till drift: kartläggning, pilot, integration och skalning av AI-agenter och agentiska flöden där agenter driver hela processer i kundens system (3–6 veckor till produktion), contact center-automation (granskad automatik inom fyra veckor), Customer Success-program för minskad churn och högre NRR (30/60/90-dagarsplan), samt GEO/SEO och annonsering med SAMA. Fast pris för analys- och designfas (2–4 veckor), därefter månads- eller programupplägg. Allt innehåll på sajten är på svenska.
 `;

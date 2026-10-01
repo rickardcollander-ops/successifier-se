@@ -25,7 +25,7 @@ const sv = {
     cta1: "Boka strategisamtal (30 min)",
     cta2: "Se hur vi jobbar",
     bullets: [
-      "AI-agenter och agentiska flöden som driver hela processer i era system, från inkommande ärende till löst ärende.",
+      "AI-agenter och agentiska flöden anpassade efter era processer, som driver arbetet i era system från inkommande ärende till löst ärende.",
       "AI-strategi och AI-verktyg med mätbar effekt i drift, sälj och marknad.",
       "Automationsflöden som tar bort manuellt arbete och gör verksamheten skalbar.",
       "AI-driven SEO och marknadsföring på Google, LinkedIn och Meta.",
@@ -196,7 +196,7 @@ const sv = {
       },
       {
         heading: "Vad gör Successifier med AI-agenter?",
-        text: "Vi bygger och driftsätter AI-agenter och agentiska flöden, där agenter driver en hel process i kundens egna system: läser det som kommer in, hämtar data, agerar inom givna ramar och lämnar över till en människa när det krävs. Typiska flöden är kundärenden, order- och fakturafrågor, leadhantering och intern routing. Allt loggas och kunden bestämmer per steg var agenten agerar fritt.",
+        text: "Vi bygger och driftsätter AI-agenter och agentiska flöden anpassade efter kundens egna processer, där agenter driver en hel process i kundens system: läser det som kommer in, hämtar data, agerar inom givna ramar och lämnar över till en människa när det krävs. Typiska flöden är kundärenden, order- och fakturafrågor, leadhantering och intern routing. Allt loggas och kunden bestämmer per steg var agenten agerar fritt.",
       },
       {
         heading: "Vad kostar det?",
@@ -333,7 +333,7 @@ const en: typeof sv = {
     cta1: "Book strategy call (30 min)",
     cta2: "See how we work",
     bullets: [
-      "AI agents and agentic workflows that run entire processes in your systems, from incoming case to resolved case.",
+      "AI agents and agentic workflows tailored to your processes, running the work in your systems from incoming case to resolved case.",
       "AI strategy and AI tools with measurable impact across operations, sales, and marketing.",
       "Automation flows that eliminate manual work and make the business scalable.",
       "AI-driven SEO and marketing on Google, LinkedIn, and Meta.",
@@ -504,7 +504,7 @@ const en: typeof sv = {
       },
       {
         heading: "What does Successifier do with AI agents?",
-        text: "We build and deploy AI agents and agentic workflows, where agents run an entire process in the client's own systems: reading what comes in, fetching data, acting within set boundaries and handing over to a person when needed. Typical workflows are customer cases, order and invoice questions, lead handling and internal routing. Everything is logged, and the client decides per step where the agent may act on its own.",
+        text: "We build and deploy AI agents and agentic workflows tailored to the client's own processes, where agents run an entire process in the client's systems: reading what comes in, fetching data, acting within set boundaries and handing over to a person when needed. Typical workflows are customer cases, order and invoice questions, lead handling and internal routing. Everything is logged, and the client decides per step where the agent may act on its own.",
       },
       {
         heading: "What does it cost?",

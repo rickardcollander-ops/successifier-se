@@ -124,7 +124,7 @@ const data: ServicePageData = {
     {
       href: "/agentiska-floden",
       label: "Agentiska flöden",
-      text: "När agenterna driver hela processen, från inkommande ärende till löst ärende.",
+      text: "När agenterna driver hela processen, i flöden anpassade efter hur ni arbetar.",
     },
     {
       href: "/contact-center-automation",
