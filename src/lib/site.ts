@@ -56,6 +56,11 @@ export const SERVICE_PAGES = [
     short: "Vi bygger och driftsätter AI-agenter i era system, 3–6 veckor till produktion.",
   },
   {
+    href: "/agentiska-floden",
+    label: "Agentiska flöden",
+    short: "AI-agenter som driver hela processer, från inkommande ärende till löst ärende, med människan i loopen.",
+  },
+  {
     href: "/ai-konsult",
     label: "AI-konsult & agentic AI",
     short: "Kartläggning, pilot, integration och skalning av agentic AI med människan i loopen.",
@@ -91,16 +96,17 @@ export function orgSameAs(): string[] {
 // kodändringar, byggen eller deployer. Bing och Google slutar lita på lastmod
 // som ändras i klump. Bloggartiklarnas datum ligger i respektive frontmatter.
 export const PAGE_UPDATED: Record<string, string> = {
-  "/": "2026-09-17",
-  "/tjanster": "2026-09-17",
-  "/ai-agenter": "2026-09-17",
+  "/": "2026-10-01",
+  "/tjanster": "2026-10-01",
+  "/ai-agenter": "2026-10-01",
+  "/agentiska-floden": "2026-10-01",
   "/ai-konsult": "2026-06-24",
   "/seo-geo": "2026-09-17",
   "/customer-success": "2026-09-17",
-  "/contact-center-automation": "2026-09-17",
+  "/contact-center-automation": "2026-10-01",
   "/ai-kundtjanst": "2026-09-17",
-  "/en": "2026-09-17",
-  "/om/rickard-collander": "2026-09-22",
+  "/en": "2026-10-01",
+  "/om/rickard-collander": "2026-10-01",
 };
 
 // Grundaren som författare och expert (E-E-A-T). Används av Person-schemat i
@@ -124,6 +130,8 @@ export const FOUNDER = {
     "AI i kundservice",
     "AI-automation",
     "Agentic AI",
+    "AI-agenter",
+    "Agentiska flöden",
     "Customer engagement center",
     "Generative Engine Optimization",
   ],

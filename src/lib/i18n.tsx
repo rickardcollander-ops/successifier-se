@@ -16,7 +16,7 @@ const sv = {
   },
   hero: {
     badge1: "Baserat i Sverige · Internationella uppdrag",
-    badge2: "AI-konsulting · Bygg & implementering",
+    badge2: "AI-konsulting · AI-agenter · Bygg & implementering",
     // Primär H1:
     heading: "AI-konsulting som bygger och driftsätter, inte PowerPoint.",
     // Variant (kommenterad): "Vi bygger AI:n. Vi driftsätter den. Sen driver ni vidare."
@@ -25,6 +25,7 @@ const sv = {
     cta1: "Boka strategisamtal (30 min)",
     cta2: "Se hur vi jobbar",
     bullets: [
+      "AI-agenter och agentiska flöden som driver hela processer i era system, från inkommande ärende till löst ärende.",
       "AI-strategi och AI-verktyg med mätbar effekt i drift, sälj och marknad.",
       "Automationsflöden som tar bort manuellt arbete och gör verksamheten skalbar.",
       "AI-driven SEO och marknadsföring på Google, LinkedIn och Meta.",
@@ -94,10 +95,10 @@ const sv = {
     p3ResultLabel: "Utfall",
     p3Result: "AI i faktisk drift. Snabbare beslut, lägre kostnad, mätbar effekt.",
     p4Num: "04",
-    p4Title: "Automation",
-    p4Sub: "Skalbar drift utan linjär headcount-tillväxt",
+    p4Title: "AI-agenter & agentiska flöden",
+    p4Sub: "Processer som drivs av AI-agenter, utan linjär headcount-tillväxt",
     p4FocusLabel: "Leverans",
-    p4Focus: ["Processkartläggning och automation roadmap", "Workflow-automation (n8n, Make, Zapier, Power Automate)", "Integrationer: CRM, CS, Support, BI och marknad", "AI + automation: triggers, signaler och autonoma flöden"],
+    p4Focus: ["Processkartläggning och agent-roadmap", "AI-agenter för support, sälj och backoffice", "Agentiska flöden och orkestrering (n8n, Make, Zapier, Power Automate)", "Integrationer: CRM, ERP, ärendesystem och BI", "Loggning, behörigheter och människan i loopen"],
     p4ResultLabel: "Utfall",
     p4Result: "Lägre operativ kostnad. Färre fel. Skalbar leverans.",
     p5Num: "05",
@@ -159,8 +160,8 @@ const sv = {
     r1Text: "Strukturerad risk- och renewalmodell med tydliga triggers, ägare och uppföljning.",
     r2Title: "Kortare time-to-value",
     r2Text: "Playbooks och milestones som gör kundens värde tydligt och repeterbart från dag ett.",
-    r3Title: "AI och automation i drift",
-    r3Text: "Konkreta verktyg och flöden som tar bort manuellt arbete och frigör kapacitet.",
+    r3Title: "AI-agenter i drift",
+    r3Text: "Agentiska flöden och verktyg som tar bort manuellt arbete och frigör kapacitet, med människan i loopen.",
     r4Title: "Pipeline från Google, LinkedIn & Meta",
     r4Text: "AI-driven SEO och kampanjstyrning drivet av SAMA, från sökord till publicerat content.",
     r5Title: "Högre leveransprecision",
@@ -192,6 +193,10 @@ const sv = {
       {
         heading: "Hur snabbt går det?",
         text: "Första workshop inom 1–2 veckor. AI-agenter går från start till produktion på 3–6 veckor: två veckors kartläggning och tre till fyra veckors pilot. Contact center-automation når granskad automatik inom fyra veckor. Customer Success-program följer en 30/60/90-dagarsplan.",
+      },
+      {
+        heading: "Vad gör Successifier med AI-agenter?",
+        text: "Vi bygger och driftsätter AI-agenter och agentiska flöden, där agenter driver en hel process i kundens egna system: läser det som kommer in, hämtar data, agerar inom givna ramar och lämnar över till en människa när det krävs. Typiska flöden är kundärenden, order- och fakturafrågor, leadhantering och intern routing. Allt loggas och kunden bestämmer per steg var agenten agerar fritt.",
       },
       {
         heading: "Vad kostar det?",
@@ -319,7 +324,7 @@ const en: typeof sv = {
   },
   hero: {
     badge1: "Based in Sweden · Working internationally",
-    badge2: "AI consulting · Build & implement",
+    badge2: "AI consulting · AI agents · Build & implement",
     // Primary H1:
     heading: "AI consulting that builds and deploys, not PowerPoint.",
     // Variant (commented): "We build the AI. We deploy it. Then you run it."
@@ -328,6 +333,7 @@ const en: typeof sv = {
     cta1: "Book strategy call (30 min)",
     cta2: "See how we work",
     bullets: [
+      "AI agents and agentic workflows that run entire processes in your systems, from incoming case to resolved case.",
       "AI strategy and AI tools with measurable impact across operations, sales, and marketing.",
       "Automation flows that eliminate manual work and make the business scalable.",
       "AI-driven SEO and marketing on Google, LinkedIn, and Meta.",
@@ -397,10 +403,10 @@ const en: typeof sv = {
     p3ResultLabel: "Outcome",
     p3Result: "AI in actual production. Faster decisions, lower cost, measurable impact.",
     p4Num: "04",
-    p4Title: "Automation",
-    p4Sub: "Scalable operations without linear headcount growth",
+    p4Title: "AI Agents & Agentic Workflows",
+    p4Sub: "Processes run by AI agents, without linear headcount growth",
     p4FocusLabel: "Deliverables",
-    p4Focus: ["Process mapping and automation roadmap", "Workflow automation (n8n, Make, Zapier, Power Automate)", "Integrations: CRM, CS, Support, BI, and marketing", "AI + automation: triggers, signals, and autonomous flows"],
+    p4Focus: ["Process mapping and agent roadmap", "AI agents for support, sales, and back office", "Agentic workflows and orchestration (n8n, Make, Zapier, Power Automate)", "Integrations: CRM, ERP, ticketing, and BI", "Logging, permissions, and human in the loop"],
     p4ResultLabel: "Outcome",
     p4Result: "Lower operational cost. Fewer errors. Scalable delivery.",
     p5Num: "05",
@@ -462,8 +468,8 @@ const en: typeof sv = {
     r1Text: "Structured risk and renewal model with clear triggers, ownership, and follow-up.",
     r2Title: "Shorter time-to-value",
     r2Text: "Playbooks and milestones that make customer value clear and repeatable from day one.",
-    r3Title: "AI and automation in production",
-    r3Text: "Concrete tools and flows that eliminate manual work and free up capacity.",
+    r3Title: "AI agents in production",
+    r3Text: "Agentic workflows and tools that eliminate manual work and free up capacity, with a human in the loop.",
     r4Title: "Pipeline from Google, LinkedIn & Meta",
     r4Text: "AI-driven SEO and campaign management powered by SAMA, from keywords to published content.",
     r5Title: "Higher delivery precision",
@@ -495,6 +501,10 @@ const en: typeof sv = {
       {
         heading: "How fast is it?",
         text: "First workshop within 1–2 weeks. AI agents go from kickoff to production in 3–6 weeks: two weeks of mapping and three to four weeks of pilot. Contact center automation reaches reviewed automation within four weeks. Customer Success programs follow a 30/60/90-day plan.",
+      },
+      {
+        heading: "What does Successifier do with AI agents?",
+        text: "We build and deploy AI agents and agentic workflows, where agents run an entire process in the client's own systems: reading what comes in, fetching data, acting within set boundaries and handing over to a person when needed. Typical workflows are customer cases, order and invoice questions, lead handling and internal routing. Everything is logged, and the client decides per step where the agent may act on its own.",
       },
       {
         heading: "What does it cost?",

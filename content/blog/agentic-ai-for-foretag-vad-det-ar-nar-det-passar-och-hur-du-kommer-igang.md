@@ -3,11 +3,14 @@ title: "Agentic AI för företag: vad det är, när det passar och hur du kommer
 metaTitle: "Agentic AI för företag: vad det är och hur du börjar"
 slug: "agentic-ai-for-foretag-vad-det-ar-nar-det-passar-och-hur-du-kommer-igang"
 date: 2026-09-14T08:00:00.000Z
-updated: 2026-09-14T08:00:00.000Z
+updated: 2026-10-01T08:00:00.000Z
 excerpt: "Agentic AI är AI-agenter som planerar, använder verktyg och agerar mot mål i era system. Här får du definition, användningsfall och en konkret införandeplan."
 summary: "Agentic AI är AI-agenter som planerar, anropar system och agerar mot ett mål, med människan i loopen där det behövs. Det passar processer med hög volym, strukturerad data och tydliga regler, som ärendehantering, orderhantering och fakturaflöden. Med två veckors kartläggning och en pilot på tre till fyra veckor är en första agent i produktion inom tre till sex veckor."
 language: "sv"
 category: "ai-konsult"
+cluster: "agenter"
+pillar: true
+answers: "Vad agentic AI och AI-agenter är, hur de skiljer sig från chatbotar och RPA, när de passar och hur ett företag går från kartläggning till en agent i produktion."
 tags:
   - "Agentic AI"
 keywords:
@@ -225,5 +228,7 @@ De flesta moderna system: CRM, ERP, ärendesystem, databaser och interna API:er 
 ## Nästa steg {#nasta-steg}
 
 Agentic AI är inte en fråga om ifall, utan om vilken process ni börjar med och hur ni styr den. Det bästa första steget är en kartläggning som visar var en agent ger störst effekt, vad den kräver av era system och vad ni kan förvänta er i mätbara termer.
+
+När ni har en första agent i drift är nästa steg att låta den driva en hel process. Hur det fungerar beskriver vi i [Agentiska flöden: så låter du AI-agenter driva hela processer](/blog/agentiska-floden-sa-later-du-ai-agenter-driva-hela-processer), och hur vi själva arbetar i [Så bygger Successifier AI-agenter](/blog/sa-bygger-successifier-ai-agenter-metod-styrning-och-leverans).
 
 Vill du veta var ni ska börja? [Boka en kostnadsfri kartläggning](/ai-konsult#kontakt) så går vi igenom era processer, prioriterar de bästa kandidaterna och ger dig ett konkret beslutsunderlag inom två veckor.

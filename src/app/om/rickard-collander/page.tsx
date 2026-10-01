@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 export default function RickardCollanderPage() {
   const posts = getAllPosts();
   const clusterPosts = getClusterPosts("kontaktcenter");
-  const otherPosts = posts.filter((p) => !clusterPosts.some((c) => c.slug === p.slug));
+  const agentPosts = getClusterPosts("agenter");
+  const otherPosts = posts.filter((p) => !p.cluster);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -117,6 +118,20 @@ export default function RickardCollanderPage() {
             <h2 id="kontaktcenter" className="text-[24px] font-medium tracking-[-0.01em]" style={serif}>{CLUSTERS.kontaktcenter.label}</h2>
             <ul className="mt-4 space-y-3">
               {clusterPosts.map((p) => (
+                <li key={p.slug} className="text-[15px] leading-[1.55]">
+                  <Link href={`/blog/${p.slug}`} className="font-medium no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>{p.title}</Link>
+                  {p.answers && <span style={{ color: "var(--muted)" }}> – {p.answers}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {agentPosts.length > 0 && (
+          <section className="mt-12" aria-labelledby="agenter">
+            <h2 id="agenter" className="text-[24px] font-medium tracking-[-0.01em]" style={serif}>{CLUSTERS.agenter.label}</h2>
+            <ul className="mt-4 space-y-3">
+              {agentPosts.map((p) => (
                 <li key={p.slug} className="text-[15px] leading-[1.55]">
                   <Link href={`/blog/${p.slug}`} className="font-medium no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid var(--hairline-strong)" }}>{p.title}</Link>
                   {p.answers && <span style={{ color: "var(--muted)" }}> – {p.answers}</span>}
