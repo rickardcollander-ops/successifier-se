@@ -47,6 +47,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang",
         statusCode: 301,
       },
+      // Bilderna i /public är konverterade från PNG till WebP (okt 2026).
+      {
+        source: "/:name(Content|Insights|agentic-ai|ai-content|delad|ida-rosell|person-vid-skarm|shack|skrivbord|tre-skarmar).png",
+        destination: "/:name.webp",
+        statusCode: 301,
+      },
       // Artiklar som konkurrerade om samma sökning är sammanslagna (okt 2026).
       {
         source: "/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag",

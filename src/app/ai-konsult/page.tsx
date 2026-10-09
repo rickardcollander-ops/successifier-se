@@ -8,8 +8,8 @@ import { getAllPosts, clusterForSlug } from "@/lib/blog";
 import { publicAssetExists } from "@/lib/publicAsset";
 
 // Riktiga bilder i /public. ImageSlot växlar till next/image när de finns.
-const FEATURE_IMG = "/agentic-ai.png";
-const PORTRAIT_IMG = "/person-vid-skarm.png";
+const FEATURE_IMG = "/agentic-ai.webp";
+const PORTRAIT_IMG = "/person-vid-skarm.webp";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -457,7 +457,7 @@ export default function AiKonsultPage() {
               style={{ border: "1px solid rgba(242,238,230,.18)" }}
             >
               <Image
-                src="/shack.png"
+                src="/shack.webp"
                 alt="Schackbräde med AI-formade pjäser — agentic AI som strategiskt beslutsfattande"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

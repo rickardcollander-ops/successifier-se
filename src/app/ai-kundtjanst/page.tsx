@@ -375,7 +375,7 @@ export default function AiKundtjanstPage() {
               style={{ border: "1px solid var(--hairline)" }}
             >
               <Image
-                src="/delad.png"
+                src="/delad.webp"
                 alt="Före och efter: från manuell ärendehantering med papper och anteckningar till ett samlat AI-drivet dashboard"
                 fill
                 sizes="(max-width: 1280px) 100vw, 1200px"

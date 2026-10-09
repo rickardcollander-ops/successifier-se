@@ -115,7 +115,7 @@ export default function DoldAdressCasePage() {
         </blockquote>
         <figcaption className="mt-6 flex items-center gap-4">
           <div className="h-14 w-14 overflow-hidden rounded-full" style={{ border: "1px solid var(--hairline)" }}>
-            <Image src="/ida-rosell.png" alt={PERSON} width={112} height={112} className="h-full w-full object-cover" />
+            <Image src="/ida-rosell.webp" alt={PERSON} width={112} height={112} className="h-full w-full object-cover" />
           </div>
           <div>
             <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>{PERSON}</div>

@@ -177,7 +177,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               style={{ border: "1px solid var(--hairline)" }}
             >
               <Image
-                src="/tre-skarmar.png"
+                src="/tre-skarmar.webp"
                 alt={t.locale === "sv"
                   ? "Strateg vid tre skärmar med dashboards, med Stockholms skyline i bakgrunden"
                   : "Strategist at three screens with dashboards, Stockholm skyline in the background"}
@@ -322,7 +322,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 <div className="space-y-4">
                   <div className="relative aspect-[16/9] overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/ai-content.png"
+                      src="/ai-content.webp"
                       alt={t.locale === "sv" ? "SAMA: AI Content Hub med AI-omnämnandepoäng, sökordstrend, SEO-hälsa och content-pipeline" : "SAMA: AI Content Hub with AI mention score, keyword trend, SEO health and content pipeline"}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -331,7 +331,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/Insights.png"
+                      src="/Insights.webp"
                       alt={t.locale === "sv" ? "SAMA Insights-dashboard, exempel på siteanalys" : "SAMA Insights dashboard, example site audit"}
                       width={2646}
                       height={1554}
@@ -340,7 +340,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/Content.png"
+                      src="/Content.webp"
                       alt={t.locale === "sv" ? "SAMA Content-dashboard, AI-driven content-pipeline" : "SAMA Content dashboard, AI-driven content pipeline"}
                       width={2750}
                       height={1752}
@@ -489,7 +489,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               </blockquote>
               <figcaption className="mt-9 flex items-center justify-center gap-4">
                 <div className="h-14 w-14 overflow-hidden rounded-full" style={{ border: "1px solid var(--hairline)" }}>
-                  <Image src="/ida-rosell.png" alt={t.testimonial.name} width={320} height={320} className="h-full w-full object-cover" />
+                  <Image src="/ida-rosell.webp" alt={t.testimonial.name} width={320} height={320} className="h-full w-full object-cover" />
                 </div>
                 <div className="text-left">
                   <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>{t.testimonial.name}</div>
@@ -549,7 +549,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   style={{ border: "1px solid var(--hairline)" }}
                 >
                   <Image
-                    src="/skrivbord.png"
+                    src="/skrivbord.webp"
                     alt={t.locale === "sv" ? "Skrivbord med projektplan och bärbar dator som visar en tillväxtkurva" : "Desk with project plan and laptop showing a growth curve"}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
