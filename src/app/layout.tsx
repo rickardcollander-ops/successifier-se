@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Spectral, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import ConsentBanner from "@/components/site/ConsentBanner";
 import { ORG, SERVICE_PAGES, SUPPORTIFIER, founderPersonSchema, orgSameAs } from "@/lib/site";
 
 const spectral = Spectral({
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s · Successifier",
   },
   description:
-    "Successifier är en svensk konsult inom AI, automation och Customer Success. Vi bygger och driftsätter AI-agenter, AI-kundtjänst och automationsflöden, och driver SEO, GEO och marknadsföring med vår egen plattform SAMA.",
+    "Svensk AI-konsult som bygger och driftsätter AI-agenter, AI-kundtjänst och automationsflöden, och driver Customer Success, SEO och GEO för B2B-bolag.",
   keywords: [
     "AI-konsult",
     "AI-konsult Sverige",
@@ -142,6 +143,7 @@ export default function RootLayout({
         brand: [
           { "@type": "Brand", name: "Supportifier", url: SUPPORTIFIER.url },
           { "@type": "Brand", name: "SAMA", url: "https://www.successifier.se/seo-geo" },
+          { "@type": "Brand", name: "Successifier Customer Success-plattform", url: ORG.comSite },
         ],
         owns: [
           {
@@ -226,8 +228,48 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
+            });
+            try {
+              if (localStorage.getItem('successifier-consent') === 'granted') {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+              }
+            } catch (e) {}
             gtag('js', new Date());
             gtag('config', 'G-9ZMLDNWJQN');
+          `}
+        </Script>
+        {/* Konverteringar: bokning, e-post, telefon och Supportifier skickas som
+            GA4-händelser. Markera generate_lead som nyckelhändelse i GA4. */}
+        <Script id="conversion-events" strategy="afterInteractive">
+          {`
+            (function () {
+              function send(name, params) { if (window.gtag) window.gtag('event', name, params); }
+              document.addEventListener('click', function (e) {
+                var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+                if (!a) return;
+                var href = a.getAttribute('href') || '';
+                var page = location.pathname;
+                if (href.indexOf('mailto:') === 0) send('generate_lead', { method: 'email', page_path: page });
+                else if (href.indexOf('tel:') === 0) send('generate_lead', { method: 'phone', page_path: page });
+                else if (href.indexOf('calendar.google.com') !== -1) send('generate_lead', { method: 'booking_link', page_path: page });
+                else if (href.indexOf('supportifier.se') !== -1) send('click_supportifier', { link_url: href, page_path: page });
+              }, true);
+              // Klick i den inbäddade bokningskalendern syns som att fönstret
+              // tappar fokus till iframen.
+              window.addEventListener('blur', function () {
+                var el = document.activeElement;
+                if (el && el.tagName === 'IFRAME' && (el.getAttribute('src') || '').indexOf('calendar.google.com') !== -1) {
+                  send('generate_lead', { method: 'booking_embed', page_path: location.pathname });
+                }
+              });
+            })();
           `}
         </Script>
       </head>
@@ -246,6 +288,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <ConsentBanner />
       </body>
     </html>
   );

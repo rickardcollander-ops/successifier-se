@@ -33,6 +33,9 @@ export const ORG = {
   // Microsofts partnerkatalog (marketplace.microsoft.com/…/partner-dir) här.
   // Tom sträng = utelämnas ur sameAs tills länken finns.
   microsoftPartner: "",
+  // Engelskspråkiga sajten för Customer Success-plattformen, samma bolag.
+  // Den länkar tillbaka hit och till Supportifier.
+  comSite: "https://www.successifier.com",
 } as const;
 
 export const SUPPORTIFIER = {
@@ -88,7 +91,7 @@ export const SERVICE_PAGES = [
 ] as const;
 
 export function orgSameAs(): string[] {
-  return [ORG.linkedInCompany, ORG.linkedInFounder, ORG.allabolag, ORG.microsoftPartner].filter(Boolean);
+  return [ORG.linkedInCompany, ORG.linkedInFounder, ORG.allabolag, ORG.comSite, ORG.microsoftPartner].filter(Boolean);
 }
 
 // Senaste faktiska innehållsändring per statisk sida (lastmod i sitemap.xml).
@@ -96,17 +99,21 @@ export function orgSameAs(): string[] {
 // kodändringar, byggen eller deployer. Bing och Google slutar lita på lastmod
 // som ändras i klump. Bloggartiklarnas datum ligger i respektive frontmatter.
 export const PAGE_UPDATED: Record<string, string> = {
-  "/": "2026-10-01",
-  "/tjanster": "2026-10-01",
-  "/ai-agenter": "2026-10-01",
-  "/agentiska-floden": "2026-10-01",
-  "/ai-konsult": "2026-06-24",
-  "/seo-geo": "2026-09-17",
-  "/customer-success": "2026-09-17",
-  "/contact-center-automation": "2026-10-01",
-  "/ai-kundtjanst": "2026-09-17",
-  "/en": "2026-10-01",
+  "/": "2026-10-09",
+  "/tjanster": "2026-10-09",
+  "/ai-agenter": "2026-10-09",
+  "/agentiska-floden": "2026-10-09",
+  "/ai-konsult": "2026-10-09",
+  "/seo-geo": "2026-10-09",
+  "/customer-success": "2026-10-09",
+  "/contact-center-automation": "2026-10-09",
+  "/ai-kundtjanst": "2026-10-09",
+  "/en": "2026-10-09",
   "/om/rickard-collander": "2026-10-01",
+  "/om": "2026-10-09",
+  "/kontakt": "2026-10-09",
+  "/kundcase/dold-adress": "2026-10-09",
+  "/integritetspolicy": "2026-10-09",
 };
 
 // Grundaren som författare och expert (E-E-A-T). Används av Person-schemat i

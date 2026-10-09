@@ -3,8 +3,8 @@ title: "GEO-checklista för B2B-sajter 2026: llms.txt, schema och citerbarhet"
 metaTitle: "GEO-checklista 2026: llms.txt, schema & citerbarhet"
 slug: "geo-checklista-for-b2b-sajter-2026-llms-txt-schema-och-citerbarhet"
 date: 2026-09-15T08:00:00.000Z
-updated: 2026-09-17T08:00:00.000Z
-excerpt: "GEO-checklista i 12 punkter för svenska B2B-sajter, uppdelad i dokumenterade krav, beprövade arbetsmetoder och hypoteser som llms.txt. Med källor till Googles egen vägledning."
+updated: 2026-10-09T08:00:00.000Z
+excerpt: "GEO-checklista i 12 punkter för svenska B2B-sajter: dokumenterade krav, beprövade metoder och hypoteser som llms.txt, med källor."
 summary: "För att bli citerad av ChatGPT, Perplexity och Google AI behöver en B2B-sajt släppa in AI-crawlers i robots.txt, vara indexerad i Google och Bing, ha serverrenderat innehåll och konsekvent strukturerad data (Organization, Person, Article, FAQPage). Det är de dokumenterade kraven. Kort svar högst upp, rubriker som frågor och siffror med källa är arbetsmetoder som gör texten citerbar. llms.txt är en hypotes: Google använder den inte, kostnaden är låg, men förvänta dig ingen mätbar effekt av filen ensam. Ingen särskild AI-märkning krävs."
 language: "sv"
 category: "marknad"
@@ -42,11 +42,11 @@ Källor: [Googles vägledning om AI-funktioner i sök](https://developers.google
 
 ## Innehåll
 
-- [Så använder du checklistan](#sa-anvander-du-checklistan)
-- [Crawlbarhet: släpp in rätt AI-bottar](#crawlbarhet-ai-bottar)
+- [Hur använder du checklistan?](#sa-anvander-du-checklistan)
+- [Hur släpper du in rätt AI-bottar?](#crawlbarhet-ai-bottar)
 - [llms.txt och llms-full.txt](#llms-txt)
 - [Strukturerad data som bygger entiteter](#strukturerad-data)
-- [Citerbart innehåll](#citerbart-innehall)
+- [Vad gör innehåll citerbart?](#citerbart-innehall)
 - [Entitetskonsekvens och färskhet](#entitetskonsekvens-och-farskhet)
 - [Teknisk grund och mätning](#teknik-och-matning)
 - [Nästa steg](#nasta-steg)
@@ -62,7 +62,7 @@ Källor: [Googles vägledning om AI-funktioner i sök](https://developers.google
 | Citerbarhet är ett format | Kort svar högst upp, en definition per sida, frågor som rubriker och tabeller med siffror gör texten möjlig att lyfta ut i ett AI-svar. | Arbetsmetod |
 | Mät per sökmotor | AI-synlighet syns inte i vanlig rank-tracking. Använd Search Consoles rapport för generativ AI, Bings AI Performance, prompttester och referral-data. | Arbetsmetod |
 
-## Så använder du checklistan {#sa-anvander-du-checklistan}
+## Hur använder du checklistan? {#sa-anvander-du-checklistan}
 
 Gå igenom punkterna i ordning. De första sex avgör om AI-systemen alls kan läsa och förstå sajten; de sista sex avgör om de väljer att citera dig. Kolumnen "kategori" anger om punkten är ett dokumenterat krav, en arbetsmetod eller en hypotes, och kolumnen "verifiera med" hur du kontrollerar att punkten faktiskt är klar, inte bara beställd.
 
@@ -81,9 +81,9 @@ Gå igenom punkterna i ordning. De första sex avgör om AI-systemen alls kan l�
 | 11. Teknisk grund | Canonical, hreflang, Core Web Vitals, serverrenderad HTML, alt-texter | Krav | Visa sidkälla utan JavaScript |
 | 12. Mätning | Search Console (generativ AI), Bing AI Performance, prompttester, GA4-referral | Arbetsmetod | Månadsrapport per sökmotor |
 
-## Crawlbarhet: släpp in rätt AI-bottar {#crawlbarhet-ai-bottar}
+## Hur släpper du in rätt AI-bottar? {#crawlbarhet-ai-bottar}
 
-Det här är punkten där flest sajter faller. Många CMS-mallar, säkerhetsplugin och CDN-regler blockerar okända user agents som standard, och AI-bottar räknas ofta som okända.
+Släpp in AI-bolagens sökcrawlers med explicita regler i robots.txt och se till att sajten finns i Googles och Bings index. Det är punkten där flest sajter faller. Många CMS-mallar, säkerhetsplugin och CDN-regler blockerar okända user agents som standard, och AI-bottar räknas ofta som okända.
 
 ### 1. Skriv explicita regler för AI-crawlers i robots.txt
 
@@ -199,9 +199,9 @@ BreadcrumbList talar om var sidan hör hemma i sajtens hierarki, vilket hjälper
 
 Den detalj som oftast missas är `@id`. Ge Organization ett fast id, till exempel `https://www.dindoman.se/#organization`, och varje författare ett eget, till exempel `https://www.dindoman.se/#rickard-collander`. Referera sedan till samma id från `publisher`, `author` och `worksFor` på alla sidor. Då blir företaget och personerna en entitet var, inte tjugo halvt överlappande kopior.
 
-## Citerbart innehåll {#citerbart-innehall}
+## Vad gör innehåll citerbart? {#citerbart-innehall}
 
-När tekniken är på plats avgör formatet. AI-system lyfter helst ut text som redan är ett svar: kort, avgränsad och utan att läsaren behöver kontext från tre stycken innan.
+Citerbart innehåll är text som redan är ett svar: ett kort svar överst, Q&A-sektioner, tabeller och rubriker som frågor. När tekniken är på plats avgör formatet. AI-system lyfter helst ut text som redan är ett svar: kort, avgränsad och utan att läsaren behöver kontext från tre stycken innan.
 
 ### 7. Öppna med ett kort svar och en definition per sida
 
@@ -265,7 +265,7 @@ Utan mätning vet du inte om checklistan gav effekt. Tre nivåer, från enklast 
 | GA4 | Segment för referral från chatgpt.com, perplexity.ai, copilot.microsoft.com och gemini.google.com | Faktisk trafik och konverteringar från AI-svar |
 | Plattform | Automatiserad spårning av omnämnandegrad, källor och GEO-readiness per sökmotor över tid | Trend, konkurrentjämförelse och prioriterad åtgärdslista |
 
-De manuella testerna beskrivs i detalj i vår guide om [AI-synlighet i marknadsföring 2026](/blog/ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta). För den tredje nivån använder vi [SAMA-plattformen](/#sama), som mäter AI-omnämnandegrad per sökmotor, poängsätter GEO-readiness enligt punkterna ovan och följer SEO-hälsan i samma vy. Poängen är inte verktyget i sig utan att mätningen sker regelbundet och på samma sätt varje gång.
+De manuella testerna beskrivs i detalj i vår guide om [AI-synlighet i marknadsföring 2026](/blog/ai-synlighet-2026-hur-b2b-bolag-rankar-i-chatgpt-och-perplexity). För den tredje nivån använder vi [SAMA-plattformen](/#sama), som mäter AI-omnämnandegrad per sökmotor, poängsätter GEO-readiness enligt punkterna ovan och följer SEO-hälsan i samma vy. Poängen är inte verktyget i sig utan att mätningen sker regelbundet och på samma sätt varje gång.
 
 ## Vanliga frågor
 

@@ -29,9 +29,9 @@ function formatDate(iso: string, locale: Locale) {
   });
 }
 
-// Gemensam artikelmall för /blog och /en/blog. Innehållet är svenskt i båda
-// fallen; /en-varianten har engelsk kringtext och canonical mot den svenska
-// URL:en (se respektive page.tsx).
+// Artikelmall för /blog. Artiklarna finns bara på svenska; /en/blog/*
+// omdirigeras (301) till /blog/* i next.config.ts. Locale "en" styr bara
+// kringtexten och används inte av några publicerade sidor i dag.
 export default function ArticlePage({ post, locale }: { post: Post; locale: Locale }) {
   const t = dict[locale];
   const html = renderMarkdown(post.content);
@@ -136,7 +136,7 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
           </ol>
         </nav>
 
-        <article itemScope itemType="https://schema.org/BlogPosting" lang="sv">
+        <article lang="sv">
           <header className="mt-4">
             {(category || post.tags.length > 0) && (
               <div className="mb-4 flex flex-wrap gap-3 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", color: "var(--accent)" }}>
@@ -147,7 +147,7 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
               </div>
             )}
 
-            <h1 className="text-[clamp(32px,4.4vw,52px)] font-medium leading-[1.08] tracking-[-0.018em]" style={serif} itemProp="headline">
+            <h1 className="text-[clamp(32px,4.4vw,52px)] font-medium leading-[1.08] tracking-[-0.018em]" style={serif}>
               {post.title}
             </h1>
 
@@ -160,12 +160,12 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
               </span>
               <span>
                 {t.blog.publishedLabel}{" "}
-                <time dateTime={post.date} itemProp="datePublished">{formatDate(post.date, locale)}</time>
+                <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
               </span>
               {isUpdated && (
                 <span>
                   {t.blog.updatedLabel}{" "}
-                  <time dateTime={post.updated} itemProp="dateModified">{formatDate(post.updated, locale)}</time>
+                  <time dateTime={post.updated}>{formatDate(post.updated, locale)}</time>
                 </span>
               )}
               <span>{post.readingMinutes} {t.blog.readingTimeLabel}</span>
@@ -181,7 +181,7 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
               <div className="mb-2 uppercase" style={{ ...mono, fontSize: "11px", letterSpacing: "0.16em", color: "var(--accent)" }}>
                 {t.blog.shortAnswerLabel}
               </div>
-              <p className="text-[17px] leading-[1.6]" style={{ color: "var(--ink-soft)" }} itemProp="abstract">
+              <p className="text-[17px] leading-[1.6]" style={{ color: "var(--ink-soft)" }}>
                 {post.summary}
               </p>
             </section>
@@ -189,7 +189,7 @@ export default function ArticlePage({ post, locale }: { post: Post; locale: Loca
 
           <div
             className="article-prose prose mt-10 max-w-none prose-a:no-underline hover:prose-a:underline prose-img:rounded-[6px] prose-table:text-sm"
-            itemProp="articleBody"
+           
             dangerouslySetInnerHTML={{ __html: html }}
           />
 

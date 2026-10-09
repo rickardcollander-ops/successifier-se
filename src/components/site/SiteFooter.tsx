@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { ORG, SUPPORTIFIER } from "@/lib/site";
+import { ConsentSettingsLink } from "@/components/site/ConsentBanner";
 
 type Locale = "sv" | "en";
 
 export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
   const home = locale === "en" ? "/en" : "/";
-  const blog = locale === "en" ? "/en/blog" : "/blog";
+  // Bloggen finns bara på svenska, även från den engelska startsidan.
+  const blog = "/blog";
   const tagline = locale === "en" ? "AI automation for business" : "AI-automatisering för företag";
 
   const links: [string, string][] =
@@ -13,7 +15,8 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
       ? [
           [`${home}#tjanster`, "Services"],
           [`${home}#sama`, "Platform"],
-          [blog, "Blog"],
+          [blog, "Blog (Swedish)"],
+          ["/kontakt", "Contact"],
         ]
       : [
           ["/tjanster", "Tjänster"],
@@ -24,6 +27,9 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
           ["/contact-center-automation", "Contact center"],
           ["/ai-kundtjanst", "Supportifier"],
           [blog, "Blogg"],
+          ["/kundcase/dold-adress", "Kundcase"],
+          ["/om", "Om oss"],
+          ["/kontakt", "Kontakt"],
         ];
 
   return (
@@ -71,6 +77,11 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
       <div className="mx-auto max-w-[1200px] px-6 pb-8 sm:px-10">
         <p className="text-[12.5px] leading-[1.6]" style={{ color: "var(--faint-2)" }}>
           {ORG.legalName} · Org.nr {ORG.orgNr} · {ORG.address.streetAddress}, {ORG.address.postalCode} {ORG.address.addressLocality} · {ORG.email} · {ORG.phoneDisplay}
+        </p>
+        <p className="mt-2 flex flex-wrap gap-x-5 text-[12.5px]" style={{ color: "var(--faint-2)" }}>
+          <Link href="/integritetspolicy" className="no-underline" style={{ color: "var(--faint-2)" }}>Integritetspolicy</Link>
+          <ConsentSettingsLink className="text-[12.5px]" style={{ color: "var(--faint-2)" }} />
+          <a href={ORG.comSite} className="no-underline" style={{ color: "var(--faint-2)" }}>successifier.com</a>
         </p>
       </div>
     </footer>

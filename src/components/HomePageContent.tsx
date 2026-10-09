@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ORG, SUPPORTIFIER } from "@/lib/site";
 import BookingEmbed from "@/components/site/BookingEmbed";
+import { ConsentSettingsLink } from "@/components/site/ConsentBanner";
 import SiteNav, { type NavLink } from "@/components/site/SiteNav";
 import type { Dict } from "@/lib/i18n";
 
@@ -36,11 +37,11 @@ export default function HomePageContent({ t }: { t: Dict }) {
   // Tjänstesidorna finns bara på svenska; på /en länkas korten inte vidare.
   const sv = t.locale === "sv";
   const services = [
-    { num: t.services.p1Num, title: t.services.p1Title, sub: t.services.p1Sub, focusLabel: t.services.p1FocusLabel, focus: t.services.p1Focus, resultLabel: t.services.p1ResultLabel, result: t.services.p1Result, href: sv ? "/customer-success" : null },
-    { num: t.services.p2Num, title: t.services.p2Title, sub: t.services.p2Sub, focusLabel: t.services.p2FocusLabel, focus: t.services.p2Focus, resultLabel: t.services.p2ResultLabel, result: t.services.p2Result, href: sv ? "/contact-center-automation" : null },
-    { num: t.services.p3Num, title: t.services.p3Title, sub: t.services.p3Sub, focusLabel: t.services.p3FocusLabel, focus: t.services.p3Focus, resultLabel: t.services.p3ResultLabel, result: t.services.p3Result, href: sv ? "/ai-konsult" : null },
-    { num: t.services.p4Num, title: t.services.p4Title, sub: t.services.p4Sub, focusLabel: t.services.p4FocusLabel, focus: t.services.p4Focus, resultLabel: t.services.p4ResultLabel, result: t.services.p4Result, href: sv ? "/ai-agenter" : null },
-    { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result, href: sv ? "/seo-geo" : null },
+    { num: t.services.p1Num, title: t.services.p1Title, sub: t.services.p1Sub, focusLabel: t.services.p1FocusLabel, focus: t.services.p1Focus, resultLabel: t.services.p1ResultLabel, result: t.services.p1Result, href: "/customer-success" },
+    { num: t.services.p2Num, title: t.services.p2Title, sub: t.services.p2Sub, focusLabel: t.services.p2FocusLabel, focus: t.services.p2Focus, resultLabel: t.services.p2ResultLabel, result: t.services.p2Result, href: "/contact-center-automation" },
+    { num: t.services.p3Num, title: t.services.p3Title, sub: t.services.p3Sub, focusLabel: t.services.p3FocusLabel, focus: t.services.p3Focus, resultLabel: t.services.p3ResultLabel, result: t.services.p3Result, href: "/ai-konsult" },
+    { num: t.services.p4Num, title: t.services.p4Title, sub: t.services.p4Sub, focusLabel: t.services.p4FocusLabel, focus: t.services.p4Focus, resultLabel: t.services.p4ResultLabel, result: t.services.p4Result, href: "/ai-agenter" },
+    { num: t.services.p5Num, title: t.services.p5Title, sub: t.services.p5Sub, focusLabel: t.services.p5FocusLabel, focus: t.services.p5Focus, resultLabel: t.services.p5ResultLabel, result: t.services.p5Result, href: "/seo-geo" },
   ];
 
   const pageUrl = t.locale === "sv" ? "https://www.successifier.se/" : "https://www.successifier.se/en";
@@ -176,7 +177,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               style={{ border: "1px solid var(--hairline)" }}
             >
               <Image
-                src="/tre-skarmar.png"
+                src="/tre-skarmar.webp"
                 alt={t.locale === "sv"
                   ? "Strateg vid tre skärmar med dashboards, med Stockholms skyline i bakgrunden"
                   : "Strategist at three screens with dashboards, Stockholm skyline in the background"}
@@ -271,7 +272,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   {p.href && (
                     <Link href={p.href} className="mt-4 text-[13.5px] font-medium no-underline" style={{ color: "var(--accent)" }}>
-                      Läs mer om tjänsten →
+                      {sv ? "Läs mer om tjänsten →" : "Read more (in Swedish) →"}
                     </Link>
                   )}
                 </div>
@@ -318,23 +319,10 @@ export default function HomePageContent({ t }: { t: Dict }) {
               </div>
 
               <div className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-3">
-                  {[
-                    { label: t.sama.stat1Label, value: t.sama.stat1Value, sub: t.sama.stat1Sub },
-                    { label: t.sama.stat2Label, value: t.sama.stat2Value, sub: t.sama.stat2Sub },
-                    { label: t.sama.stat3Label, value: t.sama.stat3Value, sub: t.sama.stat3Sub },
-                  ].map((s) => (
-                    <div key={s.label} className="rounded-[6px] p-4" style={{ border: "1px solid var(--hairline)", background: "var(--paper-alt)" }}>
-                      <div className="uppercase" style={{ ...mono, fontSize: "10px", letterSpacing: "0.16em", color: "var(--faint-2)" }}>{s.label}</div>
-                      <div className="mt-1 text-[28px] font-medium leading-none" style={serif}>{s.value}</div>
-                      <div className="mt-1 text-[12px]" style={{ color: "var(--faint-2)" }}>{s.sub}</div>
-                    </div>
-                  ))}
-                </div>
                 <div className="space-y-4">
                   <div className="relative aspect-[16/9] overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/ai-content.png"
+                      src="/ai-content.webp"
                       alt={t.locale === "sv" ? "SAMA: AI Content Hub med AI-omnämnandepoäng, sökordstrend, SEO-hälsa och content-pipeline" : "SAMA: AI Content Hub with AI mention score, keyword trend, SEO health and content pipeline"}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -343,7 +331,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/Insights.png"
+                      src="/Insights.webp"
                       alt={t.locale === "sv" ? "SAMA Insights-dashboard, exempel på siteanalys" : "SAMA Insights dashboard, example site audit"}
                       width={2646}
                       height={1554}
@@ -352,7 +340,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   </div>
                   <div className="overflow-hidden rounded-[6px]" style={{ border: "1px solid var(--hairline)" }}>
                     <Image
-                      src="/Content.png"
+                      src="/Content.webp"
                       alt={t.locale === "sv" ? "SAMA Content-dashboard, AI-driven content-pipeline" : "SAMA Content dashboard, AI-driven content pipeline"}
                       width={2750}
                       height={1752}
@@ -436,9 +424,36 @@ export default function HomePageContent({ t }: { t: Dict }) {
                 </div>
               ))}
             </div>
-            <p className="mt-5 text-[12px]" style={{ color: "var(--faint-2)" }}>{t.cases.note}</p>
+            <p className="mt-6 text-[15px]">
+              <Link href={t.cases.noteHref} className="no-underline" style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}>{t.cases.note} →</Link>
+            </p>
           </div>
         </section>
+
+        {/* Guider: interna länkar till pillar-sidorna och författaren */}
+        {sv && (
+          <section style={{ borderBottom: "1px solid var(--hairline)" }} aria-label="Guider och fördjupning">
+            <div className="mx-auto max-w-[1200px] px-6 py-[80px] sm:px-10">
+              <Overline>Guider</Overline>
+              <h2 className="text-[clamp(28px,3.4vw,40px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>Fördjupning från bloggen</h2>
+              <ul className="mt-8 grid gap-4 md:grid-cols-2">
+                {[
+                  { href: "/blog/ai-i-kontaktcenter-2026-komplett-guide-for-svenska-kundserviceledare", title: "AI i kontaktcenter 2026: komplett guide", text: "Var AI ger effekt först, hur du väljer plattform, räknar kostnad, hanterar GDPR och mäter resultat." },
+                  { href: "/blog/agentic-ai-for-foretag-vad-det-ar-nar-det-passar-och-hur-du-kommer-igang", title: "Agentic AI för företag", text: "Vad AI-agenter är, när de passar och hur du går från kartläggning till en agent i produktion." },
+                  { href: "/agentiska-floden", title: "Agentiska flöden", text: "AI-agenter som driver hela processer i era system, från inkommande ärende till löst ärende." },
+                  { href: "/om/rickard-collander", title: "Om Rickard Collander", text: "Över 20 års erfarenhet av kundservice och kontaktcenter, bland annat från Scania, Releasy och Telia." },
+                ].map((g) => (
+                  <li key={g.href}>
+                    <Link href={g.href} className="block rounded-[6px] p-5 no-underline transition-colors hover:bg-[color:var(--paper-alt)]" style={{ border: "1px solid var(--hairline)", color: "var(--ink)" }}>
+                      <span className="block text-[17px] font-medium" style={serif}>{g.title} →</span>
+                      <span className="mt-1 block text-[14.5px] leading-[1.55]" style={{ color: "var(--muted)" }}>{g.text}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* Citerbara fakta */}
         <section id="fakta" style={{ borderBottom: "1px solid var(--hairline)" }} aria-label={t.facts.heading}>
@@ -474,7 +489,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
               </blockquote>
               <figcaption className="mt-9 flex items-center justify-center gap-4">
                 <div className="h-14 w-14 overflow-hidden rounded-full" style={{ border: "1px solid var(--hairline)" }}>
-                  <Image src="/ida-rosell.png" alt={t.testimonial.name} width={320} height={320} className="h-full w-full object-cover" />
+                  <Image src="/ida-rosell.webp" alt={t.testimonial.name} width={320} height={320} className="h-full w-full object-cover" />
                 </div>
                 <div className="text-left">
                   <div className="text-[15px] font-medium" style={{ color: "var(--ink)" }}>{t.testimonial.name}</div>
@@ -534,7 +549,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
                   style={{ border: "1px solid var(--hairline)" }}
                 >
                   <Image
-                    src="/skrivbord.png"
+                    src="/skrivbord.webp"
                     alt={t.locale === "sv" ? "Skrivbord med projektplan och bärbar dator som visar en tillväxtkurva" : "Desk with project plan and laptop showing a growth curve"}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -610,6 +625,27 @@ export default function HomePageContent({ t }: { t: Dict }) {
             <a className="text-[14px] no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }} href={SUPPORTIFIER.url}>supportifier.se</a>
           </div>
         </div>
+        <nav className="mx-auto max-w-[1200px] px-6 pb-4 sm:px-10" aria-label={sv ? "Fler sidor" : "More pages"}>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[13.5px]">
+            {[
+              ["/tjanster", sv ? "Tjänster" : "Services (Swedish)"],
+              ["/agentiska-floden", sv ? "Agentiska flöden" : "Agentic workflows (Swedish)"],
+              ["/kundcase/dold-adress", sv ? "Kundcase" : "Customer story (Swedish)"],
+              ["/blog", sv ? "Blogg" : "Blog (Swedish)"],
+              ["/om", sv ? "Om oss" : "About (Swedish)"],
+              ["/kontakt", sv ? "Kontakt" : "Contact (Swedish)"],
+              ["/integritetspolicy", sv ? "Integritetspolicy" : "Privacy policy (Swedish)"],
+              [ORG.comSite, "successifier.com"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className="no-underline transition-colors hover:text-[color:var(--ink)]" style={{ color: "var(--faint)" }}>{label}</Link>
+              </li>
+            ))}
+            <li>
+              <ConsentSettingsLink className="text-[13.5px]" style={{ color: "var(--faint)" }} />
+            </li>
+          </ul>
+        </nav>
         <div className="mx-auto max-w-[1200px] px-6 pb-8 sm:px-10">
           <p className="text-[12.5px] leading-[1.6]" style={{ color: "var(--faint-2)" }}>
             {ORG.legalName} · {t.locale === "sv" ? "Org.nr" : "Reg. no."} {ORG.orgNr} · {ORG.address.streetAddress}, {ORG.address.postalCode} {ORG.address.addressLocality} · {ORG.email} · {ORG.phoneDisplay}

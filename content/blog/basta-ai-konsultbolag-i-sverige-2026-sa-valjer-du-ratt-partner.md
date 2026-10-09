@@ -17,7 +17,7 @@ keywords:
   - "upphandla AI-konsult"
   - "AI-konsult pris per dag"
 category: "ai-konsult"
-updated: 2026-08-26T08:00:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Team analyserar AI-dashboards tillsammans på ett modernt kontor i Stockholm"
 ---
 
@@ -25,7 +25,7 @@ imageAlt: "Team analyserar AI-dashboards tillsammans på ett modernt kontor i St
 
 De flesta företag som misslyckas med AI gör inte det för att tekniken är svår. De misslyckas för att de väljer fel partner. Ett AI-konsultbolag som imponerar i pitchen men saknar branschförståelse, teknisk bredd eller förmåga att leverera i produktion kan kosta dig ett år och miljontals kronor.
 
-Den här guiden är till för dig som ska upphandla AI-tjänster i Sverige under 2025 eller 2026. Den ger dig konkreta urvalskriterier, frågor att ställa vid mötet och tydliga varningssignaler att hålla utkik efter. Ingen hype, inga rangordningslistor som byggts på sponsrade placeringar, bara ett ramverk du faktiskt kan använda.
+Den här guiden är till för dig som ska upphandla AI-tjänster i Sverige under 2026. Den ger dig konkreta urvalskriterier, frågor att ställa vid mötet och tydliga varningssignaler att hålla utkik efter. Ingen hype, inga rangordningslistor som byggts på sponsrade placeringar, bara ett ramverk du faktiskt kan använda.
 
 Oavsett om du letar efter hjälp med en avgränsad pilot eller en fullskalig AI-transformation, gäller samma grundprincip: rätt partner är den som kan visa resultat från verkliga kundcase, inte bara presentera snygga slides om framtidens möjligheter.
 
@@ -34,8 +34,9 @@ Oavsett om du letar efter hjälp med en avgränsad pilot eller en fullskalig AI-
 - [Vad skiljer ett bra AI-konsultbolag från ett mediokert?](#vad-skiljer-ett-bra-ai-konsultbolag)
 - [De viktigaste urvalskriterierna](#urvalskriterier)
 - [Frågor du måste ställa innan du skriver på](#fragor-att-stalla)
-- [Varningssignaler att hålla utkik efter](#varningssignaler)
+- [Vilka varningssignaler ska du hålla utkik efter?](#varningssignaler)
 - [Olika typer av AI-konsultbolag – vilket passar dig?](#olika-typer-av-ai-konsulter)
+- [Hur strukturerar du upphandlingen?](#upphandlingsprocess)
 - [Avtalet och uppföljning: vad du bör kräva](#avtalet-och-uppfoljning)
 
 ## Viktigaste punkterna
@@ -54,7 +55,7 @@ Oavsett om du letar efter hjälp med en avgränsad pilot eller en fullskalig AI-
 
 AI-marknaden i Sverige har exploderat. Sedan ChatGPT slog igenom har hundratals aktörer lagt till "AI" i sin bolagsbeskrivning. Problemet är att många av dem i praktiken säljer PowerPoint-strategier och vidarefakturerar molntjänster de själva inte fullt ut förstår.
 
-Ett genuint kompetent AI-konsultbolag kännetecknas av tre saker som är svåra att fejka, oavsett om du [söker en AI-konsult för ditt B2B-bolag](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag) eller upphandlar ett helt team.
+Ett genuint kompetent AI-konsultbolag kännetecknas av tre saker som är svåra att fejka, oavsett om du [söker en AI-konsult för ditt B2B-bolag](/ai-konsult) eller upphandlar ett helt team.
 
 ### Djup teknisk kompetens som syns i leveransen
 
@@ -114,9 +115,9 @@ En säljpitch berättar vad konsultbolaget vill att du ska tro om dem. Rätt fr�
 
 Ett bra AI-konsultbolag välkomnar dessa frågor. De vet att kunder som förstår vad de köper är bättre samarbetspartners och mer nöjda i slutändan.
 
-## Varningssignaler att hålla utkik efter {#varningssignaler}
+## Vilka varningssignaler ska du hålla utkik efter? {#varningssignaler}
 
-Ibland är det enklare att identifiera ett dåligt val än ett bra. Dessa varningssignaler är baserade på mönster som återkommer i misslyckade AI-upphandlingar.
+Varningssignalerna är att bolaget lovar resultat utan att förstå problemet, att alla projekt slutar som piloter, att data undviks, att kontraktet är vagt och att seniora konsulter säljer medan juniorer levererar. Ibland är det enklare att identifiera ett dåligt val än ett bra. Dessa varningssignaler är baserade på mönster som återkommer i misslyckade AI-upphandlingar.
 
 ### De lovar resultat utan att förstå ditt problem
 
@@ -165,6 +166,36 @@ Microsoft, Google och AWS erbjuder alla konsulttjänster kring sina egna plattfo
 En del bolag har tät koppling till svenska lärosäten som KTH, Chalmers eller Uppsala. De har ofta tillgång till spetskompetens inom specifika AI-domäner, men leveranshastighet och kommersiellt fokus kan vara lägre.
 
 **Passar dig som:** Har ett komplext, forskningsnära problem och kan acceptera längre tidshorisonter.
+
+Successifier är ett exempel på det första slaget: ett specialistbolag inom AI-agenter, AI i kundservice och Customer Success. Vad ett sådant uppdrag innehåller beskriver vi i [Vad gör en AI-konsult?](/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026) och på sidan [AI-konsult](/ai-konsult).
+
+## Hur strukturerar du upphandlingen? {#upphandlingsprocess}
+
+Strukturera upphandlingen i sex steg: definiera problemet internt, gör en kortlista, skicka en RFI, håll problembaserade möten, kontrollera referenser och starta med en pilot. En strukturerad upphandlingsprocess skyddar dig från att välja fel av fel anledningar, som en karismatisk säljare, en snygg pitch eller tidsbrist.
+
+### Steg 1: Definiera problemet internt (innan du pratar med konsulter)
+
+Skriv ner det affärsproblem du vill lösa i en mening. Definiera hur ni mäter framgång idag och hur ni vill mäta det efter projektet. Det här arbetet gör ni innan ni bjuder in någon extern part, gärna med stöd av en [ordentlig kartläggning av era processer](/blog/ai-konsult-och-automationsfloden-sa-kartlagger-du-dina-processer-pa-ratt-satt).
+
+### Steg 2: Skapa en kortlista med 3-5 kandidater
+
+Använd era nätverk, branschorganisationer som [AI Sweden](https://www.ai.se), och LinkedIn. Be om rekommendationer från bolag i liknande situationer. Undvik att enbart söka på Google, eftersom de mest synliga konsulterna inte alltid är de bästa.
+
+### Steg 3: Skicka en strukturerad RFI (Request for Information)
+
+Istället för att direkt be om offerter, skicka ett dokument med åtta till tio frågor om erfarenhet, metodik och referensuppdrag. Det filtrerar bort kandidater som inte tar upphandlingen seriöst.
+
+### Steg 4: Genomför problembaserade möten, inte presentationsmöten
+
+Be varje kandidat att analysera ert problem och komma med en preliminär hypotes om lösning. Ni letar inte efter rätt svar, ni letar efter kvaliteten på tänkandet.
+
+### Steg 5: Kontrollera referenser aktivt
+
+Ring referenserna, läs inte bara de skriftliga utlåtandena. Ställ specifika frågor: levererade de i tid, höll de budget, hur hanterades problem, skulle ni anlita dem igen?
+
+### Steg 6: Starta med ett pilotprojekt
+
+Ett pilotprojekt på fyra till åtta veckor med ett avgränsat scope och tydliga leveranser ger er data om hur konsulten faktiskt arbetar, inte bara hur de presenterar. Det är den bästa investeringen ni kan göra före ett stort kontrakt.
 
 ## Avtalet och uppföljning: vad du bör kräva {#avtalet-och-uppfoljning}
 

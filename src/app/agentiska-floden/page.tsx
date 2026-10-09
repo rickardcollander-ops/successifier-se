@@ -7,7 +7,7 @@ const PAGE_URL = "https://www.successifier.se/agentiska-floden";
 export const metadata: Metadata = {
   title: "Agentiska flöden: AI-agenter som driver hela processer",
   description:
-    "Successifier bygger agentiska flöden anpassade efter era processer: AI-agenter som tar en process från start till mål i era system, med orkestrering, loggning och människan i loopen där det behövs.",
+    "Agentiska flöden anpassade efter era processer: AI-agenter som driver ett ärende från start till mål i era system, med loggning och människan i loopen.",
   keywords: [
     "agentiska flöden",
     "agentiskt flöde",
@@ -155,7 +155,7 @@ const data: ServicePageData = {
       detail: "Ett flöde som tar hand om återkommande kundmail med bibehållen personlig ton, och lämnar det som kräver en människa till teamet.",
     },
   ],
-  casesNote: "Kundnamn och detaljer publiceras efter godkännande.",
+  casesNote: "Läs kundcaset från Dold Adress",
   faqs: [
     {
       q: "Vilka processer passar för agentiska flöden?",

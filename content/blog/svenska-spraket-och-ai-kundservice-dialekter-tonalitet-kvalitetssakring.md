@@ -3,7 +3,7 @@ title: "Svenska språket och AI-kundservice: dialekter, tonalitet och kvalitetss
 metaTitle: "AI-kundservice på svenska: ton och kvalitet"
 slug: "svenska-spraket-och-ai-kundservice-dialekter-tonalitet-kvalitetssakring"
 date: 2026-09-22T17:00:00.000Z
-updated: 2026-09-22T17:00:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 excerpt: "Så får du AI-kundservice att fungera på svenska: tilltal och ton i text, dialekter i röst-AI, flerspråkiga kunder, blindtest och en bedömningsmall för drift."
 summary: "AI-kundservice på svenska kräver styrning av tre saker. I skriven svenska: tilltal, varumärkets ton, sär- och sammanskrivning, anglicismer, facktermer och produktnamn. I talad svenska: dialekter, finlandssvenska, brytning, bakgrundsljud och taligenkänning av namn, adresser och personnummer. Och i kvalitetssäkringen: blindtest med handläggare före start, testset per dialekt och kanal, och stickprov i drift som bedöms med en fast mall. Skriv en tonalitetsguide för AI:n med exempel på bra och dåliga formuleringar."
 category: "customer-success"
@@ -32,16 +32,16 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 ## Innehåll
 
-- [Varför svenska är en egen kvalitetsfråga](#varfor-svenska)
+- [Varför är svenska en egen kvalitetsfråga?](#varfor-svenska)
 - [Skriven svenska: tilltal, ton och språkriktighet](#skriven-svenska)
 - [Talad svenska och röst-AI](#talad-svenska)
 - [Flerspråkiga kunder i Sverige](#flersprakiga-kunder)
 - [Tonalitetsguide för AI](#tonalitetsguide)
-- [Så testar du språket före driftstart](#sa-testar-du)
-- [Kvalitetssäkring i drift](#kvalitetssakring-i-drift)
+- [Hur testar du språket före driftstart?](#sa-testar-du)
+- [Hur kvalitetssäkrar du språket i drift?](#kvalitetssakring-i-drift)
 - [Vanliga frågor](#vanliga-fragor)
 
-## Varför svenska är en egen kvalitetsfråga {#varfor-svenska}
+## Varför är svenska en egen kvalitetsfråga? {#varfor-svenska}
 
 De stora språkmodellerna är tränade på betydligt mer engelska än svenska. Det syns i detaljerna: engelska meningsbyggnader, översatta artighetsfraser, fel sammansatta ord och tilltal som växlar mitt i ett svar. För kunden låter det som en maskin, även när svaret är rätt i sak.
 
@@ -105,7 +105,7 @@ Här gör fel mest skada, eftersom ett felhört namn eller nummer leder till fel
 
 - **Namn:** svenska efternamn, namn med ursprung i andra språk och företagsnamn med engelska ord. Låt AI:n bekräfta genom att bokstavera eller läsa upp namnet.
 - **Adresser:** sammansatta gatunamn som "Östra Långgatan", lägenhetsnummer och postnummer som sägs på olika sätt. Bekräfta alltid genom att läsa upp adressen.
-- **Personnummer:** kunder säger siffrorna på olika sätt, i par ("sjuttiofem"), en och en eller med sekel. Läs upp numret i grupper och be om bekräftelse, eller låt kunden knappa in det. Fundera också på om ni behöver personnumret alls. Enligt dataskyddslagen får personnummer behandlas utan samtycke bara när det är klart motiverat, och identifiering via BankID kan vara både säkrare och enklare. Mer om regelverket finns i [AI, GDPR och AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
+- **Personnummer:** kunder säger siffrorna på olika sätt, i par ("sjuttiofem"), en och en eller med sekel. Läs upp numret i grupper och be om bekräftelse, eller låt kunden knappa in det. Fundera också på om ni behöver personnumret alls. Enligt [dataskyddslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2018218-med-kompletterande-bestammelser-till_sfs-2018-218/) får personnummer behandlas utan samtycke bara när det är klart motiverat, och identifiering via BankID kan vara både säkrare och enklare. Mer om regelverket finns i [AI, GDPR och AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
 
 Glöm inte talsyntesen, alltså rösten som AI:n svarar med. Svenska har ordaccent som skiljer ord åt, till exempel "anden" (fågeln) och "anden" (själen). Lyssna på hur rösten uttalar era produktnamn, förkortningar som "t.ex." och belopp. Hur röst-AI skiljer sig från chatbots och traditionell IVR går vi igenom i [AI-agenter vs chatbots vs IVR i svensk kundservice](/blog/ai-agenter-vs-chatbots-vs-ivr-i-svensk-kundservice).
 
@@ -117,7 +117,7 @@ AI gör det möjligt att svara på fler språk än ni har handläggare för. Det
 2. **Vilken version som gäller.** Kunskapsbasen är oftast på svenska. När AI:n svarar på ett annat språk ska villkor, priser och juridiska formuleringar hänvisa till den version som är gällande.
 3. **Hur ni kvalitetssäkrar.** Om ingen i teamet kan läsa språket, börja på nivå 1 med människa som godkänner, eller begränsa AI:n till enklare kategorier på det språket.
 
-För offentlig sektor kan språklagen och reglerna om nationella minoritetsspråk ge särskilda skyldigheter. Stäm av med er jurist vad som gäller för er.
+För offentlig sektor kan [språklagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/spraklag-2009600_sfs-2009-600/) och reglerna om [nationella minoritetsspråk](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2009724-om-nationella-minoriteter-och_sfs-2009-724/) ge särskilda skyldigheter. Stäm av med er jurist vad som gäller för er.
 
 ## Tonalitetsguide för AI {#tonalitetsguide}
 
@@ -135,9 +135,11 @@ En tonalitetsguide för AI ska vara konkret. Allmänna ord som "vänlig och prof
 
 Komplettera med några regler som AI:n alltid följer, till exempel: svara på frågan i första meningen, högst ett utropstecken per svar, inga löften som systemet inte kan bekräfta och alltid ett tydligt nästa steg. Samla handläggarnas vanligaste ändringar i svarsförslagen varje vecka och gör om dem till nya regler eller exempel.
 
-Märkningen av AI-svar är inte bara en tonfråga. EU:s AI-förordning (förordning (EU) 2024/1689) ställer i artikel 50 krav på transparens när AI-system interagerar med människor. Stäm av med jurist vilka datum och krav som gäller för era system.
+Märkningen av AI-svar är inte bara en tonfråga. EU:s AI-förordning ([förordning (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)) ställer i artikel 50 krav på transparens när AI-system interagerar med människor. Stäm av med jurist vilka datum och krav som gäller för era system.
 
-## Så testar du språket före driftstart {#sa-testar-du}
+## Hur testar du språket före driftstart? {#sa-testar-du}
+
+Testa språket före driftstart med ett blindtest där handläggare bedömer AI:ns svar mot riktiga svar, och med ett fast testset per dialekt och kanal som ni kör vid varje större ändring.
 
 ### Blindtest med handläggare
 
@@ -156,9 +158,9 @@ Bygg ett fast testset som ni kör vid varje större ändring: byte av språkmode
 
 För röst-AI räcker inte skriftliga testfall. Spela in testsamtal med kollegor från olika delar av landet och med olika förstaspråk, i verkliga ljudmiljöer. Mät hur ofta namn, adresser och personnummer blir rätt på första försöket och hur ofta samtalet måste gå till en människa.
 
-## Kvalitetssäkring i drift {#kvalitetssakring-i-drift}
+## Hur kvalitetssäkrar du språket i drift? {#kvalitetssakring-i-drift}
 
-Språket försämras sällan på en gång. Det glider: en ny produkt får fel namn eller en modelluppdatering ändrar tonen. Därför behövs löpande stickprov.
+Kvalitetssäkra språket i drift med löpande stickprov per kategori, en fast bedömningsmall och en stoppregel. Språket försämras sällan på en gång. Det glider: en ny produkt får fel namn eller en modelluppdatering ändrar tonen.
 
 - **Stickprov per kategori och nivå.** Granska fler svar i kategorier som skickas automatiskt (nivå 2 och 3) än i kategorier där en människa redan godkänner varje svar. Antag som startpunkt 20 slumpvis valda svar per kategori och vecka, och justera efter hur stabil kvaliteten är.
 - **Samma mall varje gång.** Använd bedömningsmallen nedan, så att resultaten går att jämföra över tid och mellan granskare.
