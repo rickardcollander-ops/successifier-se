@@ -13,7 +13,7 @@ keywords:
   - "AI-assisterad kundservice"
   - "anlita AI-konsult"
 category: "ai-konsult"
-updated: 2026-03-09T07:45:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Team analyserar dashboards med resultat från AI-projekt på ett modernt kontor"
 language: "sv"
 tags:
@@ -31,13 +31,13 @@ Om du funderar på att anlita en AI-konsult, eller om du är mitt i en utvärder
 
 ## Innehåll
 
-- [Varför 90 dagar är rätt tidshorisont för AI-ROI](#varfor-90-dagar)
+- [Varför är 90 dagar rätt tidshorisont för AI-ROI?](#varfor-90-dagar)
 - [Projekt 1: AI-driven lead scoring](#projekt-1-lead-scoring)
 - [Projekt 2: Churn-prevention med prediktiv AI](#projekt-2-churn-prevention)
 - [Projekt 3: Automatiserad säljdokumentation](#projekt-3-automatiserad-dokumentation)
 - [Projekt 4: AI-assisterad kundservice](#projekt-4-kundservice-ai)
 - [Projekt 5: Dynamisk prisoptimering](#projekt-5-prisoptimering)
-- [Hur du väljer rätt AI-konsult för ditt B2B-bolag](#valja-ratt-konsult)
+- [Hur väljer du rätt AI-konsult för ditt B2B-bolag?](#valja-ratt-konsult)
 
 ## Viktigaste punkterna
 
@@ -49,11 +49,11 @@ Om du funderar på att anlita en AI-konsult, eller om du är mitt i en utvärder
 | 85 procent mindre manuellt arbete | Automatiserad dokumentation och AI-assisterad kundservice minskar manuellt arbete dramatiskt utan att ersätta dina säljare eller CSM:er. |
 | Konsultvalet avgör takten | En AI-konsult med beprövade playbooks och B2B-specifik erfarenhet halverar implementationstiden jämfört med att bygga allt från grunden internt. |
 
-## Varför 90 dagar är rätt tidshorisont för AI-ROI {#varfor-90-dagar}
+## Varför är 90 dagar rätt tidshorisont för AI-ROI? {#varfor-90-dagar}
 
 ![Team analyserar dashboards med resultat från AI-projekt på ett modernt kontor](/blog/ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar.webp)
 
-Många AI-initiativ misslyckas inte för att tekniken är dålig. De misslyckas för att tidshorisonten är fel. Projekt som planeras på 12-18 månader tappar momentum, byter ägare och dör av intern tröghet. Tre månader är tillräckligt kort för att hålla fokus och tillräckligt långt för att se faktiska resultat.
+90 dagar är rätt tidshorisont eftersom längre projekt tappar fart. Många AI-initiativ misslyckas inte för att tekniken är dålig, utan för att tidshorisonten är fel. Projekt som planeras på 12-18 månader tappar momentum, byter ägare och dör av intern tröghet. Tre månader är tillräckligt kort för att hålla fokus och tillräckligt långt för att se faktiska resultat.
 
 ### Vad som krävs för snabb avkastning
 
@@ -184,9 +184,9 @@ B2B-bolag som implementerar AI-driven prisoptimering ser i genomsnitt [5-12 proc
 
 Den dolda vinsten är att säljarna slutar ge onödiga rabatter. När modellen visar att ett segment historiskt accepterat ett pris utan rabatt tas den manuella gissningen bort ur processen.
 
-## Hur du väljer rätt AI-konsult för ditt B2B-bolag {#valja-ratt-konsult}
+## Hur väljer du rätt AI-konsult för ditt B2B-bolag? {#valja-ratt-konsult}
 
-Marknaden för AI-konsulter växer snabbt och [kvaliteten varierar kraftigt](https://hbr.org/2023/07/how-to-hire-an-ai-consultant). Att välja fel konsult är dyrt, inte bara i konsultarvode utan i förlorad tid och missade möjligheter, vilket gör det värt att [hitta rätt AI-konsult i Sverige](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner) med en strukturerad process.
+Välj AI-konsult med en strukturerad process där du kräver konkreta B2B-case med mätbara resultat. Marknaden för AI-konsulter växer snabbt och [kvaliteten varierar kraftigt](https://hbr.org/2023/07/how-to-hire-an-ai-consultant). Att välja fel konsult är dyrt, inte bara i konsultarvode utan i förlorad tid och missade möjligheter, vilket gör det värt att [hitta rätt AI-konsult i Sverige](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner) med en strukturerad process.
 
 ### Fem frågor att ställa i en konsultupphandling
 

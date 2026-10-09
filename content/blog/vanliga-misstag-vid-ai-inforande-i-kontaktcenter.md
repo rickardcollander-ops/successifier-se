@@ -3,7 +3,7 @@ title: "Vanliga misstag vid AI-införande i kontaktcenter (och hur du undviker d
 metaTitle: "Vanliga misstag vid AI-införande i kontaktcenter"
 slug: "vanliga-misstag-vid-ai-inforande-i-kontaktcenter"
 date: 2026-09-22T16:00:00.000Z
-updated: 2026-09-22T16:00:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 excerpt: "12 vanliga misstag vid AI-införande i kontaktcenter: vad som händer, varför det händer och hur du undviker det. Med sammanfattande checklista."
 summary: "De vanligaste misstagen vid AI-införande i kontaktcenter är att börja i fel ärenden, sakna baseline, hoppa över nivån där en människa godkänner svaren och lämna kunskapsbasen utan ägare. Andra är att mäta containment utan CSAT, glömma handläggarna och facket, köpa på demo, underskatta integrationer, sakna väg till människa, inte märka AI-svar, inte justera WFM-prognoserna och köra piloter utan exitkriterier. Alla går att undvika med en avgränsad pilot, tydliga mätetal och en ägare med mandat."
 category: "customer-success"
@@ -31,14 +31,16 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 ## Innehåll
 
-- [Misstag i förberedelsen](#misstag-i-forberedelsen)
+- [Vilka misstag görs i förberedelsen?](#misstag-i-forberedelsen)
 - [Misstag vid val av leverantör](#misstag-vid-val-av-leverantor)
-- [Misstag i piloten](#misstag-i-piloten)
-- [Misstag när AI:n går i drift](#misstag-i-drift)
+- [Vilka misstag görs i piloten?](#misstag-i-piloten)
+- [Vilka misstag görs när AI:n går i drift?](#misstag-i-drift)
 - [Sammanfattande checklista](#checklista)
 - [Vanliga frågor](#vanliga-fragor)
 
-## Misstag i förberedelsen {#misstag-i-forberedelsen}
+## Vilka misstag görs i förberedelsen? {#misstag-i-forberedelsen}
+
+De vanligaste misstagen i förberedelsen är att börja i fel ärenden, sakna baseline, lämna kunskapsbasen utan ägare och glömma handläggarna och facket.
 
 ### 1. Att börja i fel ärenden
 
@@ -70,7 +72,7 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 **Varför det händer:** Projektet ses som ett IT-projekt. Men AI i kontaktcentret ändrar arbetsinnehåll, schemaläggning och ibland bemanning, och det är arbetsmiljö- och förhandlingsfrågor.
 
-**Så undviker du det:** Ta med handläggare i projektgruppen från början och låt dem bedöma AI:ns svar i piloten. Var ärlig med vad som förändras. Om ni har kollektivavtal gäller medbestämmandelagen (MBL), som innebär förhandlingsskyldighet före viktigare förändringar av verksamheten. Stäm av med HR och er arbetsrättsjurist när och hur fackliga företrädare ska involveras, och gör det tidigt.
+**Så undviker du det:** Ta med handläggare i projektgruppen från början och låt dem bedöma AI:ns svar i piloten. Var ärlig med vad som förändras. Om ni har kollektivavtal gäller [medbestämmandelagen (MBL)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1976580-om-medbestammande-i-arbetslivet_sfs-1976-580/), som innebär förhandlingsskyldighet före viktigare förändringar av verksamheten. Stäm av med HR och er arbetsrättsjurist när och hur fackliga företrädare ska involveras, och gör det tidigt.
 
 ## Misstag vid val av leverantör {#misstag-vid-val-av-leverantor}
 
@@ -90,7 +92,9 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 **Så undviker du det:** Lista vilka system AI:n måste läsa från och skriva till för varje ärendekategori i piloten. Kräv att leverantören visar integrationerna mot era faktiska system, inte mot en testmiljö. Budgetera intern IT-tid. Om ni funderar på att bygga delar själva, läs [Bygga eller köpa AI-kundtjänst](/blog/bygga-eller-kopa-ai-kundtjanst-inhouse-partner-eller-saas) innan beslutet.
 
-## Misstag i piloten {#misstag-i-piloten}
+## Vilka misstag görs i piloten? {#misstag-i-piloten}
+
+I piloten är de vanligaste misstagen att hoppa över nivå 1, mäta containment utan CSAT och köra piloten utan exitkriterier.
 
 ### 7. Att hoppa över nivå 1
 
@@ -116,7 +120,9 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 **Så undviker du det:** Skriv ner exitkriterierna innan piloten startar: vilka mätetal, vilka nivåer, vilket datum och vem som beslutar. Ett exempel på formulering: "Om andelen svarsförslag som godkänns utan större ändring i kategorin fakturafrågor är minst X procent vecka 4, och CSAT inte har sjunkit mer än Y punkter mot baseline, går kategorin till nivå 2. Annars förlänger vi två veckor eller stoppar." X och Y sätter ni utifrån er egen baseline. En fyraveckorsstruktur finns i [så kommer du igång på 30 dagar](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar).
 
-## Misstag när AI:n går i drift {#misstag-i-drift}
+## Vilka misstag görs när AI:n går i drift? {#misstag-i-drift}
+
+I drift är de vanligaste misstagen att kunden saknar en väg till människa, att AI-svaren inte märks och att WFM-prognoserna lämnas som förut.
 
 ### 10. Att inte ha en väg till människa
 
@@ -132,7 +138,7 @@ Artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-kontaktcenter-
 
 **Varför det händer:** Man tror att kunden föredrar att tro att det är en människa, eller så har ingen tänkt på frågan.
 
-**Så undviker du det:** Märk chatt, röst-AI och automatiskt skickade svar tydligt. EU:s AI-förordning (förordning (EU) 2024/1689) innehåller i artikel 50 krav på transparens när AI-system interagerar med människor. Stäm av tidsplanen och vad som gäller för era system med er jurist. Det juridiska ramverket, inklusive GDPR, finns samlat i [AI, GDPR och AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
+**Så undviker du det:** Märk chatt, röst-AI och automatiskt skickade svar tydligt. EU:s AI-förordning ([förordning (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)) innehåller i artikel 50 krav på transparens när AI-system interagerar med människor. Stäm av tidsplanen och vad som gäller för era system med er jurist. Det juridiska ramverket, inklusive GDPR, finns samlat i [AI, GDPR och AI-förordningen i kundservice](/blog/ai-gdpr-och-ai-forordningen-i-kundservice-checklista).
 
 ### 12. Att låta WFM-prognoserna vara som förut
 

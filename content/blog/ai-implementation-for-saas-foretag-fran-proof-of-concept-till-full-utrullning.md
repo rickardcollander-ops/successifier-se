@@ -32,9 +32,9 @@ Den här artikeln bryter ner AI-implementationen i fyra konkreta faser (en breda
 
 - [Varför AI-projekt fastnar i pilotläge](#varfor-ai-projekt-fastnar)
 - [Fas 1: Problemdefinition och affärsmässig förankring](#fas-1-problemdefinition)
-- [Fas 2: Proof-of-concept med exit-kriterier](#fas-2-proof-of-concept)
+- [Fas 2: Vad är en proof-of-concept med exit-kriterier?](#fas-2-proof-of-concept)
 - [Fas 3: Staging, säkerhet och intern validering](#fas-3-staging-och-validering)
-- [Fas 4: Full utrullning och kontinuerlig förbättring](#fas-4-full-utrullning)
+- [Fas 4: Vad händer efter full utrullning?](#fas-4-full-utrullning)
 - [MLOps och teamstruktur som håller i produktion](#mlops-och-teamstruktur)
 
 ## Viktigaste punkterna
@@ -92,7 +92,7 @@ Dessa tre ska gemensamt godkänna problemformuleringen innan någon modellering 
 
 Före PoC ska ni kartlägga tillgänglig data: volym, kvalitet, frekvens och GDPR-status. Ett AI-projekt som kräver data ni inte har, eller som ni inte lagligt kan använda, är redan dömt. Hur du kartlägger processerna och datakällorna beskriver vi i [Så kartlägger du dina processer inför AI](/blog/ai-konsult-och-automationsfloden-sa-kartlagger-du-dina-processer-pa-ratt-satt). Bygg en enkel [datakatalog i ett verktyg som Notion eller Confluence](https://www.atlassian.com/software/confluence) och dokumentera varje datakälla ni avser använda.
 
-## Fas 2: Proof-of-concept med exit-kriterier {#fas-2-proof-of-concept}
+## Fas 2: Vad är en proof-of-concept med exit-kriterier? {#fas-2-proof-of-concept}
 
 En PoC är ett strukturerat experiment, inte ett miniprojekt som ska bli en produkt. Distinktionen är kritisk.
 
@@ -148,9 +148,9 @@ I SaaS-sammanhang är detta särskilt viktigt. Ställ följande frågor innan st
 
 Driftsätt först i shadow mode, där modellen kör parallellt med det befintliga systemet utan att påverka slutanvändare. Jämför modellens output mot det befintliga systemets beslut eller manuella processer under en till två veckor. Sedan övergår ni till en kontrollerad A/B-test med en definierad andel av trafiken, typiskt fem till tjugo procent, tills ni har statistisk signifikans för det primära affärsmåttet.
 
-## Fas 4: Full utrullning och kontinuerlig förbättring {#fas-4-full-utrullning}
+## Fas 4: Vad händer efter full utrullning? {#fas-4-full-utrullning}
 
-Full utrullning innebär inte att projektet är klart. Det innebär att det börjar på allvar.
+Efter full utrullning börjar fasen av kontinuerlig förbättring, så projektet är inte klart utan börjar på allvar.
 
 När modellen är live på 100 procent av trafiken och affärsresultaten bekräftas startar fasen av kontinuerlig förbättring. Det är här många AI-projekt börjar förfalla, eftersom uppmärksamheten naturligt vänds mot nästa projekt.
 

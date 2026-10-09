@@ -34,9 +34,9 @@ Oavsett om du letar efter hjälp med en avgränsad pilot eller en fullskalig AI-
 - [Vad skiljer ett bra AI-konsultbolag från ett mediokert?](#vad-skiljer-ett-bra-ai-konsultbolag)
 - [De viktigaste urvalskriterierna](#urvalskriterier)
 - [Frågor du måste ställa innan du skriver på](#fragor-att-stalla)
-- [Varningssignaler att hålla utkik efter](#varningssignaler)
+- [Vilka varningssignaler ska du hålla utkik efter?](#varningssignaler)
 - [Olika typer av AI-konsultbolag – vilket passar dig?](#olika-typer-av-ai-konsulter)
-- [Så strukturerar du upphandlingen steg för steg](#upphandlingsprocess)
+- [Hur strukturerar du upphandlingen?](#upphandlingsprocess)
 - [Avtalet och uppföljning: vad du bör kräva](#avtalet-och-uppfoljning)
 
 ## Viktigaste punkterna
@@ -115,9 +115,9 @@ En säljpitch berättar vad konsultbolaget vill att du ska tro om dem. Rätt fr�
 
 Ett bra AI-konsultbolag välkomnar dessa frågor. De vet att kunder som förstår vad de köper är bättre samarbetspartners och mer nöjda i slutändan.
 
-## Varningssignaler att hålla utkik efter {#varningssignaler}
+## Vilka varningssignaler ska du hålla utkik efter? {#varningssignaler}
 
-Ibland är det enklare att identifiera ett dåligt val än ett bra. Dessa varningssignaler är baserade på mönster som återkommer i misslyckade AI-upphandlingar.
+Varningssignalerna är att bolaget lovar resultat utan att förstå problemet, att alla projekt slutar som piloter, att data undviks, att kontraktet är vagt och att seniora konsulter säljer medan juniorer levererar. Ibland är det enklare att identifiera ett dåligt val än ett bra. Dessa varningssignaler är baserade på mönster som återkommer i misslyckade AI-upphandlingar.
 
 ### De lovar resultat utan att förstå ditt problem
 
@@ -169,9 +169,9 @@ En del bolag har tät koppling till svenska lärosäten som KTH, Chalmers eller 
 
 Successifier är ett exempel på det första slaget: ett specialistbolag inom AI-agenter, AI i kundservice och Customer Success. Vad ett sådant uppdrag innehåller beskriver vi i [Vad gör en AI-konsult?](/blog/varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026) och på sidan [AI-konsult](/ai-konsult).
 
-## Så strukturerar du upphandlingen steg för steg {#upphandlingsprocess}
+## Hur strukturerar du upphandlingen? {#upphandlingsprocess}
 
-En strukturerad upphandlingsprocess skyddar dig från att välja fel av fel anledningar, som en karismatisk säljare, en snygg pitch eller tidsbrist.
+Strukturera upphandlingen i sex steg: definiera problemet internt, gör en kortlista, skicka en RFI, håll problembaserade möten, kontrollera referenser och starta med en pilot. En strukturerad upphandlingsprocess skyddar dig från att välja fel av fel anledningar, som en karismatisk säljare, en snygg pitch eller tidsbrist.
 
 ### Steg 1: Definiera problemet internt (innan du pratar med konsulter)
 

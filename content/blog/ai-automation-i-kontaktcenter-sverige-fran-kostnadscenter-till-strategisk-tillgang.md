@@ -35,9 +35,9 @@ Den här artikeln går igenom hur automationen faktiskt fungerar i praktiken, vi
 - [Varför AI automation just nu?](#varfor-ai-nu)
 - [Vad kan faktiskt automatiseras i ett kontaktcenter?](#vad-kan-automatiseras)
 - [Health score och churn-förebyggande med AI](#halsopoang-och-churn)
-- [Implementering: Från pilot till full utrullning](#implementering-steg)
+- [Hur går du från pilot till full utrullning?](#implementering-steg)
 - [Mätning och ROI: Vad ska du följa upp?](#matning-och-roi)
-- [Vanliga misstag vid AI-implementation](#vanliga-misstag)
+- [Vilka misstag är vanligast vid AI-implementation?](#vanliga-misstag)
 
 ## Viktigaste punkterna
 
@@ -134,9 +134,9 @@ Målet med AI-driven health scoring och kopplade playbooks är lägre churn. Int
 
 En health score som inte uppdateras slutar vara träffsäker. AI-modeller behöver valideras mot faktiska churnutfall kvartalsvis. Om kunder med höga scores ändå churnar finns det signaler som modellen missar. Om kunder med låga scores stannar kvar kanske viktningen är fel. Det här kräver ett nära samarbete mellan CS-operationer och den plattform som driver analysen.
 
-## Implementering: Från pilot till full utrullning {#implementering-steg}
+## Hur går du från pilot till full utrullning? {#implementering-steg}
 
-De flesta misslyckade AI-implementationer har ett gemensamt drag: de försökte göra för mycket på en gång. En framgångsrik utrullning är strukturerad, mätbar och börjar smalt, precis som i en [30-dagarsplan för AI-automation i kontaktcenter](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar).
+Gå från pilot till full utrullning i tre faser: välj ett use case med tydlig baseline, validera och dokumentera, och koppla sedan ihop och skala. De flesta misslyckade AI-implementationer har ett gemensamt drag: de försökte göra för mycket på en gång. En framgångsrik utrullning är strukturerad, mätbar och börjar smalt, precis som i en [30-dagarsplan för AI-automation i kontaktcenter](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar).
 
 ### Fas 1: Välj ett use case med tydlig baseline (vecka 1-4)
 
@@ -231,9 +231,9 @@ Detta är en förenkling, men det ger en ram för att presentera investeringen i
 
 VP- och direktörsnivå bryr sig om NRR och churn, inte om antal automatiserade ärenden. Bygg din rapport kring affärsutfallet och visa sedan vilken aktivitet som drev det. Inte tvärtom.
 
-## Vanliga misstag vid AI-implementation {#vanliga-misstag}
+## Vilka misstag är vanligast vid AI-implementation? {#vanliga-misstag}
 
-Att veta vad man ska undvika är lika värdefullt som att veta vad man ska göra. Här är de fyra felen som upprepas oftast.
+De fyra vanligaste misstagen är att köpa en plattform utan internt ägarskap, automatisera trasiga processer, ignorera agenternas perspektiv och mäta aktivitet i stället för utfall. Att veta vad man ska undvika är lika värdefullt som att veta vad man ska göra.
 
 ### Misstag 1: Köpa en platform utan ägandeskap internt
 

@@ -3,7 +3,7 @@ title: "AI och GDPR/AI-förordningen i kundservice – checklista för svenska f
 metaTitle: "AI i kundservice: GDPR och AI-förordningen"
 slug: "ai-gdpr-och-ai-forordningen-i-kundservice-checklista"
 date: 2026-09-22T13:00:00.000Z
-updated: 2026-09-22T13:00:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 excerpt: "Checklista för AI i kundservice enligt GDPR och AI-förordningen: roller, PuB-avtal, DPIA, inspelade samtal, röst-AI och träning på kunddata, fas för fas."
 summary: "Ett svenskt företag som inför AI i kundservice är normalt personuppgiftsansvarigt och behöver ett personuppgiftsbiträdesavtal som omfattar leverantörens underbiträden, en rättslig grund per ändamål, en konsekvensbedömning eller dokumenterat skäl till varför den inte krävs, en uppdaterad registerförteckning och en informationstext till kunderna. AI-förordningen kräver att kunden får veta när den interagerar med AI. Kontrollera tredjelandsöverföringar, stäng av träning på kunddata och stäm av tidsplanen med jurist."
 category: "customer-success"
@@ -32,21 +32,21 @@ Den här artikeln ingår i vår serie [AI i kontaktcenter 2026](/blog/ai-i-konta
 
 ## Innehåll
 
-- [Två regelverk som ställer olika frågor](#tva-regelverk)
-- [Roller och dokument](#roller-och-dokument)
+- [Vad är skillnaden mellan GDPR och AI-förordningen?](#tva-regelverk)
+- [Vilka roller och dokument behövs?](#roller-och-dokument)
 - [Checklista i fyra faser](#checklista)
 - [Inspelade samtal och röst-AI](#inspelade-samtal-och-rost-ai)
 - [Känsliga personuppgifter i ärenden](#kansliga-personuppgifter)
-- [Modellträning på kunddata](#modelltraning)
+- [Får leverantören träna AI-modeller på era kunddata?](#modelltraning)
 - [Vanliga frågor](#vanliga-fragor)
 
-## Två regelverk som ställer olika frågor {#tva-regelverk}
+## Vad är skillnaden mellan GDPR och AI-förordningen? {#tva-regelverk}
 
-GDPR och AI-förordningen överlappar men frågar efter olika saker. GDPR handlar om personuppgifterna: vilka ni behandlar, varför, med vilket stöd och hur de skyddas. AI-förordningen, förordning (EU) 2024/1689, handlar om själva AI-systemet: vilken risk det innebär och vilka krav som följer av det.
+GDPR och AI-förordningen överlappar men frågar efter olika saker. GDPR handlar om personuppgifterna: vilka ni behandlar, varför, med vilket stöd och hur de skyddas. AI-förordningen, [förordning (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), handlar om själva AI-systemet: vilken risk det innebär och vilka krav som följer av det.
 
 I kundservice gäller i praktiken båda samtidigt. Ett kundmail som en AI läser och besvarar innehåller personuppgifter, och AI:n som svarar är ett AI-system som interagerar med en människa.
 
-**GDPR i korthet.** De bärande delarna för ett AI-projekt i kundservice är:
+**GDPR i korthet.** De bärande delarna i [dataskyddsförordningen (EU) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj) för ett AI-projekt i kundservice är:
 
 - **Principerna i art. 5:** ändamålsbegränsning, uppgiftsminimering, korrekthet, lagringsminimering, säkerhet och ansvarsskyldighet. Ansvarsskyldigheten betyder att ni ska kunna visa att ni följer reglerna, inte bara göra det.
 - **Rättslig grund enligt art. 6:** varje ändamål behöver en grund. Att besvara en kunds fråga stöds ofta av avtal eller berättigat intresse, men analys och förbättring av AI:n kan vara ett nytt ändamål som behöver en egen bedömning.
@@ -54,7 +54,7 @@ I kundservice gäller i praktiken båda samtidigt. Ett kundmail som en AI läser
 - **Automatiserade beslut enligt art. 22:** beslut som enbart grundas på automatiserad behandling och som har rättsliga följder eller på liknande sätt påverkar kunden i betydande grad är som huvudregel inte tillåtna, med vissa undantag och skyddsåtgärder.
 - **Biträden enligt art. 28, konsekvensbedömning enligt art. 35 och tredjelandsöverföring enligt art. 44 ff.** Dessa tre går vi igenom nedan.
 
-IMY är svensk tillsynsmyndighet för GDPR.
+[IMY](https://www.imy.se) är svensk tillsynsmyndighet för GDPR.
 
 **AI-förordningen i korthet.** Förordningen delar in AI-användning i riskklasser. I stora drag:
 
@@ -67,11 +67,11 @@ IMY är svensk tillsynsmyndighet för GDPR.
 
 De flesta AI-tillämpningar i kundservice hamnar i transparensklassen. Men klassningen beror på vad AI:n faktiskt gör. En AI som bara svarar på leveransfrågor och en AI som beslutar om avbetalning hos ett kreditbolag kan hamna i olika klasser, även om de ligger i samma plattform.
 
-Förordningens skyldigheter börjar gälla stegvis och tidsplanen har diskuterats politiskt. Stäm av vilka datum som gäller för era system med jurist, i stället för att lita på en bloggtext. Det gäller även den här.
+Förordningens skyldigheter [börjar gälla stegvis](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) och tidsplanen har diskuterats politiskt. Stäm av vilka datum som gäller för era system med jurist, i stället för att lita på en bloggtext. Det gäller även den här.
 
-## Roller och dokument {#roller-och-dokument}
+## Vilka roller och dokument behövs? {#roller-och-dokument}
 
-Den vanligaste oklarheten i AI-projekt är vem som har vilken roll. Rollen avgör ansvaret, och ansvaret avgör vilka dokument som behövs.
+Ert företag är normalt personuppgiftsansvarigt, plattformsleverantören personuppgiftsbiträde och dess leverantörer underbiträden. Rollen avgör ansvaret, och ansvaret avgör vilka dokument som behövs. Vem som har vilken roll är också den vanligaste oklarheten i AI-projekt.
 
 | Roll | Vem det brukar vara | Huvudansvar | Nyckeldokument |
 | --- | --- | --- | --- |
@@ -166,9 +166,9 @@ Ni kan inte hindra kunder från att skriva känsliga uppgifter. Ni kan däremot 
 
 Branscher med tystnadsplikt eller särskild sekretess, som bank, försäkring, vård och offentlig sektor, har regler utöver GDPR. De behöver vägas in redan i fas 1.
 
-## Modellträning på kunddata {#modelltraning}
+## Får leverantören träna AI-modeller på era kunddata? {#modelltraning}
 
-Här finns den största skillnaden mellan leverantörer, och den syns sällan i en demo. Frågan är om era kunders ärenden används för att träna eller förbättra AI-modeller, och i så fall vems.
+Bara om ni tillåter det, och i de flesta kundserviceprojekt bör ni avtala bort det. Här finns den största skillnaden mellan leverantörer, och den syns sällan i en demo. Frågan är om era kunders ärenden används för att träna eller förbättra AI-modeller, och i så fall vems.
 
 Principen är enkel. Om leverantören använder er data för sina egna syften, till exempel för att förbättra sin modell åt alla kunder, agerar den inte längre bara på er instruktion. Den blir då i regel personuppgiftsansvarig för den behandlingen. Det kräver en egen rättslig grund, och ni behöver ha informerat era kunder om att deras uppgifter lämnas ut för ett sådant syfte. I de flesta kundserviceprojekt är det enklaste att avtala bort det helt.
 

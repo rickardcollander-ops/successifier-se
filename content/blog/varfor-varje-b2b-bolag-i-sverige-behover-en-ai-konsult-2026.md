@@ -32,10 +32,10 @@ Den här artikeln går igenom vad en AI-konsult konkret levererar för svenska B
 ## Innehåll
 
 - [Vad gör en AI-konsult egentligen?](#vad-gor-en-ai-konsult)
-- [Processerna med snabbast ROI för B2B-bolag](#processer-med-snabbast-roi)
-- [Så ser ett typiskt uppdrag ut: fas för fas](#sa-ser-ett-typiskt-uppdrag-ut)
+- [Vilka processer ger snabbast ROI för B2B-bolag?](#processer-med-snabbast-roi)
+- [Hur ser ett typiskt uppdrag ut?](#sa-ser-ett-typiskt-uppdrag-ut)
 - [Så väljer du rätt AI-konsult](#valja-ratt-ai-konsult)
-- [Kostnader och realistisk ROI](#kostnader-och-roi)
+- [Vad kostar en AI-konsult, och vilken ROI är realistisk?](#kostnader-och-roi)
 - [Varför det inte längre är ett alternativ att vänta](#varfor-inte-vanta)
 
 ## Viktigaste punkterna
@@ -72,9 +72,9 @@ De bästa konsultuppdragen avslutas med att kunden kan driva och vidareutveckla 
 
 Vad en konsult **inte** gör är att ge dig en generisk AI-strategi på 80 sidor som samlar damm. Fokus ska vara på leverans, inte analys för analysens skull.
 
-## Processerna med snabbast ROI för B2B-bolag {#processer-med-snabbast-roi}
+## Vilka processer ger snabbast ROI för B2B-bolag? {#processer-med-snabbast-roi}
 
-Inte alla processer är lika värda att automatisera. Baserat på genomförda AI-implementeringar i europeiska B2B-bolag under 2023-2025 framträder ett tydligt mönster: de snabbaste returerna kommer från processer som kombinerar hög volym, strukturerad (eller halvstrukturerad) data, och tydliga beslutsmönster.
+Snabbast ROI ger processer med hög volym, strukturerad data och tydliga beslutsmönster, till exempel leadkvalificering, offert- och avtalsgranskning och kundkommunikation. Inte alla processer är lika värda att automatisera. Baserat på genomförda AI-implementeringar i europeiska B2B-bolag under 2023-2025 framträder ett tydligt mönster: de snabbaste returerna kommer från processer som kombinerar hög volym, strukturerad (eller halvstrukturerad) data, och tydliga beslutsmönster.
 
 Här är en jämförelse av vanliga use cases, varav flera är [AI-projekt som ger ROI inom 90 dagar](/blog/ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar):
 
@@ -99,9 +99,9 @@ Juridiska och kommersiella team lägger ner hundratals timmar per år på att gr
 
 För B2B-bolag med återkommande kunder är tidig churn-detektion direkt kopplat till intäkter. AI-modeller som analyserar e-postfrekvens, inloggningsmönster och supportärenden kan flagga konton i riskzonen veckor innan uppsägningen kommer. Det ger Customer Success-teamet tid att agera.
 
-## Så ser ett typiskt uppdrag ut: fas för fas {#sa-ser-ett-typiskt-uppdrag-ut}
+## Hur ser ett typiskt uppdrag ut? {#sa-ser-ett-typiskt-uppdrag-ut}
 
-Många bolag är osäkra på vad de egentligen köper när de anlitar en AI-konsult. Här är en realistisk beskrivning av hur ett välstrukturerat [AI-konsultuppdrag](/ai-konsult) för ett medelstort B2B-bolag brukar se ut.
+Ett typiskt AI-konsultuppdrag har fyra faser: discovery, pilot, produktion och skalning, och till sist överlämning med intern kompetensbyggnad. Många bolag är osäkra på vad de egentligen köper när de anlitar en AI-konsult. Här är en realistisk beskrivning av hur ett välstrukturerat [AI-konsultuppdrag](/ai-konsult) för ett medelstort B2B-bolag brukar se ut.
 
 ### Fas 1: Discovery (2-4 veckor)
 
@@ -153,9 +153,9 @@ Be dem beskriva ett uppdrag som inte gick som planerat och vad de lärde sig av 
 - Intern kompetensbyggnad ingår i uppdraget
 - Kan specificera exakt vilka modeller och verktyg de föreslår, och varför
 
-## Kostnader och realistisk ROI {#kostnader-och-roi}
+## Vad kostar en AI-konsult, och vilken ROI är realistisk? {#kostnader-och-roi}
 
-En av de vanligaste frågorna är: vad kostar det och när tjänar vi in det? Svaret varierar kraftigt beroende på uppdragets scope, men det finns rimliga riktmärken.
+Kostnaden beror på uppdragets omfattning, men discovery-fasen kostar typiskt 80 000 till 200 000 kronor för ett medelstort bolag. En av de vanligaste frågorna är vad det kostar och när det tjänas in. Svaret varierar kraftigt beroende på uppdragets scope, men det finns rimliga riktmärken.
 
 ### Typiska kostnadsnivåer för svenska B2B-bolag
 
