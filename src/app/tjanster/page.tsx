@@ -10,9 +10,9 @@ const serif = { fontFamily: "var(--font-spectral)" } as const;
 const mono = { fontFamily: "var(--font-plex-mono)" } as const;
 
 export const metadata: Metadata = {
-  title: "Tjänster: AI-agenter, agentiska flöden, GEO/SEO, Customer Success",
+  title: "Tjänster: AI-agenter, AI-kundtjänst och Customer Success",
   description:
-    "Successifiers tjänster för svenska B2B-bolag: AI-agenter, agentiska flöden och agentic AI, GEO och SEO med SAMA, Customer Success, contact center-automation och AI-kundtjänstplattformen Supportifier.",
+    "Alla tjänster för svenska B2B-bolag: AI-agenter, agentiska flöden, AI i kontaktcenter, Supportifier, Customer Success samt SEO och GEO med SAMA.",
   alternates: { canonical: "/tjanster" },
   openGraph: {
     type: "website",

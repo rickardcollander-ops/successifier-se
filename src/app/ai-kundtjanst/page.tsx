@@ -75,9 +75,9 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Supportifier: AI-kundtjänst från Successifier",
+  title: "AI-kundtjänst med Supportifier: kunskapsbas, chatt och inkorg",
   description:
-    "Supportifier är Successifiers AI-plattform för kundservice: kunskapsbas, hjälpcenter, AI-chatt, AI-formulär, inkorg med svarsförslag och kundportal. Över 100 000 hanterade mail. Vi inför den hos er.",
+    "Supportifier är vår AI-plattform för kundtjänst: kunskapsbas, hjälpcenter, AI-chatt och inkorg med svarsförslag. Över 100 000 hanterade mail.",
   keywords: [
     "Supportifier",
     "AI-kundtjänst",
@@ -92,7 +92,7 @@ export const metadata = {
     canonical: "/ai-kundtjanst",
   },
   openGraph: {
-    title: "Supportifier: AI-kundtjänst från Successifier · Successifier",
+    title: "AI-kundtjänst med Supportifier · Successifier",
     description:
       "Vår produkt för AI-kundtjänst: en kunskapsbas som driver hjälpcenter, AI-chatt, AI-formulär, inkorg med svarsförslag och kundportal. Vi inför den hos er.",
     url: PAGE_URL,
@@ -102,7 +102,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Supportifier: AI-kundtjänst från Successifier",
+    title: "AI-kundtjänst med Supportifier: kunskapsbas, chatt och inkorg",
     description:
       "AI som läser, sorterar och föreslår svar på kundmail, med säkerhetspoäng och mänsklig granskning innan utskick.",
   },

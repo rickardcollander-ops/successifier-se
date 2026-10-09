@@ -4,7 +4,7 @@ metaTitle: "Agentiska flöden: AI-agenter som driver hela processer"
 slug: "agentiska-floden-sa-later-du-ai-agenter-driva-hela-processer"
 date: 2026-10-01T08:00:00.000Z
 updated: 2026-10-01T08:00:00.000Z
-excerpt: "Ett agentiskt flöde låter AI-agenter ta en process från start till mål i era system. Här är definitionen, skillnaden mot automation och RPA, byggstenarna och hur du väljer första flöde."
+excerpt: "Ett agentiskt flöde låter AI-agenter driva en process från start till mål. Definitionen, skillnaden mot RPA och hur du väljer första flöde."
 summary: "Ett agentiskt flöde är en process där en eller flera AI-agenter driver arbetet mot ett mål: tolkar det som kommer in, väljer nästa steg, använder era system för att utföra det och lämnar över till en människa när de är osäkra eller när en regel kräver godkännande. Skillnaden mot vanlig automation är att flödet klarar det som inte går att skriva regler för. Börja med en process som har hög volym, data i befintliga system och tydliga gränser, och låt agenten föreslå innan den får agera."
 language: "sv"
 category: "ai-konsult"

@@ -7,7 +7,7 @@ const PAGE_URL = "https://www.successifier.se/customer-success";
 export const metadata: Metadata = {
   title: "Customer Success-konsult: minska churn och skydda NRR",
   description:
-    "Successifier bygger Customer Success-funktioner för bolag med återkommande intäkter: operating model, health scoring, renewal-playbooks och QBR-struktur. Första workshop inom 1–2 veckor, 30/60/90-dagarsplan.",
+    "Customer Success för bolag med återkommande intäkter: operating model, health scoring och renewal-playbooks. Första workshop inom 1–2 veckor.",
   keywords: [
     "Customer Success-konsult",
     "Customer Success Sverige",
@@ -132,7 +132,7 @@ const data: ServicePageData = {
       detail: "Processanalys följt av AI-agenter som automatiserar ärendehantering och intern routing i supportfunktionen, utan att byta plattform.",
     },
   ],
-  casesNote: "Kundnamn och detaljer publiceras efter godkännande.",
+  casesNote: "Läs kundcaset från Dold Adress",
   faqs: [
     {
       q: "Hur snabbt kan vi komma igång?",

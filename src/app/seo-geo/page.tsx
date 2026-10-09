@@ -7,7 +7,7 @@ const PAGE_URL = "https://www.successifier.se/seo-geo";
 export const metadata: Metadata = {
   title: "GEO & SEO med SAMA: synlighet i Google och AI-svar",
   description:
-    "Successifier driver SEO och GEO (Generative Engine Optimization) för svenska B2B-bolag med den egna plattformen SAMA: AI-omnämnanden i ChatGPT, Perplexity och Google AI, SEO-hälsa och content med människa i loopen.",
+    "SEO och GEO för svenska B2B-bolag med vår plattform SAMA: synlighet i Google och i AI-svar från ChatGPT, Perplexity och Google AI.",
   keywords: [
     "GEO",
     "Generative Engine Optimization",

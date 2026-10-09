@@ -243,7 +243,7 @@ Under samma tre månader fick sajten bara 49 visningar i vanlig Bing-sök, näst
 
 1. **AI-citeringar kräver inte klassisk ranking.** Copilot citerade sidor som knappt syntes i vanlig webbsök. Det som citerades var sidor med konkreta siffror, tabeller och tydliga svar, framför allt ROI-kalkylen.
 2. **Frågorna var bredare än sidorna.** Ingen av de citerade sidorna besvarade de två frågorna direkt. Därför har vi skrivit sidor som gör det: [Så väljer du AI-plattform för automatiserad kundkontakt](/blog/sa-valjer-du-ai-plattform-for-automatiserad-kundkontakt-12-faktorer) och [Customer engagement center med AI](/blog/customer-engagement-center-med-ai-arkitektur-roller-och-plan), samlade under en [pillar-guide om AI i kontaktcenter](/blog/ai-i-kontaktcenter-2026-komplett-guide-for-svenska-kundserviceledare).
-3. **Dubbletter delar upp förtroendet.** 19 citeringar gick till en engelsk URL som visade samma svenska text. Sådana URL:er bör omdirigeras till originalet.
+3. **Dubbletter delar upp förtroendet.** 19 citeringar gick till en engelsk URL som visade samma svenska text. Vi omdirigerar därför sådana URL:er permanent (301) till originalet.
 4. **Citeringar kan upphöra snabbt, och orsaken syns inte i verktygen.** Vi vet inte säkert varför citeringarna upphörde. Vi har åtgärdat det vi själva kan påverka: ärliga ändringsdatum i sitemap och schema (i stället för samma datum på alla sidor), IndexNow-pingar bara för sidor som faktiskt ändrats, en författarsida med bakgrund och tydliga interna länkar mellan artiklarna i samma ämne.
 
 Hela listan över tekniska åtgärder finns i vår [GEO-checklista för B2B-sajter](/blog/geo-checklista-for-b2b-sajter-2026-llms-txt-schema-och-citerbarhet). Vi uppdaterar fallstudien när vi ser hur citeringarna utvecklas.

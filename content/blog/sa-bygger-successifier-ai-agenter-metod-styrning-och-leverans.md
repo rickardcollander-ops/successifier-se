@@ -4,7 +4,7 @@ metaTitle: "Så bygger Successifier AI-agenter: metod och styrning"
 slug: "sa-bygger-successifier-ai-agenter-metod-styrning-och-leverans"
 date: 2026-10-01T10:00:00.000Z
 updated: 2026-10-01T10:00:00.000Z
-excerpt: "Hur Successifier går från kartläggning till AI-agenter och agentiska flöden i produktion: våra principer, de fyra stegen, hur vi styr agenterna och vad vi lärt oss av att bygga egna AI-plattformar."
+excerpt: "Så går Successifier från kartläggning till AI-agenter i produktion: principerna, de fyra stegen, styrningen och vad kunden äger efteråt."
 summary: "Successifier bygger AI-agenter och agentiska flöden anpassade efter kundens egna processer, i kundens egna system, i fyra steg: två veckors kartläggning, en pilot på tre till fyra veckor i skarp miljö, integration med loggning och behörighetsstyrning, och skalning till fler processer. Varje agent har ett mätbart affärsmål och börjar med att föreslå i stället för att agera. Kunden äger data, prompts och flöden. Metoden bygger på erfarenhet från egna plattformar: Supportifier för AI-kundtjänst och SAMA för AI-synlighet och content."
 language: "sv"
 category: "ai-konsult"

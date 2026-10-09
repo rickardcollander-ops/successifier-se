@@ -34,14 +34,10 @@ const plexMono = IBM_Plex_Mono({
 const PAGE_URL = "https://www.successifier.se/ai-konsult";
 
 export function generateMetadata(): Metadata {
-  const ogImages = publicAssetExists(FEATURE_IMG)
-    ? [{ url: FEATURE_IMG, alt: "Successifier — agentic AI i arbete" }]
-    : undefined;
-
   return {
-    title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor",
+    title: "AI-konsult i Sverige: från kartläggning till AI i drift",
     description:
-      "AI-konsult som kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet. Från idé till produktion på 3–6 veckor, med mätbar effekt, governance och människan i loopen.",
+      "Svensk AI-konsult som kartlägger, bygger och driftsätter AI i er verksamhet. Från idé till produktion på 3–6 veckor, med mätbar effekt och människan i loopen.",
     keywords: [
       "AI-konsult",
       "agentic AI",
@@ -57,20 +53,18 @@ export function generateMetadata(): Metadata {
     alternates: { canonical: "/ai-konsult" },
     openGraph: {
       type: "website",
-      title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor · Successifier",
+      title: "AI-konsult i Sverige: från kartläggning till AI i drift · Successifier",
       description:
         "Specialistbyrå för AI-automatisering. Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — med mätbar effekt och människan i loopen.",
       url: PAGE_URL,
       siteName: "Successifier.se",
       locale: "sv_SE",
-      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
-      title: "AI-konsult för agentic AI: AI-agenter i drift på 3–6 veckor · Successifier",
+      title: "AI-konsult i Sverige: från kartläggning till AI i drift · Successifier",
       description:
         "Vi kartlägger, bygger och driftsätter autonoma AI-agenter i er verksamhet — från idé till produktion på veckor.",
-      images: ogImages?.map((i) => i.url),
     },
   };
 }
@@ -131,7 +125,7 @@ const phases = [
 ];
 
 const stats = [
-  { value: "85%", label: "lägre handläggningstid i genomförda piloter" },
+  { value: "upp till 85%", label: "lägre handläggningstid i genomförda piloter" },
   { value: "3–6v", label: "från start till agent i produktion" },
   { value: "100%", label: "drift i er egen miljö och kontroll" },
 ];

@@ -7,7 +7,7 @@ const PAGE_URL = "https://www.successifier.se/ai-agenter";
 export const metadata: Metadata = {
   title: "AI-agenter för företag: byggda och driftsatta i Sverige",
   description:
-    "Successifier bygger och driftsätter AI-agenter för svenska B2B- och SaaS-bolag: support-, sälj- och backoffice-agenter i era egna system. 3–6 veckor från start till produktion, med människan i loopen.",
+    "Vi bygger och driftsätter AI-agenter för support, sälj och backoffice i era egna system. 3–6 veckor till produktion, med loggning och människan i loopen.",
   keywords: [
     "AI-agenter",
     "AI-agenter för företag",
@@ -47,7 +47,7 @@ const data: ServicePageData = {
   serviceType: "AI-agenter / agentic AI-utveckling",
   facts: [
     { value: "3–6 v", label: "från start till AI-agent i produktion" },
-    { value: "85 %", label: "lägre handläggningstid i genomförda piloter" },
+    { value: "upp till 85 %", label: "lägre handläggningstid i genomförda piloter" },
     { value: "2 v", label: "kartläggning innan piloten startar" },
   ],
   deliverablesHeading: "Agenter vi bygger",
@@ -149,7 +149,7 @@ const data: ServicePageData = {
       detail: "AI-lösning som tar hand om återkommande kundmail med bibehållen personlig ton. Kortare svarstider och ett team som fokuserar på det som kräver en människa.",
     },
   ],
-  casesNote: "Kundnamn och detaljer publiceras efter godkännande.",
+  casesNote: "Läs kundcaset från Dold Adress",
   faqs: [
     {
       q: "Vad är skillnaden mellan en AI-agent och en chatbot?",

@@ -3,7 +3,7 @@ import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import BookingEmbed from "@/components/site/BookingEmbed";
 import { getAllPosts, getPostsByCategory, type Category } from "@/lib/blog";
-import { ORG, SERVICE_PAGES, SITE_URL } from "@/lib/site";
+import { ORG, PAGE_UPDATED, SERVICE_PAGES, SITE_URL } from "@/lib/site";
 
 // Gemensam mall för tjänstesidorna (/ai-agenter, /seo-geo, /customer-success,
 // /contact-center-automation). Varje sida beskriver ett erbjudande med
@@ -83,6 +83,10 @@ export interface ServicePageData {
   ctaText: string;
 }
 
+function formatUpdated(iso: string) {
+  return new Date(iso).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" });
+}
+
 function Overline({ children, center = false }: { children: React.ReactNode; center?: boolean }) {
   return (
     <div
@@ -135,6 +139,7 @@ export function buildServiceJsonLd(d: ServicePageData) {
         name: d.title,
         description: d.shortAnswer,
         inLanguage: "sv-SE",
+        dateModified: PAGE_UPDATED[d.href],
         isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": `${pageUrl}#service` },
         breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
@@ -222,6 +227,11 @@ export default function ServicePage({ data: d }: { data: ServicePageData }) {
                   Kort svar
                 </div>
                 <p className="text-[15.5px] leading-[1.62]" style={{ color: "var(--ink-soft)" }}>{d.shortAnswer}</p>
+                {PAGE_UPDATED[d.href] && (
+                  <p className="mt-4 text-[12.5px]" style={{ ...mono, color: "var(--faint-2)" }}>
+                    Senast uppdaterad <time dateTime={PAGE_UPDATED[d.href]}>{formatUpdated(PAGE_UPDATED[d.href])}</time>
+                  </p>
+                )}
               </aside>
             </div>
           </div>
@@ -346,7 +356,11 @@ export default function ServicePage({ data: d }: { data: ServicePageData }) {
                   </div>
                 ))}
               </div>
-              {d.casesNote && <p className="mt-5 text-[12px]" style={{ color: "var(--faint-2)" }}>{d.casesNote}</p>}
+              {d.casesNote && (
+                <p className="mt-6 text-[15px]">
+                  <Link href="/kundcase/dold-adress" className="no-underline" style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}>{d.casesNote} →</Link>
+                </p>
+              )}
             </div>
           </section>
         )}

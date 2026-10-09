@@ -50,6 +50,7 @@ const FACTS = `## Företagsfakta
 - Grundare: ${ORG.founderName}
 - Grundat: ${ORG.foundingDate.slice(0, 4)}
 - Produkter: SAMA (AI-synlighet, SEO och content) och Supportifier (AI-plattform för kundservice, ${SUPPORTIFIER.url})
+- Samma bolag driver även ${ORG.comSite}, den engelskspråkiga sajten om Customer Success-plattformen Successifier. Successifier, successifier.se, successifier.com och Supportifier är samma företag: ${ORG.legalName}.
 - LinkedIn (företag): ${ORG.linkedInCompany}
 - Allabolag: ${ORG.allabolag}
 
@@ -62,6 +63,9 @@ ${SERVICE_LINES}
 - [Startsida](${SITE_URL}/): Tjänster, SAMA-plattformen, kundresultat, citerbara fakta, FAQ och kontakt.
 - [Tjänster](${SITE_URL}/tjanster): Översikt över alla erbjudanden med tidsramar och prismodell.
 - [Supportifier – AI-kundtjänst](${SITE_URL}/ai-kundtjanst): Ingång till vår produkt Supportifier. Plattformsdetaljer, priser och demo finns på ${SUPPORTIFIER.url}.
+- [Kundcase: Dold Adress](${SITE_URL}/kundcase/dold-adress): Hur Successifier automatiserade kundmailen hos Dold Adress, med kundens egna ord.
+- [Om Successifier](${SITE_URL}/om): Vilka vi är, hur vi arbetar och bolagsfakta.
+- [Kontakt](${SITE_URL}/kontakt): Boka strategisamtal, e-post och telefon.
 - [Blogg](${SITE_URL}/blog): Guider och analyser om AI-konsulting, automation, Customer Success, SEO och GEO.
 - [Home (English)](${SITE_URL}/en): English overview of services.
 
@@ -91,8 +95,10 @@ export function buildLlmsTxt(): string {
   return `${HEADER}\n${buildClusterSection()}\n${FACTS}\n${sections.filter(Boolean).join("\n")}\n## Optional\n\n- [Fullständigt innehåll (llms-full.txt)](${SITE_URL}/llms-full.txt): Alla artiklar i sin helhet som markdown.\n- [Sitemap](${SITE_URL}/sitemap.xml)\n`;
 }
 
-// Fullständig version: varje artikel i sin helhet som markdown, med metadata
-// i klartext så att AI-system kan citera med korrekt titel, datum och URL.
+// Fullständig version, med metadata i klartext så att AI-system kan citera med
+// korrekt titel, datum och URL. Klusterartiklarna (sajtens huvudämnen) tas med
+// i sin helhet; övriga artiklar med kort svar och länk, så att filen hålls
+// liten nog att läsas i ett anrop.
 export function buildLlmsFullTxt(): string {
   // Klustren först (kontaktcenter, sedan agenter), pillar-sidan överst i
   // vart och ett, därefter övriga artiklar.
@@ -100,8 +106,10 @@ export function buildLlmsFullTxt(): string {
   const posts = [...cluster, ...getAllPosts().filter((p) => !p.cluster)];
   const articles = posts.map((p) => {
     const file = path.join(BLOG_DIR, `${p.slug}.md`);
-    const raw = fs.existsSync(file) ? fs.readFileSync(file, "utf-8") : "";
-    const body = raw ? matter(raw).content.replace(/^\s*#\s+[^\n]+\n+/, "").trim() : "";
+    const raw = p.cluster && fs.existsSync(file) ? fs.readFileSync(file, "utf-8") : "";
+    const body = raw
+      ? matter(raw).content.replace(/^\s*#\s+[^\n]+\n+/, "").trim()
+      : `Hela artikeln: ${SITE_URL}/blog/${p.slug}`;
     const meta = [
       `URL: ${SITE_URL}/blog/${p.slug}`,
       `Publicerad: ${p.date.slice(0, 10)}`,

@@ -30,7 +30,7 @@ Den här guiden visar exakt hur du kopplar ihop din customer success-plattform m
 ## Innehåll
 
 - [Varför integrationen spelar roll (och vad den kostar dig att skippa)](#varfor-integration-spelar-roll)
-- [Förstå dataflödet: vad ska synkas och i vilken riktning](#forstå-datafloden)
+- [Förstå dataflödet: vad ska synkas och i vilken riktning](#forsta-datafloden)
 - [Steg för steg: så kopplar du ihop systemen](#steg-for-steg-integration)
 - [De viktigaste integrationerna utöver CRM](#vanliga-integrationer)
 - [Bygg din 360-vy med health scores och playbooks](#bygg-360-vy)
@@ -73,7 +73,7 @@ Jämför de två scenarierna:
 
 Skillnaden är inte ett nytt verktyg. Det är en ny förmåga att agera proaktivt.
 
-## Förstå dataflödet: vad ska synkas och i vilken riktning {#forstå-datafloden}
+## Förstå dataflödet: vad ska synkas och i vilken riktning {#forsta-datafloden}
 
 Innan du öppnar ett enda API-dokument behöver du svara på en fråga: vilket system äger vilken data?
 

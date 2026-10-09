@@ -5,9 +5,9 @@ import { ORG, SUPPORTIFIER } from "@/lib/site";
 const PAGE_URL = "https://www.successifier.se/contact-center-automation";
 
 export const metadata: Metadata = {
-  title: "Contact center-automation: AI i kundtjänst och support",
+  title: "AI i kontaktcenter och kundtjänst: automation som håller",
   description:
-    "Successifier automatiserar kontaktcenter och support med AI: kategorisering och routing, AI-svarsförslag med säkerhetspoäng, självlärande kunskapsbas, QA och KPI-styrning. Byggt på egen ledningserfarenhet och produkten Supportifier.",
+    "AI i kontaktcenter och kundtjänst: routing, AI-svarsförslag med säkerhetspoäng, kunskapsbas, QA och KPI-styrning. Byggt på 20 års erfarenhet och Supportifier.",
   keywords: [
     "contact center automation",
     "kontaktcenter AI",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact-center-automation" },
   openGraph: {
     type: "website",
-    title: "Contact center-automation: AI i kundtjänst och support · Successifier",
+    title: "AI i kontaktcenter och kundtjänst: automation som håller · Successifier",
     description:
       "Från ärendeflöden och routing till AI-svarsförslag, kunskapsbas, QA och KPI-ramverk. Tre automationsnivåer med människan i loopen.",
     url: PAGE_URL,
@@ -131,7 +131,7 @@ const data: ServicePageData = {
       detail: "Processanalys följt av AI-agenter som automatiserar ärendehantering och intern routing, utan att byta plattform.",
     },
   ],
-  casesNote: "Kundnamn och detaljer publiceras efter godkännande.",
+  casesNote: "Läs kundcaset från Dold Adress",
   relatedHeading: "AI-agenter i kundservicen",
   related: [
     {

@@ -4,7 +4,7 @@ metaTitle: "Agentiska flöden i kundservice: inkorg till löst ärende"
 slug: "agentiska-floden-i-kundservice-fran-inkorg-till-lost-arende"
 date: 2026-10-01T09:00:00.000Z
 updated: 2026-10-01T09:00:00.000Z
-excerpt: "Så fungerar ett agentiskt flöde i kundservice steg för steg: hur AI-agenter läser, kategoriserar, hämtar data, svarar, agerar och lämnar över till en handläggare, och hur du inför det utan att tappa kvaliteten."
+excerpt: "Så fungerar ett agentiskt flöde i kundservice steg för steg: AI-agenter som läser, svarar och agerar, och lämnar över till en handläggare när det behövs."
 summary: "I ett agentiskt kundserviceflöde tar AI-agenter ett ärende hela vägen från inkorg till löst: läser och kategoriserar, identifierar kunden, hämtar order- och kunddata, formulerar ett svar ur kunskapsbasen, utför åtgärden i rätt system och uppdaterar ärendet. Osäkra ärenden lämnas över med en sammanfattning. Inför flödet i tre nivåer, från förslag till granskad automatik till eget ansvar, och flytta en kategori uppåt först när mätetalen håller."
 language: "sv"
 category: "customer-success"

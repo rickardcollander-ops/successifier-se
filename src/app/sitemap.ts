@@ -31,7 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/contact-center-automation", "monthly", 0.9),
     page("/ai-kundtjanst", "monthly", 0.8),
     { url: `${SITE_URL}/blog`, lastModified: new Date(latestPost), changeFrequency: "weekly", priority: 0.8 },
+    page("/kundcase/dold-adress", "monthly", 0.8),
+    page("/om", "monthly", 0.6),
     page("/om/rickard-collander", "monthly", 0.6),
+    page("/kontakt", "monthly", 0.6),
+    page("/integritetspolicy", "monthly", 0.2),
     page("/en", "monthly", 0.7),
   ];
 
