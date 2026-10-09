@@ -147,7 +147,7 @@ Börja med en avgränsad pilot. Den ska ha en tydlig baseline, en eller två är
 
 De misstag vi oftast ser, och hur du undviker dem, har vi samlat i [Vanliga misstag vid AI-införande i kontaktcenter](/blog/vanliga-misstag-vid-ai-inforande-i-kontaktcenter). Svenska språket förtjänar en egen genomgång: dialekter, tonalitet och hur du kvalitetssäkrar AI:ns svar beskriver vi i [Svenska språket och AI-kundservice](/blog/svenska-spraket-och-ai-kundservice-dialekter-tonalitet-kvalitetssakring).
 
-Vill du förstå varför AI flyttar kontaktcentret från kostnadsställe till strategisk funktion, läs [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga).
+Vill du förstå varför AI flyttar kontaktcentret från kostnadsställe till strategisk funktion, läs [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang).
 
 ## Checklista för kundserviceledare {#checklista}
 

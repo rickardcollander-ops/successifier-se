@@ -1,9 +1,9 @@
 ---
 title: "Varför varje B2B-bolag i Sverige behöver en AI-konsult 2026"
-metaTitle: "AI-konsult för B2B i Sverige: därför behövs den 2026"
+metaTitle: "Vad gör en AI-konsult? Uppdrag, faser och ROI för B2B"
 slug: "varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026"
 date: 2026-02-11T09:12:00.000Z
-excerpt: "En AI-konsult hjälper B2B-bolag hitta processerna med snabbast ROI, från lead-scoring till offerthantering. Så ser uppdraget ut och vad det kostar 2026."
+excerpt: "Vad en AI-konsult gör i ett B2B-bolag: vilka processer som ger snabbast ROI, hur ett uppdrag ser ut fas för fas och vad det kostar."
 language: "sv"
 tags:
   - "AI-konsult B2B Sverige"
@@ -17,7 +17,7 @@ keywords:
   - "vad kostar en ai-konsult"
   - "välja ai-konsult"
 category: "ai-konsult"
-updated: 2026-02-11T09:12:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Konsult presenterar AI-analys för ledningsgrupp i ett modernt kontor i Stockholm"
 ---
 
@@ -127,7 +127,7 @@ Totalt sett tar ett typiskt förstauppdrag 4-6 månader från discovery till pro
 
 ## Så väljer du rätt AI-konsult {#valja-ratt-ai-konsult}
 
-Marknaden för AI-konsulttjänster i Sverige har exploderat. Alla stora IT-konsulter erbjuder nu AI-tjänster, och hundratals frilansare kallar sig AI-konsulter. Kvalitetsskillnaderna är enorma. Här är de faktorer som faktiskt spelar roll när du ska [hitta rätt AI-partner för ditt B2B-bolag](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag).
+Marknaden för AI-konsulttjänster i Sverige har exploderat. Alla stora IT-konsulter erbjuder nu AI-tjänster, och hundratals frilansare kallar sig AI-konsulter. Kvalitetsskillnaderna är enorma. Här är de faktorer som faktiskt spelar roll när du ska [hitta rätt AI-partner för ditt B2B-bolag](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner).
 
 ### Prioritera B2B-erfarenhet framför teknisk bredd
 

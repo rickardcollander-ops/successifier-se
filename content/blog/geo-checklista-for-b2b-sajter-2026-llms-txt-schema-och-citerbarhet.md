@@ -265,7 +265,7 @@ Utan mätning vet du inte om checklistan gav effekt. Tre nivåer, från enklast 
 | GA4 | Segment för referral från chatgpt.com, perplexity.ai, copilot.microsoft.com och gemini.google.com | Faktisk trafik och konverteringar från AI-svar |
 | Plattform | Automatiserad spårning av omnämnandegrad, källor och GEO-readiness per sökmotor över tid | Trend, konkurrentjämförelse och prioriterad åtgärdslista |
 
-De manuella testerna beskrivs i detalj i vår guide om [AI-synlighet i marknadsföring 2026](/blog/ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta). För den tredje nivån använder vi [SAMA-plattformen](/#sama), som mäter AI-omnämnandegrad per sökmotor, poängsätter GEO-readiness enligt punkterna ovan och följer SEO-hälsan i samma vy. Poängen är inte verktyget i sig utan att mätningen sker regelbundet och på samma sätt varje gång.
+De manuella testerna beskrivs i detalj i vår guide om [AI-synlighet i marknadsföring 2026](/blog/ai-synlighet-2026-hur-b2b-bolag-rankar-i-chatgpt-och-perplexity). För den tredje nivån använder vi [SAMA-plattformen](/#sama), som mäter AI-omnämnandegrad per sökmotor, poängsätter GEO-readiness enligt punkterna ovan och följer SEO-hälsan i samma vy. Poängen är inte verktyget i sig utan att mätningen sker regelbundet och på samma sätt varje gång.
 
 ## Vanliga frågor
 

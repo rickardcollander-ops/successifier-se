@@ -19,6 +19,8 @@ keywords:
 category: "customer-success"
 updated: 2026-07-23T08:00:00.000Z
 imageAlt: "Customer Success-team analyserar churnsignaler i en dashboard på ett modernt kontor"
+cluster: "customer-success"
+pillar: true
 ---
 
 # Customer Success strategi B2B: Så bygger du en maskin som minskar churn

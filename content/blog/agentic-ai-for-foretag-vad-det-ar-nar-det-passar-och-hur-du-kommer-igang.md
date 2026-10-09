@@ -149,7 +149,7 @@ Agenten ska bara behandla de personuppgifter uppgiften kräver, i er egen miljö
 
 ### Mätbarhet
 
-Utan en baseline går det inte att avgöra om agenten gör nytta eller skada. Mät handläggningstid, felfrekvens och andel ärenden som eskaleras, före och efter. Vad som krävs av en partner på det här området beskriver vi i [AI-konsult i Sverige: hur hittar du rätt partner för ditt B2B-bolag](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag).
+Utan en baseline går det inte att avgöra om agenten gör nytta eller skada. Mät handläggningstid, felfrekvens och andel ärenden som eskaleras, före och efter. Vad som krävs av en partner på det här området beskriver vi i [AI-konsult i Sverige: hur hittar du rätt partner för ditt B2B-bolag](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner).
 
 ## Införandeplan: från kartläggning till skalning {#inforandeplan}
 

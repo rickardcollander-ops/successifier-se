@@ -106,7 +106,7 @@ Efter lansering tillkommer:
 
 ## Bygg nyttomodellen: var pengarna sparas {#nyttomodell}
 
-Nu till den del som är roligare att räkna på. Nyttan från [AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga) kommer från fyra huvudkällor.
+Nu till den del som är roligare att räkna på. Nyttan från [AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang) kommer från fyra huvudkällor.
 
 ### 1. Minskad genomsnittlig hanteringstid (AHT)
 

@@ -186,7 +186,7 @@ Den dolda vinsten är att säljarna slutar ge onödiga rabatter. När modellen v
 
 ## Hur du väljer rätt AI-konsult för ditt B2B-bolag {#valja-ratt-konsult}
 
-Marknaden för AI-konsulter växer snabbt och [kvaliteten varierar kraftigt](https://hbr.org/2023/07/how-to-hire-an-ai-consultant). Att välja fel konsult är dyrt, inte bara i konsultarvode utan i förlorad tid och missade möjligheter, vilket gör det värt att [hitta rätt AI-konsult i Sverige](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag) med en strukturerad process.
+Marknaden för AI-konsulter växer snabbt och [kvaliteten varierar kraftigt](https://hbr.org/2023/07/how-to-hire-an-ai-consultant). Att välja fel konsult är dyrt, inte bara i konsultarvode utan i förlorad tid och missade möjligheter, vilket gör det värt att [hitta rätt AI-konsult i Sverige](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner) med en strukturerad process.
 
 ### Fem frågor att ställa i en konsultupphandling
 

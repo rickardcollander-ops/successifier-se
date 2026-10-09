@@ -19,6 +19,7 @@ keywords:
 category: "customer-success"
 updated: 2026-04-02T08:15:00.000Z
 imageAlt: "Customer success-team analyserar churn-data på dashboards i ett modernt SaaS-kontor"
+cluster: "customer-success"
 ---
 
 # Customer Success plattform för SaaS: Så väljer du rätt 2026

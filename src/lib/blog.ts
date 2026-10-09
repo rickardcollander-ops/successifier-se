@@ -77,7 +77,7 @@ export interface FaqItem {
 
 // Ämneskluster för intern länkning. Artiklar med samma cluster länkar till
 // varandra och till klustrets pillar-sida (frontmatter "pillar: true").
-export type Cluster = "kontaktcenter" | "agenter";
+export type Cluster = "kontaktcenter" | "agenter" | "customer-success" | "saas";
 
 export const CLUSTERS: Record<Cluster, { label: string; description: string }> = {
   kontaktcenter: {
@@ -87,6 +87,14 @@ export const CLUSTERS: Record<Cluster, { label: string; description: string }> =
   agenter: {
     label: "AI-agenter och agentiska flöden",
     description: "Guider om vad AI-agenter och agentiska flöden är, när de passar och hur Successifier bygger och styr dem i drift.",
+  },
+  "customer-success": {
+    label: "Customer Success i B2B",
+    description: "Guider om att bygga en Customer Success-funktion som minskar churn: strategi, plattform, verktyg och CRM-integration.",
+  },
+  saas: {
+    label: "AI och skalning i SaaS-bolag",
+    description: "Guider om att införa AI i SaaS-bolag och skala utan att kostnaderna växer i samma takt.",
   },
 };
 
@@ -131,17 +139,15 @@ const LEGACY_CLUSTERS: Record<Category, string[]> = {
   "ai-konsult": [
     "varfor-varje-b2b-bolag-i-sverige-behover-en-ai-konsult-2026",
     "ai-konsult-for-b2b-5-projekt-som-ger-roi-inom-90-dagar",
-    "ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag",
   ],
   "customer-success": [
     "customer-success-plattform-for-saas-sa-valjer-du-ratt-2026",
     "customer-success-plattform-sa-integrerar-du-den-med-ditt-crm",
     "de-7-basta-customer-success-verktygen-for-b2b-2026",
-    "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga",
+    "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang",
   ],
   marknad: [
     "seo-konsult-for-b2b-foretag-sa-dominerar-du-google-med-ratt-strategi",
-    "ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta",
     "ai-driven-content-marknadsforing-b2b-strategi-som-skalar",
     "sa-okar-linkedin-annonsering-din-pipeline-som-b2b-konsult",
   ],

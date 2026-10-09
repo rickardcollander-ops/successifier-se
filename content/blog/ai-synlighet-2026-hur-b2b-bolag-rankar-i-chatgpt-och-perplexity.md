@@ -17,7 +17,7 @@ keywords:
   - "AI-sökmotorer B2B"
   - "mäta AI-synlighet"
 category: "marknad"
-updated: 2026-09-22T13:00:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Marknadsförare analyserar AI-sökresultat från ChatGPT och Perplexity på laptop"
 ---
 
@@ -55,7 +55,7 @@ Den här artikeln går igenom vad som avgör om ett B2B-bolag nämns i generativ
 
 Generative Engine Optimization (GEO) är ett samlingsnamn för de åtgärder ett bolag vidtar för att synas i svar från AI-drivna sökmotorer och chattar. Begreppet myntades av forskare vid Princeton och Georgia Tech i en studie från 2023, och har sedan dess blivit branschstandard för diskussionen om synlighet i ChatGPT, Perplexity och liknande verktyg.
 
-Det viktiga att förstå direkt: GEO ersätter inte SEO. De kompletterar varandra, vilket vår guide till [AI-synlighet i marknadsföring 2026](/blog/ai-synlighet-i-marknadsforing-2026-allt-du-behover-veta) går igenom i detalj.
+Det viktiga att förstå direkt: GEO ersätter inte SEO. De kompletterar varandra, vilket vår [GEO-checklista för B2B-sajter](/blog/geo-checklista-for-b2b-sajter-2026-llms-txt-schema-och-citerbarhet) också visar.
 
 Google indexerar fortfarande majoriteten av webbens innehåll och driver köptrafik. Men AI-modeller hämtar sina svar från en kombination av träningsdata, realtidsindexering (framför allt Perplexity och Bing-integrerade tjänster) och, i allt högre grad, RAG (retrieval-augmented generation) där modellen aktivt söker efter aktuell information.
 
@@ -234,7 +234,7 @@ Fyra sidor stod för nästan alla citeringar:
 | --- | --- |
 | [ROI-kalkyl för AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare) | 61 |
 | Den här artikeln om AI-synlighet | 34 |
-| [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga) | 30 (varav 19 via en engelsk dubblett-URL) |
+| [AI-automation i kontaktcenter: från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang) | 30 (varav 19 via en engelsk dubblett-URL) |
 | [AI-automation i svenska kontaktcenter: så kom igång på 30 dagar](/blog/ai-automation-i-svenska-kontaktcenter-sa-kom-igang-pa-30-dagar) | 18 |
 
 Under samma tre månader fick sajten bara 49 visningar i vanlig Bing-sök, nästan alla på varumärkessökningar. Från den 8 september upphörde citeringarna i princip.

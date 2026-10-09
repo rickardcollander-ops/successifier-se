@@ -1,7 +1,7 @@
 ---
 title: "AI automation i kontaktcenter Sverige: Från kostnadscenter till strategisk tillgång"
-metaTitle: "AI automation i kontaktcenter: från kostnad till värde"
-slug: "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga"
+metaTitle: "AI i kontaktcenter: vad ska automatiseras först?"
+slug: "ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang"
 date: 2026-04-28T07:30:00.000Z
 excerpt: "Så blir kontaktcentret en strategisk tillgång med AI: vilka uppgifter du automatiserar först, hur ärendedata blir affärsinsikt och vilka mått ledningen bryr sig om."
 language: "sv"
@@ -17,7 +17,7 @@ keywords:
   - "AI-native kontaktcenter"
   - "minska churn med AI"
 category: "customer-success"
-updated: 2026-09-22T12:40:00.000Z
+updated: 2026-10-09T08:00:00.000Z
 cluster: "kontaktcenter"
 answers: "Vilka uppgifter i ett svenskt kontaktcenter som ger mest effekt att automatisera med AI, och hur kontaktcentret går från kostnad till strategisk tillgång."
 ---

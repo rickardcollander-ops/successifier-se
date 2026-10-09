@@ -19,6 +19,7 @@ keywords:
 category: "saas"
 updated: 2026-07-13T08:13:50.266Z
 imageAlt: "Customer Success-team i ett SaaS-bolag följer automatiserade health scores på skärmar"
+cluster: "saas"
 ---
 
 # SaaS-bolag: Så skalar du med AI och automation utan att tappa kontrollen

@@ -146,7 +146,7 @@ När kunskapsbasen håller kan AI:n svara kunden direkt i chatt och hjälpcenter
 
 Gå igenom kategorierna varje månad. Vilka kan gå upp en automationsnivå, vilka ska gå ner? Vilka ärenden kan förebyggas med bättre information före kontakt? Det är här customer engagement center skiljer sig från ett effektivare kontaktcenter.
 
-För att få budget till planen behöver du en kalkyl. Använd [ROI-kalkylen för AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare). Vill du argumentera för varför kontaktcentret är en strategisk funktion snarare än en kostnad, läs [från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga).
+För att få budget till planen behöver du en kalkyl. Använd [ROI-kalkylen för AI-automation i kontaktcenter](/blog/ai-automation-i-kontaktcenter-roi-kalkyl-for-svenska-beslutsfattare). Vill du argumentera för varför kontaktcentret är en strategisk funktion snarare än en kostnad, läs [från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang).
 
 ## Checklista innan AI:n möter kunden {#checklista}
 

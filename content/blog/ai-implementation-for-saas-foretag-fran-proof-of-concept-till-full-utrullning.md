@@ -17,6 +17,7 @@ language: "sv"
 tags:
   - "AI-implementation SaaS"
 status: "published"
+cluster: "saas"
 ---
 
 # AI-implementation för SaaS-företag: Från proof-of-concept till full utrullning

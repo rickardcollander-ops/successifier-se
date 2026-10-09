@@ -214,7 +214,7 @@ Undvik att presentera AI-implementationen som ett teknikprojekt. Presentera den 
 
 ### Vad händer efter dag 30?
 
-En 30-dagarsplan ger dig ett proof of concept och en intern rörelse. Den riktiga skalningen, där du lägger till fler use cases, integrerar mot CRM och börjar med [proaktiv AI-kommunikation](https://hbr.org/2022/03/when-do-customers-prefer-ai-over-humans), sker under kvartal två och tre, när kontaktcentret går [från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillga). Planen här är grunden, inte slutmålet.
+En 30-dagarsplan ger dig ett proof of concept och en intern rörelse. Den riktiga skalningen, där du lägger till fler use cases, integrerar mot CRM och börjar med [proaktiv AI-kommunikation](https://hbr.org/2022/03/when-do-customers-prefer-ai-over-humans), sker under kvartal två och tre, när kontaktcentret går [från kostnadscenter till strategisk tillgång](/blog/ai-automation-i-kontaktcenter-sverige-fran-kostnadscenter-till-strategisk-tillgang). Planen här är grunden, inte slutmålet.
 
 ## Nytt 2026: 30-dagarsplanen för e-postinkorgen {#plan-for-e-post}
 

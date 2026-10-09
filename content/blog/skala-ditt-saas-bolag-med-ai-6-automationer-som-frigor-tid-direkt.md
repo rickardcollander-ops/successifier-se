@@ -19,6 +19,7 @@ keywords:
 category: "saas"
 updated: 2026-07-16T08:00:00.000Z
 imageAlt: "Customer success-team följer AI-drivna health scores på dashboards i ett modernt techkontor"
+cluster: "saas"
 ---
 
 # Skala ditt SaaS-bolag med AI: 6 automationer som frigör tid direkt

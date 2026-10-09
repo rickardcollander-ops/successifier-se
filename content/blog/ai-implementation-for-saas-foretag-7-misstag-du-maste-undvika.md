@@ -19,6 +19,7 @@ language: "sv"
 tags:
   - "AI-implementation SaaS"
 status: "published"
+cluster: "saas"
 ---
 
 # AI-implementation för SaaS-företag: 7 misstag du måste undvika

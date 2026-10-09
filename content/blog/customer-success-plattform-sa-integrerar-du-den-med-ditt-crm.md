@@ -17,6 +17,7 @@ keywords:
   - "CRM-synk customer success"
 category: "customer-success"
 updated: 2026-04-15T09:40:00.000Z
+cluster: "customer-success"
 ---
 
 # Customer Success-plattform: Så integrerar du den med ditt CRM

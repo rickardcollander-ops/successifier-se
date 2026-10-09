@@ -19,6 +19,8 @@ language: "sv"
 tags:
   - "AI-implementation för SaaS-företag"
 status: "published"
+cluster: "saas"
+pillar: true
 ---
 
 # AI-implementation för SaaS-företag 2026: Den kompletta guiden

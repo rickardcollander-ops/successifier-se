@@ -154,7 +154,7 @@ Börja med det flöde där ni kan mäta before/after tydligast, vilket förutsä
 
 ## Så väljer du rätt AI-konsult för ditt företag {#sa-valjer-du-ratt-ai-konsult}
 
-Marknaden för AI-konsulter har vuxit snabbt, och kvaliteten varierar enormt när du ska [hitta rätt AI-konsult i Sverige](/blog/ai-konsult-i-sverige-hur-hittar-du-ratt-partner-for-ditt-b2b-bolag). Här är de kriterier som faktiskt skiljer bra från mediokra.
+Marknaden för AI-konsulter har vuxit snabbt, och kvaliteten varierar enormt när du ska [hitta rätt AI-konsult i Sverige](/blog/basta-ai-konsultbolag-i-sverige-2026-sa-valjer-du-ratt-partner). Här är de kriterier som faktiskt skiljer bra från mediokra.
 
 ### Teknisk bredd utan vendorbias
 

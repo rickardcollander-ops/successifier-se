@@ -19,6 +19,7 @@ keywords:
 category: "customer-success"
 updated: 2026-03-20T10:30:00.000Z
 imageAlt: "Customer Success-team jämför health scores i dashboards på ett modernt kontor"
+cluster: "customer-success"
 ---
 
 # De 7 bästa Customer Success-verktygen för B2B 2026

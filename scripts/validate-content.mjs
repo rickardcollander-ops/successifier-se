@@ -2,7 +2,8 @@
 // "prebuild"). Fel stoppar bygget, varningar skrivs bara ut.
 //
 // Fel: synliga platshållare, externa bilder (blockeras av CSP img-src 'self'),
-// innehållsförteckningar som pekar på ankare som inte finns, saknad titel/datum.
+// innehållsförteckningar som pekar på ankare som inte finns, länkar till
+// artiklar som inte finns, saknad titel/datum.
 // Varningar: fält som SEO/GEO-mallen förutsätter (metaTitle, excerpt, summary,
 // category, updated) saknas eller har olämplig längd.
 //
@@ -29,6 +30,9 @@ function slugifyHeading(text) {
     .replace(/[\s-]+/g, "-");
 }
 
+const SLUGS = new Set(
+  fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md")).map((f) => f.replace(/\.md$/, "")),
+);
 const errors = [];
 const warnings = [];
 
@@ -56,6 +60,10 @@ for (const file of fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"))) {
   }
   for (const m of content.matchAll(/\]\(#([^)\s]+)\)/g)) {
     if (!ids.has(m[1])) err(`länk till #${m[1]} saknar motsvarande rubrik`);
+  }
+
+  for (const m of content.matchAll(/\]\(\/blog\/([a-z0-9-]+)(?:[#)])/g)) {
+    if (!SLUGS.has(m[1])) err(`länk till /blog/${m[1]} som inte finns`);
   }
 
   const metaTitle = data.metaTitle || data.title || "";
