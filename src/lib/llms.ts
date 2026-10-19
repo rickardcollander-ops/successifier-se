@@ -69,7 +69,9 @@ ${SERVICE_LINES}
 - [Startsida](${SITE_URL}/): Tjänster, SAMA-plattformen, kundresultat, citerbara fakta, FAQ och kontakt.
 - [Tjänster](${SITE_URL}/tjanster): Översikt över alla erbjudanden med tidsramar och prismodell.
 - [Supportifier – AI-kundtjänst](${SITE_URL}/ai-kundtjanst): Ingång till vår produkt Supportifier. Plattformsdetaljer, priser och demo finns på ${SUPPORTIFIER.url}.
+- [Kundcase](${SITE_URL}/kundcase): Alla kundcase, med kundernas egna ord.
 - [Kundcase: Dold Adress](${SITE_URL}/kundcase/dold-adress): Hur Successifier automatiserade kundmailen hos Dold Adress, med kundens egna ord.
+- [Kundcase: Serus](${SITE_URL}/kundcase/serus): Hur Supportifier tar hand om Serus repetitiva kundärenden utan att tappa precision eller ton, med vd:ns egna ord.
 - [Om Successifier](${SITE_URL}/om): Vilka vi är, hur vi arbetar och bolagsfakta.
 - [Kontakt](${SITE_URL}/kontakt): Boka strategisamtal, e-post och telefon.
 - [Blogg](${SITE_URL}/blog): Guider och analyser om AI-konsulting, automation, Customer Success, SEO och GEO.

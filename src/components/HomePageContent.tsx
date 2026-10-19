@@ -630,7 +630,7 @@ export default function HomePageContent({ t }: { t: Dict }) {
             {[
               ["/tjanster", sv ? "Tjänster" : "Services (Swedish)"],
               ["/agentiska-floden", sv ? "Agentiska flöden" : "Agentic workflows (Swedish)"],
-              ["/kundcase/dold-adress", sv ? "Kundcase" : "Customer story (Swedish)"],
+              ["/kundcase", sv ? "Kundcase" : "Customer stories (Swedish)"],
               ["/blog", sv ? "Blogg" : "Blog (Swedish)"],
               ["/om", sv ? "Om oss" : "About (Swedish)"],
               ["/kontakt", sv ? "Kontakt" : "Contact (Swedish)"],

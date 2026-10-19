@@ -358,7 +358,7 @@ export default function ServicePage({ data: d }: { data: ServicePageData }) {
               </div>
               {d.casesNote && (
                 <p className="mt-6 text-[15px]">
-                  <Link href="/kundcase/dold-adress" className="no-underline" style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}>{d.casesNote} →</Link>
+                  <Link href="/kundcase" className="no-underline" style={{ color: "var(--accent)", borderBottom: "1px solid var(--hairline-strong)" }}>{d.casesNote} →</Link>
                 </p>
               )}
             </div>

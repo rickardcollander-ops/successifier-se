@@ -112,7 +112,9 @@ export const PAGE_UPDATED: Record<string, string> = {
   "/om/rickard-collander": "2026-10-01",
   "/om": "2026-10-09",
   "/kontakt": "2026-10-09",
-  "/kundcase/dold-adress": "2026-10-09",
+  "/kundcase": "2026-10-19",
+  "/kundcase/dold-adress": "2026-10-19",
+  "/kundcase/serus": "2026-10-19",
   "/integritetspolicy": "2026-10-09",
 };
 

@@ -27,7 +27,7 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
           ["/contact-center-automation", "Contact center"],
           ["/ai-kundtjanst", "Supportifier"],
           [blog, "Blogg"],
-          ["/kundcase/dold-adress", "Kundcase"],
+          ["/kundcase", "Kundcase"],
           ["/om", "Om oss"],
           ["/kontakt", "Kontakt"],
         ];
