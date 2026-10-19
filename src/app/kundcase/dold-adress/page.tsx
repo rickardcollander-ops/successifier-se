@@ -72,7 +72,8 @@ export default function DoldAdressCasePage() {
         "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Hem", item: `${SITE_URL}/` },
-          { "@type": "ListItem", position: 2, name: "Kundcase: Dold Adress", item: PAGE_URL },
+          { "@type": "ListItem", position: 2, name: "Kundcase", item: `${SITE_URL}/kundcase` },
+          { "@type": "ListItem", position: 3, name: "Dold Adress", item: PAGE_URL },
         ],
       },
     ],
@@ -81,7 +82,7 @@ export default function DoldAdressCasePage() {
   return (
     <SimplePage
       jsonLd={jsonLd}
-      breadcrumb={[{ label: "Kundcase: Dold Adress" }]}
+      breadcrumb={[{ href: "/kundcase", label: "Kundcase" }, { label: "Dold Adress" }]}
       eyebrow="Kundcase · AI-kundtjänst"
       title="Dold Adress: kundmail som besvaras automatiskt, utan att tappa tonen"
       lead="Dold Adress hjälper privatpersoner att ta bort och dölja sina personuppgifter på nätet. Kunderna skriver ofta i känsliga lägen, så varje svar måste vara personligt och diskret."
@@ -133,7 +134,7 @@ export default function DoldAdressCasePage() {
 
       <h2>Vill ni göra samma sak?</h2>
       <p>
-        Läs hur vi inför <Link href="/contact-center-automation">AI i kontaktcenter och kundtjänst</Link>, eller den
+        Läs även <Link href="/kundcase/serus">kundcaset från Serus</Link>, hur vi inför <Link href="/contact-center-automation">AI i kontaktcenter och kundtjänst</Link> eller den
         praktiska guiden <Link href="/blog/ai-kundtjanst-for-e-post-sa-automatiserar-du-supportinkorgen-utan-att-tappa-kvaliteten">AI-kundtjänst för e-post</Link>.
         Ni kan också <Link href="/kontakt">boka ett samtal</Link> direkt.
       </p>

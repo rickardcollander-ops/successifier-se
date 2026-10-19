@@ -169,8 +169,8 @@ const sv = {
     case2Title: "Tjänstebolag i tillväxtfas",
     case2Result: "Strukturerat CS-arbete från grunden",
     case2Detail: "Successifier etablerade kundfunktion, definierade processer och implementerade verktyg som gav teamet ett driftbart system att ta över.",
-    note: "Läs kundcaset från Dold Adress",
-    noteHref: "/kundcase/dold-adress",
+    note: "Läs kundcasen från Dold Adress och Serus",
+    noteHref: "/kundcase",
   },
   facts: {
     overline: "Fakta i korthet",
@@ -468,8 +468,8 @@ const en: typeof sv = {
     case2Title: "Professional services company, growth stage",
     case2Result: "Customer Success function built from scratch",
     case2Detail: "Successifier established the customer function, defined processes, and implemented tooling that gave the team an operational system to take ownership of.",
-    note: "Read the Dold Adress customer story (Swedish)",
-    noteHref: "/kundcase/dold-adress",
+    note: "Read the Dold Adress and Serus customer stories (Swedish)",
+    noteHref: "/kundcase",
   },
   facts: {
     overline: "Facts in brief",

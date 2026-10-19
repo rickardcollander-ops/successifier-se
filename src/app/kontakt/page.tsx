@@ -78,7 +78,7 @@ export default function ContactPage() {
 
       <p>
         Vill du veta mer först? Läs <Link href="/om">om oss</Link>, se våra <Link href="/tjanster">tjänster</Link> eller{" "}
-        <Link href="/kundcase/dold-adress">kundcaset från Dold Adress</Link>.
+        <Link href="/kundcase">våra kundcase</Link>.
       </p>
     </SimplePage>
   );

@@ -149,7 +149,7 @@ const data: ServicePageData = {
       detail: "AI-lösning som tar hand om återkommande kundmail med bibehållen personlig ton. Kortare svarstider och ett team som fokuserar på det som kräver en människa.",
     },
   ],
-  casesNote: "Läs kundcaset från Dold Adress",
+  casesNote: "Läs kundcasen från Dold Adress och Serus",
   faqs: [
     {
       q: "Vad är skillnaden mellan en AI-agent och en chatbot?",

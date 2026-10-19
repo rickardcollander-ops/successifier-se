@@ -155,7 +155,7 @@ const data: ServicePageData = {
       detail: "Ett flöde som tar hand om återkommande kundmail med bibehållen personlig ton, och lämnar det som kräver en människa till teamet.",
     },
   ],
-  casesNote: "Läs kundcaset från Dold Adress",
+  casesNote: "Läs kundcasen från Dold Adress och Serus",
   faqs: [
     {
       q: "Vilka processer passar för agentiska flöden?",

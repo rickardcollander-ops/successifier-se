@@ -131,7 +131,7 @@ const data: ServicePageData = {
       detail: "Processanalys följt av AI-agenter som automatiserar ärendehantering och intern routing, utan att byta plattform.",
     },
   ],
-  casesNote: "Läs kundcaset från Dold Adress",
+  casesNote: "Läs kundcasen från Dold Adress och Serus",
   relatedHeading: "AI-agenter i kundservicen",
   related: [
     {

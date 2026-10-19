@@ -103,8 +103,9 @@ export default function AboutPage() {
         <li><strong>{t.approach.s3Title}.</strong> {t.approach.s3Text}</li>
       </ol>
       <p>
-        Ett exempel är <Link href="/kundcase/dold-adress">kundcaset från Dold Adress</Link>, där återkommande kundmail
-        nu besvaras automatiskt i kundens egen ton.
+        Två exempel är <Link href="/kundcase/dold-adress">Dold Adress</Link> och{" "}
+        <Link href="/kundcase/serus">Serus</Link>, där återkommande kundärenden nu besvaras automatiskt i kundens
+        egen ton.
       </p>
 
       <h2>Bolagsfakta</h2>
