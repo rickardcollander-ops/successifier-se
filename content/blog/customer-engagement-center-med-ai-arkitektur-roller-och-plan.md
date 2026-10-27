@@ -2,7 +2,7 @@
 title: "Customer engagement center med AI: arkitektur, roller och steg-för-steg-plan"
 metaTitle: "Customer engagement center med AI: arkitektur & plan"
 slug: "customer-engagement-center-med-ai-arkitektur-roller-och-plan"
-date: 2026-09-22T10:00:00.000Z
+date: 2026-09-24T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Så bygger du ett modernt AI-drivet customer engagement center: arkitektur i fem lager, nya roller och en steg-för-steg-plan från nuläge till drift."
 summary: "Ett modernt AI-drivet customer engagement center bygger på fem lager: kanaler, orkestrering och routing, en gemensam kunskapsbas med kunddata, ett AI-lager för svarsförslag, självservice och AI-agenter, samt analys och styrning. Bygg i den ordningen: kunskap och data först, sedan AI som stöd för handläggare, därefter granskad automatik och självservice. Utse ägare för kunskapsbas, AI-kvalitet och automationsnivåer innan AI:n möter kunden."

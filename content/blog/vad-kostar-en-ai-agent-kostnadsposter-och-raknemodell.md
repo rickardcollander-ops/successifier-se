@@ -2,8 +2,8 @@
 title: "Vad kostar en AI-agent? Kostnadsposter och räknemodell för payback"
 metaTitle: "Vad kostar en AI-agent? Kostnadsposter och räknemodell"
 slug: "vad-kostar-en-ai-agent-kostnadsposter-och-raknemodell"
-date: 2026-10-09T08:00:00.000Z
-updated: 2026-10-09T08:00:00.000Z
+date: 2026-10-11T08:00:00.000Z
+updated: 2026-10-11T08:00:00.000Z
 excerpt: "Vad kostar en AI-agent? Alla kostnadsposter från kartläggning till drift och styrning, och en räknemodell för payback som du fyller i med egna siffror."
 summary: "En AI-agent kostar mer än modellanvändningen. Räkna med kartläggning, bygge, integration, modell och drift, förvaltning, styrning och er egen tid, där integration och förvaltning oftast underskattas. Räkna payback som engångskostnaden delad med den månatliga nyttan minus de löpande kostnaderna, och räkna baklänges till hur mycket de externa kostnaderna högst får vara. Använd en försiktig nytta och era egna siffror för volym, handläggningstid och timkostnad."
 language: "sv"

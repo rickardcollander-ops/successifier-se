@@ -17,6 +17,7 @@ keywords:
   - "organiska mql"
   - "seo-rapportering till ledning"
 category: "marknad"
+cluster: "marknad"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "B2B-marknadsteam granskar SEO-dashboards med pipeline-data i ett modernt kontor"
 ---

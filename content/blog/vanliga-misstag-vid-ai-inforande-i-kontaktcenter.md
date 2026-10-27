@@ -2,7 +2,7 @@
 title: "Vanliga misstag vid AI-införande i kontaktcenter (och hur du undviker dem)"
 metaTitle: "Vanliga misstag vid AI-införande i kontaktcenter"
 slug: "vanliga-misstag-vid-ai-inforande-i-kontaktcenter"
-date: 2026-09-22T16:00:00.000Z
+date: 2026-10-02T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "12 vanliga misstag vid AI-införande i kontaktcenter: vad som händer, varför det händer och hur du undviker det. Med sammanfattande checklista."
 summary: "De vanligaste misstagen vid AI-införande i kontaktcenter är att börja i fel ärenden, sakna baseline, hoppa över nivån där en människa godkänner svaren och lämna kunskapsbasen utan ägare. Andra är att mäta containment utan CSAT, glömma handläggarna och facket, köpa på demo, underskatta integrationer, sakna väg till människa, inte märka AI-svar, inte justera WFM-prognoserna och köra piloter utan exitkriterier. Alla går att undvika med en avgränsad pilot, tydliga mätetal och en ägare med mandat."

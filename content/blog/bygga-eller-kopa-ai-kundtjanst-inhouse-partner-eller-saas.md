@@ -2,7 +2,7 @@
 title: "Bygga eller köpa? AI-kundtjänst inhouse vs. partner vs. SaaS"
 metaTitle: "Bygga eller köpa AI-kundtjänst? Tre vägar"
 slug: "bygga-eller-kopa-ai-kundtjanst-inhouse-partner-eller-saas"
-date: 2026-09-22T15:00:00.000Z
+date: 2026-09-30T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Bygga själva, anlita partner eller köpa SaaS för AI-kundtjänst? Jämförelse av kontroll, tid till värde, kostnad, risk och exit, med beslutsstöd."
 summary: "De flesta svenska företag får snabbast och säkrast värde av en SaaS-plattform för AI-kundtjänst, ofta kombinerad med en partner för kartläggning och införande. Att bygga själva är rätt när AI-kundtjänsten är en del av er egen produkt, när ni har ett etablerat team för AI och integrationer eller när krav på datakontroll inte går att uppfylla med en standardplattform. Jämför vägarna på kontroll, tid till värde, kompetenskrav, kostnad över tre år, risk, underhåll och exit."

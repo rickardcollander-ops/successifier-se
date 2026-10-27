@@ -13,6 +13,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const post = getPostBySlug(slug);
   return renderOgImage({
     title: post?.title ?? "Successifier",
-    eyebrow: categoryLabel(post?.category ?? null) ?? "Blogg",
+    eyebrow: categoryLabel(post?.category ?? null) ?? "Kunskapsbas",
   });
 }

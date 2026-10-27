@@ -2,7 +2,7 @@
 title: "Vad kostar AI i kundservice? Prismodeller och räkneexempel för 10, 50 och 200 agenter"
 metaTitle: "Vad kostar AI i kundservice? Prismodeller och kalkyl"
 slug: "vad-kostar-ai-i-kundservice-prismodeller-och-rakneexempel"
-date: 2026-09-22T12:00:00.000Z
+date: 2026-09-27T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Vad kostar AI i kundservice? Fyra prismodeller, alla kostnadsposter och räkneexempel för 10, 50 och 200 handläggare som du fyller i med egna värden."
 summary: "AI i kundservice kostar mer än licensen. Räkna med integration, intern tid för projekt och kunskapsbas, utbildning och löpande förbättring. Prismodellen avgör hur kostnaden växer: per ärende eller konversation, per användare, per volym eller plattform plus konsult. Räkna baklänges från nyttan: i våra räkneexempel, med försiktiga antaganden, är utrymmet för licens per handläggare betydligt större vid 200 handläggare än vid 10, eftersom de fasta kostnaderna slås ut på fler ärenden."

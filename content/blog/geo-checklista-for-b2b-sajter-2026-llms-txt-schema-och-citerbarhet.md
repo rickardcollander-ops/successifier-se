@@ -8,6 +8,7 @@ excerpt: "GEO-checklista i 12 punkter för svenska B2B-sajter: dokumenterade kra
 summary: "För att bli citerad av ChatGPT, Perplexity och Google AI behöver en B2B-sajt släppa in AI-crawlers i robots.txt, vara indexerad i Google och Bing, ha serverrenderat innehåll och konsekvent strukturerad data (Organization, Person, Article, FAQPage). Det är de dokumenterade kraven. Kort svar högst upp, rubriker som frågor och siffror med källa är arbetsmetoder som gör texten citerbar. llms.txt är en hypotes: Google använder den inte, kostnaden är låg, men förvänta dig ingen mätbar effekt av filen ensam. Ingen särskild AI-märkning krävs."
 language: "sv"
 category: "marknad"
+cluster: "marknad"
 tags:
   - "GEO-checklista"
 keywords:

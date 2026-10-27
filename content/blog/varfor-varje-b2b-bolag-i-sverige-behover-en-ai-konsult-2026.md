@@ -17,6 +17,7 @@ keywords:
   - "vad kostar en ai-konsult"
   - "välja ai-konsult"
 category: "ai-konsult"
+cluster: "ai-konsult"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Konsult presenterar AI-analys för ledningsgrupp i ett modernt kontor i Stockholm"
 ---

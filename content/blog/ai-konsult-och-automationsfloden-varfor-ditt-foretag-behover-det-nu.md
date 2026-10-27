@@ -17,6 +17,7 @@ keywords:
   - "ROI på AI-automation"
   - "välja AI-konsult"
 category: "ai-konsult"
+cluster: "ai-konsult"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Team diskuterar AI-strategi och automationsflöden vid en whiteboard på modernt kontor"
 ---

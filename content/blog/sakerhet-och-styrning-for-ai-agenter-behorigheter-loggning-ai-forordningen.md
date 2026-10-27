@@ -2,8 +2,8 @@
 title: "Säkerhet och styrning för AI-agenter: behörigheter, loggning och AI-förordningen"
 metaTitle: "Säkerhet och styrning för AI-agenter"
 slug: "sakerhet-och-styrning-for-ai-agenter-behorigheter-loggning-ai-forordningen"
-date: 2026-10-09T08:00:00.000Z
-updated: 2026-10-09T08:00:00.000Z
+date: 2026-10-10T08:00:00.000Z
+updated: 2026-10-10T08:00:00.000Z
 excerpt: "Så styr du AI-agenter säkert: minsta behörighet, nivåer av mänsklig kontroll, loggning, skydd mot prompt injection, GDPR och AI-förordningen."
 summary: "En AI-agent ska ha ett eget konto med minsta möjliga behörighet, en bestämd nivå av mänsklig kontroll per åtgärd och en logg över varje steg den tar. Behandla allt agenten läser som opålitligt, eftersom prompt injection kan styra om den, och låt koden, inte modellen, avgöra vad den får göra. GDPR gäller fullt ut när agenten behandlar personuppgifter, och AI-förordningen kräver bland annat att människor informeras när de interagerar med ett AI-system, om det inte är uppenbart. Stäm av klassning och tidsplan med jurist."
 language: "sv"

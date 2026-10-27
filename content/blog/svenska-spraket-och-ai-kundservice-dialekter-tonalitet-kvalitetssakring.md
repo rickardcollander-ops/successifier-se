@@ -2,7 +2,7 @@
 title: "Svenska språket och AI-kundservice: dialekter, tonalitet och kvalitetssäkring"
 metaTitle: "AI-kundservice på svenska: ton och kvalitet"
 slug: "svenska-spraket-och-ai-kundservice-dialekter-tonalitet-kvalitetssakring"
-date: 2026-09-22T17:00:00.000Z
+date: 2026-10-03T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Så får du AI-kundservice att fungera på svenska: tilltal och ton i text, dialekter i röst-AI, flerspråkiga kunder, blindtest och en bedömningsmall för drift."
 summary: "AI-kundservice på svenska kräver styrning av tre saker. I skriven svenska: tilltal, varumärkets ton, sär- och sammanskrivning, anglicismer, facktermer och produktnamn. I talad svenska: dialekter, finlandssvenska, brytning, bakgrundsljud och taligenkänning av namn, adresser och personnummer. Och i kvalitetssäkringen: blindtest med handläggare före start, testset per dialekt och kanal, och stickprov i drift som bedöms med en fast mall. Skriv en tonalitetsguide för AI:n med exempel på bra och dåliga formuleringar."

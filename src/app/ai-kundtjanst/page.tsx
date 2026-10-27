@@ -427,7 +427,7 @@ export default function AiKundtjanstPage() {
                   </h2>
                 </div>
                 <Link href="/blog" className="text-[14.5px] no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}>
-                  Alla artiklar →
+                  Hela kunskapsbasen →
                 </Link>
               </div>
               <div className="grid gap-6 md:grid-cols-3">

@@ -75,28 +75,54 @@ export interface FaqItem {
   a: string;
 }
 
-// Ämneskluster för intern länkning. Artiklar med samma cluster länkar till
-// varandra och till klustrets pillar-sida (frontmatter "pillar: true").
-export type Cluster = "kontaktcenter" | "agenter" | "customer-success" | "saas";
+// Ämneskluster för intern länkning och kunskapsbasens ämnessidor
+// (/blog/amne/<kluster>). Artiklar med samma cluster länkar till varandra och
+// till klustrets pillar-sida (frontmatter "pillar: true").
+export type Cluster = "kontaktcenter" | "agenter" | "customer-success" | "saas" | "marknad" | "ai-konsult";
 
-export const CLUSTERS: Record<Cluster, { label: string; description: string }> = {
+export const CLUSTERS: Record<Cluster, { label: string; short: string; description: string }> = {
   kontaktcenter: {
     label: "AI i kontaktcenter och kundservice",
+    short: "AI i kundservice",
     description: "Guider om att välja, bygga, räkna hem och mäta AI i svenska kontaktcenter.",
   },
   agenter: {
     label: "AI-agenter och agentiska flöden",
+    short: "AI-agenter",
     description: "Guider om vad AI-agenter och agentiska flöden är, när de passar och hur Successifier bygger och styr dem i drift.",
   },
   "customer-success": {
     label: "Customer Success i B2B",
+    short: "Customer Success",
     description: "Guider om att bygga en Customer Success-funktion som minskar churn: strategi, plattform, verktyg och CRM-integration.",
   },
   saas: {
     label: "AI och skalning i SaaS-bolag",
+    short: "SaaS",
     description: "Guider om att införa AI i SaaS-bolag och skala utan att kostnaderna växer i samma takt.",
   },
+  "ai-konsult": {
+    label: "AI-konsult och automation",
+    short: "AI-konsult",
+    description: "Guider om att välja AI-konsult, kartlägga processer och hitta de första automationerna som ger avkastning.",
+  },
+  marknad: {
+    label: "SEO, GEO och B2B-marknadsföring",
+    short: "SEO & GEO",
+    description: "Guider om att synas i Google och i AI-svar från ChatGPT och Perplexity, och om AI-driven B2B-marknadsföring.",
+  },
 };
+
+// Ordningen ämnena visas i på kunskapsbasens översikt.
+export const CLUSTER_ORDER: Cluster[] = ["kontaktcenter", "agenter", "customer-success", "saas", "ai-konsult", "marknad"];
+
+export function isCluster(value: string): value is Cluster {
+  return value in CLUSTERS;
+}
+
+export function clusterHref(cluster: Cluster): string {
+  return `/blog/amne/${cluster}`;
+}
 
 export interface PostMeta {
   slug: string;
@@ -122,6 +148,117 @@ export interface PostMeta {
 export interface Post extends PostMeta {
   content: string;
   faq: FaqItem[];
+}
+
+export interface TocItem {
+  id: string;
+  label: string;
+}
+
+export interface FaqHtmlItem {
+  id: string;
+  question: string;
+  answerHtml: string;
+}
+
+// Artikeln uppdelad för mallen: innehållsförteckningen lyfts ut till en egen
+// navigering, brödtexten delas i två delar så att en CTA kan ligga mitt i,
+// och FAQ-sektionen renderas som fällbara frågor.
+export interface ArticleParts {
+  toc: TocItem[];
+  beforeHtml: string;
+  afterHtml: string;
+  faqHeadingHtml: string;
+  faq: FaqHtmlItem[];
+  tailHtml: string;
+}
+
+function headingId(text: string): string {
+  const explicit = text.match(HEADING_ID_RE);
+  return explicit ? explicit[1] : slugifyHeading(text.replace(HEADING_ID_RE, "").trim());
+}
+
+// Delar upp markdown i sektioner per H2. Första sektionen är texten före
+// första H2 (kan vara tom).
+function splitH2(content: string): { heading: string | null; body: string }[] {
+  const sections: { heading: string | null; body: string }[] = [{ heading: null, body: "" }];
+  let inFence = false;
+  for (const line of content.split("\n")) {
+    if (/^```/.test(line)) inFence = !inFence;
+    if (!inFence && /^##\s/.test(line)) {
+      sections.push({ heading: line.replace(/^##\s+/, "").trim(), body: "" });
+    } else {
+      sections[sections.length - 1].body += line + "\n";
+    }
+  }
+  return sections;
+}
+
+const sectionMd = (s: { heading: string | null; body: string }) => (s.heading ? `## ${s.heading}\n${s.body}` : s.body);
+
+export function buildArticleParts(content: string): ArticleParts {
+  const sections = splitH2(content);
+
+  // Innehållsförteckningen i markdown ("## Innehåll") blir navigering.
+  const tocIndex = sections.findIndex((s) => s.heading && /^Innehåll\b/i.test(s.heading.replace(HEADING_ID_RE, "")));
+  let toc: TocItem[] = [];
+  if (tocIndex !== -1) {
+    toc = [...sections[tocIndex].body.matchAll(/^\s*[-*]\s+\[([^\]]+)\]\(#([^)\s]+)\)/gm)].map((m) => ({
+      label: stripMarkdown(m[1]),
+      id: m[2],
+    }));
+    sections.splice(tocIndex, 1);
+  }
+  if (toc.length === 0) {
+    toc = sections
+      .filter((s) => s.heading)
+      .map((s) => ({ id: headingId(s.heading!), label: stripMarkdown(s.heading!.replace(HEADING_ID_RE, "")) }));
+  }
+
+  const faqIndex = sections.findIndex((s) => s.heading && /^(Vanliga frågor|Frequently Asked Questions)/i.test(s.heading));
+  const bodySections = faqIndex === -1 ? sections : sections.slice(0, faqIndex);
+  const faqSection = faqIndex === -1 ? null : sections[faqIndex];
+  const tailSections = faqIndex === -1 ? [] : sections.slice(faqIndex + 1);
+
+  // Brödtexten delas vid den H2 som ligger närmast 45 % in i texten, så att
+  // CTA:n hamnar efter en avslutad sektion. Korta artiklar delas inte.
+  const total = bodySections.reduce((n, s) => n + sectionMd(s).length, 0);
+  let split = bodySections.length;
+  if (bodySections.filter((s) => s.heading).length >= 4) {
+    let acc = 0;
+    let best = Infinity;
+    bodySections.forEach((s, i) => {
+      if (i > 1 && s.heading) {
+        const diff = Math.abs(acc / total - 0.45);
+        if (diff < best) {
+          best = diff;
+          split = i;
+        }
+      }
+      acc += sectionMd(s).length;
+    });
+  }
+  const beforeHtml = renderMarkdown(bodySections.slice(0, split).map(sectionMd).join("\n"));
+  const afterHtml = renderMarkdown(bodySections.slice(split).map(sectionMd).join("\n"));
+
+  const faq: FaqHtmlItem[] = [];
+  let faqHeadingHtml = "";
+  if (faqSection) {
+    const parts = faqSection.body.split(/^###\s+/m);
+    faqHeadingHtml = renderMarkdown(`## ${faqSection.heading}\n\n${parts[0]}`);
+    for (const part of parts.slice(1)) {
+      const nl = part.indexOf("\n");
+      const q = (nl === -1 ? part : part.slice(0, nl)).trim();
+      const answer = nl === -1 ? "" : part.slice(nl + 1).trim();
+      faq.push({
+        id: headingId(q),
+        question: md.parseInline(q.replace(HEADING_ID_RE, "")) as string,
+        answerHtml: renderMarkdown(answer),
+      });
+    }
+  }
+
+  return { toc, beforeHtml, afterHtml, faqHeadingHtml, faq, tailHtml: renderMarkdown(tailSections.map(sectionMd).join("\n")) };
 }
 
 function slugFromFilename(filename: string) {
@@ -160,6 +297,13 @@ const CATEGORY_LABELS: Record<Category, string> = {
   marknad: "SEO, GEO & marknadsföring",
   saas: "SaaS & tillväxt",
 };
+
+// Etikett på kort och i artikelns överrad: ämnet om artikeln har ett,
+// annars kategorin.
+export function topicLabel(post: Pick<PostMeta, "cluster" | "category" | "tags">): string | null {
+  if (post.cluster) return CLUSTERS[post.cluster].short;
+  return categoryLabel(post.category) ?? post.tags[0] ?? null;
+}
 
 export function categoryLabel(category: Category | null): string | null {
   return category ? CATEGORY_LABELS[category] : null;
@@ -307,8 +451,22 @@ export function relatedServices(slug: string, locale: "sv" | "en" = "sv"): Relat
     flow: { href: homeAnchor.replace("#sama", "#tjanster"), label: "Agentic workflows", description: "AI agents that run entire processes in your systems, with a human in the loop." },
   };
   const s = locale === "en" ? en : sv;
-  // Agentklustret pekar på agentsidorna oavsett kategori.
-  if (getAllPosts().find((p) => p.slug === slug)?.cluster === "agenter") return [s.flow, s.konsult];
+  // Ämnet styr i första hand, kategorin används för artiklar utan ämne.
+  const topic = getAllPosts().find((p) => p.slug === slug)?.cluster;
+  switch (topic) {
+    case "kontaktcenter":
+      return [s.cc, s.support];
+    case "agenter":
+      return [s.flow, s.konsult];
+    case "customer-success":
+      return [s.cs, s.cc];
+    case "saas":
+      return [s.konsult, s.cs];
+    case "ai-konsult":
+      return [s.konsult, s.flow];
+    case "marknad":
+      return [s.sama, s.konsult];
+  }
   switch (cluster) {
     case "ai-konsult":
       return [s.konsult, s.sama];

@@ -17,6 +17,7 @@ keywords:
   - "formatomvandling AI innehåll"
   - "content ROI pipeline"
 category: "marknad"
+cluster: "marknad"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Marknadsteam granskar analys av AI-driven content-marknadsföring på stor kontorsskärm"
 ---

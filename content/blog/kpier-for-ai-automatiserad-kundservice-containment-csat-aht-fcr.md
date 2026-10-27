@@ -2,7 +2,7 @@
 title: "KPI:er för AI-automatiserad kundservice: containment, CSAT, AHT och FCR – så mäter du rätt"
 metaTitle: "KPI:er för AI i kundservice: så mäter du rätt"
 slug: "kpier-for-ai-automatiserad-kundservice-containment-csat-aht-fcr"
-date: 2026-09-22T14:00:00.000Z
+date: 2026-09-29T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Så mäter du AI i kundservice: formler för containment, CSAT, AHT och FCR, vanliga mätfel, AI-specifika mått och ett exempel på veckorapport."
 summary: "Mät AI-automatiserad kundservice med fyra KPI:er som läses tillsammans: containment rate, CSAT, AHT och FCR. Komplettera med AI-specifika mått: andel oförändrade AI-svar, eskaleringsgrad, återkontakt inom ett bestämt antal dagar och en säkerhetspoäng som kalibreras mot stickprov. Mät per ärendekategori och mot en baseline. De vanligaste mätfelen är avbrutna chattar som räknas som lösta och AHT som påverkas av att AI:n tar de enkla ärendena medan de svåra blir kvar."
