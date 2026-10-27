@@ -2,7 +2,7 @@
 title: "AI och GDPR/AI-förordningen i kundservice – checklista för svenska företag"
 metaTitle: "AI i kundservice: GDPR och AI-förordningen"
 slug: "ai-gdpr-och-ai-forordningen-i-kundservice-checklista"
-date: 2026-09-22T13:00:00.000Z
+date: 2026-09-28T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "Checklista för AI i kundservice enligt GDPR och AI-förordningen: roller, PuB-avtal, DPIA, inspelade samtal, röst-AI och träning på kunddata, fas för fas."
 summary: "Ett svenskt företag som inför AI i kundservice är normalt personuppgiftsansvarigt och behöver ett personuppgiftsbiträdesavtal som omfattar leverantörens underbiträden, en rättslig grund per ändamål, en konsekvensbedömning eller dokumenterat skäl till varför den inte krävs, en uppdaterad registerförteckning och en informationstext till kunderna. AI-förordningen kräver att kunden får veta när den interagerar med AI. Kontrollera tredjelandsöverföringar, stäng av träning på kunddata och stäm av tidsplanen med jurist."

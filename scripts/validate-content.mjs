@@ -3,7 +3,8 @@
 //
 // Fel: synliga platshållare, externa bilder (blockeras av CSP img-src 'self'),
 // innehållsförteckningar som pekar på ankare som inte finns, länkar till
-// artiklar som inte finns, saknad titel/datum.
+// artiklar som inte finns, saknad titel/datum, två artiklar på samma
+// publiceringsdag och updated som är tidigare än date.
 // Varningar: fält som SEO/GEO-mallen förutsätter (metaTitle, excerpt, summary,
 // category, updated) saknas eller har olämplig längd.
 //
@@ -35,6 +36,10 @@ const SLUGS = new Set(
 );
 const errors = [];
 const warnings = [];
+// Publiceringsdagar som redan används, för att hitta artiklar som delar datum.
+const publishDays = new Map();
+const toDay = (v) => (v instanceof Date ? v.toISOString() : String(v ?? "")).slice(0, 10);
+const today = new Date().toISOString().slice(0, 10);
 
 for (const file of fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"))) {
   const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
@@ -45,6 +50,13 @@ for (const file of fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"))) {
 
   if (!data.title) err("title saknas");
   if (!data.date) err("date saknas");
+  if (data.date) {
+    const day = toDay(data.date);
+    if (publishDays.has(day)) err(`samma publiceringsdatum (${day}) som ${publishDays.get(day)}: ge artikeln en egen dag`);
+    else publishDays.set(day, file);
+    if (day > today) warn(`date ${day} ligger i framtiden`);
+    if (data.updated && toDay(data.updated) < day) err(`updated (${toDay(data.updated)}) är tidigare än date (${day})`);
+  }
 
   if (/\[(KÄLLA|EGET EXEMPEL)[^\]]*\]/.test(content)) err("synlig platshållare ([KÄLLA…] eller [EGET EXEMPEL…])");
 

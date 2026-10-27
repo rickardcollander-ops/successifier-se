@@ -2,7 +2,7 @@
 title: "Så väljer du AI-plattform för automatiserad kundkontakt – 12 faktorer och en utvärderingsmall"
 metaTitle: "Välj AI-plattform för kundkontakt: 12 faktorer"
 slug: "sa-valjer-du-ai-plattform-for-automatiserad-kundkontakt-12-faktorer"
-date: 2026-09-22T09:00:00.000Z
+date: 2026-09-23T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "12 faktorer för att välja AI-plattform för automatiserad kundkontakt i Sverige, med utvärderingsmall och nedladdningsbar kravmatris för att jämföra leverantörer."
 summary: "De viktigaste faktorerna vid val av AI-plattform för automatiserad kundkontakt i Sverige är integrationer mot era system, kvaliteten på svenska, hur kunskapsbasen byggs, möjligheten att styra automationsnivå per ärendekategori, överlämning till människa, dataskydd inom EU/EES och totalkostnad över tre år. Vikta faktorerna innan ni ser demos, testa med era egna ärenden och poängsätt leverantörerna i en kravmatris."

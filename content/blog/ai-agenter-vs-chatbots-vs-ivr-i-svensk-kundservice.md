@@ -2,7 +2,7 @@
 title: "Jämförelse: AI-agenter vs. chatbots vs. IVR i svensk kundservice"
 metaTitle: "AI-agenter vs chatbots vs IVR i kundservice"
 slug: "ai-agenter-vs-chatbots-vs-ivr-i-svensk-kundservice"
-date: 2026-09-22T11:00:00.000Z
+date: 2026-09-25T08:00:00.000Z
 updated: 2026-10-09T08:00:00.000Z
 excerpt: "AI-agenter, chatbots och IVR jämförda för svensk kundservice: styrkor, svagheter, kostnad, införandetid, risker och när du ska kombinera dem."
 summary: "En regelbaserad chatbot följer förskrivna flöden, en generativ AI-chatt formulerar svar ur en kunskapsbas och en AI-agent utför dessutom uppgifter i era system, till exempel ändrar en leveransadress. Traditionell IVR styr samtal med knappval, medan konversationell IVR förstår tal. Välj teknik efter ärendetyp och integrationsläge, inte efter demo. De flesta svenska kontaktcenter får bäst resultat av en kombination med gemensam kunskapsbas och tydlig väg till en människa."
