@@ -18,7 +18,7 @@ export default function SiteHeader({ locale = "sv" }: { locale?: Locale }) {
           { href: "/ai-agenter", label: "AI-agenter" },
           { href: "/seo-geo", label: "GEO & SEO" },
           { href: "/ai-kundtjanst", label: "Supportifier" },
-          { href: "/blog", label: "Blogg" },
+          { href: "/blog", label: "Kunskapsbas" },
         ];
 
   return (

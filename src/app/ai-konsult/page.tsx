@@ -320,7 +320,7 @@ export default function AiKonsultPage() {
           { href: "#angreppssatt", label: "Angreppssätt" },
           { href: "/ai-agenter", label: "AI-agenter" },
           { href: "/ai-kundtjanst", label: "Supportifier" },
-          { href: "/blog", label: "Blogg" },
+          { href: "/blog", label: "Kunskapsbas" },
         ]}
         cta={{ href: "#kontakt", label: "Boka samtal" }}
       />
@@ -748,7 +748,7 @@ export default function AiKonsultPage() {
               ["/tjanster", "Tjänster"],
               ["/ai-agenter", "AI-agenter"],
               ["/ai-kundtjanst", "Supportifier"],
-              ["/blog", "Blogg"],
+              ["/blog", "Kunskapsbas"],
               ["#faq", "FAQ"],
             ].map(([href, label]) => (
               <a

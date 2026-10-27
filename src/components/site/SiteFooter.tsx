@@ -15,7 +15,7 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
       ? [
           [`${home}#tjanster`, "Services"],
           [`${home}#sama`, "Platform"],
-          [blog, "Blog (Swedish)"],
+          [blog, "Knowledge base (Swedish)"],
           ["/kontakt", "Contact"],
         ]
       : [
@@ -26,7 +26,7 @@ export default function SiteFooter({ locale = "sv" }: { locale?: Locale }) {
           ["/customer-success", "Customer Success"],
           ["/contact-center-automation", "Contact center"],
           ["/ai-kundtjanst", "Supportifier"],
-          [blog, "Blogg"],
+          [blog, "Kunskapsbas"],
           ["/kundcase/dold-adress", "Kundcase"],
           ["/om", "Om oss"],
           ["/kontakt", "Kontakt"],

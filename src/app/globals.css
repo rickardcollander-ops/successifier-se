@@ -57,3 +57,26 @@ body {
   font-weight: 500;
   letter-spacing: -0.012em;
 }
+
+/* Kunskapsbasen: ankarlänkar landar under den klistriga menyn, och
+   FAQ-frågornas egen markör döljs (plustecknet visar läget). */
+.article-prose :is(h2, h3),
+.faq-item h3 {
+  scroll-margin-top: 96px;
+}
+
+.faq-item summary::-webkit-details-marker,
+.toc-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-details summary {
+  list-style: none;
+}
+
+/* Breda tabeller scrollar i sidled i stället för att göra sidan bredare. */
+.article-prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}

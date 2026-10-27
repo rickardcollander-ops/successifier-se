@@ -421,7 +421,7 @@ export default function ServicePage({ data: d }: { data: ServicePageData }) {
                   <h2 className="text-[clamp(26px,3vw,36px)] font-medium leading-[1.1] tracking-[-0.015em]" style={serif}>{d.guidesHeading}</h2>
                 </div>
                 <Link href="/blog" className="text-[14.5px] no-underline" style={{ color: "var(--ink)", borderBottom: "1px solid rgba(26,24,21,.3)" }}>
-                  Alla artiklar →
+                  Hela kunskapsbasen →
                 </Link>
               </div>
               <div className="grid gap-6 md:grid-cols-3">

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { CLUSTER_ORDER, clusterHref, getAllPosts, getClusterPosts } from "@/lib/blog";
 import { PAGE_UPDATED, SITE_URL } from "@/lib/site";
 
 // lastmod ska spegla sidans senaste faktiska innehållsändring, aldrig bygg-
@@ -47,5 +47,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: post.pillar ? 0.9 : 0.7,
   }));
 
-  return [...staticRoutes, ...postRoutes];
+  // Ämnessidorna ändras när en artikel i ämnet publiceras eller uppdateras.
+  const topicRoutes: MetadataRoute.Sitemap = CLUSTER_ORDER.map((c) => getClusterPosts(c))
+    .filter((list) => list.length > 0)
+    .map((list) => ({
+      url: `${SITE_URL}${clusterHref(list[0].cluster!)}`,
+      lastModified: new Date(list.reduce((acc, p) => (p.updated > acc ? p.updated : acc), "")),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }));
+
+  return [...staticRoutes, ...topicRoutes, ...postRoutes];
 }

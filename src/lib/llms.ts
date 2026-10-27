@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { CLUSTERS, SITE_URL, categoryLabel, getAllPosts, getClusterPosts, type Category, type Cluster } from "@/lib/blog";
+import { CLUSTERS, CLUSTER_ORDER, SITE_URL, categoryLabel, clusterHref, getAllPosts, getClusterPosts, type Category, type Cluster } from "@/lib/blog";
 import { FOUNDER, ORG, SERVICE_PAGES, SUPPORTIFIER } from "@/lib/site";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
@@ -38,6 +38,8 @@ function buildClusterSection(): string {
     `## ${CLUSTERS.agenter.label}\n\n${CLUSTERS.agenter.description}\n\n${agenter.join("\n")}\n`,
     `## ${CLUSTERS["customer-success"].label}\n\n${CLUSTERS["customer-success"].description}\n\n${customerSuccess.join("\n")}\n`,
     `## ${CLUSTERS.saas.label}\n\n${CLUSTERS.saas.description}\n\n${clusterLines("saas").join("\n")}\n`,
+    `## ${CLUSTERS["ai-konsult"].label}\n\n${CLUSTERS["ai-konsult"].description}\n\n${clusterLines("ai-konsult").join("\n")}\n`,
+    `## ${CLUSTERS.marknad.label}\n\n${CLUSTERS.marknad.description}\n\n${[`- [GEO & SEO med SAMA](${SITE_URL}/seo-geo): Hur Successifier driver synlighet i Google och i AI-svar med plattformen SAMA.`, ...clusterLines("marknad")].join("\n")}\n`,
   ].join("\n");
 }
 
@@ -72,7 +74,7 @@ ${SERVICE_LINES}
 - [Kundcase: Dold Adress](${SITE_URL}/kundcase/dold-adress): Hur Successifier automatiserade kundmailen hos Dold Adress, med kundens egna ord.
 - [Om Successifier](${SITE_URL}/om): Vilka vi är, hur vi arbetar och bolagsfakta.
 - [Kontakt](${SITE_URL}/kontakt): Boka strategisamtal, e-post och telefon.
-- [Blogg](${SITE_URL}/blog): Guider och analyser om AI-konsulting, automation, Customer Success, SEO och GEO.
+- [Kunskapsbas](${SITE_URL}/blog): Guider om AI i kundservice, AI-agenter, Customer Success, SaaS, SEO och GEO, sorterade per ämne. Ämnessidor: ${CLUSTER_ORDER.map((c) => `${SITE_URL}${clusterHref(c)}`).join(", ")}.
 - [Home (English)](${SITE_URL}/en): English overview of services.
 
 ## Kontakt
