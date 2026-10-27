@@ -16,6 +16,8 @@ import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 const CATEGORIES = ["ai-konsult", "customer-success", "marknad", "saas"];
+// Ska matcha CLUSTERS i src/lib/blog.ts (ämnessidorna i kunskapsbasen).
+const CLUSTERS = ["kontaktcenter", "agenter", "customer-success", "saas", "ai-konsult", "marknad"];
 
 function slugifyHeading(text) {
   return text
@@ -88,6 +90,7 @@ for (const file of fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"))) {
   if (!data.summary) warn("summary saknas (artikeln får inget Kort svar)");
   if (!CATEGORIES.includes(data.category)) warn(`category saknas eller är okänd (${data.category ?? "–"})`);
   if (!data.updated) warn("updated saknas");
+  if (!CLUSTERS.includes(data.cluster)) warn(`cluster saknas eller är okänt (${data.cluster ?? "–"}): artikeln hamnar inte på någon ämnessida`);
   if (data.canonical_url) warn("canonical_url ignoreras av sajten, ta bort fältet");
   if (!/\]\(\/(blog|ai-|agentiska|customer-success|contact-center|seo-geo|tjanster)/.test(content)) {
     warn("inga interna länkar i texten");

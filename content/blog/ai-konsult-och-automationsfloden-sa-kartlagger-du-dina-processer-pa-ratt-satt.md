@@ -13,6 +13,7 @@ keywords:
   - "automatisera processer med AI"
   - "baseline före automation"
 category: "ai-konsult"
+cluster: "ai-konsult"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Team kartlägger processflöden på en whiteboard inför AI-automation på ett modernt kontor"
 language: "sv"

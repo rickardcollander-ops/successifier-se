@@ -13,6 +13,7 @@ keywords:
   - "AI-assisterad kundservice"
   - "anlita AI-konsult"
 category: "ai-konsult"
+cluster: "ai-konsult"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Team analyserar dashboards med resultat från AI-projekt på ett modernt kontor"
 language: "sv"

@@ -17,6 +17,7 @@ keywords:
   - "b2b seo-konsult"
   - "seo för b2b-företag"
 category: "marknad"
+cluster: "marknad"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Marknadsteam analyserar B2B-pipeline och SEO-data på skärmar i modernt kontor"
 ---

@@ -17,6 +17,7 @@ keywords:
   - "LinkedIn kampanjstruktur B2B"
   - "kostnad per lead LinkedIn"
 category: "marknad"
+cluster: "marknad"
 updated: 2026-10-09T08:00:00.000Z
 imageAlt: "Konsult granskar LinkedIn-annonsstatistik på en laptop i ett modernt kontor"
 ---
